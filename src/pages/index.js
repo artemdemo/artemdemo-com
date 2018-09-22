@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import _get from 'lodash/get';
-import Helmet from 'react-helmet';
 
 import Bio from '../containers/Bio';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 class BlogIndex extends React.Component {
     render() {
@@ -13,12 +12,12 @@ class BlogIndex extends React.Component {
         const posts = _get(this.props, 'data.allMarkdownRemark.edges');
 
         return (
-            <Layout location={this.props.location}>
-                <Helmet
-                    htmlAttributes={{lang: 'en'}}
-                    meta={[{name: 'description', content: siteDescription}]}
-                    title={siteTitle}
-                />
+            <Layout
+                title={siteTitle}
+                metaTitle={siteTitle}
+                description={siteDescription}
+                location={this.props.location}
+            >
                 <Bio />
                 {posts.map((post) => {
                     const { node } = post;

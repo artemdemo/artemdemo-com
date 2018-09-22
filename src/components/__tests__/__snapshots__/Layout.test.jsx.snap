@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render empty 1`] = `
+<div
+  className="container"
+>
+  <div
+    data-mock="Helmet"
+  >
+    htmlAttributes: 
+    {"lang":"en"}
+    meta: 
+    [{"name":"description","content":"Site description"}]
+    title: 
+    Regular title
+  </div>
+  <h3>
+    <div
+      data-mock="Link"
+    >
+      Meta title
+    </div>
+  </h3>
+</div>
+`;
+
+exports[`Layout should render with children 1`] = `
+<div
+  className="container"
+>
+  <div
+    data-mock="Helmet"
+  >
+    htmlAttributes: 
+    {"lang":"en"}
+    meta: 
+    [{"name":"description","content":"Site description"}]
+    title: 
+    Regular title
+  </div>
+  <h3>
+    <div
+      data-mock="Link"
+    >
+      Meta title
+    </div>
+  </h3>
+  <div>
+    Some child
+  </div>
+</div>
+`;
+
+exports[`Layout should render with location 1`] = `
+<div
+  className="container"
+>
+  <div
+    data-mock="Helmet"
+  >
+    htmlAttributes: 
+    {"lang":"en"}
+    meta: 
+    [{"name":"description","content":"Site description"}]
+    title: 
+    Regular title
+  </div>
+  <h1>
+    Meta title
+  </h1>
+</div>
+`;

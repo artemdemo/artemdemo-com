@@ -23,6 +23,7 @@
     "<rootDir>/node_modules/babel-polyfill/"
   ],
   "globals": {
+    "__PATH_PREFIX__": "",
     "ENV": {
       "production": true
     }

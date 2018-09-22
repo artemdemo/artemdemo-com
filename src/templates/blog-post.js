@@ -1,10 +1,9 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 
 import Bio from '../containers/Bio';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 import 'prismjs/themes/prism.css';
 
@@ -16,12 +15,12 @@ class BlogPostTemplate extends React.Component {
         const {previous, next} = this.props.pageContext;
 
         return (
-            <Layout location={this.props.location}>
-                <Helmet
-                    htmlAttributes={{lang: 'en'}}
-                    meta={[{name: 'description', content: siteDescription}]}
-                    title={`${post.frontmatter.title} | ${siteTitle}`}
-                />
+            <Layout
+                title={`${post.frontmatter.title} | ${siteTitle}`}
+                description={siteDescription}
+                metaTitle={siteTitle}
+                location={this.props.location}
+            >
                 <h1>{post.frontmatter.title}</h1>
                 <p
                     style={{
