@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container should render empty 1`] = `
+<div
+  className="sc-bdVaJa AOLhf"
+/>
+`;
+
+exports[`Container should render with child 1`] = `
+<div
+  className="sc-bdVaJa AOLhf"
+>
+  <div>
+    Some child
+  </div>
+</div>
+`;
