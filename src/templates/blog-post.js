@@ -1,10 +1,10 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
-import get from 'lodash/get'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { Link, graphql } from 'gatsby';
+import get from 'lodash/get';
 
-import Bio from '../components/Bio'
-import Layout from '../components/layout'
+import Bio from '../containers/Bio';
+import Layout from '../components/layout';
 
 class BlogPostTemplate extends React.Component {
     render() {

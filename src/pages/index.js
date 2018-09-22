@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 import _get from 'lodash/get';
 import Helmet from 'react-helmet';
 
-import Bio from '../components/Bio';
+import Bio from '../containers/Bio';
 import Layout from '../components/layout';
 
 class BlogIndex extends React.Component {
