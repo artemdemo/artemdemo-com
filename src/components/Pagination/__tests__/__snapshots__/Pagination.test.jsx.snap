@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination should render empty 1`] = `
+<ul
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-between",
+      "listStyle": "none",
+      "padding": 0,
+    }
+  }
+/>
+`;
+
+exports[`Pagination should render with data 1`] = `
+<ul
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-between",
+      "listStyle": "none",
+      "padding": 0,
+    }
+  }
+>
+  <li>
+    <div
+      data-mock="Link"
+    >
+      ← 
+      Prev title
+    </div>
+  </li>
+  <li>
+    <div
+      data-mock="Link"
+    >
+      Next title
+       →
+    </div>
+  </li>
+</ul>
+`;

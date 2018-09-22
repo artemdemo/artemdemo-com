@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import get from 'lodash/get';
-
+import _get from 'lodash/get';
 import Bio from '../containers/Bio';
 import Layout from '../components/Layout/Layout';
+import Pagination from '../components/Pagination/Pagination';
 
 import 'prismjs/themes/prism.css';
 
 class BlogPostTemplate extends React.Component {
     render() {
         const post = this.props.data.markdownRemark;
-        const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+        const siteTitle = _get(this.props, 'data.site.siteMetadata.title');
         const siteDescription = post.excerpt;
-        const {previous, next} = this.props.pageContext;
+        const { previous, next } = this.props.pageContext;
 
         return (
             <Layout
@@ -30,42 +30,27 @@ class BlogPostTemplate extends React.Component {
                 >
                     {post.frontmatter.date}
                 </p>
-                <div dangerouslySetInnerHTML={{__html: post.html}}/>
-                <hr
-                    style={{
-                        marginBottom: '10px',
-                    }}
+
+                <div
+                    dangerouslySetInnerHTML={{__html: post.html}}
                 />
+
+                <hr />
+
                 <Bio/>
 
-                <ul
-                    style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'space-between',
-                        listStyle: 'none',
-                        padding: 0,
+                <Pagination
+                    previous={{
+                        slug: _get(previous, 'fields.slug', null),
+                        title: _get(previous, 'frontmatter.title', null),
                     }}
-                >
-                    <li>
-                        {
-                            previous &&
-                            <Link to={previous.fields.slug} rel="prev">
-                                ← {previous.frontmatter.title}
-                            </Link>
-                        }
-                    </li>
-                    <li>
-                        {
-                            next &&
-                            <Link to={next.fields.slug} rel="next">
-                                {next.frontmatter.title} →
-                            </Link>
-                        }
-                    </li>
-                </ul>
+                    next={{
+                        slug: _get(next, 'fields.slug', null),
+                        title: _get(next, 'frontmatter.title', null),
+                    }}
+                />
             </Layout>
-        )
+        );
     }
 }
 
