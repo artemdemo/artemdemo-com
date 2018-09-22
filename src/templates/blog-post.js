@@ -6,6 +6,8 @@ import get from 'lodash/get';
 import Bio from '../containers/Bio';
 import Layout from '../components/layout';
 
+import 'prismjs/themes/prism.css';
+
 class BlogPostTemplate extends React.Component {
     render() {
         const post = this.props.data.markdownRemark;
