@@ -9,6 +9,7 @@ exports.createPages = ({graphql, actions}) => {
     return new Promise((resolve, reject) => {
         const blogPost = path.resolve('./src/templates/blog-post.js');
         resolve(
+            // Now we're seeding GraphQL “database” that we can then query against via page-level GraphQL queries.
             graphql(
                 `
               {
