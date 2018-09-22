@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Artem Demo",
   "dependencies": {
+    "bootstrap": "^4.1.3",
     "gatsby": "^2.0.0",
     "gatsby-plugin-feed": "^2.0.5",
     "gatsby-plugin-google-analytics": "^2.0.5",

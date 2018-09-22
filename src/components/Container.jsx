@@ -1,8 +1,9 @@
-import styled from 'styled-components'
+import React from 'react';
 
-const Container = styled.div`
-    margin: 0 auto;
-    max-width: 1024px;
-`;
+const Container = props => (
+    <div className='container'>
+        {props.children}
+    </div>
+);
 
 export default Container;
