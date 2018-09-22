@@ -44,3 +44,48 @@ exports[`Pagination should render with data 1`] = `
   </li>
 </ul>
 `;
+
+exports[`Pagination should use slug if title not provided 1`] = `
+<ul
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-between",
+      "listStyle": "none",
+      "padding": 0,
+    }
+  }
+>
+  <li>
+    <div
+      data-mock="Link"
+    >
+      ← 
+      /prev
+    </div>
+  </li>
+  <li>
+    <div
+      data-mock="Link"
+    >
+      /next
+       →
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`Pagination shouldn't render without slug 1`] = `
+<ul
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-between",
+      "listStyle": "none",
+      "padding": 0,
+    }
+  }
+/>
+`;

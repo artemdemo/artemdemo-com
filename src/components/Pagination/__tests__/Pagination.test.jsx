@@ -13,6 +13,36 @@ describe('Pagination', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    it('shouldn\'t render without slug', () => {
+        const tree = renderer.create(
+            <Pagination
+                previous={{
+                    title: 'Prev title',
+                }}
+                next={{
+                    title: 'Next title',
+                }}
+            />
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should use slug if title not provided', () => {
+        const tree = renderer.create(
+            <Pagination
+                previous={{
+                    slug: '/prev',
+                }}
+                next={{
+                    slug: '/next',
+                }}
+            />
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
     it('should render with data', () => {
         const tree = renderer.create(
             <Pagination

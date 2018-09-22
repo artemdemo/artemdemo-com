@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 class Pagination extends React.PureComponent {
     renderPrev() {
         const { previous } = this.props;
-        if (previous && previous.slug != null && previous.title) {
+        if (previous && previous.slug != null) {
             const title = previous.title || previous.slug;
             return (
                 <li>
@@ -20,7 +20,7 @@ class Pagination extends React.PureComponent {
 
     renderNext() {
         const { next } = this.props;
-        if (next && next.slug != null && next.title) {
+        if (next && next.slug != null) {
             const title = next.title || next.slug;
             return (
                 <li>
