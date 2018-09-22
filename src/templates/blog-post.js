@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 
 import Bio from '../containers/Bio';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 
 import 'prismjs/themes/prism.css';
 

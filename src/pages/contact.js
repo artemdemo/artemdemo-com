@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import _get from 'lodash/get';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 
 class Contact extends React.PureComponent {
     render() {

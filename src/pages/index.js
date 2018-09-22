@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import _get from 'lodash/get';
 import Bio from '../containers/Bio';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import Posts from '../components/Posts/Posts';
 
 class BlogIndex extends React.Component {

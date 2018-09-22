@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
-import Container from './Container';
+import Container from '../Container/Container';
 
 class Layout extends React.Component {
     renderHeader() {
