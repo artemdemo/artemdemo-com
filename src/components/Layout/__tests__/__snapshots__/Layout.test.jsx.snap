@@ -7,12 +7,18 @@ exports[`Layout should render empty 1`] = `
   <div
     data-mock="Helmet"
   >
-    htmlAttributes: 
-    {"lang":"en"}
-    meta: 
-    [{"name":"description","content":"Site description"}]
-    title: 
-    Regular title
+    {
+  "htmlAttributes": {
+    "lang": "en"
+  },
+  "meta": [
+    {
+      "name": "description",
+      "content": "Site description"
+    }
+  ],
+  "title": "Regular title"
+}
   </div>
   <h3>
     <div
@@ -31,12 +37,18 @@ exports[`Layout should render with children 1`] = `
   <div
     data-mock="Helmet"
   >
-    htmlAttributes: 
-    {"lang":"en"}
-    meta: 
-    [{"name":"description","content":"Site description"}]
-    title: 
-    Regular title
+    {
+  "htmlAttributes": {
+    "lang": "en"
+  },
+  "meta": [
+    {
+      "name": "description",
+      "content": "Site description"
+    }
+  ],
+  "title": "Regular title"
+}
   </div>
   <h3>
     <div
@@ -58,12 +70,18 @@ exports[`Layout should render with location 1`] = `
   <div
     data-mock="Helmet"
   >
-    htmlAttributes: 
-    {"lang":"en"}
-    meta: 
-    [{"name":"description","content":"Site description"}]
-    title: 
-    Regular title
+    {
+  "htmlAttributes": {
+    "lang": "en"
+  },
+  "meta": [
+    {
+      "name": "description",
+      "content": "Site description"
+    }
+  ],
+  "title": "Regular title"
+}
   </div>
   <h1>
     Meta title

@@ -7,12 +7,24 @@ Array [
   <div
     data-mock="PostsItem"
   >
-    {"node":{"fields":{"slug":"/first"}}}
+    {
+  "node": {
+    "fields": {
+      "slug": "/first"
+    }
+  }
+}
   </div>,
   <div
     data-mock="PostsItem"
   >
-    {"node":{"fields":{"slug":"/second"}}}
+    {
+  "node": {
+    "fields": {
+      "slug": "/second"
+    }
+  }
+}
   </div>,
 ]
 `;
