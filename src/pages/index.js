@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby';
 import _get from 'lodash/get';
 import Bio from '../containers/Bio';
 import Layout from '../components/Layout';
+import Posts from '../components/Posts/Posts';
 
 class BlogIndex extends React.Component {
     render() {
@@ -18,21 +19,7 @@ class BlogIndex extends React.Component {
                 location={this.props.location}
             >
                 <Bio />
-                {posts.map((post) => {
-                    const { node } = post;
-                    const title = _get(node, 'frontmatter.title') || node.fields.slug;
-                    return (
-                        <div key={node.fields.slug}>
-                            <h3>
-                                <Link to={node.fields.slug}>
-                                    {title}
-                                </Link>
-                            </h3>
-                            <small>{node.frontmatter.date}</small>
-                            <p dangerouslySetInnerHTML={{__html: node.excerpt}}/>
-                        </div>
-                    )
-                })}
+                <Posts list={posts} />
             </Layout>
         )
     }
