@@ -5,6 +5,9 @@ import _get from 'lodash/get';
 
 const PostsItem = (props) => {
     const { node } = props;
+    if (!node) {
+        return null;
+    }
     const title = _get(node, 'frontmatter.title') || node.fields.slug;
     return (
         <div>

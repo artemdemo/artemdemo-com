@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsItem should render empty 1`] = `null`;
+
+exports[`PostsItem should render with node 1`] = `
+<div>
+  <h3>
+    <div
+      data-mock="Link"
+    >
+      Some title
+    </div>
+  </h3>
+  <small>
+    10 May, 2018
+  </small>
+  <p
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "Excerpt text",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`PostsItem should render with slug when title not provided 1`] = `
+<div>
+  <h3>
+    <div
+      data-mock="Link"
+    >
+      /first
+    </div>
+  </h3>
+  <small>
+    10 May, 2018
+  </small>
+  <p
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "Excerpt text",
+      }
+    }
+  />
+</div>
+`;
