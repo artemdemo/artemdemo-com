@@ -8,11 +8,30 @@ import Pagination from '../components/Pagination/Pagination';
 import 'prismjs/themes/prism.css';
 
 class BlogPostTemplate extends React.Component {
+    renderPagination() {
+        const { previous, next } = this.props.pageContext;
+
+        const prevSlug = _get(previous, 'fields.slug', null);
+        const nextSlug = _get(next, 'fields.slug', null);
+
+        return (
+            <Pagination
+                previous={{
+                    slug: prevSlug ? `/blog/${prevSlug}` : null,
+                    title: _get(previous, 'frontmatter.title', null),
+                }}
+                next={{
+                    slug: nextSlug ? `/blog/${nextSlug}` : null,
+                    title: _get(next, 'frontmatter.title', null),
+                }}
+            />
+        );
+    }
+
     render() {
         const post = this.props.data.markdownRemark;
         const siteTitle = _get(this.props, 'data.site.siteMetadata.title');
         const siteDescription = post.excerpt;
-        const { previous, next } = this.props.pageContext;
 
         return (
             <Layout
@@ -39,16 +58,7 @@ class BlogPostTemplate extends React.Component {
 
                 <Bio/>
 
-                <Pagination
-                    previous={{
-                        slug: _get(previous, 'fields.slug', null),
-                        title: _get(previous, 'frontmatter.title', null),
-                    }}
-                    next={{
-                        slug: _get(next, 'fields.slug', null),
-                        title: _get(next, 'frontmatter.title', null),
-                    }}
-                />
+                {this.renderPagination()}
             </Layout>
         );
     }

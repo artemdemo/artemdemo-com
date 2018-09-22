@@ -12,7 +12,7 @@ const PostsItem = (props) => {
     return (
         <div>
             <h3>
-                <Link to={node.fields.slug}>
+                <Link to={`/blog/${node.fields.slug}`}>
                     {title}
                 </Link>
             </h3>

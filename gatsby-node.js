@@ -3,11 +3,23 @@ const Promise = require('bluebird');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.createPages = ({graphql, actions}) => {
+const blogPost = path.resolve('./src/templates/blog-post.js');
+const postsList = path.resolve('./src/templates/posts-list.js');
+
+const paginationPath = (path, page, totalPages) => {
+    if (page === 0) {
+        return path
+    } else if (page < 0 || page >= totalPages) {
+        return ''
+    } else {
+        return `${path}/${page + 1}`
+    }
+};
+
+exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
 
     return new Promise((resolve, reject) => {
-        const blogPost = path.resolve('./src/templates/blog-post.js');
         resolve(
             // Now we're seeding GraphQL “database” that we can then query against via page-level GraphQL queries.
             graphql(
@@ -33,15 +45,42 @@ exports.createPages = ({graphql, actions}) => {
                     reject(result.errors);
                 }
 
-                // Create blog posts pages.
                 const posts = result.data.allMarkdownRemark.edges;
+
+                const postsAmount = posts.length;
+                const postsPerPage = 2;
+                // How many paginated pages do we need?
+                const paginatedPagesCount = Math.ceil(postsAmount / postsPerPage);
+
+                // Create each paginated page
+                _.times(paginatedPagesCount, (index) => {
+                    createPage({
+                        // Calculate the path for this page like `/blog`, `/blog/2`
+                        path: paginationPath('/blog', index, paginatedPagesCount),
+                        // Set the component as normal
+                        component: postsList,
+                        // Pass the following context to the component
+                        context: {
+                            // Skip this number of posts from the beginning
+                            skip: index * postsPerPage,
+                            // How many posts to show on this paginated page
+                            limit: postsPerPage,
+                            // How many paginated pages there are in total
+                            paginatedPagesCount,
+                            // The path to the previous paginated page (or an empty string)
+                            prevPath: paginationPath('/blog', index - 1, paginatedPagesCount),
+                            // The path to the next paginated page (or an empty string)
+                            nextPath: paginationPath('/blog', index + 1, paginatedPagesCount),
+                        }
+                    });
+                });
 
                 _.each(posts, (post, index) => {
                     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
                     const next = index === 0 ? null : posts[index - 1].node;
 
                     createPage({
-                        path: post.node.fields.slug,
+                        path: `/blog${post.node.fields.slug}`,
                         component: blogPost,
                         context: {
                             slug: post.node.fields.slug,
