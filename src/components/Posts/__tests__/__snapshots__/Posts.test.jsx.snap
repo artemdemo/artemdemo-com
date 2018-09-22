@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts should render empty 1`] = `null`;
+
+exports[`Posts should render with posts 1`] = `
+Array [
+  <div
+    data-mock="PostsItem"
+  >
+    {"node":{"fields":{"slug":"/first"}}}
+  </div>,
+  <div
+    data-mock="PostsItem"
+  >
+    {"node":{"fields":{"slug":"/second"}}}
+  </div>,
+]
+`;

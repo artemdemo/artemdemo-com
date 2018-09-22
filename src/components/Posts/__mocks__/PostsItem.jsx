@@ -2,7 +2,7 @@ import React from 'react';
 
 const PostsItem = props => (
     <div data-mock='PostsItem'>
-        {props.children}
+        {JSON.stringify(props)}
     </div>
 );
 
