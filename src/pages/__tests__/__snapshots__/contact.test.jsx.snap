@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact should render 1`] = `
+<div
+  data-mock="Container"
+>
+  <div
+    data-mock="Helmet"
+  >
+    {
+  "htmlAttributes": {
+    "lang": "en"
+  },
+  "meta": [
+    {
+      "name": "description",
+      "content": "Some description"
+    }
+  ],
+  "title": "Some title"
+}
+  </div>
+  <h3>
+    <div
+      data-mock="Link"
+    >
+      Some title
+    </div>
+  </h3>
+  <h1>
+    Contacts
+  </h1>
+  <p>
+    In order to contact me, please fill form below and I will get back to you.
+  </p>
+  <iframe
+    frameBorder="0"
+    height="822"
+    marginHeight="0"
+    marginWidth="0"
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true"
+    width="640"
+  >
+    Loading...
+  </iframe>
+</div>
+`;

@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index should render 1`] = `
+<div
+  data-mock="Container"
+>
+  <div
+    data-mock="Helmet"
+  >
+    {
+  "htmlAttributes": {
+    "lang": "en"
+  },
+  "meta": [
+    {
+      "name": "description",
+      "content": "Some description"
+    }
+  ],
+  "title": "Some title"
+}
+  </div>
+  <h3>
+    <div
+      data-mock="Link"
+    >
+      Some title
+    </div>
+  </h3>
+  <p>
+    Written by 
+    <strong>
+      Artem Demo
+    </strong>
+     who lives and works in Tel Aviv building useful things.
+     
+    <a
+      href="https://github.com/artemdemo"
+    >
+      You should follow him on Github
+    </a>
+  </p>
+  <div
+    data-mock="Posts"
+  >
+    {
+  "list": [
+    {
+      "frontmatter": {
+        "title": "Some title",
+        "date": "10 May, 2018"
+      },
+      "fields": {
+        "slug": "/first"
+      },
+      "excerpt": "Excerpt text"
+    }
+  ]
+}
+  </div>
+</div>
+`;
