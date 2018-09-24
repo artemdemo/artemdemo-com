@@ -44,12 +44,6 @@ const createBlogPages = (posts, createPage) => {
                 // How many paginated pages there are in total
                 //
                 paginatedPagesCount,
-                // The path to the previous paginated page (or an empty string)
-                //
-                prevPath: paginationPath(index - 1, paginatedPagesCount),
-                // The path to the next paginated page (or an empty string)
-                //
-                nextPath: paginationPath(index + 1, paginatedPagesCount),
             }
         });
     });

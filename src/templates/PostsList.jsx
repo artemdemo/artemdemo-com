@@ -13,6 +13,8 @@ class PostsList extends React.Component {
         const posts = _get(this.props, 'data.allMarkdownRemark.edges');
         const totalCount = _get(this.props, 'data.allMarkdownRemark.totalCount', 0);
 
+        console.log(this.props);
+
         return (
             <Layout
                 title={siteTitle}
