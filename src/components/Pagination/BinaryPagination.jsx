@@ -1,6 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
+
+const PaginationContainerSty = styled.div`
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+`;
+
+const PaginationLeftSty = styled.div`
+    float: left;
+`;
+
+const PaginationRightSty = styled.div`
+    float: right;
+`;
 
 class BinaryPagination extends React.PureComponent {
     renderPrev() {
@@ -8,11 +25,17 @@ class BinaryPagination extends React.PureComponent {
         if (previous && previous.slug != null) {
             const title = previous.title || previous.slug;
             return (
-                <li>
-                    <Link to={previous.slug} rel="prev">
-                        ← {title}
-                    </Link>
-                </li>
+                <ul className="pagination">
+                    <li className="page-item">
+                        <Link
+                            className="page-link"
+                            to={previous.slug}
+                            rel="prev"
+                        >
+                            ← {title}
+                        </Link>
+                    </li>
+                </ul>
             );
         }
         return null;
@@ -23,11 +46,17 @@ class BinaryPagination extends React.PureComponent {
         if (next && next.slug != null) {
             const title = next.title || next.slug;
             return (
-                <li>
-                    <Link to={next.slug} rel="next">
-                        {title} →
-                    </Link>
-                </li>
+                <ul className="pagination">
+                    <li className="page-item">
+                        <Link
+                            className="page-link"
+                            to={next.slug}
+                            rel="next"
+                        >
+                            {title} →
+                        </Link>
+                    </li>
+                </ul>
             );
         }
         return null;
@@ -35,18 +64,14 @@ class BinaryPagination extends React.PureComponent {
 
     render() {
         return (
-            <ul
-                style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    justifyContent: 'space-between',
-                    listStyle: 'none',
-                    padding: 0,
-                }}
-            >
-                {this.renderPrev()}
-                {this.renderNext()}
-            </ul>
+            <PaginationContainerSty>
+                <PaginationLeftSty>
+                    {this.renderPrev()}
+                </PaginationLeftSty>
+                <PaginationRightSty>
+                    {this.renderNext()}
+                </PaginationRightSty>
+            </PaginationContainerSty>
         );
     }
 }
