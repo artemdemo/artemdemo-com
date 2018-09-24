@@ -4,7 +4,7 @@ import BlogPost from '../BlogPost';
 
 jest.mock('gatsby');
 jest.mock('../../components/Container/Container');
-jest.mock('../../components/Pagination/Pagination');
+jest.mock('../../components/Pagination/BinaryPagination');
 
 describe('BlogPost', () => {
     it('should render', () => {

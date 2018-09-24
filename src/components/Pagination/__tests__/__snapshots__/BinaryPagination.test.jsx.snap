@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pagination should render empty 1`] = `
+exports[`BinaryPagination should render empty 1`] = `
 <ul
   style={
     Object {
@@ -14,7 +14,7 @@ exports[`Pagination should render empty 1`] = `
 />
 `;
 
-exports[`Pagination should render with data 1`] = `
+exports[`BinaryPagination should render with data 1`] = `
 <ul
   style={
     Object {
@@ -45,7 +45,7 @@ exports[`Pagination should render with data 1`] = `
 </ul>
 `;
 
-exports[`Pagination should use slug if title not provided 1`] = `
+exports[`BinaryPagination should use slug if title not provided 1`] = `
 <ul
   style={
     Object {
@@ -76,7 +76,7 @@ exports[`Pagination should use slug if title not provided 1`] = `
 </ul>
 `;
 
-exports[`Pagination shouldn't render without slug 1`] = `
+exports[`BinaryPagination shouldn't render without slug 1`] = `
 <ul
   style={
     Object {

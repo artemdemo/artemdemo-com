@@ -1,13 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Pagination from '../Pagination';
+import BinaryPagination from '../BinaryPagination';
 
 jest.mock('gatsby');
 
-describe('Pagination', () => {
+describe('BinaryPagination', () => {
     it('should render empty', () => {
         const tree = renderer.create(
-            <Pagination />
+            <BinaryPagination />
         ).toJSON();
 
         expect(tree).toMatchSnapshot();
@@ -15,7 +15,7 @@ describe('Pagination', () => {
 
     it('shouldn\'t render without slug', () => {
         const tree = renderer.create(
-            <Pagination
+            <BinaryPagination
                 previous={{
                     title: 'Prev title',
                 }}
@@ -30,7 +30,7 @@ describe('Pagination', () => {
 
     it('should use slug if title not provided', () => {
         const tree = renderer.create(
-            <Pagination
+            <BinaryPagination
                 previous={{
                     slug: '/prev',
                 }}
@@ -45,7 +45,7 @@ describe('Pagination', () => {
 
     it('should render with data', () => {
         const tree = renderer.create(
-            <Pagination
+            <BinaryPagination
                 previous={{
                     slug: '/prev',
                     title: 'Prev title',

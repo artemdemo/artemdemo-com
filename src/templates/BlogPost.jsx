@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import _get from 'lodash/get';
 import Bio from '../containers/Bio';
 import Layout from '../components/Layout/Layout';
-import Pagination from '../components/Pagination/Pagination';
+import BinaryPagination from '../components/Pagination/BinaryPagination';
 import * as utils from '../services/utils';
 
 import 'prismjs/themes/prism.css';
@@ -16,7 +16,7 @@ class BlogPost extends React.Component {
         const nextSlug = _get(next, 'fields.slug', null);
 
         return (
-            <Pagination
+            <BinaryPagination
                 previous={{
                     slug: prevSlug ? utils.prefixBlog(prevSlug) : null,
                     title: _get(previous, 'frontmatter.title', null),

@@ -62,7 +62,7 @@ exports[`BlogPost should render 1`] = `
     </a>
   </p>
   <div
-    data-mock="Pagination"
+    data-mock="BinaryPagination"
   >
     {
   "previous": {

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-class Pagination extends React.PureComponent {
+class BinaryPagination extends React.PureComponent {
     renderPrev() {
         const { previous } = this.props;
         if (previous && previous.slug != null) {
@@ -51,7 +51,7 @@ class Pagination extends React.PureComponent {
     }
 }
 
-Pagination.propTypes = {
+BinaryPagination.propTypes = {
     previous: PropTypes.shape({
         slug: PropTypes.string,
         title: PropTypes.string,
@@ -62,9 +62,9 @@ Pagination.propTypes = {
     }),
 };
 
-Pagination.defaultProps = {
+BinaryPagination.defaultProps = {
     previous: null,
     next: null,
 };
 
-export default Pagination;
+export default BinaryPagination;
