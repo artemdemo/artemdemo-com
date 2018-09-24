@@ -9,13 +9,13 @@ const PaginationNumItem = (props) => {
     const itemClass = classnames('page-item', {
         active
     });
-    const path = pageNum > 1 ? `/${pageNum}` : '/';
+    const path = pageNum > 1 ? utils.prefixBlog(`/${pageNum}`) : '/';
 
     return (
         <li className={itemClass}>
             <Link
                 className='page-link'
-                to={utils.prefixBlog(path)}
+                to={path}
             >
                 {pageNum}
             </Link>

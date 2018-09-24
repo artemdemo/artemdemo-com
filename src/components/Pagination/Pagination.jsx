@@ -15,7 +15,7 @@ class Pagination extends React.PureComponent {
             disabled: skip === 0
         });
         const prevPageNumber = Math.floor(skip / limit);
-        const prevPath = prevPageNumber > 1 ? utils.prefixBlog(`/${prevPageNumber}`) : utils.prefixBlog();
+        const prevPath = prevPageNumber > 1 ? utils.prefixBlog(`/${prevPageNumber}`) : '/';
         return (
             <li className={itemClass}>
                 <Link
