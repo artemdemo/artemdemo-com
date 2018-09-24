@@ -10,6 +10,7 @@ class PostsList extends React.Component {
         const siteTitle = _get(this.props, 'data.site.siteMetadata.title');
         const siteDescription = _get(this.props, 'data.site.siteMetadata.description');
         const posts = _get(this.props, 'data.allMarkdownRemark.edges');
+        const totalCount = _get(this.props, 'data.allMarkdownRemark.totalCount', 0);
 
         return (
             <Layout
@@ -40,6 +41,7 @@ export const pageQuery = graphql`
       skip: $skip
       limit: $limit
     ) {
+      totalCount
       edges {
         node {
           excerpt

@@ -10,6 +10,7 @@ class BlogIndex extends React.Component {
         const siteTitle = _get(this.props, 'data.site.siteMetadata.title');
         const siteDescription = _get(this.props, 'data.site.siteMetadata.description');
         const posts = _get(this.props, 'data.allMarkdownRemark.edges');
+        const totalCount = _get(this.props, 'data.allMarkdownRemark.totalCount', 0);
 
         return (
             <Layout
@@ -28,14 +29,19 @@ class BlogIndex extends React.Component {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query {
+  query IndexQuery($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      skip: $skip
+      limit: $limit
+    ) {
+      totalCount
       edges {
         node {
           excerpt
