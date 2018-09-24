@@ -4,6 +4,7 @@ import _get from 'lodash/get';
 import Bio from '../containers/Bio';
 import Layout from '../components/Layout/Layout';
 import Pagination from '../components/Pagination/Pagination';
+import * as utils from '../services/utils';
 
 import 'prismjs/themes/prism.css';
 
@@ -17,11 +18,11 @@ class BlogPostTemplate extends React.Component {
         return (
             <Pagination
                 previous={{
-                    slug: prevSlug ? `/blog/${prevSlug}` : null,
+                    slug: prevSlug ? utils.prefixBlog(prevSlug) : null,
                     title: _get(previous, 'frontmatter.title', null),
                 }}
                 next={{
-                    slug: nextSlug ? `/blog/${nextSlug}` : null,
+                    slug: nextSlug ? utils.prefixBlog(nextSlug) : null,
                     title: _get(next, 'frontmatter.title', null),
                 }}
             />

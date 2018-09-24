@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import _get from 'lodash/get';
+import * as utils from '../../services/utils';
 
 const PostsItem = (props) => {
     const { node } = props;
@@ -12,7 +13,7 @@ const PostsItem = (props) => {
     return (
         <div>
             <h3>
-                <Link to={`/blog/${node.fields.slug}`}>
+                <Link to={utils.prefixBlog(node.fields.slug)}>
                     {title}
                 </Link>
             </h3>
