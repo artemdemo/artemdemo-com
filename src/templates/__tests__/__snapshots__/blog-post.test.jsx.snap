@@ -66,11 +66,11 @@ exports[`BlogPost should render 1`] = `
   >
     {
   "previous": {
-    "slug": "/prev",
+    "slug": "/blog/prev",
     "title": "Prev title"
   },
   "next": {
-    "slug": "/next",
+    "slug": "/blog/next",
     "title": "Next title"
   }
 }

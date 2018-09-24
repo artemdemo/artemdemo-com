@@ -2,7 +2,7 @@ const _ = require('lodash');
 const Promise = require('bluebird');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
-
+const utils = require('./src/services/utils');
 const blogPost = path.resolve('./src/templates/blog-post.js');
 const postsList = path.resolve('./src/templates/posts-list.js');
 
@@ -48,28 +48,37 @@ exports.createPages = ({ graphql, actions }) => {
                 const posts = result.data.allMarkdownRemark.edges;
 
                 const postsAmount = posts.length;
-                const postsPerPage = 2;
                 // How many paginated pages do we need?
-                const paginatedPagesCount = Math.ceil(postsAmount / postsPerPage);
+                //
+                const paginatedPagesCount = Math.ceil(postsAmount / utils.POSTS_PER_PAGE);
 
                 // Create each paginated page
+                //
                 _.times(paginatedPagesCount, (index) => {
                     createPage({
                         // Calculate the path for this page like `/blog`, `/blog/2`
+                        //
                         path: paginationPath('/blog', index, paginatedPagesCount),
                         // Set the component as normal
+                        //
                         component: postsList,
                         // Pass the following context to the component
+                        //
                         context: {
                             // Skip this number of posts from the beginning
-                            skip: index * postsPerPage,
+                            //
+                            skip: index * utils.POSTS_PER_PAGE,
                             // How many posts to show on this paginated page
-                            limit: postsPerPage,
+                            //
+                            limit: utils.POSTS_PER_PAGE,
                             // How many paginated pages there are in total
+                            //
                             paginatedPagesCount,
                             // The path to the previous paginated page (or an empty string)
+                            //
                             prevPath: paginationPath('/blog', index - 1, paginatedPagesCount),
                             // The path to the next paginated page (or an empty string)
+                            //
                             nextPath: paginationPath('/blog', index + 1, paginatedPagesCount),
                         }
                     });
