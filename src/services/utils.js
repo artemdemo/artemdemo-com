@@ -1,6 +1,6 @@
 const _isString = require('lodash/isString');
 
-exports.POSTS_PER_PAGE = 2;
+exports.POSTS_PER_PAGE = 1;
 
 exports.prefixBlog = (slug) => {
     const prefix = '/blog';

@@ -41,9 +41,6 @@ const createBlogPages = (posts, createPage) => {
                 // How many posts to show on this paginated page
                 //
                 limit: utils.POSTS_PER_PAGE,
-                // How many paginated pages there are in total
-                //
-                paginatedPagesCount,
             }
         });
     });

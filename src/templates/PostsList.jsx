@@ -12,8 +12,8 @@ class PostsList extends React.Component {
         const siteDescription = _get(this.props, 'data.site.siteMetadata.description');
         const posts = _get(this.props, 'data.allMarkdownRemark.edges');
         const totalCount = _get(this.props, 'data.allMarkdownRemark.totalCount', 0);
-
-        console.log(this.props);
+        const skip = _get(this.props, 'pageContext.skip', 0);
+        const limit = _get(this.props, 'pageContext.limit', 0);
 
         return (
             <Layout
@@ -24,7 +24,11 @@ class PostsList extends React.Component {
             >
                 <Bio />
                 <Posts list={posts} />
-                <Pagination />
+                <Pagination
+                    skip={skip}
+                    limit={limit}
+                    totalPosts={totalCount}
+                />
             </Layout>
         )
     }
