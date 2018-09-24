@@ -1,30 +1,7 @@
-import React from 'react';
 import { graphql } from 'gatsby';
-import _get from 'lodash/get';
-import Bio from '../containers/Bio';
-import Layout from '../components/Layout/Layout';
-import Posts from '../components/Posts/Posts';
+import PostsList from '../templates/posts-list';
 
-class BlogIndex extends React.Component {
-    render() {
-        const siteTitle = _get(this.props, 'data.site.siteMetadata.title');
-        const siteDescription = _get(this.props, 'data.site.siteMetadata.description');
-        const posts = _get(this.props, 'data.allMarkdownRemark.edges');
-        const totalCount = _get(this.props, 'data.allMarkdownRemark.totalCount', 0);
-
-        return (
-            <Layout
-                title={siteTitle}
-                metaTitle={siteTitle}
-                description={siteDescription}
-                location={this.props.location}
-            >
-                <Bio />
-                <Posts list={posts} />
-            </Layout>
-        )
-    }
-}
+class BlogIndex extends PostsList {}
 
 export default BlogIndex
 
