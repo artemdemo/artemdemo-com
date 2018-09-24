@@ -3,8 +3,8 @@ const Promise = require('bluebird');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const utils = require('./src/services/utils');
-const blogPost = path.resolve('./src/templates/blog-post.js');
-const postsList = path.resolve('./src/templates/posts-list.js');
+const blogPost = path.resolve('./src/templates/BlogPost.jsx');
+const postsList = path.resolve('./src/templates/PostsList.jsx');
 
 const paginationPath = (path, page, totalPages) => {
     if (page === 0) {

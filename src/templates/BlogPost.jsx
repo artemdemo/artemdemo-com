@@ -8,7 +8,7 @@ import * as utils from '../services/utils';
 
 import 'prismjs/themes/prism.css';
 
-class BlogPostTemplate extends React.Component {
+class BlogPost extends React.Component {
     renderPagination() {
         const { previous, next } = this.props.pageContext;
 
@@ -65,7 +65,7 @@ class BlogPostTemplate extends React.Component {
     }
 }
 
-export default BlogPostTemplate;
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

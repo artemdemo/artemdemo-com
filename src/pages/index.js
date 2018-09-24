@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import PostsList from '../templates/posts-list';
+import PostsList from '../templates/PostsList';
 
 class BlogIndex extends PostsList {}
 

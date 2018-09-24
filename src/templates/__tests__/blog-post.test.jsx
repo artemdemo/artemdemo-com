@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import BlogPost from '../blog-post';
+import BlogPost from '../BlogPost';
 
 jest.mock('gatsby');
 jest.mock('../../components/Container/Container');
