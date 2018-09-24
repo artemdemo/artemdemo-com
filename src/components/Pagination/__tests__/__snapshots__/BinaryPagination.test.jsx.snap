@@ -1,91 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BinaryPagination should render empty 1`] = `
-<ul
-  style={
-    Object {
-      "display": "flex",
-      "flexWrap": "wrap",
-      "justifyContent": "space-between",
-      "listStyle": "none",
-      "padding": 0,
-    }
-  }
-/>
+<div
+  className="sc-bdVaJa flWwzy"
+>
+  <div
+    className="sc-bwzfXH kUhibZ"
+  />
+  <div
+    className="sc-htpNat bQTCAo"
+  />
+</div>
 `;
 
 exports[`BinaryPagination should render with data 1`] = `
-<ul
-  style={
-    Object {
-      "display": "flex",
-      "flexWrap": "wrap",
-      "justifyContent": "space-between",
-      "listStyle": "none",
-      "padding": 0,
-    }
-  }
+<div
+  className="sc-bdVaJa flWwzy"
 >
-  <li>
-    <div
-      data-mock="Link"
+  <div
+    className="sc-bwzfXH kUhibZ"
+  >
+    <ul
+      className="pagination"
     >
-      ← 
-      Prev title
-    </div>
-  </li>
-  <li>
-    <div
-      data-mock="Link"
+      <li
+        className="page-item"
+      >
+        <div
+          data-mock="Link"
+        >
+          ← 
+          Prev title
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-htpNat bQTCAo"
+  >
+    <ul
+      className="pagination"
     >
-      Next title
-       →
-    </div>
-  </li>
-</ul>
+      <li
+        className="page-item"
+      >
+        <div
+          data-mock="Link"
+        >
+          Next title
+           →
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
 `;
 
 exports[`BinaryPagination should use slug if title not provided 1`] = `
-<ul
-  style={
-    Object {
-      "display": "flex",
-      "flexWrap": "wrap",
-      "justifyContent": "space-between",
-      "listStyle": "none",
-      "padding": 0,
-    }
-  }
+<div
+  className="sc-bdVaJa flWwzy"
 >
-  <li>
-    <div
-      data-mock="Link"
+  <div
+    className="sc-bwzfXH kUhibZ"
+  >
+    <ul
+      className="pagination"
     >
-      ← 
-      /prev
-    </div>
-  </li>
-  <li>
-    <div
-      data-mock="Link"
+      <li
+        className="page-item"
+      >
+        <div
+          data-mock="Link"
+        >
+          ← 
+          /prev
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-htpNat bQTCAo"
+  >
+    <ul
+      className="pagination"
     >
-      /next
-       →
-    </div>
-  </li>
-</ul>
+      <li
+        className="page-item"
+      >
+        <div
+          data-mock="Link"
+        >
+          /next
+           →
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
 `;
 
 exports[`BinaryPagination shouldn't render without slug 1`] = `
-<ul
-  style={
-    Object {
-      "display": "flex",
-      "flexWrap": "wrap",
-      "justifyContent": "space-between",
-      "listStyle": "none",
-      "padding": 0,
-    }
-  }
-/>
+<div
+  className="sc-bdVaJa flWwzy"
+>
+  <div
+    className="sc-bwzfXH kUhibZ"
+  />
+  <div
+    className="sc-htpNat bQTCAo"
+  />
+</div>
 `;

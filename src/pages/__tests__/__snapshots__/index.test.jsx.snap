@@ -58,5 +58,10 @@ exports[`Index should render 1`] = `
   ]
 }
   </div>
+  <div
+    data-mock="Pagination"
+  >
+    {}
+  </div>
 </div>
 `;

@@ -4,6 +4,7 @@ import _get from 'lodash/get';
 import Bio from '../containers/Bio';
 import Layout from '../components/Layout/Layout';
 import Posts from '../components/Posts/Posts';
+import Pagination from '../components/Pagination/Pagination';
 
 class PostsList extends React.Component {
     render() {
@@ -21,6 +22,7 @@ class PostsList extends React.Component {
             >
                 <Bio />
                 <Posts list={posts} />
+                <Pagination />
             </Layout>
         )
     }

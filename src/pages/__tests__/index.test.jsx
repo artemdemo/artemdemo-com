@@ -4,6 +4,7 @@ import Index from '../index';
 
 jest.mock('../../components/Container/Container');
 jest.mock('../../components/Posts/Posts');
+jest.mock('../../components/Pagination/Pagination');
 
 describe('Index', () => {
     it('should render', () => {
