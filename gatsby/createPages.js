@@ -6,14 +6,14 @@ const utils = require('../src/services/utils');
 const blogPost = path.resolve('./src/templates/BlogPost.jsx');
 const postsList = path.resolve('./src/templates/PostsList.jsx');
 
-const paginationPath = (path, page, totalPages) => {
+const paginationPath = (page, totalPages) => {
     if (page === 0) {
-        return path
+        return utils.prefixBlog();
     } else if (page < 0 || page >= totalPages) {
         return ''
-    } else {
-        return `${path}/${page + 1}`
     }
+
+    return utils.prefixBlog(page + 1);
 };
 
 const createBlogPages = (posts, createPage) => {
@@ -28,7 +28,7 @@ const createBlogPages = (posts, createPage) => {
         createPage({
             // Calculate the path for this page like `/blog`, `/blog/2`
             //
-            path: paginationPath('/blog', index, paginatedPagesCount),
+            path: paginationPath(index, paginatedPagesCount),
             // Set the component as normal
             //
             component: postsList,
@@ -46,10 +46,10 @@ const createBlogPages = (posts, createPage) => {
                 paginatedPagesCount,
                 // The path to the previous paginated page (or an empty string)
                 //
-                prevPath: paginationPath('/blog', index - 1, paginatedPagesCount),
+                prevPath: paginationPath(index - 1, paginatedPagesCount),
                 // The path to the next paginated page (or an empty string)
                 //
-                nextPath: paginationPath('/blog', index + 1, paginatedPagesCount),
+                nextPath: paginationPath(index + 1, paginatedPagesCount),
             }
         });
     });
@@ -61,7 +61,7 @@ const createBlogPosts = (posts, createPage) => {
         const next = index === 0 ? null : posts[index - 1].node;
 
         createPage({
-            path: `/blog${post.node.fields.slug}`,
+            path: utils.prefixBlog(post.node.fields.slug),
             component: blogPost,
             context: {
                 slug: post.node.fields.slug,

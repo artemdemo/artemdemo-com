@@ -2,7 +2,11 @@ import * as utils from '../utils';
 
 describe('utils', () => {
     it('prefixBlog', () => {
-        expect(utils.prefixBlog('test')).toBe(`/blog/test`);
-        expect(utils.prefixBlog('/second')).toBe(`/blog/second`);
+        const prefix = '/blog';
+        expect(utils.prefixBlog('test')).toBe(`${prefix}/test`);
+        expect(utils.prefixBlog('/second')).toBe(`${prefix}/second`);
+        expect(utils.prefixBlog('/')).toBe(prefix);
+        expect(utils.prefixBlog('')).toBe(prefix);
+        expect(utils.prefixBlog()).toBe(prefix);
     });
 });
