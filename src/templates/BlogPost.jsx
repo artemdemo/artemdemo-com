@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import _get from 'lodash/get';
-import Bio from '../containers/Bio';
 import Layout from '../components/Layout/Layout';
 import BinaryPagination from '../components/Pagination/BinaryPagination';
+import PostDate from '../components/PostDate/PostDate';
 import * as utils from '../services/utils';
 
 import 'prismjs/themes/prism.css';
@@ -42,22 +42,15 @@ class BlogPost extends React.Component {
                 location={this.props.location}
             >
                 <h1>{post.frontmatter.title}</h1>
-                <p
-                    style={{
-                        display: 'block',
-                        marginBottom: '10px',
-                    }}
-                >
+                <PostDate>
                     {post.frontmatter.date}
-                </p>
+                </PostDate>
 
                 <div
                     dangerouslySetInnerHTML={{__html: post.html}}
                 />
 
                 <hr />
-
-                <Bio/>
 
                 {this.renderPagination()}
             </Layout>

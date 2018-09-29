@@ -38,6 +38,7 @@ class Layout extends React.Component {
                     <Icon name='link' />
                 </TitleIconSty>
                 <p className='display-4'>{metaTitle}</p>
+                <hr />
             </TitleWrapperSty>
         )
     }
