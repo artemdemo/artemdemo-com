@@ -20,13 +20,23 @@ exports[`Layout should render empty 1`] = `
   "title": "Regular title"
 }
   </div>
-  <h3>
-    <div
-      data-mock="Link"
+  <div
+    className="sc-bdVaJa jaOyYS"
+  >
+    <button
+      className="sc-bwzfXH frwUYB"
+      onClick={[Function]}
+    >
+      <div
+        data-mock="Icon"
+      />
+    </button>
+    <p
+      className="display-4"
     >
       Meta title
-    </div>
-  </h3>
+    </p>
+  </div>
 </div>
 `;
 
@@ -50,41 +60,25 @@ exports[`Layout should render with children 1`] = `
   "title": "Regular title"
 }
   </div>
-  <h3>
-    <div
-      data-mock="Link"
+  <div
+    className="sc-bdVaJa jaOyYS"
+  >
+    <button
+      className="sc-bwzfXH frwUYB"
+      onClick={[Function]}
+    >
+      <div
+        data-mock="Icon"
+      />
+    </button>
+    <p
+      className="display-4"
     >
       Meta title
-    </div>
-  </h3>
+    </p>
+  </div>
   <div>
     Some child
   </div>
-</div>
-`;
-
-exports[`Layout should render with location 1`] = `
-<div
-  className="container"
->
-  <div
-    data-mock="Helmet"
-  >
-    {
-  "htmlAttributes": {
-    "lang": "en"
-  },
-  "meta": [
-    {
-      "name": "description",
-      "content": "Site description"
-    }
-  ],
-  "title": "Regular title"
-}
-  </div>
-  <h1>
-    Meta title
-  </h1>
 </div>
 `;

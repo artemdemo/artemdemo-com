@@ -12,11 +12,11 @@ const PostsItem = (props) => {
     const title = _get(node, 'frontmatter.title') || node.fields.slug;
     return (
         <div>
-            <h3>
+            <h2>
                 <Link to={utils.prefixBlog(node.fields.slug)}>
                     {title}
                 </Link>
-            </h3>
+            </h2>
             <small>{node.frontmatter.date}</small>
             <p dangerouslySetInnerHTML={{__html: node.excerpt}}/>
         </div>

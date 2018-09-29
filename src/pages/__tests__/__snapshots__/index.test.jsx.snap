@@ -20,13 +20,24 @@ exports[`Index should render 1`] = `
   "title": "Some title"
 }
   </div>
-  <h3>
-    <div
-      data-mock="Link"
+  <div
+    className="sc-bwzfXH heexqI"
+  >
+    <button
+      className="sc-htpNat kxlLiN"
+      onClick={[Function]}
+    >
+      <span
+        className="fa fa-link"
+        title={null}
+      />
+    </button>
+    <p
+      className="display-4"
     >
       Some title
-    </div>
-  </h3>
+    </p>
+  </div>
   <p>
     Written by 
     <strong>
@@ -61,7 +72,11 @@ exports[`Index should render 1`] = `
   <div
     data-mock="Pagination"
   >
-    {}
+    {
+  "skip": 0,
+  "limit": 0,
+  "totalPosts": 0
+}
   </div>
 </div>
 `;

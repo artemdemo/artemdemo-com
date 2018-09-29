@@ -20,13 +20,24 @@ exports[`BlogPost should render 1`] = `
   "title": "FrontMatter title | Site title"
 }
   </div>
-  <h3>
-    <div
-      data-mock="Link"
+  <div
+    className="sc-bwzfXH heexqI"
+  >
+    <button
+      className="sc-htpNat kxlLiN"
+      onClick={[Function]}
+    >
+      <span
+        className="fa fa-link"
+        title={null}
+      />
+    </button>
+    <p
+      className="display-4"
     >
       Site title
-    </div>
-  </h3>
+    </p>
+  </div>
   <h1>
     FrontMatter title
   </h1>
