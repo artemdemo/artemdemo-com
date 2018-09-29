@@ -15,7 +15,7 @@ class Contact extends React.PureComponent {
                 description={siteDescription}
                 location={this.props.location}
             >
-                <h1>Contacts</h1>
+                <h1>Contact me</h1>
                 <p>
                     In order to contact me, please fill form below and I will get back to you.
                 </p>
