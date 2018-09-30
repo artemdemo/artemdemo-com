@@ -12,6 +12,9 @@ const HeaderSty = styled.div`
 
 const HeaderContainerSty = styled.div`
     padding: 15px 0;
+    @media (max-width: 575.98px) {
+        text-align: center;
+    }
 `;
 
 const HeaderItemSty = styled.div`
@@ -22,6 +25,10 @@ const HeaderItemSty = styled.div`
         min-width: 280px;
         font-size: 1.5rem;
         font-weight: 300;
+        @media (max-width: 575.98px) {
+            width: auto;
+            margin-bottom: 10px;
+        }
     `}
     ${props => props.menu && `
         ${styles.clearFix}
