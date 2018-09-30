@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import _get from 'lodash/get';
 import Bio from '../containers/Bio';
+import MainMenu from '../components/MainMenu/MainMenu';
 import Layout from '../components/Layout/Layout';
 import Posts from '../components/Posts/Posts';
 import Pagination from '../components/Pagination/Pagination';
@@ -22,6 +23,7 @@ class PostsList extends React.Component {
                 description={siteDescription}
                 location={this.props.location}
             >
+                <MainMenu />
                 <Bio />
                 <Posts list={posts} />
                 <Pagination

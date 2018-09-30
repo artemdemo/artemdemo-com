@@ -35,3 +35,11 @@ As you can see, it's not a lot rules to follow and remember. Let's see what each
 REST verbs
 
 GET, POST, PUT, DELETE, PATCH, HEADER, OPTIONS
+
+Data flow
+
+REST is not defining by default what are data contracts between server and client.
+However part of the methodology lies in using correct media types, that define sent and received data-types.
+Developer can use existing one or invent one of its own, but the rule of thumb is - you should use existing one and extend it if needed.
+
+[IANA](https://www.iana.org/) is holding [list of registered media types](https://www.iana.org/assignments/media-types/media-types.xhtml) 
