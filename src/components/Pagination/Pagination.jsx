@@ -72,6 +72,12 @@ class Pagination extends React.PureComponent {
     }
 
     render() {
+        const { totalPosts } = this.props;
+
+        if (totalPosts <= utils.POSTS_PER_PAGE) {
+            return null;
+        }
+
         return (
             <ul className='pagination justify-content-center'>
                 {this.renderPrev()}
