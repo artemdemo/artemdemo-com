@@ -23,3 +23,18 @@ export const resetButton = `
     /* Corrects inability to style clickable \`input\` types in iOS */
     -webkit-appearance: none;
 `;
+
+export const resetUl = `
+    list-style-type: none;
+    margin: none;
+    margin: 0;
+    padding: 0;
+`;
+
+export const clearFix = `
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+`;

@@ -9,15 +9,17 @@ class Layout extends React.Component {
     render() {
         const { title, description, location } = this.props;
         return (
-            <Container>
+            <React.Fragment>
                 <Helmet
                     htmlAttributes={{lang: 'en'}}
                     meta={[{name: 'description', content: description}]}
                     title={title}
                 />
                 <Header location={location} />
-                {this.props.children}
-            </Container>
+                <Container>
+                    {this.props.children}
+                </Container>
+            </React.Fragment>
         )
     }
 }

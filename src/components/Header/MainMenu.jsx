@@ -1,26 +1,43 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { locationProp } from '../Layout/layoutProps';
+import * as styles from '../../services/styles';
+
+import './MainMenu.css';
+
+const MainMenuSty = styled.ul`
+    ${styles.clearFix}
+    ${styles.resetUl}
+`;
+
+const MainMenuItemSty = styled.li`
+    float: left;
+    padding: 0 10px;
+    ${props => props.active && `
+        border-bottom: 2px solid #96c9ff;
+    `}
+`;
 
 const MainMenu = () => {
     return (
-        <ul>
-            <li>
-                <Link to='/'>
+        <MainMenuSty>
+            <MainMenuItemSty>
+                <Link className='main-menu-link' to='/'>
                     Blog
                 </Link>
-            </li>
-            <li>
-                <Link to='/about'>
+            </MainMenuItemSty>
+            <MainMenuItemSty active>
+                <Link className='main-menu-link' to='/about'>
                     About
                 </Link>
-            </li>
-            <li>
-                <Link to='/contact'>
+            </MainMenuItemSty>
+            <MainMenuItemSty>
+                <Link className='main-menu-link' to='/contact'>
                     Contact me
                 </Link>
-            </li>
-        </ul>
+            </MainMenuItemSty>
+        </MainMenuSty>
     );
 };
 
