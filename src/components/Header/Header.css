@@ -1,0 +1,6 @@
+.header-logo-link {
+    color: initial;
+}
+.header-logo-link:hover {
+    text-decoration: none;
+}

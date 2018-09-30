@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import MainMenu from './MainMenu';
 import Container from '../Container/Container';
-import Icon from '../Icon/Icon';
 import { locationProp } from '../Layout/layoutProps';
 import * as styles from '../../services/styles';
+
+import './Header.css';
 
 const HeaderSty = styled.div`
     margin-bottom: 20px;
@@ -56,7 +58,9 @@ const Header = (props) => {
             <Container>
                 <HeaderContainerSty>
                     <HeaderItemSty logo>
-                        Artem Demo, frontend dev.
+                        <Link to='/' className='header-logo-link'>
+                            Artem Demo, frontend dev.
+                        </Link>
                     </HeaderItemSty>
                     <HeaderItemSty menu>
                         <HeaderItemMenuSty>
