@@ -17,8 +17,27 @@ class Contact extends React.PureComponent {
             >
                 <h1>Contact me</h1>
                 <p>
-                    In order to contact me, please fill form below and I will get back to you.
+                    Hi there!
                 </p>
+                <p>
+                    If you want to drop me a line, you're more then welcome to do so.
+                    As you can see, I'm using form instead of simple email address.
+                    There is some reasons for that:
+                </p>
+                <ul>
+                    <li>
+                        I don't want get more spam that I'm already receiving.
+                    </li>
+                    <li>
+                        By using dedicated form I will have reserved copy of the email,
+                        in case I removed one from my inbox by accident.
+                    </li>
+                    <li>
+                        And finally I think it's simply faster, to the user.
+                        You don't need to click on email, wait until your client will open and
+                        then do exactly what you can do on this very page :)
+                    </li>
+                </ul>
                 <iframe
                     src='https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true'
                     width='640' height='822' frameBorder='0' marginHeight='0' marginWidth='0'>Loading...
