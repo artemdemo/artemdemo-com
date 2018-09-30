@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About should render 1`] = `
+<div
+  data-mock="Layout"
+>
+  Written by 
+  <strong>
+    Artem Demo
+  </strong>
+   who lives and works in Tel Aviv building useful things.
+   
+  <a
+    href="https://github.com/artemdemo"
+  >
+    You should follow him on Github
+  </a>
+</div>
+`;
