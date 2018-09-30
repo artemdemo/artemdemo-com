@@ -19,20 +19,21 @@ const MainMenuItemSty = styled.li`
     `}
 `;
 
-const MainMenu = () => {
+const MainMenu = (props) => {
+    const { location } = props;
     return (
         <MainMenuSty>
-            <MainMenuItemSty>
+            <MainMenuItemSty active={location.pathname === '/' || location.pathname.startsWith('/blog')}>
                 <Link className='main-menu-link' to='/'>
                     Blog
                 </Link>
             </MainMenuItemSty>
-            <MainMenuItemSty active>
+            <MainMenuItemSty active={location.pathname.startsWith('/about')}>
                 <Link className='main-menu-link' to='/about'>
                     About
                 </Link>
             </MainMenuItemSty>
-            <MainMenuItemSty>
+            <MainMenuItemSty active={location.pathname.startsWith('/contact')}>
                 <Link className='main-menu-link' to='/contact'>
                     Contact me
                 </Link>
