@@ -34,6 +34,7 @@ class PostsList extends React.Component {
 
 export default PostsList
 
+// Notice, that this query should be the same as in `/pages/index.jsx`
 export const pageQuery = graphql`
   query BlogQuery($skip: Int!, $limit: Int!) {
     site {
