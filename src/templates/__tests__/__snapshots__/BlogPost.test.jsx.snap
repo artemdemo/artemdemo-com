@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Contact should render 1`] = `
+exports[`BlogPost should render 1`] = `
 Array [
   <div
     data-mock="Helmet"
@@ -12,10 +12,10 @@ Array [
   "meta": [
     {
       "name": "description",
-      "content": "Some description"
+      "content": "Post excerpt"
     }
   ],
-  "title": "Some title"
+  "title": "FrontMatter title | Site title"
 }
   </div>,
   <div
@@ -81,35 +81,33 @@ Array [
     data-mock="Container"
   >
     <h1>
-      Contact me
+      FrontMatter title
     </h1>
     <p>
-      Hi there!
+      23 May, 2018
     </p>
-    <p>
-      If you want to drop me a line, you're more then welcome to do so. As you can see, I'm using form instead of simple email address. There is some reasons for that:
-    </p>
-    <ul>
-      <li>
-        I don't want get more spam that I'm already receiving.
-      </li>
-      <li>
-        By using dedicated form I will have reserved copy of the email, in case I removed one from my inbox by accident.
-      </li>
-      <li>
-        And finally I think it's simply faster, to the user. You don't need to click on email, wait until your client will open and then do exactly what you can do on this very page :)
-      </li>
-    </ul>
-    <iframe
-      frameBorder="0"
-      height="822"
-      marginHeight="0"
-      marginWidth="0"
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true"
-      width="640"
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "HTML content",
+        }
+      }
+    />
+    <hr />
+    <div
+      data-mock="BinaryPagination"
     >
-      Loading...
-    </iframe>
+      {
+  "previous": {
+    "slug": "/blog/prev",
+    "title": "Prev title"
+  },
+  "next": {
+    "slug": "/blog/next",
+    "title": "Next title"
+  }
+}
+    </div>
   </div>,
 ]
 `;

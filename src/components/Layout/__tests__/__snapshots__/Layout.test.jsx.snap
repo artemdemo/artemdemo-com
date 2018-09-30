@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout should render empty 1`] = `
-<div
-  className="container"
->
+Array [
   <div
     data-mock="Helmet"
   >
@@ -19,31 +17,18 @@ exports[`Layout should render empty 1`] = `
   ],
   "title": "Regular title"
 }
-  </div>
+  </div>,
   <div
-    className="sc-bdVaJa jaOyYS"
-  >
-    <button
-      className="sc-bwzfXH frwUYB"
-      onClick={[Function]}
-    >
-      <div
-        data-mock="Icon"
-      />
-    </button>
-    <p
-      className="display-4"
-    >
-      Meta title
-    </p>
-  </div>
-</div>
+    data-mock="Header"
+  />,
+  <div
+    className="container"
+  />,
+]
 `;
 
 exports[`Layout should render with children 1`] = `
-<div
-  className="container"
->
+Array [
   <div
     data-mock="Helmet"
   >
@@ -59,26 +44,16 @@ exports[`Layout should render with children 1`] = `
   ],
   "title": "Regular title"
 }
-  </div>
+  </div>,
   <div
-    className="sc-bdVaJa jaOyYS"
+    data-mock="Header"
+  />,
+  <div
+    className="container"
   >
-    <button
-      className="sc-bwzfXH frwUYB"
-      onClick={[Function]}
-    >
-      <div
-        data-mock="Icon"
-      />
-    </button>
-    <p
-      className="display-4"
-    >
-      Meta title
-    </p>
-  </div>
-  <div>
-    Some child
-  </div>
-</div>
+    <div>
+      Some child
+    </div>
+  </div>,
+]
 `;

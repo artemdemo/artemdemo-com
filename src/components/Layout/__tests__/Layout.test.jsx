@@ -4,6 +4,7 @@ import Layout from '../Layout';
 
 jest.mock('react-helmet');
 jest.mock('../../Icon/Icon');
+jest.mock('../../Header/Header');
 
 describe('Layout', () => {
     it('should render empty', () => {
