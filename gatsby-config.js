@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        title: 'Frontend thoughts and experiments',
+        title: 'Artem Demo, frontend dev.',
         author: 'Artem Demo',
         description: 'Blog about FrontEnd: JS, CSS, HTML',
         siteUrl: 'https://github.com/artemdemo',
