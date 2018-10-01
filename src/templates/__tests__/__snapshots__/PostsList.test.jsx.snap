@@ -1,89 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PostsList should render 1`] = `
-Array [
+<div
+  data-description="Some description"
+  data-metaTitle="Some title"
+  data-mock="Layout"
+  data-title="Some title"
+>
   <div
-    data-mock="Helmet"
+    data-mock="Posts"
   >
     {
-  "htmlAttributes": {
-    "lang": "en"
-  },
-  "meta": [
-    {
-      "name": "description",
-      "content": "Some description"
-    }
-  ],
-  "title": "Some title"
-}
-  </div>,
-  <div
-    className="sc-bxivhb fzHwCQ"
-  >
-    <div
-      data-mock="Container"
-    >
-      <div
-        className="sc-ifAKCX hFVVjf"
-      >
-        <div
-          className="sc-EHOje izkpzI"
-        >
-          Artem Demo, frontend dev.
-        </div>
-        <div
-          className="sc-EHOje alipj"
-        >
-          <div
-            className="sc-bZQynM dzDdWg"
-          >
-            <ul
-              className="sc-bdVaJa etvdzQ"
-            >
-              <li
-                className="sc-bwzfXH gFlZct"
-              >
-                <div
-                  data-mock="Link"
-                >
-                  Blog
-                </div>
-              </li>
-              <li
-                className="sc-bwzfXH hOcbWo"
-              >
-                <div
-                  data-mock="Link"
-                >
-                  About
-                </div>
-              </li>
-              <li
-                className="sc-bwzfXH gFlZct"
-              >
-                <div
-                  data-mock="Link"
-                >
-                  Contact me
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div
-        className="sc-gzVnrw jIgEQY"
-      />
-    </div>
-  </div>,
-  <div
-    data-mock="Container"
-  >
-    <div
-      data-mock="Posts"
-    >
-      {
   "list": [
     {
       "frontmatter": {
@@ -97,16 +24,15 @@ Array [
     }
   ]
 }
-    </div>
-    <div
-      data-mock="Pagination"
-    >
-      {
+  </div>
+  <div
+    data-mock="Pagination"
+  >
+    {
   "skip": 0,
   "limit": 0,
   "totalPosts": 0
 }
-    </div>
-  </div>,
-]
+  </div>
+</div>
 `;

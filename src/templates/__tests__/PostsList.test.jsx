@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import PostsList from '../PostsList';
 
-jest.mock('../../components/Container/Container');
+jest.mock('../../components/Layout/Layout');
 jest.mock('../../components/Posts/Posts');
 jest.mock('../../components/Pagination/Pagination');
 

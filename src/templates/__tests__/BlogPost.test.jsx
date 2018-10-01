@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import BlogPost from '../BlogPost';
 
 jest.mock('gatsby');
-jest.mock('../../components/Container/Container');
+jest.mock('../../components/Layout/Layout');
 jest.mock('../../components/Pagination/BinaryPagination');
 
 describe('BlogPost', () => {

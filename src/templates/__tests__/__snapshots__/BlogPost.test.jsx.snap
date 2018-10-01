@@ -1,103 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BlogPost should render 1`] = `
-Array [
+<div
+  data-description="Post excerpt"
+  data-metaTitle="Site title"
+  data-mock="Layout"
+  data-title="FrontMatter title | Site title"
+>
+  <h1>
+    FrontMatter title
+  </h1>
+  <p>
+    23 May, 2018
+  </p>
   <div
-    data-mock="Helmet"
-  >
-    {
-  "htmlAttributes": {
-    "lang": "en"
-  },
-  "meta": [
-    {
-      "name": "description",
-      "content": "Post excerpt"
-    }
-  ],
-  "title": "FrontMatter title | Site title"
-}
-  </div>,
-  <div
-    className="sc-bxivhb fzHwCQ"
-  >
-    <div
-      data-mock="Container"
-    >
-      <div
-        className="sc-ifAKCX hFVVjf"
-      >
-        <div
-          className="sc-EHOje izkpzI"
-        >
-          Artem Demo, frontend dev.
-        </div>
-        <div
-          className="sc-EHOje alipj"
-        >
-          <div
-            className="sc-bZQynM dzDdWg"
-          >
-            <ul
-              className="sc-bdVaJa etvdzQ"
-            >
-              <li
-                className="sc-bwzfXH gFlZct"
-              >
-                <div
-                  data-mock="Link"
-                >
-                  Blog
-                </div>
-              </li>
-              <li
-                className="sc-bwzfXH hOcbWo"
-              >
-                <div
-                  data-mock="Link"
-                >
-                  About
-                </div>
-              </li>
-              <li
-                className="sc-bwzfXH gFlZct"
-              >
-                <div
-                  data-mock="Link"
-                >
-                  Contact me
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div
-        className="sc-gzVnrw jIgEQY"
-      />
-    </div>
-  </div>,
-  <div
-    data-mock="Container"
-  >
-    <h1>
-      FrontMatter title
-    </h1>
-    <p>
-      23 May, 2018
-    </p>
-    <div
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "HTML content",
-        }
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "HTML content",
       }
-    />
-    <hr />
-    <div
-      data-mock="BinaryPagination"
-    >
-      {
+    }
+  />
+  <hr />
+  <div
+    data-mock="BinaryPagination"
+  >
+    {
   "previous": {
     "slug": "/blog/prev",
     "title": "Prev title"
@@ -107,7 +34,6 @@ Array [
     "title": "Next title"
   }
 }
-    </div>
-  </div>,
-]
+  </div>
+</div>
 `;
