@@ -7,7 +7,16 @@ jest.mock('../../components/Layout/Layout');
 describe('About', () => {
     it('should render', () => {
         const tree = renderer.create(
-            <About />
+            <About
+                data={{
+                    site: {
+                        siteMetadata: {
+                            title: 'Some title',
+                            description: 'Some description'
+                        },
+                    },
+                }}
+            />
         ).toJSON();
 
         expect(tree).toMatchSnapshot();

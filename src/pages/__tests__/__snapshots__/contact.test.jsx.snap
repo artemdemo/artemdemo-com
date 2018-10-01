@@ -1,115 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Contact should render 1`] = `
-Array [
-  <div
-    data-mock="Helmet"
+<div
+  data-description="Some description"
+  data-metaTitle="Some title"
+  data-mock="Layout"
+  data-title="Some title"
+>
+  <h1>
+    Contact me
+  </h1>
+  <p>
+    Hi there!
+  </p>
+  <p>
+    If you want to drop me a line, you're more then welcome to do so. As you can see, I'm using form instead of simple email address. There is some reasons for that:
+  </p>
+  <ul>
+    <li>
+      I don't want get more spam that I'm already receiving.
+    </li>
+    <li>
+      By using dedicated form I will have reserved copy of the email, in case I removed one from my inbox by accident.
+    </li>
+    <li>
+      And finally I think it's simply faster, to the user. You don't need to click on email, wait until your client will open and then do exactly what you can do on this very page :)
+    </li>
+  </ul>
+  <iframe
+    frameBorder="0"
+    height="822"
+    marginHeight="0"
+    marginWidth="0"
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true"
+    width="640"
   >
-    {
-  "htmlAttributes": {
-    "lang": "en"
-  },
-  "meta": [
-    {
-      "name": "description",
-      "content": "Some description"
-    }
-  ],
-  "title": "Some title"
-}
-  </div>,
-  <div
-    className="sc-bxivhb fzHwCQ"
-  >
-    <div
-      data-mock="Container"
-    >
-      <div
-        className="sc-ifAKCX hFVVjf"
-      >
-        <div
-          className="sc-EHOje izkpzI"
-        >
-          Artem Demo, frontend dev.
-        </div>
-        <div
-          className="sc-EHOje alipj"
-        >
-          <div
-            className="sc-bZQynM dzDdWg"
-          >
-            <ul
-              className="sc-bdVaJa etvdzQ"
-            >
-              <li
-                className="sc-bwzfXH gFlZct"
-              >
-                <div
-                  data-mock="Link"
-                >
-                  Blog
-                </div>
-              </li>
-              <li
-                className="sc-bwzfXH hOcbWo"
-              >
-                <div
-                  data-mock="Link"
-                >
-                  About
-                </div>
-              </li>
-              <li
-                className="sc-bwzfXH gFlZct"
-              >
-                <div
-                  data-mock="Link"
-                >
-                  Contact me
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div
-        className="sc-gzVnrw jIgEQY"
-      />
-    </div>
-  </div>,
-  <div
-    data-mock="Container"
-  >
-    <h1>
-      Contact me
-    </h1>
-    <p>
-      Hi there!
-    </p>
-    <p>
-      If you want to drop me a line, you're more then welcome to do so. As you can see, I'm using form instead of simple email address. There is some reasons for that:
-    </p>
-    <ul>
-      <li>
-        I don't want get more spam that I'm already receiving.
-      </li>
-      <li>
-        By using dedicated form I will have reserved copy of the email, in case I removed one from my inbox by accident.
-      </li>
-      <li>
-        And finally I think it's simply faster, to the user. You don't need to click on email, wait until your client will open and then do exactly what you can do on this very page :)
-      </li>
-    </ul>
-    <iframe
-      frameBorder="0"
-      height="822"
-      marginHeight="0"
-      marginWidth="0"
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true"
-      width="640"
-    >
-      Loading...
-    </iframe>
-  </div>,
-]
+    Loading...
+  </iframe>
+</div>
 `;

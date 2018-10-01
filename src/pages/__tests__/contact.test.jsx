@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Contact from '../contact';
 
-jest.mock('../../components/Container/Container');
+jest.mock('../../components/Layout/Layout');
 
 describe('Contact', () => {
     it('should render', () => {
