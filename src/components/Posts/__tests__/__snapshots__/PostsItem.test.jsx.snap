@@ -13,9 +13,11 @@ exports[`PostsItem should render with node 1`] = `
       Some title
     </div>
   </h2>
-  <small>
+  <div
+    className="sc-bwzfXH bJNuVE"
+  >
     10 May, 2018
-  </small>
+  </div>
   <p
     dangerouslySetInnerHTML={
       Object {
@@ -37,9 +39,11 @@ exports[`PostsItem should render with slug when title not provided 1`] = `
       /first
     </div>
   </h2>
-  <small>
+  <div
+    className="sc-bwzfXH bJNuVE"
+  >
     10 May, 2018
-  </small>
+  </div>
   <p
     dangerouslySetInnerHTML={
       Object {

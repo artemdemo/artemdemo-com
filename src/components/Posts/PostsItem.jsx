@@ -9,6 +9,12 @@ const PostItemSty = styled.div`
     margin-bottom: 30px;
 `;
 
+const PostsItemDateSty = styled.div`
+    font-size: 85%;
+    margin-bottom: 5px;
+    opacity: 0.5;
+`;
+
 const PostsItem = (props) => {
     const { node } = props;
     if (!node) {
@@ -22,7 +28,9 @@ const PostsItem = (props) => {
                     {title}
                 </Link>
             </h2>
-            <small>{node.frontmatter.date}</small>
+            <PostsItemDateSty>
+                {node.frontmatter.date}
+            </PostsItemDateSty>
             <p dangerouslySetInnerHTML={{__html: node.excerpt}}/>
         </PostItemSty>
     );
