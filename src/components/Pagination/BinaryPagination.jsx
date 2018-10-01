@@ -3,20 +3,32 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+import './BinaryPagination.css';
+
 const PaginationContainerSty = styled.div`
     &::after {
         content: '';
         display: table;
         clear: both;
     }
+    
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
-const PaginationLeftSty = styled.div`
-    float: left;
-`;
-
-const PaginationRightSty = styled.div`
-    float: right;
+const PaginationItemSty = styled.div`
+    ${props => props.left && `
+        float: left;    
+    `}
+    ${props => props.right && `
+        float: right;
+    `}
+    @media (max-width: 768px) {
+        float: initial;
+        display: inline-block;
+        width: 51%;
+    }
 `;
 
 class BinaryPagination extends React.PureComponent {
@@ -25,12 +37,12 @@ class BinaryPagination extends React.PureComponent {
         if (previous && previous.slug != null) {
             const title = previous.title || previous.slug;
             return (
-                <ul className="pagination">
-                    <li className="page-item">
+                <ul className='pagination binary-pagination'>
+                    <li className='page-item'>
                         <Link
-                            className="page-link"
+                            className='page-link binary-pagination-link'
                             to={previous.slug}
-                            rel="prev"
+                            rel='prev'
                         >
                             ← {title}
                         </Link>
@@ -46,12 +58,12 @@ class BinaryPagination extends React.PureComponent {
         if (next && next.slug != null) {
             const title = next.title || next.slug;
             return (
-                <ul className="pagination">
-                    <li className="page-item">
+                <ul className='pagination binary-pagination'>
+                    <li className='page-item'>
                         <Link
-                            className="page-link"
+                            className='page-link binary-pagination-link'
                             to={next.slug}
-                            rel="next"
+                            rel='next'
                         >
                             {title} →
                         </Link>
@@ -65,12 +77,12 @@ class BinaryPagination extends React.PureComponent {
     render() {
         return (
             <PaginationContainerSty>
-                <PaginationLeftSty>
+                <PaginationItemSty left>
                     {this.renderPrev()}
-                </PaginationLeftSty>
-                <PaginationRightSty>
+                </PaginationItemSty>
+                <PaginationItemSty right>
                     {this.renderNext()}
-                </PaginationRightSty>
+                </PaginationItemSty>
             </PaginationContainerSty>
         );
     }

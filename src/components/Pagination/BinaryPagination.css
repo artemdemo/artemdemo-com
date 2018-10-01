@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+    .binary-pagination {
+        display: block;
+    }
+}
+
+.binary-pagination-link {
+    max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    .binary-pagination-link {
+        max-width: 300px;
+    }
+}
