@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostDate should render 1`] = `
+<div
+  className="sc-bdVaJa hNfkOC"
+>
+  29 September, 2018
+</div>
+`;

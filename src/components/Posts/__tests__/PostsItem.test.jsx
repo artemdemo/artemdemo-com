@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import PostsItem from '../PostsItem';
 
 jest.mock('gatsby');
+jest.mock('../../PostDate/PostDate');
 
 describe('PostsItem', () => {
     it('should render empty', () => {

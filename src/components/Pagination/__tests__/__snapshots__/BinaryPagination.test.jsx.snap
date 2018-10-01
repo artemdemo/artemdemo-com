@@ -2,26 +2,26 @@
 
 exports[`BinaryPagination should render empty 1`] = `
 <div
-  className="sc-bdVaJa flWwzy"
+  className="sc-bdVaJa dsBppE"
 >
   <div
-    className="sc-bwzfXH kUhibZ"
+    className="sc-bwzfXH bkceN"
   />
   <div
-    className="sc-htpNat bQTCAo"
+    className="sc-bwzfXH ceutDb"
   />
 </div>
 `;
 
 exports[`BinaryPagination should render with data 1`] = `
 <div
-  className="sc-bdVaJa flWwzy"
+  className="sc-bdVaJa dsBppE"
 >
   <div
-    className="sc-bwzfXH kUhibZ"
+    className="sc-bwzfXH bkceN"
   >
     <ul
-      className="pagination"
+      className="pagination binary-pagination"
     >
       <li
         className="page-item"
@@ -36,10 +36,10 @@ exports[`BinaryPagination should render with data 1`] = `
     </ul>
   </div>
   <div
-    className="sc-htpNat bQTCAo"
+    className="sc-bwzfXH ceutDb"
   >
     <ul
-      className="pagination"
+      className="pagination binary-pagination"
     >
       <li
         className="page-item"
@@ -58,13 +58,13 @@ exports[`BinaryPagination should render with data 1`] = `
 
 exports[`BinaryPagination should use slug if title not provided 1`] = `
 <div
-  className="sc-bdVaJa flWwzy"
+  className="sc-bdVaJa dsBppE"
 >
   <div
-    className="sc-bwzfXH kUhibZ"
+    className="sc-bwzfXH bkceN"
   >
     <ul
-      className="pagination"
+      className="pagination binary-pagination"
     >
       <li
         className="page-item"
@@ -79,10 +79,10 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
     </ul>
   </div>
   <div
-    className="sc-htpNat bQTCAo"
+    className="sc-bwzfXH ceutDb"
   >
     <ul
-      className="pagination"
+      className="pagination binary-pagination"
     >
       <li
         className="page-item"
@@ -101,13 +101,13 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
 
 exports[`BinaryPagination shouldn't render without slug 1`] = `
 <div
-  className="sc-bdVaJa flWwzy"
+  className="sc-bdVaJa dsBppE"
 >
   <div
-    className="sc-bwzfXH kUhibZ"
+    className="sc-bwzfXH bkceN"
   />
   <div
-    className="sc-htpNat bQTCAo"
+    className="sc-bwzfXH ceutDb"
   />
 </div>
 `;

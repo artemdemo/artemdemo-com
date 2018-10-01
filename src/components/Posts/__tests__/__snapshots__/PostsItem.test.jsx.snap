@@ -14,7 +14,7 @@ exports[`PostsItem should render with node 1`] = `
     </div>
   </h2>
   <div
-    className="sc-bwzfXH bJNuVE"
+    data-mock="PostDate"
   >
     10 May, 2018
   </div>
@@ -40,7 +40,7 @@ exports[`PostsItem should render with slug when title not provided 1`] = `
     </div>
   </h2>
   <div
-    className="sc-bwzfXH bJNuVE"
+    data-mock="PostDate"
   >
     10 May, 2018
   </div>
