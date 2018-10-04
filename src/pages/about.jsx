@@ -29,14 +29,18 @@ class About extends React.Component {
                     (the one who shares and the one who can find useful information on the internet).
                 </p>
                 <p>
-                    Second, is better understanding of concepts.
-                    You truly start to understand something, only when you start to teach it.
+                    Second, writing helps me as well to better understand the concepts.
+                    You truly start to understand something, only when you start to explain it to someone.
                     I know, that for some it could look not intuitive, but it's true.
                     By explaining complicated concepts we start to understand them better by ourselves.
                 </p>
                 <p>
                     If you're interested in my open source projects, or code examples, you can checkout&nbsp;
-                    <a href="https://github.com/artemdemo" target='_blank'>my github account</a>
+                    <a href="https://github.com/artemdemo" target='_blank'>my github account</a>.
+                </p>
+                <p>
+                    Best, <br />
+                    Artem
                 </p>
             </Layout>
         )
