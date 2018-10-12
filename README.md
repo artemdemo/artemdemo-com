@@ -10,6 +10,8 @@ Basic commands:
 
 https://www.gatsbyjs.org/docs/
 
+I'm using `gatsby@2.0.0`
+
 ## Based on gatsby-starter-blog
 
 https://github.com/gatsbyjs/gatsby-starter-blog
