@@ -1,26 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import _get from 'lodash/get';
-import classnames from 'classnames';
 import Layout from '../components/Layout/Layout';
-
-import './contact.css';
+import ContactForm from '../components/ContactForm/ContactForm';
 
 class Contact extends React.PureComponent {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            formLoaded: false,
-        };
-    }
-
-    iframeLoaded() {
-        this.setState({
-            formLoaded: true,
-        });
-    }
-
     render() {
         const siteTitle = _get(this.props, 'data.site.siteMetadata.title');
         const siteDescription = _get(this.props, 'data.site.siteMetadata.description');
@@ -55,23 +39,7 @@ class Contact extends React.PureComponent {
                         then do exactly what you can do on this very page :)
                     </li>
                 </ul>
-                <div
-                    className={classnames({
-                        'contact-form-loader': true,
-                        'contact-form-loader_loaded': this.state.formLoaded,
-                    })}
-                >
-                    Form is loading...
-                </div>
-                <iframe
-                    src='https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true'
-                    onLoad={this.iframeLoaded.bind(this)}
-                    className={classnames({
-                        'contact-form': true,
-                        'contact-form_loaded': this.state.formLoaded,
-                    })}
-                    width='640' height='822' frameBorder='0' marginHeight='0' marginWidth='0'>Loading...
-                </iframe>
+                <ContactForm />
             </Layout>
         );
     }

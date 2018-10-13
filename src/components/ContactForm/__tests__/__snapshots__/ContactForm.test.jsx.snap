@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactForm should render 1`] = `
+Array [
+  <div
+    className="sc-bdVaJa btQzXo"
+  >
+    Form is loading...
+  </div>,
+  <iframe
+    className="sc-bwzfXH eFGgDK"
+    frameBorder="0"
+    marginHeight="0"
+    marginWidth="0"
+    onLoad={[Function]}
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true"
+  />,
+]
+`;

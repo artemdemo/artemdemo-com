@@ -28,21 +28,7 @@ exports[`Contact should render 1`] = `
     </li>
   </ul>
   <div
-    className="contact-form-loader"
-  >
-    Form is loading...
-  </div>
-  <iframe
-    className="contact-form"
-    frameBorder="0"
-    height="822"
-    marginHeight="0"
-    marginWidth="0"
-    onLoad={[Function]}
-    src="https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true"
-    width="640"
-  >
-    Loading...
-  </iframe>
+    data-mock="ContactForm"
+  />
 </div>
 `;

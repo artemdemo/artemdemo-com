@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import Contact from '../contact';
 
 jest.mock('../../components/Layout/Layout');
+jest.mock('../../components/ContactForm/ContactForm');
 
 describe('Contact', () => {
     it('should render', () => {
