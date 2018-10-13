@@ -2,7 +2,7 @@
 
 exports[`PostDate should render 1`] = `
 <div
-  className="sc-bdVaJa hNfkOC"
+  className="sc-bdVaJa heNSdX"
 >
   29 September, 2018
 </div>
