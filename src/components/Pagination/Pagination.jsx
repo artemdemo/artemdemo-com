@@ -6,6 +6,11 @@ import * as utils from '../../services/utils';
 import PaginationNumItem from './PaginationNumItem';
 
 class Pagination extends React.PureComponent {
+    prefixPath(path) {
+        const { prefixer } = this.props;
+        return prefixer ? prefixer(path) : path;
+    }
+
     renderPrev() {
         const { skip, totalPosts, limit } = this.props;
         if (totalPosts === 0) {
@@ -15,7 +20,7 @@ class Pagination extends React.PureComponent {
             disabled: skip === 0
         });
         const prevPageNumber = Math.floor(skip / limit);
-        const prevPath = prevPageNumber > 1 ? utils.prefixBlog(`/${prevPageNumber}`) : '/';
+        const prevPath = prevPageNumber > 1 ? this.prefixPath(`/${prevPageNumber}`) : this.prefixPath();
         return (
             <li className={itemClass}>
                 <Link
@@ -29,7 +34,7 @@ class Pagination extends React.PureComponent {
     }
 
     renderNext() {
-        const { skip, totalPosts, limit } = this.props;
+        const { skip, totalPosts, limit} = this.props;
         if (totalPosts === 0) {
             return null;
         }
@@ -42,7 +47,7 @@ class Pagination extends React.PureComponent {
             <li className={itemClass}>
                 <Link
                     className='page-link'
-                    to={utils.prefixBlog(`/${nextPageNumber}`)}
+                    to={this.prefixPath(`/${nextPageNumber}`)}
                 >
                     Next
                 </Link>
@@ -51,7 +56,7 @@ class Pagination extends React.PureComponent {
     }
 
     renderNumPages() {
-        const { totalPosts, limit, skip } = this.props;
+        const { totalPosts, limit, skip, prefixer } = this.props;
         if (totalPosts === 0) {
             return null;
         }
@@ -64,6 +69,7 @@ class Pagination extends React.PureComponent {
                     <PaginationNumItem
                         pageNum={index + 1}
                         active={currentNumber === index + 1}
+                        prefixer={prefixer}
                         key={`pagination-item-${index}`}
                     />
                 ))}
@@ -92,12 +98,14 @@ Pagination.propTypes = {
     skip: PropTypes.number,
     limit: PropTypes.number,
     totalPosts: PropTypes.number,
+    prefixer: PropTypes.func,
 };
 
 Pagination.defaultProps = {
     skip: 0,
     limit: 0,
     totalPosts: 0,
+    prefixer: null,
 };
 
 export default Pagination;

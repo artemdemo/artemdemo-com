@@ -3,7 +3,7 @@ const path = require('path');
 const utils = require('../../src/services/utils');
 
 // Path in `path.resolve` should be relative to `gatsby-node.js`
-const postsList = path.resolve('./src/templates/PostsList.jsx');
+const PostsList = path.resolve('./src/templates/PostsList.jsx');
 
 const paginationPath = (page, totalPages) => {
     if (page === 0) {
@@ -30,7 +30,7 @@ const createBlogPages = (posts, createPage) => new Promise((resolve) => {
             path: paginationPath(index, paginatedPagesCount),
             // Set the component as normal
             //
-            component: postsList,
+            component: PostsList,
             // Pass the following context to the component
             //
             context: {

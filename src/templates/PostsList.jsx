@@ -4,15 +4,28 @@ import _get from 'lodash/get';
 import Layout from '../components/Layout/Layout';
 import Posts from '../components/Posts/Posts';
 import Pagination from '../components/Pagination/Pagination';
+import * as utils from '../services/utils';
 
 class PostsList extends React.Component {
+    renderPagination(prefixer = utils.prefixBlog) {
+        const totalCount = _get(this.props, 'data.allMarkdownRemark.totalCount', 0);
+        const skip = _get(this.props, 'pageContext.skip', 0);
+        const limit = _get(this.props, 'pageContext.limit', 0);
+
+        return (
+            <Pagination
+                skip={skip}
+                limit={limit}
+                totalPosts={totalCount}
+                prefixer={prefixer}
+            />
+        );
+    }
+
     render() {
         const siteTitle = _get(this.props, 'data.site.siteMetadata.title');
         const siteDescription = _get(this.props, 'data.site.siteMetadata.description');
         const posts = _get(this.props, 'data.allMarkdownRemark.edges');
-        const totalCount = _get(this.props, 'data.allMarkdownRemark.totalCount', 0);
-        const skip = _get(this.props, 'pageContext.skip', 0);
-        const limit = _get(this.props, 'pageContext.limit', 0);
 
         return (
             <Layout
@@ -22,17 +35,13 @@ class PostsList extends React.Component {
                 location={this.props.location}
             >
                 <Posts list={posts} />
-                <Pagination
-                    skip={skip}
-                    limit={limit}
-                    totalPosts={totalCount}
-                />
+                {this.renderPagination()}
             </Layout>
         )
     }
 }
 
-export default PostsList
+export default PostsList;
 
 // Notice, that this query should be the same as in `/pages/index.jsx`
 export const pageQuery = graphql`
