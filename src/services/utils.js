@@ -1,6 +1,6 @@
 const _isString = require('lodash/isString');
 
-exports.POSTS_PER_PAGE = 1;
+exports.POSTS_PER_PAGE = 10;
 
 const prefix = (prefix, slug) => {
     const suffix = _isString(slug) && slug.startsWith('/') ? slug.substr(1) : slug;
