@@ -17,7 +17,7 @@ const paginationPath = (page, totalPages) => {
     return utils.prefixBlog(page + 1);
 };
 
-const createBlogPages = (posts, createPage) => {
+const createBlogPages = (posts, createPage) => new Promise((resolve) => {
     const postsAmount = posts.length;
     // How many paginated pages do we need?
     //
@@ -45,9 +45,11 @@ const createBlogPages = (posts, createPage) => {
             }
         });
     });
-};
 
-const createBlogPosts = (posts, createPage) => {
+    resolve();
+});
+
+const createBlogPosts = (posts, createPage) => new Promise((resolve) => {
     _.each(posts, (post, index) => {
         const previous = index === posts.length - 1 ? null : posts[index + 1].node;
         const next = index === 0 ? null : posts[index - 1].node;
@@ -62,12 +64,14 @@ const createBlogPosts = (posts, createPage) => {
             },
         })
     });
-};
+
+    resolve();
+});
 
 // Creating Tags Pages for Blog Posts
 // https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/
 //
-const createTagsPages = (posts, createPage) => {
+const createTagsPages = (posts, createPage) => new Promise((resolve) => {
     let tags = [];
     // Iterate through each post, putting all found tags into `tags`
     _.each(posts, (edge) => {
@@ -85,11 +89,14 @@ const createTagsPages = (posts, createPage) => {
                 tag,
             },
         })
-    })
-};
+    });
+
+    resolve();
+});
 
 const createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
+    let posts = [];
 
     return new Promise((resolve, reject) => {
         // Now we're seeding GraphQL “database” that we can then query against via page-level GraphQL queries.
@@ -112,19 +119,27 @@ const createPages = ({ graphql, actions }) => {
                 }
               }
             `
-        ).then((result) => {
-            if (result.errors) {
-                console.log(result.errors);
-                reject(result.errors);
-            }
+        )
+            .then((result) => {
+                if (result.errors) {
+                    console.log(result.errors);
+                    reject(result.errors);
+                }
 
-            const posts = result.data.allMarkdownRemark.edges;
-            createBlogPages(posts, createPage);
-            createBlogPosts(posts, createPage);
-            createTagsPages(posts, createPage);
-
-            resolve();
-        });
+                posts = result.data.allMarkdownRemark.edges;
+            })
+            .then(() => {
+                return createBlogPages(posts, createPage);
+            })
+            .then(() => {
+                return createBlogPosts(posts, createPage);
+            })
+            .then(() => {
+                return createTagsPages(posts, createPage, graphql);
+            })
+            .then(() => {
+                resolve();
+            });
     })
 };
 
