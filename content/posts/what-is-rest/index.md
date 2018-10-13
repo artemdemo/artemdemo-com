@@ -1,6 +1,7 @@
 ---
 title: What is REST?
 date: "2018-09-29T23:46:37.121Z"
+tags: ["rest", "get", "post"]
 ---
 
 This is one of rare occasions when disambiguation will not lead better understanding.

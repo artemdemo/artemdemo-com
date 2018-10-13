@@ -4,6 +4,7 @@ import _get from 'lodash/get';
 import Layout from '../components/Layout/Layout';
 import BinaryPagination from '../components/Pagination/BinaryPagination';
 import PostDate from '../components/PostDate/PostDate';
+import PostTags from '../components/PostTags/PostTags';
 import * as utils from '../services/utils';
 
 import 'prismjs/themes/prism.css';
@@ -32,6 +33,7 @@ class BlogPost extends React.Component {
     render() {
         const post = this.props.data.markdownRemark;
         const siteTitle = _get(this.props, 'data.site.siteMetadata.title');
+        const tags = _get(this.props, 'data.markdownRemark.frontmatter.tags', []);
         const siteDescription = post.excerpt;
 
         return (
@@ -45,6 +47,7 @@ class BlogPost extends React.Component {
                 <PostDate>
                     {post.frontmatter.date}
                 </PostDate>
+                <PostTags tags={tags} />
 
                 <div
                     dangerouslySetInnerHTML={{__html: post.html}}
@@ -75,6 +78,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        tags
       }
     }
   }

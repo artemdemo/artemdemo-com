@@ -38,3 +38,14 @@ export const clearFix = `
         clear: both;
     }
 `;
+
+export const secondaryText = `
+    font-size: 85%;
+    margin-bottom: 10px;
+    opacity: 0.5;
+    transition: 300ms;
+    
+    &:hover {
+        opacity: 1;
+    }
+`;

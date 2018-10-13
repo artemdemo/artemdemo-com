@@ -3,7 +3,7 @@ import PostsList from '../templates/PostsList';
 
 class BlogIndex extends PostsList {}
 
-export default BlogIndex
+export default BlogIndex;
 
 // Notice, that this query should be the same as in `/templates/PostsList.jsx`
 // ToDo: Find the way to keep both queries in one place
