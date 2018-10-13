@@ -5,6 +5,7 @@ const utils = require('../src/services/utils');
 // Path in `path.resolve` should be relative to `gatsby-node.js`
 const blogPost = path.resolve('./src/templates/BlogPost.jsx');
 const postsList = path.resolve('./src/templates/PostsList.jsx');
+const PostsListByTag = path.resolve('./src/templates/PostsListByTag.jsx');
 
 const paginationPath = (page, totalPages) => {
     if (page === 0) {
@@ -63,6 +64,30 @@ const createBlogPosts = (posts, createPage) => {
     });
 };
 
+// Creating Tags Pages for Blog Posts
+// https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/
+//
+const createTagsPages = (posts, createPage) => {
+    let tags = [];
+    // Iterate through each post, putting all found tags into `tags`
+    _.each(posts, (edge) => {
+        tags = tags.concat(_.get(edge, 'node.frontmatter.tags', []));
+    });
+    // Eliminate duplicate tags
+    tags = _.uniq(tags);
+
+    // Make tag pages
+    tags.forEach(tag => {
+        createPage({
+            path: `/tags/${_.kebabCase(tag)}/`,
+            component: PostsListByTag,
+            context: {
+                tag,
+            },
+        })
+    })
+};
+
 const createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
 
@@ -72,7 +97,7 @@ const createPages = ({ graphql, actions }) => {
         graphql(
             `
               {
-                allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+                allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 2000) {
                   edges {
                     node {
                       fields {
@@ -80,6 +105,7 @@ const createPages = ({ graphql, actions }) => {
                       }
                       frontmatter {
                         title
+                        tags
                       }
                     }
                   }
@@ -95,6 +121,7 @@ const createPages = ({ graphql, actions }) => {
             const posts = result.data.allMarkdownRemark.edges;
             createBlogPages(posts, createPage);
             createBlogPosts(posts, createPage);
+            createTagsPages(posts, createPage);
 
             resolve();
         });
