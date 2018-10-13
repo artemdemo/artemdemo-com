@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostTags should render with tags 1`] = `
+<div
+  className="sc-bdVaJa heNSdX"
+>
+  Tags: 
+  <div
+    className="sc-bwzfXH fylPMz"
+  >
+    <div
+      data-mock="Link"
+    >
+      one
+    </div>
+  </div>
+  <div
+    className="sc-bwzfXH fylPMz"
+  >
+    <div
+      data-mock="Link"
+    >
+      two
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PostTags should render without tags 1`] = `null`;

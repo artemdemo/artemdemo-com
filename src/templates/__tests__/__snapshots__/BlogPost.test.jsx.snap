@@ -16,6 +16,9 @@ exports[`BlogPost should render 1`] = `
     23 May, 2018
   </div>
   <div
+    data-mock="PostTags"
+  />
+  <div
     dangerouslySetInnerHTML={
       Object {
         "__html": "HTML content",

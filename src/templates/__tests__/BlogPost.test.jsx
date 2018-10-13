@@ -6,6 +6,7 @@ jest.mock('gatsby');
 jest.mock('../../components/Layout/Layout');
 jest.mock('../../components/Pagination/BinaryPagination');
 jest.mock('../../components/PostDate/PostDate');
+jest.mock('../../components/PostTags/PostTags');
 
 describe('BlogPost', () => {
     it('should render', () => {
