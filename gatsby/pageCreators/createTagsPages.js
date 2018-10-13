@@ -8,16 +8,20 @@ const PostsListByTag = path.resolve('./src/templates/PostsListByTag.jsx');
 // https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/
 //
 const createTagsPages = (posts, createPage) => new Promise((resolve) => {
-    let tags = [];
+    const tagsMap = {};
+
     // Iterate through each post, putting all found tags into `tags`
     _.each(posts, (edge) => {
-        tags = tags.concat(_.get(edge, 'node.frontmatter.tags', []));
+        const edgeTags = _.get(edge, 'node.frontmatter.tags', []);
+        edgeTags.forEach((tag) => {
+            tagsMap[tag] ? tagsMap[tag]++ : tagsMap[tag] = 1;
+        });
     });
-    // Eliminate duplicate tags
-    tags = _.uniq(tags);
+
+    console.log(tagsMap);
 
     // Make tag pages
-    tags.forEach(tag => {
+    Object.keys(tagsMap).forEach(tag => {
         createPage({
             path: `/tags/${_.kebabCase(tag)}/`,
             component: PostsListByTag,
