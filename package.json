@@ -54,7 +54,7 @@
   "main": "n/a",
   "scripts": {
     "start": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json",
     "test:coverage": "BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json --coverage",
     "develop": "gatsby develop",
