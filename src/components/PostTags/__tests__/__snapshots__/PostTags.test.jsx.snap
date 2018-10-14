@@ -2,11 +2,11 @@
 
 exports[`PostTags should render with tags 1`] = `
 <div
-  className="sc-bdVaJa heNSdX"
+  data-mock="SecondaryText"
 >
   Tags: 
   <div
-    className="sc-bwzfXH fylPMz"
+    className="sc-bdVaJa euERvt"
   >
     <div
       data-mock="Link"
@@ -15,7 +15,7 @@ exports[`PostTags should render with tags 1`] = `
     </div>
   </div>
   <div
-    className="sc-bwzfXH fylPMz"
+    className="sc-bdVaJa euERvt"
   >
     <div
       data-mock="Link"

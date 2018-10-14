@@ -1,15 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import PostDate from '../PostDate';
+import SecondaryText from '../SecondaryText';
 
-jest.mock('../../SecondaryText/SecondaryText');
-
-describe('PostDate', () => {
+describe('SecondaryText', () => {
     it('should render', () => {
         const tree = renderer.create(
-            <PostDate>
-                29 September, 2018
-            </PostDate>
+            <SecondaryText>
+                Some text
+            </SecondaryText>
         ).toJSON();
 
         expect(tree).toMatchSnapshot();

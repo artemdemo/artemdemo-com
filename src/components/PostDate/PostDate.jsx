@@ -1,8 +1,10 @@
-import styled from 'styled-components';
-import { secondaryText } from '../../services/styles';
+import React from 'react';
+import SecondaryText from '../SecondaryText/SecondaryText';
 
-const PostDate = styled.div`
-    ${secondaryText}
-`;
+const PostDate = props => (
+    <SecondaryText>
+        {props.children}
+    </SecondaryText>
+);
 
 export default PostDate;

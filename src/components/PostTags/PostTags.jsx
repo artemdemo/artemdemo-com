@@ -2,12 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { secondaryText } from '../../services/styles';
+import SecondaryText from '../SecondaryText/SecondaryText';
 import { normalizeTag } from '../../services/utils';
-
-const PostTagsSty = styled.div`
-    ${secondaryText}
-`;
 
 const PostTagsItemSty = styled.div`
     display: inline-block;
@@ -27,7 +23,7 @@ const PostTags = (props) => {
         return null;
     }
     return (
-        <PostTagsSty>
+        <SecondaryText>
             Tags:&nbsp;
             {tags.map(tag => (
                 <PostTagsItemSty
@@ -38,7 +34,7 @@ const PostTags = (props) => {
                     </Link>
                 </PostTagsItemSty>
             ))}
-        </PostTagsSty>
+        </SecondaryText>
     );
 };
 

@@ -2,6 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import PostTags from '../PostTags';
 
+jest.mock('../../SecondaryText/SecondaryText');
+
 describe('PostTags', () => {
     it('should render without tags', () => {
         const tree = renderer.create(
