@@ -6,7 +6,7 @@ exports[`PostTags should render with tags 1`] = `
 >
   Tags: 
   <div
-    className="sc-bdVaJa euERvt"
+    className="PostTags__PostTagsItemSty-sc-8r4n58-0 czQWcx"
   >
     <div
       data-mock="Link"
@@ -15,7 +15,7 @@ exports[`PostTags should render with tags 1`] = `
     </div>
   </div>
   <div
-    className="sc-bdVaJa euERvt"
+    className="PostTags__PostTagsItemSty-sc-8r4n58-0 czQWcx"
   >
     <div
       data-mock="Link"

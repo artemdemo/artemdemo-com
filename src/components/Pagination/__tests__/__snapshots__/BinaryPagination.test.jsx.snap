@@ -2,23 +2,23 @@
 
 exports[`BinaryPagination should render empty 1`] = `
 <div
-  className="sc-bdVaJa dsBppE"
+  className="BinaryPagination__PaginationContainerSty-sc-1j8x01y-0 cUJyHY"
 >
   <div
-    className="sc-bwzfXH bkceN"
+    className="BinaryPagination__PaginationItemSty-sc-1j8x01y-1 kQHAns"
   />
   <div
-    className="sc-bwzfXH ceutDb"
+    className="BinaryPagination__PaginationItemSty-sc-1j8x01y-1 flucJZ"
   />
 </div>
 `;
 
 exports[`BinaryPagination should render with data 1`] = `
 <div
-  className="sc-bdVaJa dsBppE"
+  className="BinaryPagination__PaginationContainerSty-sc-1j8x01y-0 cUJyHY"
 >
   <div
-    className="sc-bwzfXH bkceN"
+    className="BinaryPagination__PaginationItemSty-sc-1j8x01y-1 kQHAns"
   >
     <ul
       className="pagination binary-pagination"
@@ -36,7 +36,7 @@ exports[`BinaryPagination should render with data 1`] = `
     </ul>
   </div>
   <div
-    className="sc-bwzfXH ceutDb"
+    className="BinaryPagination__PaginationItemSty-sc-1j8x01y-1 flucJZ"
   >
     <ul
       className="pagination binary-pagination"
@@ -58,10 +58,10 @@ exports[`BinaryPagination should render with data 1`] = `
 
 exports[`BinaryPagination should use slug if title not provided 1`] = `
 <div
-  className="sc-bdVaJa dsBppE"
+  className="BinaryPagination__PaginationContainerSty-sc-1j8x01y-0 cUJyHY"
 >
   <div
-    className="sc-bwzfXH bkceN"
+    className="BinaryPagination__PaginationItemSty-sc-1j8x01y-1 kQHAns"
   >
     <ul
       className="pagination binary-pagination"
@@ -79,7 +79,7 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
     </ul>
   </div>
   <div
-    className="sc-bwzfXH ceutDb"
+    className="BinaryPagination__PaginationItemSty-sc-1j8x01y-1 flucJZ"
   >
     <ul
       className="pagination binary-pagination"
@@ -101,13 +101,13 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
 
 exports[`BinaryPagination shouldn't render without slug 1`] = `
 <div
-  className="sc-bdVaJa dsBppE"
+  className="BinaryPagination__PaginationContainerSty-sc-1j8x01y-0 cUJyHY"
 >
   <div
-    className="sc-bwzfXH bkceN"
+    className="BinaryPagination__PaginationItemSty-sc-1j8x01y-1 kQHAns"
   />
   <div
-    className="sc-bwzfXH ceutDb"
+    className="BinaryPagination__PaginationItemSty-sc-1j8x01y-1 flucJZ"
   />
 </div>
 `;

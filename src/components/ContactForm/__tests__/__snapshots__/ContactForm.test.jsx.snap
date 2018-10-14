@@ -3,12 +3,12 @@
 exports[`ContactForm should render 1`] = `
 Array [
   <div
-    className="sc-bdVaJa btQzXo"
+    className="ContactForm__ContactFormLoadingSty-r3mpp6-0 hPxlFJ"
   >
     Form is loading...
   </div>,
   <iframe
-    className="sc-bwzfXH eFGgDK"
+    className="ContactForm__ContactFormIframeSty-r3mpp6-1 kQrKSt"
     frameBorder="0"
     marginHeight="0"
     marginWidth="0"

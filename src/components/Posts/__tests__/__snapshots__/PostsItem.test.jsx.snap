@@ -4,7 +4,7 @@ exports[`PostsItem should render empty 1`] = `null`;
 
 exports[`PostsItem should render with node 1`] = `
 <div
-  className="sc-bdVaJa bKXTIM"
+  className="PostsItem__PostItemSty-sc-1fceitp-0 bGzTAb"
 >
   <h2>
     <div
@@ -30,7 +30,7 @@ exports[`PostsItem should render with node 1`] = `
 
 exports[`PostsItem should render with slug when title not provided 1`] = `
 <div
-  className="sc-bdVaJa bKXTIM"
+  className="PostsItem__PostItemSty-sc-1fceitp-0 bGzTAb"
 >
   <h2>
     <div

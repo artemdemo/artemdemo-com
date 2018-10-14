@@ -2,7 +2,7 @@
 
 exports[`SecondaryText should render 1`] = `
 <div
-  className="sc-bdVaJa hUnbxe"
+  className="SecondaryText-gvqirs-0 fRfnNE"
 >
   Some text
 </div>
