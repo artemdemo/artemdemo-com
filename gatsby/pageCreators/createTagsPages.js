@@ -7,12 +7,12 @@ const PostsListByTag = path.resolve('./src/templates/PostsListByTag.jsx');
 
 const paginationPath = (tag, page, totalPages) => {
     if (page === 0) {
-        return utils.prefixTag(tag);
+        return utils.prefixTag(utils.normalizeTag(tag));
     } else if (page < 0 || page >= totalPages) {
         return ''
     }
 
-    return utils.prefixTag(tag, page + 1);
+    return utils.prefixTag(utils.normalizeTag(tag), page + 1);
 };
 
 // Creating Tags Pages for Blog Posts

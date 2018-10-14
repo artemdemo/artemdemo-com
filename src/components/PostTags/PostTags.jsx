@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { secondaryText } from '../../services/styles';
+import { normalizeTag } from '../../services/utils';
 
 const PostTagsSty = styled.div`
     ${secondaryText}
@@ -30,9 +31,9 @@ const PostTags = (props) => {
             Tags:&nbsp;
             {tags.map(tag => (
                 <PostTagsItemSty
-                    key={`post-tags${tag}`}
+                    key={`post-tags-${normalizeTag(tag)}`}
                 >
-                    <Link to={`/tags/${tag}`}>
+                    <Link to={`/tags/${normalizeTag(tag)}`}>
                         {tag}
                     </Link>
                 </PostTagsItemSty>
