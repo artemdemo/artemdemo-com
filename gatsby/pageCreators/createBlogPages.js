@@ -3,7 +3,7 @@ const path = require('path');
 const utils = require('../../src/services/utils');
 
 // Path in `path.resolve` should be relative to `gatsby-node.js`
-const PostsList = path.resolve('./src/templates/PostsList.jsx');
+const PostsList = path.resolve('./src/pages/index.jsx');
 
 const paginationPath = (page, totalPages) => {
     if (page === 0) {

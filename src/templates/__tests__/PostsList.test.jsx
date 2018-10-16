@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import PostsList from '../PostsList';
+import PostsList from '../../pages/PostsList/PostsList';
 
 jest.mock('../../components/Layout/Layout');
 jest.mock('../../components/Posts/Posts');

@@ -1,6 +1,6 @@
 import _get from 'lodash/get';
 import { graphql } from 'gatsby';
-import PostsList from './PostsList';
+import PostsList from '../pages/PostsList/PostsList';
 import * as utils from '../services/utils';
 
 class PostsListByTag extends PostsList {

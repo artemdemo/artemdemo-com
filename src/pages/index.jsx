@@ -1,12 +1,10 @@
 import { graphql } from 'gatsby';
-import PostsList from '../templates/PostsList';
+import PostsList from './PostsList/PostsList';
 
 class BlogIndex extends PostsList {}
 
 export default BlogIndex;
 
-// Notice, that this query should be the same as in `/templates/PostsList.jsx`
-// ToDo: Find the way to keep both queries in one place
 export const pageQuery = graphql`
   query IndexQuery($skip: Int!, $limit: Int!) {
     site {
