@@ -30,6 +30,9 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-test-renderer": "^16.5.2",
+    "remark": "^9.0.0",
+    "remark-html": "^8.0.0",
+    "remark-preset-lint-markdown-style-guide": "^2.1.2",
     "styled-components": "^3.4.9"
   },
   "devDependencies": {
@@ -48,7 +51,8 @@
     "enzyme-to-json": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
-    "gh-pages": "^1.2.0"
+    "gh-pages": "^1.2.0",
+    "raw-loader": "^0.5.1"
   },
   "license": "MIT",
   "main": "n/a",

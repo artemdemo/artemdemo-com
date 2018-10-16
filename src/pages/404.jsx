@@ -1,11 +1,29 @@
 import React from 'react'
-import Container from '../components/Container/Container';
+import { graphql } from 'gatsby';
+import BasePage from './BasePage/BasePage';
 
-const NotFoundPage = () => (
-    <Container>
-        <h1>NOT FOUND</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Container>
-);
+class NotFoundPage extends BasePage {
+    constructor(props) {
+        super(props);
 
-export default NotFoundPage
+        // Here I'm using inline loader for webpack.
+        // Since I don't have access to original webpack configuration,
+        // it's the only way to use specific loader
+        // @docs https://webpack.js.org/concepts/loaders/#inline
+        //
+        this.contentMd = require('raw-loader?modules!./md/404.md');
+    }
+}
+
+export default NotFoundPage;
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
