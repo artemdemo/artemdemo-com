@@ -6,8 +6,6 @@ import Container from '../Container/Container';
 import { locationProp } from '../Layout/layoutProps';
 import * as styles from '../../services/styles';
 
-import './Header.css';
-
 const HeaderSty = styled.div`
     margin-bottom: 20px;
 `;
@@ -51,6 +49,13 @@ const HeaderSeparatorSty = styled.div`
     margin: 0 auto;
 `;
 
+const HeaderLogoLinkSty = styled(Link)`
+    color: initial;
+    &:hover {
+        text-decoration: none;
+    }
+`;
+
 const Header = (props) => {
     const { location } = props;
     return (
@@ -58,9 +63,9 @@ const Header = (props) => {
             <Container>
                 <HeaderContainerSty>
                     <HeaderItemSty logo>
-                        <Link to='/' className='header-logo-link'>
+                        <HeaderLogoLinkSty to='/'>
                             Artem Demo, frontend dev.
-                        </Link>
+                        </HeaderLogoLinkSty>
                     </HeaderItemSty>
                     <HeaderItemSty menu>
                         <HeaderItemMenuSty>

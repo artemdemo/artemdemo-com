@@ -4,8 +4,6 @@ import { Link } from 'gatsby';
 import { locationProp } from '../Layout/layoutProps';
 import * as styles from '../../services/styles';
 
-import './MainMenu.css';
-
 const MainMenuSty = styled.ul`
     ${styles.clearFix}
     ${styles.resetUl}
@@ -19,24 +17,30 @@ const MainMenuItemSty = styled.li`
     `}
 `;
 
+const MainMenuLinkSty = styled(Link)`
+    &:hover {
+        text-decoration: none;
+    }
+`;
+
 const MainMenu = (props) => {
     const { location } = props;
     return (
         <MainMenuSty>
             <MainMenuItemSty active={location.pathname === '/' || location.pathname.startsWith('/blog')}>
-                <Link className='main-menu-link' to='/'>
+                <MainMenuLinkSty to='/'>
                     Blog
-                </Link>
+                </MainMenuLinkSty>
             </MainMenuItemSty>
             <MainMenuItemSty active={location.pathname.startsWith('/about')}>
-                <Link className='main-menu-link' to='/about'>
+                <MainMenuLinkSty to='/about'>
                     About
-                </Link>
+                </MainMenuLinkSty>
             </MainMenuItemSty>
             <MainMenuItemSty active={location.pathname.startsWith('/contact')}>
-                <Link className='main-menu-link' to='/contact'>
+                <MainMenuLinkSty to='/contact'>
                     Contact me
-                </Link>
+                </MainMenuLinkSty>
             </MainMenuItemSty>
         </MainMenuSty>
     );
