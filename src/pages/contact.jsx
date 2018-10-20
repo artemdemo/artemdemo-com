@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import ContactForm from '../components/ContactForm/ContactForm';
 import BasePage from './BasePage/BasePage';
+import { isTestEnv } from '../services/testEnv';
 
 class Contact extends BasePage {
     constructor(props) {
@@ -12,7 +13,7 @@ class Contact extends BasePage {
         // it's the only way to use specific loader
         // @docs https://webpack.js.org/concepts/loaders/#inline
         //
-        this.contentMd = require('raw-loader?modules!./md/contact.md');
+        this.contentMd = isTestEnv ? null : require('raw-loader?modules!./md/contact.md');
     }
 
     renderAfterContent() {

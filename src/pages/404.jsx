@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby';
 import BasePage from './BasePage/BasePage';
+import { isTestEnv } from '../services/testEnv';
 
 class NotFoundPage extends BasePage {
     constructor(props) {
@@ -11,7 +12,7 @@ class NotFoundPage extends BasePage {
         // it's the only way to use specific loader
         // @docs https://webpack.js.org/concepts/loaders/#inline
         //
-        this.contentMd = require('raw-loader?modules!./md/404.md');
+        this.contentMd = isTestEnv ? null : require('raw-loader?modules!./md/404.md');
     }
 }
 

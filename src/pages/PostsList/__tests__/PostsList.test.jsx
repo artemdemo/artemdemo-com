@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import PostsList from '../../pages/PostsList/PostsList';
+import PostsList from '../PostsList';
 
-jest.mock('../../components/Layout/Layout');
-jest.mock('../../components/Posts/Posts');
-jest.mock('../../components/Pagination/Pagination');
+jest.mock('../../../components/Layout/Layout');
+jest.mock('../../../components/Posts/Posts');
+jest.mock('../../../components/Pagination/Pagination');
 
 describe('PostsList', () => {
     it('should render', () => {

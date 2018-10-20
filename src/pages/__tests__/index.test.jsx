@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Index from '../index';
 
-jest.mock('../../templates/PostsList');
+jest.mock('../PostsList/PostsList');
 
 describe('Index', () => {
     it('should render', () => {
