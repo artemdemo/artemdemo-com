@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{66:function(e,a,n){"use strict";var r=n(7),t=n(1);Object.defineProperty(a,"__esModule",{value:!0}),a.pageQuery=a.default=void 0;var u=t(n(92)),o=t(n(62)),s=r(n(94));var p=class extends o.default{constructor(e){super(e)}renderPagination(){const e=(0,u.default)(this.props,"pageContext.tag","");return super.renderPagination(s.prefixTag.bind(null,e))}};a.default=p;a.pageQuery="2016759457"}}]);
+//# sourceMappingURL=component---src-templates-posts-list-by-tag-jsx-c80ced3897ea96623fe6.js.map

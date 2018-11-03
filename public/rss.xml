@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, frontend dev.]]></title><description><![CDATA[Blog about FrontEnd: JS, CSS, HTML]]></description><link>https://github.com/artemdemo</link><generator>RSS for Node</generator><lastBuildDate>Sat, 03 Nov 2018 08:09:46 GMT</lastBuildDate><item><title><![CDATA[Where the default sorting of a collection should be done]]></title><description><![CDATA[Let’s say you need to display a collection that you received from the server.
+Usually it will come in the form of an array of objects: list…]]></description><link>https://github.com/artemdemo/20181103-default-collection-sorting/</link><guid isPermaLink="false">https://github.com/artemdemo/20181103-default-collection-sorting/</guid><pubDate>Sat, 03 Nov 2018 09:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Let’s say you need to display a collection that you received from the server.
+Usually it will come in the form of an array of objects: list of books, people, goods, etc.
+It’s a very common task for frontend.
+Actually this assignment is the main reason why we need frontend -
+we need to represent documents and collections in the most used way to aggregate them.&lt;/p&gt;
+&lt;p&gt;Usually presentation of a collection came with it’s brother task - sorting it.
+And here comes the question - on which side should this sorting be done: in the browser or in the server?
+This question is especially legitimate for small collections,
+when the server just sends all of it to the browser - first of all let’s see why that is.&lt;/p&gt;
+&lt;p&gt;Let’s say we have a huge database - millions of data entries.
+There is no way we can send it all to the client in one piece.
+We will require the client to define some criteria and then we’ll return the collection that represents these criteria.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/collection-excerpt-1a31c405a3f3ec3a326ecc6c814350f1-bd40f.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 484px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsSAAALEgHS3X78AAABSElEQVQY02OQVVBmAIH///8zcHHziLCxs0twcnGLcXByCnNwckmwsXOI8/DyCQKViDEwMgoC1Yiys3OIAWlhkFp+QSE+BijILW+AMDwDwmBiIkAsD8QSQCwKxNJQDDJQDiouBsRSQCwOpUFyDP5hsQwowN0vRCq9oFI6MatINKOoSio6OVs8q7hGKjGzUDQ+o0COmZmZXUlVgw2oRgbIF00rqJAG0ck5JbKe/qHicIPquqawguhDlx+vOHbj5d+dp24ePX7z5dedp26dOHbz5Wcg/+Spu29/yyko801euFbi5O03//ecvXvoyLVnP4H0QaCa//svPpwPMqOxdwYLg6qGDhuQzbb5yGVnoOaUNXtO+e06fStx7d7T/kBDE4H8gH3n7ydzAwMS6C1BoFza+v3nfLefuJ68/gCYTlu376wj0Ax2LT0jFgBDVXjgRUkgsAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Collection excerpt&quot;
+        title=&quot;&quot;
+        src=&quot;/static/collection-excerpt-1a31c405a3f3ec3a326ecc6c814350f1-bd40f.png&quot;
+        srcset=&quot;/static/collection-excerpt-1a31c405a3f3ec3a326ecc6c814350f1-2fb3d.png 148w,
+/static/collection-excerpt-1a31c405a3f3ec3a326ecc6c814350f1-d651b.png 295w,
+/static/collection-excerpt-1a31c405a3f3ec3a326ecc6c814350f1-bd40f.png 484w&quot;
+        sizes=&quot;(max-width: 484px) 100vw, 484px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;So each time the client will get only partial data and sometimes, when a given query is too general,
+then the server will cut it even more. For example, it may return only the first 1000 entries.
+In this case we can’t sort data on the client,
+because sorting should be part of the query and should be taken into account in the server.&lt;/p&gt;
+&lt;p&gt;The next situation is when the server indeed returns all data to the client.
+Usually this happens when a project is in the early stage of development and server sorting
+hasn’t been implemented yet or a collection is small by design and shouldn’t grow.
+In this case, sorting can be done in the client.&lt;/p&gt;
+&lt;p&gt;But even when sorting is done in the client,
+it doesn’t mean that the default order of the items should be defined by the client.
+You see, the server will need to fetch data from the database anyway, it’s not like it has any other choice.
+So if data has already been fetched by some query, why not define sorting in the same query?
+The client will take it from here, but the default order should be a server side problem.&lt;/p&gt;</content:encoded></item></channel></rss>
