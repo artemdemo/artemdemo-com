@@ -12,6 +12,20 @@ https://www.gatsbyjs.org/docs/
 
 I'm using `gatsby@2.0.0`
 
+## How to publish
+
+```
+$ npm run build
+```
+
+```
+$ git add --all && git commit -m 'Build blog'
+```
+
+```
+$ git subtree push --prefix public origin gh-pages
+```
+
 ## Based on gatsby-starter-blog
 
 https://github.com/gatsbyjs/gatsby-starter-blog
