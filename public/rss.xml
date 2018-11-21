@@ -1,4 +1,110 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, frontend dev.]]></title><description><![CDATA[Blog about FrontEnd: JS, CSS, HTML]]></description><link>https://github.com/artemdemo</link><generator>RSS for Node</generator><lastBuildDate>Thu, 15 Nov 2018 18:59:48 GMT</lastBuildDate><item><title><![CDATA[How to test code that uses moment.js]]></title><description><![CDATA[I’m going to talk about unit tests here, not any other kind of tests.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, frontend dev.]]></title><description><![CDATA[Blog about FrontEnd: JS, CSS, HTML]]></description><link>https://github.com/artemdemo</link><generator>RSS for Node</generator><lastBuildDate>Wed, 21 Nov 2018 17:42:06 GMT</lastBuildDate><item><title><![CDATA[What is REST?]]></title><description><![CDATA[This is one of those rare occasions when disambiguation will not lead to a better understanding.
+We can safely use REST as a word on its own…]]></description><link>https://github.com/artemdemo/20181121-what-is-rest/</link><guid isPermaLink="false">https://github.com/artemdemo/20181121-what-is-rest/</guid><pubDate>Wed, 21 Nov 2018 19:33:20 GMT</pubDate><content:encoded>&lt;p&gt;This is one of those rare occasions when disambiguation will not lead to a better understanding.
+We can safely use REST as a word on its own, without even considering the meaning of each letter.
+It’s just been decided to write it in capital letters, it doesn’t matter why.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;So, why do you need to know what REST is?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Well, if you’re a web developer and you’re working with external API’s,
+or writing your own service to provide a way of communication with the external world, then you, probably,
+need to know what tools are at your disposal.
+REST is a base for most API’s in the world, and a lot of programmers rely on those concepts.
+In addition, because of its popularity, it provides a methodology not only for the API itself,
+but also for client applications as well. This is because, in the end,
+the client will use the provided API and will organize its code accordingly.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Methodology&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;As I mentioned before, REST is a methodology for writing API. It’s not a framework and not a language,
+it’s a set of general rules. Those rules provide a way of creating endpoints for your service,
+and it’s doing so by incorporating HTTP specifications. As a result, it gives us a compact,
+and self-explanatory, list of API endpoints that are easy for clients of the service to use.
+As a bonus, since we’re using an industry standard methodology -
+it’s easier for a new developer to understand the logic behind it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;REST - main parts&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Each RESTful endpoint is built from basic building blocks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;REST verb&lt;/li&gt;
+&lt;li&gt;URL&lt;/li&gt;
+&lt;li&gt;Headers&lt;/li&gt;
+&lt;li&gt;Data (may or may not be provided)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/rest-schema-4e81edfcabfd901d51913659ab52b5e2-32413.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 583px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 20.06861063464837%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAABIklEQVQY02NgQAJrGRh4GdDAIQYGbnQxFgYGxv0MDJwM2MDOUzcd952/v2XnmdvrDx65vGxyZ5fM7rN3WvddeLB5/5k7O3duOZi+6eAp9f0XHqwBql0HVLdi78kbB3ZtPhx84MIOh7N3j289cnnfqnP3Tmzbf36XK8PBy48zrr368//ItWf/D19/8XXx0mUee87cvnnu4af/l1/8+r/z1LWFOw8cDwfxgWr/7z137//Nd///7zlzt+XwmR0Nr/89/X/82sH/H/+/+n/8+qF8hpU7j0sDXeh19MYLz12nbjqAXL3rzG3TA5ceee87f89n06GLCvldC1l3n7ntefT6cw+gxW57z931X7nzgtj6A/MED1/e73v69jE3oCu9Nx1YKwsANPys4HJ8AXgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;REST schema&quot;
+        title=&quot;&quot;
+        src=&quot;/static/rest-schema-4e81edfcabfd901d51913659ab52b5e2-32413.png&quot;
+        srcset=&quot;/static/rest-schema-4e81edfcabfd901d51913659ab52b5e2-a734f.png 148w,
+/static/rest-schema-4e81edfcabfd901d51913659ab52b5e2-5c6ba.png 295w,
+/static/rest-schema-4e81edfcabfd901d51913659ab52b5e2-32413.png 583w&quot;
+        sizes=&quot;(max-width: 583px) 100vw, 583px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Blocks with an asterisk are required.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;REST verbs&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GET - retrieve data from a specific resource&lt;/li&gt;
+&lt;li&gt;POST - submit data to be processed to a specific resource&lt;/li&gt;
+&lt;li&gt;PUT - update a specific resource&lt;/li&gt;
+&lt;li&gt;DELETE - delete a specific resource&lt;/li&gt;
+&lt;li&gt;PATCH - update a partial resource&lt;/li&gt;
+&lt;li&gt;HEAD - request only for headers, does not return a body&lt;/li&gt;
+&lt;li&gt;OPTIONS - return the supported HTTP methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Headers&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Headers are metadata about the request or response.
+They provide information about the status of the requests, content of it, authorizations and more.
+Let’s describe some of them:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Status - describes the status of the request. It’s an integer number, that defines what happened in the request:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;200 - Ok&lt;/li&gt;
+&lt;li&gt;201 - Created&lt;/li&gt;
+&lt;li&gt;400 - Bad request&lt;/li&gt;
+&lt;li&gt;401 - Unauthorized&lt;/li&gt;
+&lt;li&gt;500 - Internal Server Error&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_HTTP_status_codes&quot;&gt;more examples of statuses&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Authorization - carries credentials containing the authentication information of the client.&lt;/li&gt;
+&lt;li&gt;Content-Type - defines the media type of the response sent to the client by the server.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Data&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;REST does not define, by default, what are the data contracts between the server and the client.
+However part of the methodology lies in using the correct media types that define sent and received types of data.
+Developers can use an existing one or invent one of their own,
+but the rule of thumb is - you should use an existing one and extend it if needed.&lt;/p&gt;
+&lt;p&gt;Where you can find a list of existing media types? No worries, there is a solution.
+IANA holds a list of registered media types:
+&lt;a href=&quot;https://www.iana.org/assignments/media-types/media-types.xhtml&quot;&gt;https://www.iana.org/assignments/media-types/media-types.xhtml&lt;/a&gt;.
+The most used media-type is obviously application/json,
+because it’s general for all JSON data structures you will send or receive in communication with the server.&lt;/p&gt;
+&lt;p&gt;Those are the main parts of RESTful API. There are additional things to research and study, such as: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What are the best data structures for certain use cases? For example, what if you need to introduce filtering, sorting and pagination? - What data will the endpoint accept? What will the response look like?&lt;/li&gt;
+&lt;li&gt;How to define the endpoint for combined data from different services.&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As always there is no silver bullet solution, we just need to find the right way for our set of requirements.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to test code that uses moment.js]]></title><description><![CDATA[I’m going to talk about unit tests here, not any other kind of tests.
 And unit tests have, in my opinion, the following list of criteria…]]></description><link>https://github.com/artemdemo/20181105-test-code-with-momentjs/</link><guid isPermaLink="false">https://github.com/artemdemo/20181105-test-code-with-momentjs/</guid><pubDate>Mon, 05 Nov 2018 08:00:20 GMT</pubDate><content:encoded>&lt;p&gt;I’m going to talk about unit tests here, not any other kind of tests.
 And unit tests have, in my opinion, the following list of criteria that they have to meet.
 This list makes it hard to write tests for code that use external libraries, especially ones that manipulate time:&lt;/p&gt;
