@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, frontend dev.]]></title><description><![CDATA[Blog about FrontEnd: JS, CSS, HTML]]></description><link>https://github.com/artemdemo</link><generator>RSS for Node</generator><lastBuildDate>Thu, 22 Nov 2018 05:52:36 GMT</lastBuildDate><item><title><![CDATA[Reducing boilerplate in React + Redux app]]></title><description><![CDATA[First, let’s see what is the problem, then we’ll discuss possible solutions and, in the end,
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, frontend dev.]]></title><description><![CDATA[Blog about FrontEnd: JS, CSS, HTML]]></description><link>https://github.com/artemdemo</link><generator>RSS for Node</generator><lastBuildDate>Fri, 23 Nov 2018 18:50:09 GMT</lastBuildDate><item><title><![CDATA[Why we need to stop validating emails at the frontend]]></title><description><![CDATA[Let’s talk about one of the most well-known features of the web - registration.
+Not particularly the whole process, but in particular one…]]></description><link>https://github.com/artemdemo/20181123-why-we-need-to-stop-validate-emails-on-frontend/</link><guid isPermaLink="false">https://github.com/artemdemo/20181123-why-we-need-to-stop-validate-emails-on-frontend/</guid><pubDate>Fri, 23 Nov 2018 20:27:20 GMT</pubDate><content:encoded>&lt;p&gt;Let’s talk about one of the most well-known features of the web - registration.
+Not particularly the whole process, but in particular one aspect, email.
+For almost anything on the web, we need an email: ordering goods, registering for a service,
+receiving notifications, etc. It’s logical that if we need emails so much,
+then we’ll need to somehow be sure that the user has provided a correct one.&lt;/p&gt;
+&lt;p&gt;Ok, let’s do a quick search on the Internet and see what are the front-end solutions for email validation.
+We’ll quickly find the most popular &lt;a href=&quot;https://stackoverflow.com/a/46181&quot;&gt;stackoverflow answer&lt;/a&gt; for this problem.
+It uses some complex regular expressions for this task and even takes into account Unicode,
+hence email nowadays can be written in any language as well as English.
+This is a good start, but it doesn’t take into account all cases of email specification.&lt;/p&gt;
+&lt;p&gt;Have you actually tried to read a complete definition of what an email can be?
+Trust me, there are some surprises :) Let’s see some examples.
+Here is a list of different email addresses, which one is valid?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;mail”hello@there”@mail.com&lt;/li&gt;
+&lt;li&gt;user+mailbox/department=shipping@example.com&lt;/li&gt;
+&lt;li&gt;mail”(hi)“@mail.com&lt;/li&gt;
+&lt;li&gt;用户@例子.广告&lt;/li&gt;
+&lt;li&gt;mail@dimainname&lt;/li&gt;
+&lt;li&gt;mail@somedomain.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Well, most people will say that only the last one is valid.
+But in fact, that’s not true. Every email in the list is valid according to the definition.
+Obviously, someone with email mail@dimainname will have a hard time trying to register to any service,
+but it doesn’t mean that his email isn’t valid. By the way, Chrome, and other browsers will validate exactly that,
+when you use the built-in validation for email. You can test it in &lt;a href=&quot;https://jsbin.com/varilim/edit?js,output&quot;&gt;this example&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The next logical question is: could we use the full validation for email?
+Actually, we could, you can find it easily &lt;a href=&quot;https://www.regular-expressions.info/email.html&quot;&gt;here&lt;/a&gt; or
+&lt;a href=&quot;https://emailregex.com/&quot;&gt;here&lt;/a&gt;.
+The problem is that it’s actually useless.&lt;/p&gt;
+&lt;p&gt;Let’s face it - usually, the problem lies not in hardcore emails, like, mail”hello@there”@mail.com,
+as obviously, no-one uses it. So let’s take a step back and try to redefine the problem.
+Why do we actually need an email validation? What are we trying to solve?&lt;/p&gt;
+&lt;p&gt;Can we prevent users from entering a false email? No, we can’t, if the user wants to,
+he could just enter something like noname@wtf.com and it will pass any regex validation.
+Actually, if we want to check whether an address is 100% valid,
+then we need to send an email to the given address and then we’ll see.
+This is the only way, and obviously, we can’t do this kind of validation in the browser.&lt;/p&gt;
+&lt;p&gt;So instead of trying to find out whether a user is trying to use an incorrect email,
+we’ll try to help him to write his email.
+Usually, users just misspell their own email and we can just test for common mistakes and that’s it.
+So what are the mistakes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adding a character after a dot, by typing on one of the buttons nearby.&lt;/li&gt;
+&lt;li&gt;Check that the user used @ in the email&lt;/li&gt;
+&lt;li&gt;No white spaces&lt;/li&gt;
+&lt;li&gt;Take into account the option that the email could have Unicode symbols&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is it, the rest is the server’s problem and even the server will only need to send an email to the given address
+and then check whether it returns an error. This is the only validation.&lt;/p&gt;
+&lt;p&gt;So what could be the regex validation at the frontend, given the list of constraints I mentioned before?
+This is an example of such a regex:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;^&lt;/span&gt;\&lt;span class=&quot;token constant&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;@&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;^&lt;/span&gt;@\s\&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;\\&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;:&apos;|&amp;lt;&gt;]+[^.]\.[^@\s\/\\,.;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&apos;&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;$&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I’m not saying that it’s perfect, but I think it could be a step in the right direction.
+By the way, if you find a way to improve it, then &lt;a href=&quot;https://artemdemo.com/contact&quot;&gt;write to me about it&lt;/a&gt;,
+I want to discuss this.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Reducing boilerplate in React + Redux app]]></title><description><![CDATA[First, let’s see what is the problem, then we’ll discuss possible solutions and, in the end,
 we’ll compare the solutions that already exist…]]></description><link>https://github.com/artemdemo/20181122-reducing-boilerplate-in-react-redux-app/</link><guid isPermaLink="false">https://github.com/artemdemo/20181122-reducing-boilerplate-in-react-redux-app/</guid><pubDate>Thu, 22 Nov 2018 07:41:20 GMT</pubDate><content:encoded>&lt;p&gt;First, let’s see what is the problem, then we’ll discuss possible solutions and, in the end,
 we’ll compare the solutions that already exist in the market.
 Why in this order and why not go straight to the last point?
