@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Icon from '../../components/Icon/Icon';
 
 const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true';
 
@@ -13,6 +14,11 @@ const ContactFormIframeSty = styled.iframe`
     width: 640px;
     height: 822px;
     ${props => props.loaded ? 'visibility: visible;' : ''}
+`;
+
+const IconWrapSty = styled.span`
+    font-size: 150%;
+    opacity: 0.4;
 `;
 
 class ContactForm extends React.PureComponent {
@@ -37,6 +43,9 @@ class ContactForm extends React.PureComponent {
                     loaded={this.state.formLoaded}
                 >
                     Form is loading...
+                    <IconWrapSty>
+                        <Icon name='cog fa-spin fa-fw' />
+                    </IconWrapSty>
                 </ContactFormLoadingSty>
                 <ContactFormIframeSty
                     src={FORM_URL}
