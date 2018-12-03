@@ -73,7 +73,7 @@ const lazify = loader => (props) => {
 
     return (
         <React.Suspense fallback={loadingFallback}>
-            <Component />
+            <Component {...props} />
         </React.Suspense>
     );
 };
