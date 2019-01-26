@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, frontend dev.]]></title><description><![CDATA[Blog about FrontEnd: JS, CSS, HTML]]></description><link>https://github.com/artemdemo</link><generator>RSS for Node</generator><lastBuildDate>Mon, 03 Dec 2018 06:06:41 GMT</lastBuildDate><item><title><![CDATA[Lazy load components in React]]></title><description><![CDATA[Lazy loading in React was always possible.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, frontend dev.]]></title><description><![CDATA[Blog about FrontEnd: JS, CSS, HTML]]></description><link>https://github.com/artemdemo</link><generator>RSS for Node</generator><lastBuildDate>Sat, 26 Jan 2019 07:00:38 GMT</lastBuildDate><item><title><![CDATA[Lazy load components in React]]></title><description><![CDATA[Lazy loading in React was always possible.
 It wasn’t so clear how to do it properly and how to handle all edge cases, as well as how to find…]]></description><link>https://github.com/artemdemo/20181125-lazy-load-components-in-react/</link><guid isPermaLink="false">https://github.com/artemdemo/20181125-lazy-load-components-in-react/</guid><pubDate>Sun, 25 Nov 2018 21:29:00 GMT</pubDate><content:encoded>&lt;p&gt;Lazy loading in React was always possible.
 It wasn’t so clear how to do it properly and how to handle all edge cases, as well as how to find all of them,
 because, like many things in life, we need first to encounter the problems,
@@ -338,9 +338,13 @@ Also, the action creator function accepts any string as a constant, which is nic
 In the same way, it simplifies the way that we create actions and pass data through them.&lt;/p&gt;
 &lt;p&gt;The default state again is placed last, while creating the reducer. It looks like all libraries prefer it this way.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Resume&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Out of these 2 libraries, I prefer the second one, redux-act.
-It has fewer stars in GitHub, but has a much more interesting API,
-encapsulates constants inside of the actions and suits me much better.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What is REST?]]></title><description><![CDATA[This is one of those rare occasions when disambiguation will not lead to a better understanding.
+&lt;p&gt;Out of these 2 libraries, I prefer the first one, &lt;a href=&quot;https://github.com/redux-utilities/redux-actions&quot;&gt;redux-actions&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Both libraries are very similar, but &lt;code class=&quot;language-text&quot;&gt;redux-actions&lt;/code&gt; has one feature in its API design, that makes it stand out.
+When creating reducer, the callback function receives 2 parameters: &lt;code class=&quot;language-text&quot;&gt;(state, action)&lt;/code&gt;,
+an &lt;code class=&quot;language-text&quot;&gt;action&lt;/code&gt; is the whole action object.
+In the case of &lt;code class=&quot;language-text&quot;&gt;redux-act&lt;/code&gt; reducer will receive the only &lt;code class=&quot;language-text&quot;&gt;payload&lt;/code&gt; and not the whole object.
+The only &lt;code class=&quot;language-text&quot;&gt;payload&lt;/code&gt; is not enough and I can think about use-cases when it could problematic -
+I prefer to have easy access to the whole data.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What is REST?]]></title><description><![CDATA[This is one of those rare occasions when disambiguation will not lead to a better understanding.
 We can safely use REST as a word on its own…]]></description><link>https://github.com/artemdemo/20181121-what-is-rest/</link><guid isPermaLink="false">https://github.com/artemdemo/20181121-what-is-rest/</guid><pubDate>Wed, 21 Nov 2018 19:33:20 GMT</pubDate><content:encoded>&lt;p&gt;This is one of those rare occasions when disambiguation will not lead to a better understanding.
 We can safely use REST as a word on its own, without even considering the meaning of each letter.
 It’s just been decided to write it in capital letters, it doesn’t matter why.&lt;/p&gt;
