@@ -255,9 +255,15 @@ The default state again is placed last, while creating the reducer. It looks lik
 
 **Resume**
 
-Out of these 2 libraries, I prefer the second one, redux-act.
-It has fewer stars in GitHub, but has a much more interesting API,
-encapsulates constants inside of the actions and suits me much better.
+Out of these 2 libraries, I prefer the first one, [redux-actions](https://github.com/redux-utilities/redux-actions).
+
+Both libraries are very similar, but `redux-actions` has one feature in its API design, that makes it stand out.
+When creating reducer, the callback function receives 2 parameters: `(state, action)`,
+an `action` is the whole action object.
+In the case of `redux-act` reducer will receive the only `payload` and not the whole object.
+The only `payload` is not enough and I can think about use-cases when it could problematic -
+I prefer to have easy access to the whole data.
+
 
 
 
