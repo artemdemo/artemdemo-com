@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, frontend dev.]]></title><description><![CDATA[Blog about FrontEnd: JS, CSS, HTML]]></description><link>https://github.com/artemdemo</link><generator>RSS for Node</generator><lastBuildDate>Sat, 26 Jan 2019 07:00:38 GMT</lastBuildDate><item><title><![CDATA[Lazy load components in React]]></title><description><![CDATA[Lazy loading in React was always possible.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, frontend dev.]]></title><description><![CDATA[Blog about FrontEnd: JS, CSS, HTML]]></description><link>https://github.com/artemdemo</link><generator>RSS for Node</generator><lastBuildDate>Thu, 28 Feb 2019 20:51:21 GMT</lastBuildDate><item><title><![CDATA[Digital Product Management - Modern Fundamentals [coursera]]]></title><description><![CDATA[Well, I decided to learn more about being a product manager. It’s always fun to complain where there is no PM in the workplace, but I wanted…]]></description><link>https://github.com/artemdemo/20190228-coursera-digital-product-management/</link><guid isPermaLink="false">https://github.com/artemdemo/20190228-coursera-digital-product-management/</guid><pubDate>Thu, 28 Feb 2019 21:29:00 GMT</pubDate><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/pm-coursera-course-a4e0932fb365a5d7c90004eefeef0ed1-99c36.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMCBP/EABcBAQEBAQAAAAAAAAAAAAAAAAIDAAH/2gAMAwEAAhADEAAAAetLU1tJNwHcBX//xAAbEAACAgMBAAAAAAAAAAAAAAABEgAQAgMRFP/aAAgBAQABBQKcNDah9WJDGNGr/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEQEf/aAAgBAwEBPwFmX//EABcRAQADAAAAAAAAAAAAAAAAAAEAEBH/2gAIAQIBAT8BCbf/xAAbEAABBAMAAAAAAAAAAAAAAAABABESIRAgMv/aAAgBAQAGPwKg65OJEJom9f/EABoQAQEBAQADAAAAAAAAAAAAAAERACFBYXH/2gAIAQEAAT8hnYi9aZWR80MN0iTmsHxsESGo5hZW7//aAAwDAQACAAMAAAAQDze+/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAwEBPxBI5akjl//EABcRAQEBAQAAAAAAAAAAAAAAAAABEUH/2gAIAQIBAT8QhZrDiv/EABwQAQEAAwEAAwAAAAAAAAAAAAERACExQWFxkf/aAAgBAQABPxBTrDZHMXjQq+D9wYplUUE7vffrJ10NsldbwRwae4ayQ+MG8MUkZdsz/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Digital Product Management&quot;
+        title=&quot;&quot;
+        src=&quot;/static/pm-coursera-course-a4e0932fb365a5d7c90004eefeef0ed1-f8fb9.jpg&quot;
+        srcset=&quot;/static/pm-coursera-course-a4e0932fb365a5d7c90004eefeef0ed1-e8976.jpg 148w,
+/static/pm-coursera-course-a4e0932fb365a5d7c90004eefeef0ed1-63df2.jpg 295w,
+/static/pm-coursera-course-a4e0932fb365a5d7c90004eefeef0ed1-f8fb9.jpg 590w,
+/static/pm-coursera-course-a4e0932fb365a5d7c90004eefeef0ed1-85e3d.jpg 885w,
+/static/pm-coursera-course-a4e0932fb365a5d7c90004eefeef0ed1-d1924.jpg 1180w,
+/static/pm-coursera-course-a4e0932fb365a5d7c90004eefeef0ed1-9452e.jpg 1770w,
+/static/pm-coursera-course-a4e0932fb365a5d7c90004eefeef0ed1-99c36.jpg 3024w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Well, I decided to learn more about being a product manager. It’s always fun to complain where there is no PM in the workplace, but I wanted to see what was really missing, and why a PM was needed. So I decided to learn this top`ic by myself, I had some free time to spare, so why not?&lt;/p&gt;
+&lt;p&gt;Let’s start with Coursera. It has university-based content. I honestly felt like I was going back in time and sitting in one of the lectures in my college, in the middle of the desert (yeah, a story for another time). I don’t mean that it was a bad thing, it was just how the material was presented.&lt;/p&gt;
+&lt;p&gt;The author was presenting models, conducting interviews with other product managers and showing slides. All of these are important, it just felt like you had no idea what you should do next. When the course was done, what should be the next step for me to become a product manager? What were the practical applications of all that I had learned?&lt;/p&gt;
+&lt;p&gt;Anyway, it was a good overview course for a more academic understanding of this job. Which is not bad - it gives you another perspective of the profession and enlarges your vocabulary.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Lazy load components in React]]></title><description><![CDATA[Lazy loading in React was always possible.
 It wasn’t so clear how to do it properly and how to handle all edge cases, as well as how to find…]]></description><link>https://github.com/artemdemo/20181125-lazy-load-components-in-react/</link><guid isPermaLink="false">https://github.com/artemdemo/20181125-lazy-load-components-in-react/</guid><pubDate>Sun, 25 Nov 2018 21:29:00 GMT</pubDate><content:encoded>&lt;p&gt;Lazy loading in React was always possible.
 It wasn’t so clear how to do it properly and how to handle all edge cases, as well as how to find all of them,
 because, like many things in life, we need first to encounter the problems,
