@@ -6,6 +6,8 @@ tags: ["logger", "console"]
 
 Let's talk for a moment about logging in the FrontEnd application. Yes, we can use standard `console.log` or any other `console[method]` that is available to us, but what we really want to have is some way to have a log available, when it's allowed and to hide the logging, when we're not interested in it. So let's review this.
 
+<!-- end -->
+
 Here are the required features:
 
 * Should be based on a standard `console` object.

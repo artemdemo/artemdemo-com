@@ -17,6 +17,10 @@ module.exports = {
         {
             resolve: `gatsby-transformer-remark`,
             options: {
+                // You can also manually mark in your markdown where to stop excerpting.
+                // Any file that does not have the given `excerpt_separator` will fall back to the default pruning method.
+                // @link https://using-remark.gatsbyjs.org/excerpts/
+                excerpt_separator: '<!-- end -->',
                 plugins: [
                     {
                         resolve: `gatsby-remark-images`,
