@@ -5,30 +5,55 @@ import _get from 'lodash/get';
 import styled from 'styled-components';
 import PostDate from '../PostDate/PostDate';
 import * as utils from '../../services/utils';
+import { renderMd } from '../../services/md';
+
+// Yes, I know, not the best solution.
+// The problem is that I need to use here custom service for markdown,
+// because `gatsby-transformer-remark` will work only for posts, but _not_ for excerpts.
+import './PostsItem.css';
 
 const PostItemSty = styled.div`
     margin-bottom: 30px;
 `;
 
-const PostsItem = (props) => {
-    const { node } = props;
-    if (!node) {
-        return null;
+class PostsItem extends React.PureComponent {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            content: null,
+        };
     }
-    const title = _get(node, 'frontmatter.title') || node.fields.slug;
-    return (
-        <PostItemSty>
-            <h2>
-                <Link to={utils.prefixBlog(node.fields.slug)}>
-                    {title}
-                </Link>
-            </h2>
-            <PostDate>
-                {node.frontmatter.date}
-            </PostDate>
-            <p dangerouslySetInnerHTML={{__html: node.excerpt}}/>
-        </PostItemSty>
-    );
+
+    componentDidMount() {
+        const excerpt = _get(this.props, 'node.excerpt');
+
+        if (excerpt) {
+            renderMd(excerpt)
+                .then(content => this.setState({ content }));
+        }
+    }
+
+    render() {
+        const { node } = this.props;
+        if (!node) {
+            return null;
+        }
+        const title = _get(node, 'frontmatter.title') || node.fields.slug;
+        return (
+            <PostItemSty>
+                <h2>
+                    <Link to={utils.prefixBlog(node.fields.slug)}>
+                        {title}
+                    </Link>
+                </h2>
+                <PostDate>
+                    {node.frontmatter.date}
+                </PostDate>
+                <p dangerouslySetInnerHTML={{__html: this.state.content}}/>
+            </PostItemSty>
+        );
+    }
 };
 
 PostsItem.propTypes = {
