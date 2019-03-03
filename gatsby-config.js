@@ -1,9 +1,12 @@
+const title = 'Artem Demo, frontend dev.';
+const author = 'Artem Demo';
+
 module.exports = {
     siteMetadata: {
-        title: 'Artem Demo, frontend dev.',
-        author: 'Artem Demo',
+        title,
+        author,
         description: 'Blog about FrontEnd: JS, CSS, HTML',
-        siteUrl: 'https://github.com/artemdemo',
+        siteUrl: 'https://artemdemo.com',
     },
     pathPrefix: '/',
     plugins: [
@@ -52,8 +55,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Gatsby Starter Blog`,
-                short_name: `GatsbyJS`,
+                name: title,
+                short_name: author,
                 start_url: `/`,
                 background_color: `#ffffff`,
                 theme_color: `#663399`,
