@@ -1,4 +1,4 @@
-// While running test there will be access to emv variables.
+// While running test there will be access to env variables.
 // If there is such access, then we can check whether it's test
 // and make some adjustments.
 //
