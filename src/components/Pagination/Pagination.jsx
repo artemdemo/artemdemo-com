@@ -38,7 +38,7 @@ class Pagination extends React.PureComponent {
         if (totalPosts === 0) {
             return null;
         }
-        const pagesAmount = Math.floor(totalPosts / limit);
+        const pagesAmount = Math.ceil(totalPosts / limit);
         const nextPageNumber = Math.floor(skip / limit) + 2;
         const itemClass = classnames('page-item', {
             disabled: nextPageNumber > pagesAmount,
@@ -60,7 +60,7 @@ class Pagination extends React.PureComponent {
         if (totalPosts === 0) {
             return null;
         }
-        const pagesAmount = Math.floor(totalPosts / limit);
+        const pagesAmount = Math.ceil(totalPosts / limit);
         const currentNumber = Math.floor(skip / limit) + 1;
         const iterArr = Array.from(Array(pagesAmount));
         return (
