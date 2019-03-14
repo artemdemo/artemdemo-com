@@ -1,0 +1,7 @@
+/*
+ * In a nested list markdown is adding <p> tag for the parent.
+ * It's adding gap, which I want to eliminate
+ */
+li > p:first-child {
+    margin-bottom: 0;
+}
