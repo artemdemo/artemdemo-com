@@ -31,6 +31,22 @@ const PaginationItemSty = styled.div`
     }
 `;
 
+const LinkTextSty = styled.span`
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+`;
+
+const LinkArrowSty = styled.span`
+    flex-grow: 1;
+    :first-child {
+        padding-right: 5px;
+    }
+    :last-child {
+        padding-left: 5px;
+    }
+`;
+
 class BinaryPagination extends React.PureComponent {
     renderPrev() {
         const { previous } = this.props;
@@ -44,7 +60,12 @@ class BinaryPagination extends React.PureComponent {
                             to={previous.slug}
                             rel='prev'
                         >
-                            ← {title}
+                            <LinkArrowSty>
+                                ←
+                            </LinkArrowSty>
+                            <LinkTextSty>
+                                {title}
+                            </LinkTextSty>
                         </Link>
                     </li>
                 </ul>
@@ -65,7 +86,12 @@ class BinaryPagination extends React.PureComponent {
                             to={next.slug}
                             rel='next'
                         >
-                            {title} →
+                            <LinkTextSty>
+                                {title}
+                            </LinkTextSty>
+                            <LinkArrowSty>
+                                →
+                            </LinkArrowSty>
                         </Link>
                     </li>
                 </ul>
