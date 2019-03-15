@@ -6,6 +6,20 @@ Array [
     className="ContactForm__ContactFormLoadingSty-r3mpp6-0 hPxlFJ"
   >
     Form is loading...
+    <span
+      className="ContactForm__IconWrapSty-r3mpp6-2 eXfkcL"
+    >
+      <div
+        data-mock="Icon"
+      >
+        name: 
+        cog fa-spin fa-fw
+        title: 
+        className: 
+        inText: 
+        false
+      </div>
+    </span>
   </div>,
   <iframe
     className="ContactForm__ContactFormIframeSty-r3mpp6-1 kQrKSt"

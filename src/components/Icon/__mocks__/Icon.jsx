@@ -2,7 +2,10 @@ import React from 'react';
 
 const Icon = props => (
     <div data-mock='Icon'>
-        {props.children}
+        name: {props.name}
+        title: {props.title}
+        className: {props.className}
+        inText: {props.inText ? 'true' : 'false'}
     </div>
 );
 

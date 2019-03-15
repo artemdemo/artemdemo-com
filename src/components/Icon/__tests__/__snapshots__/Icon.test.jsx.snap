@@ -9,7 +9,7 @@ exports[`Icon should render with name 1`] = `
 
 exports[`Icon should render with name and className 1`] = `
 <span
-  className="fa fa-fire"
+  className="fa fa-fire some-class"
   title={null}
 />
 `;

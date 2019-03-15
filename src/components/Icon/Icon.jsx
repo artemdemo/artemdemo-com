@@ -16,11 +16,11 @@ const SpanSty = styled.span`
  */
 class Icon extends React.PureComponent {
     renderIcon() {
-        const { name, title } = this.props;
+        const { name, title, className } = this.props;
 
         const iconClass = classnames('fa', {
             [`fa-${name}`]: true,
-        });
+        }, className);
 
         return (
             <span
@@ -52,11 +52,13 @@ class Icon extends React.PureComponent {
 Icon.propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string,
+    className: PropTypes.string,
     inText: PropTypes.bool,
 };
 
 Icon.defaultProps = {
     title: null,
+    className: null,
     inText: false,
 };
 

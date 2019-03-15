@@ -29,8 +29,16 @@ exports[`BinaryPagination should render with data 1`] = `
         <div
           data-mock="Link"
         >
-          ← 
-          Prev title
+          <span
+            className="BinaryPagination__LinkArrowSty-sc-1j8x01y-3 fBsvKd"
+          >
+            ←
+          </span>
+          <span
+            className="BinaryPagination__LinkTextSty-sc-1j8x01y-2 kcwVsH"
+          >
+            Prev title
+          </span>
         </div>
       </li>
     </ul>
@@ -47,8 +55,16 @@ exports[`BinaryPagination should render with data 1`] = `
         <div
           data-mock="Link"
         >
-          Next title
-           →
+          <span
+            className="BinaryPagination__LinkTextSty-sc-1j8x01y-2 kcwVsH"
+          >
+            Next title
+          </span>
+          <span
+            className="BinaryPagination__LinkArrowSty-sc-1j8x01y-3 fBsvKd"
+          >
+            →
+          </span>
         </div>
       </li>
     </ul>
@@ -72,8 +88,16 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
         <div
           data-mock="Link"
         >
-          ← 
-          /prev
+          <span
+            className="BinaryPagination__LinkArrowSty-sc-1j8x01y-3 fBsvKd"
+          >
+            ←
+          </span>
+          <span
+            className="BinaryPagination__LinkTextSty-sc-1j8x01y-2 kcwVsH"
+          >
+            /prev
+          </span>
         </div>
       </li>
     </ul>
@@ -90,8 +114,16 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
         <div
           data-mock="Link"
         >
-          /next
-           →
+          <span
+            className="BinaryPagination__LinkTextSty-sc-1j8x01y-2 kcwVsH"
+          >
+            /next
+          </span>
+          <span
+            className="BinaryPagination__LinkArrowSty-sc-1j8x01y-3 fBsvKd"
+          >
+            →
+          </span>
         </div>
       </li>
     </ul>
