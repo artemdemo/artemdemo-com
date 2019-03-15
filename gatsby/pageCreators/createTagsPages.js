@@ -4,6 +4,7 @@ const utils = require('../../src/services/utils');
 
 // Path in `path.resolve` should be relative to `gatsby-node.js`
 const PostsListByTag = path.resolve('./src/templates/PostsListByTag.jsx');
+const TagsList = path.resolve('./src/templates/TagsList.jsx');
 
 const paginationPath = (tag, page, totalPages) => {
     if (page === 0) {
@@ -53,6 +54,18 @@ const createTagsPages = (posts, createPage) => new Promise((resolve) => {
                 }
             });
         });
+    });
+
+    createPage({
+        path: '/tags',
+        // Set the component as normal
+        //
+        component: TagsList,
+        // Pass the following context to the component
+        //
+        context: {
+            tagsMap,
+        }
     });
 
     resolve();
