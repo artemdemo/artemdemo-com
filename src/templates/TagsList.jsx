@@ -6,7 +6,7 @@ import Layout from '../components/Layout/Layout';
 
 const TagLinkSty = styled(Link)`
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 15px;
 `;
 
 class TagsList extends React.PureComponent {

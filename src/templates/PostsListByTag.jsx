@@ -9,8 +9,8 @@ class PostsListByTag extends PostsList {
     }
 
     renderPagination() {
-        const tag = _get(this.props, 'pageContext.tag', '');
-        return super.renderPagination(utils.prefixTag.bind(null, tag))
+        const tagName = _get(this.props, 'pageContext.tagName', '');
+        return super.renderPagination(utils.prefixTag.bind(null, tagName))
     }
 }
 
@@ -19,7 +19,7 @@ export default PostsListByTag;
 // Notice, that this query should be the same as in `/templates/PostsList.jsx`
 // ToDo: Find the way to keep both queries in one place
 export const pageQuery = graphql`
-  query($tag: String, $skip: Int!, $limit: Int!) {
+  query($tagName: String, $skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
@@ -30,7 +30,7 @@ export const pageQuery = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       skip: $skip
       limit: $limit
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { tags: { in: [$tagName] } } }
     ) {
       totalCount
       edges {
