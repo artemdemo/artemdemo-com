@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import SecondaryText from '../SecondaryText/SecondaryText';
 import { normalizeTag } from '../../services/utils';
 
-const PostTagsItemSty = styled.div`
+const PostTagsItemSty = styled(Link)`
     display: inline-block;
     margin-right: 5px;
     
@@ -27,11 +27,10 @@ const PostTags = (props) => {
             Tags:&nbsp;
             {tags.map(tag => (
                 <PostTagsItemSty
+                    to={`/tags/${normalizeTag(tag)}`}
                     key={`post-tags-${normalizeTag(tag)}`}
                 >
-                    <Link to={`/tags/${normalizeTag(tag)}`}>
-                        {tag}
-                    </Link>
+                    {tag}
                 </PostTagsItemSty>
             ))}
         </SecondaryText>

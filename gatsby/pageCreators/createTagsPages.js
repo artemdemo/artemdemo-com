@@ -26,25 +26,31 @@ const createTagsPages = (posts, createPage) => new Promise((resolve) => {
     _.each(posts, (edge) => {
         const edgeTags = _.get(edge, 'node.frontmatter.tags', []);
         edgeTags.forEach((tag) => {
-            tagsMap[tag] ? tagsMap[tag]++ : tagsMap[tag] = 1;
+            const normTag = utils.normalizeTag(tag);
+            tagsMap[normTag] ?
+                tagsMap[normTag].amount++ :
+                tagsMap[normTag] = {
+                    name: tag,
+                    amount: 1,
+                };
         });
     });
 
     // Make tag pages
-    Object.keys(tagsMap).forEach(tag => {
-        const postsAmount = tagsMap[tag];
-        const paginatedPagesCount = Math.ceil(postsAmount / utils.POSTS_PER_PAGE);
+    Object.keys(tagsMap).forEach(normTag => {
+        const tag = tagsMap[normTag];
+        const paginatedPagesCount = Math.ceil(tag.amount / utils.POSTS_PER_PAGE);
 
         _.times(paginatedPagesCount, (index) => {
             createPage({
-                path: paginationPath(tag, index, paginatedPagesCount),
+                path: paginationPath(normTag, index, paginatedPagesCount),
                 // Set the component as normal
                 //
                 component: PostsListByTag,
                 // Pass the following context to the component
                 //
                 context: {
-                    tag,
+                    tag: tag.name,
                     // Skip this number of posts from the beginning
                     //
                     skip: index * utils.POSTS_PER_PAGE,
