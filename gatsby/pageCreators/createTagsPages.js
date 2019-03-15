@@ -4,6 +4,7 @@ const utils = require('../../src/services/utils');
 
 // Path in `path.resolve` should be relative to `gatsby-node.js`
 const PostsListByTag = path.resolve('./src/templates/PostsListByTag.jsx');
+const TagsList = path.resolve('./src/templates/TagsList.jsx');
 
 const paginationPath = (tag, page, totalPages) => {
     if (page === 0) {
@@ -25,25 +26,31 @@ const createTagsPages = (posts, createPage) => new Promise((resolve) => {
     _.each(posts, (edge) => {
         const edgeTags = _.get(edge, 'node.frontmatter.tags', []);
         edgeTags.forEach((tag) => {
-            tagsMap[tag] ? tagsMap[tag]++ : tagsMap[tag] = 1;
+            const tagSlug = utils.normalizeTag(tag);
+            tagsMap[tagSlug] ?
+                tagsMap[tagSlug].amount++ :
+                tagsMap[tagSlug] = {
+                    name: tag,
+                    amount: 1,
+                };
         });
     });
 
     // Make tag pages
-    Object.keys(tagsMap).forEach(tag => {
-        const postsAmount = tagsMap[tag];
-        const paginatedPagesCount = Math.ceil(postsAmount / utils.POSTS_PER_PAGE);
+    Object.keys(tagsMap).forEach(tagSlug => {
+        const tag = tagsMap[tagSlug];
+        const paginatedPagesCount = Math.ceil(tag.amount / utils.POSTS_PER_PAGE);
 
         _.times(paginatedPagesCount, (index) => {
             createPage({
-                path: paginationPath(tag, index, paginatedPagesCount),
+                path: paginationPath(tagSlug, index, paginatedPagesCount),
                 // Set the component as normal
                 //
                 component: PostsListByTag,
                 // Pass the following context to the component
                 //
                 context: {
-                    tag,
+                    tagName: tag.name,
                     // Skip this number of posts from the beginning
                     //
                     skip: index * utils.POSTS_PER_PAGE,
@@ -53,6 +60,18 @@ const createTagsPages = (posts, createPage) => new Promise((resolve) => {
                 }
             });
         });
+    });
+
+    createPage({
+        path: '/tags',
+        // Set the component as normal
+        //
+        component: TagsList,
+        // Pass the following context to the component
+        //
+        context: {
+            tagsMap,
+        }
     });
 
     resolve();
