@@ -64,7 +64,11 @@ module.exports = {
                 // icon: `src/assets/gatsby-icon.png`,
             },
         },
-        `gatsby-plugin-offline`,
+        // I'm disabling `gatsby-plugin-offline`
+        // It should be done gradually, therefore, I'm using special plugin for it
+        // More information about PWA in gatsby here:
+        // https://www.gatsbyjs.org/docs/progressive-web-app/
+        `gatsby-plugin-remove-serviceworker`,
         `gatsby-plugin-react-helmet`,
     ],
 };
