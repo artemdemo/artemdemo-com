@@ -1,7 +1,7 @@
 ---
 title: State-specific breadcrumbs
 date: "2019-03-14T09:04:00.000Z"
-tags: ["breadcrumbs", "browser history"]
+tags: ["breadcrumbs", "browser history", "routing"]
 ---
 
 Breadcrumbs can be displayed in different ways. Usually, this is solved in a naive way - if a user enters the page where a certain product is displayed, then he will see breadcrumbs from categories that are hierarchically dependent on each other. This is reasonably easy to implement because it is static information. The more complex requirement is to display a history of the changes, where we'll see not only the previous pages but also the filters that have been applied to them.
