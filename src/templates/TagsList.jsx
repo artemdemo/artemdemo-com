@@ -16,14 +16,21 @@ class TagsList extends React.PureComponent {
 
     renderTags() {
         const tagsMap = _get(this.props, 'pageContext.tagsMap');
-        return Object.keys(tagsMap).map(normTag => (
-            <TagLinkSty
-                to={`/tags/${normTag}`}
-                key={`tags-${normTag}`}
-            >
-                {tagsMap[normTag].name} ({tagsMap[normTag].amount})
-            </TagLinkSty>
-        ));
+        return Object.keys(tagsMap)
+            .map(slug => ({
+                slug,
+                name: tagsMap[slug].name,
+                amount: tagsMap[slug].amount,
+            }))
+            .sort((tagA, tagB) => tagB.amount - tagA.amount)
+            .map(tag => (
+                <TagLinkSty
+                    to={`/tags/${tag.slug}`}
+                    key={`tags-${tag.slug}`}
+                >
+                    {tag.name} ({tag.amount})
+                </TagLinkSty>
+            ));
     }
 
     render() {
