@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, frontend dev.]]></title><description><![CDATA[Blog about FrontEnd: JS, CSS, HTML]]></description><link>https://artemdemo.com</link><generator>RSS for Node</generator><lastBuildDate>Thu, 14 Mar 2019 18:53:27 GMT</lastBuildDate><item><title><![CDATA[State-specific breadcrumbs]]></title><description><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, frontend dev.]]></title><description><![CDATA[Blog about FrontEnd: JS, CSS, HTML]]></description><link>https://artemdemo.com</link><generator>RSS for Node</generator><lastBuildDate>Sat, 16 Mar 2019 07:20:46 GMT</lastBuildDate><item><title><![CDATA[Become a Product Manager [udemy]]]></title><description><![CDATA[It would be a long journey. Really, there were 17 sections, each one included from 3 to 26 videos. Each video was from 3, up to 16 minutes…]]></description><link>https://artemdemo.com/20190316-udemy-become-a-product-manager/</link><guid isPermaLink="false">https://artemdemo.com/20190316-udemy-become-a-product-manager/</guid><pubDate>Sat, 16 Mar 2019 09:10:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ac2f9f172a2fbdce218dc3fae10ea460/4fdb1/udemy-become-a-product-manager.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACA//EABUBAQEAAAAAAAAAAAAAAAAAAAID/9oADAMBAAIQAxAAAAFHYmQmRqb/AP/EABoQAQEBAAMBAAAAAAAAAAAAAAECAAMSISP/2gAIAQEAAQUCu/Q+fYzBcnCGd//EABcRAQADAAAAAAAAAAAAAAAAAAABETH/2gAIAQMBAT8BnVP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAECAQE/AU8Kf//EAB0QAAICAQUAAAAAAAAAAAAAAAABAhEQEiExMlH/2gAIAQEABj8CSUqHLXdeHJuzs8f/xAAcEAACAgIDAAAAAAAAAAAAAAAAAREhMVFBcYH/2gAIAQEAAT8hoTPkZ6FgPQIJBeh2muoSGf/aAAwDAQACAAMAAAAQkC//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREx/9oACAEDAQE/EEeCT//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAgEBPxAVL//EABsQAQEBAAIDAAAAAAAAAAAAAAERACFxMUHB/9oACAEBAAE/EJgpIqTx3nPKTFHjOHDfpqFXQlJM3CDeAD2YlCp6bv/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Digital Product Management&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ac2f9f172a2fbdce218dc3fae10ea460/4b3ab/udemy-become-a-product-manager.jpg&quot;
+        srcset=&quot;/static/ac2f9f172a2fbdce218dc3fae10ea460/f8bb1/udemy-become-a-product-manager.jpg 148w,
+/static/ac2f9f172a2fbdce218dc3fae10ea460/900ac/udemy-become-a-product-manager.jpg 295w,
+/static/ac2f9f172a2fbdce218dc3fae10ea460/4b3ab/udemy-become-a-product-manager.jpg 590w,
+/static/ac2f9f172a2fbdce218dc3fae10ea460/78641/udemy-become-a-product-manager.jpg 885w,
+/static/ac2f9f172a2fbdce218dc3fae10ea460/38a35/udemy-become-a-product-manager.jpg 1180w,
+/static/ac2f9f172a2fbdce218dc3fae10ea460/d4d4c/udemy-become-a-product-manager.jpg 1770w,
+/static/ac2f9f172a2fbdce218dc3fae10ea460/4fdb1/udemy-become-a-product-manager.jpg 4032w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It would be a long journey. Really, there were 17 sections, each one included from 3 to 26 videos. Each video was from 3, up to 16 minutes. This all added up to a very long course. On the other hand, what did you expect? To learn the profession in one sitting? Sadly it’s not the case.&lt;/p&gt;
+&lt;p&gt;Of course, even after that course, you wouldn’t, by any means, be a good product manager. What you would lack would be real-world experience, but at least you would have a good start if you were dedicated and willing to learn.&lt;/p&gt;
+&lt;p&gt;The course was based on practical examples and a lot of methods for product analysis. I started it because it was important for me to understand what were the challenges of product managers. Currently, I’m not planning to change jobs, but I always aim to better understand the professional landscape and such courses look like a good opportunity to do so.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[State-specific breadcrumbs]]></title><description><![CDATA[
 Breadcrumbs can be displayed in different ways. Usually, this is solved in a naive way - if a user enters the page where a certain product is displayed, then he will see breadcrumbs from categories that are hierarchically dependent on each other. This is reasonably easy to implement because it is static information. The more complex requirement is to display a history of the changes, where we'll see not only the previous pages but also the filters that have been applied to them.
 
 ]]></description><link>https://artemdemo.com/20190314-state-specific-breadcrumbs/</link><guid isPermaLink="false">https://artemdemo.com/20190314-state-specific-breadcrumbs/</guid><pubDate>Thu, 14 Mar 2019 09:04:00 GMT</pubDate><content:encoded>&lt;p&gt;Breadcrumbs can be displayed in different ways. Usually, this is solved in a naive way - if a user enters the page where a certain product is displayed, then he will see breadcrumbs from categories that are hierarchically dependent on each other. This is reasonably easy to implement because it is static information. The more complex requirement is to display a history of the changes, where we’ll see not only the previous pages but also the filters that have been applied to them.&lt;/p&gt;
@@ -21,40 +55,35 @@ Breadcrumbs can be displayed in different ways. Usually, this is solved in a nai
 &lt;/li&gt;
 &lt;li&gt;Single item&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7c3319275b126b5cb3277dc7161477e2/4d08a/breadcrumbs-sequence.png&quot;
+    href=&quot;/static/7c3319275b126b5cb3277dc7161477e2/68866/breadcrumbs-sequence.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
+    &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
       style=&quot;padding-bottom: 7.361111111111112%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAAsSAAALEgHS3X78AAAAUUlEQVQI12O4e/euz61bt/Ju3ryZDqSLbt++bXH//n0rIF1448aNNKB84Z07d/QfPnzoBKQLgGIZQHVZDx48AKmXvnfvXvT169ezgepzgWp8AVAoOoGIUY8KAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    &gt;&lt;/span&gt;
+    &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Breadcrumbs sequence&quot;
         title=&quot;&quot;
-        src=&quot;/static/7c3319275b126b5cb3277dc7161477e2/623ee/breadcrumbs-sequence.png&quot;
-        srcset=&quot;/static/7c3319275b126b5cb3277dc7161477e2/816c5/breadcrumbs-sequence.png 148w,
-/static/7c3319275b126b5cb3277dc7161477e2/c766b/breadcrumbs-sequence.png 295w,
-/static/7c3319275b126b5cb3277dc7161477e2/623ee/breadcrumbs-sequence.png 590w,
-/static/7c3319275b126b5cb3277dc7161477e2/4d08a/breadcrumbs-sequence.png 720w&quot;
+        src=&quot;/static/7c3319275b126b5cb3277dc7161477e2/6255c/breadcrumbs-sequence.png&quot;
+        srcset=&quot;/static/7c3319275b126b5cb3277dc7161477e2/375dc/breadcrumbs-sequence.png 148w,
+/static/7c3319275b126b5cb3277dc7161477e2/6b157/breadcrumbs-sequence.png 295w,
+/static/7c3319275b126b5cb3277dc7161477e2/6255c/breadcrumbs-sequence.png 590w,
+/static/7c3319275b126b5cb3277dc7161477e2/68866/breadcrumbs-sequence.png 720w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
-    &lt;/span&gt;
   &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
+  &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;As you can see from the list, the parcels and items can be sorted. Packages are presented in a simple list and you just need to find the right one.&lt;/p&gt;
 &lt;p&gt;Now, we need to define functionality for our breadcrumbs that will define whether we implement them or not. So the requirements are:&lt;/p&gt;
 &lt;ol&gt;
@@ -82,75 +111,65 @@ Breadcrumbs can be displayed in different ways. Usually, this is solved in a nai
   &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;Route&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
 &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;Router&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;As you can see above I’m assuming there are already defined views and that I can incorporate them into my router. I will define each one of them later. First, let’s see what will be the template for each view. It will be something simple, but nevertheless, let’s first define it. At the top, we’ll have a menu that is permanently placed there. Under the menu is a placeholder for breadcrumbs - they could be shown or not, it depends on the page. After that, we have page content.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6fa2dc5ef7397105a9d7a44b2c4d6b99/5669b/page-structure.png&quot;
+    href=&quot;/static/6fa2dc5ef7397105a9d7a44b2c4d6b99/1e965/page-structure.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
+    &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 261px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 261px;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
       style=&quot;padding-bottom: 106.89655172413795%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsSAAALEgHS3X78AAACLklEQVQ4y81US2sTURS+/iShG8GFpatuFao2reI/UlduXIkzq27ctBSySdLMDIQkhrzfCenk/X44M5mZ43cupBQpsSkFvfBxzp177neec0U+n38/GAyo2WzScDikyWRCy+WSVqvVvTGfz4lXJpMJCNM034bDYVIUZQVpRaNRu9/v2yC2x+PxvTCdTpdMjOCORCqV+sDsvu9LeJ63MxzHkRHmcrlTgYj2oHwpFoufgM8PQalU+giOr4ZhPBWPtJ7caNls9rDX6/1EzTTUwgB06PpoNDJY8p71TqdjwE5n2e12pc6S96j5VbvdTiPafYFL79AdCoVCFI/HCWFTIpHgelA6naZIJEIwpPV6TZZl3QluCK96vX4kWq3WCTxxyymZTBIiJtREolKpyH25XKbFYkGz2exOICifG9poNF4JeH+JkNH9cQswgWvMo8lAqiaM5R6pmXB8zfJPHek3MX5zOD4USOk5Ijmr1WrfARVhKwwcqoVCQWFgvlQ4VhC1Asm6utFxrsL2G0r0Q9O0ZwIb+acgXJkayKSOqLfW7Tb4z+IF8gATBrheYHfQGDcYDHq6rnv45qHDHtL1kPpWoEyWbdvcyNcCnQywF1x2UXj/VqEJxgTjrWAb2DqcDQjfSEJuOw5dHPpssMHmwv9F+LcU/wnhMT+Q/K7hcA25E/gOCH9xYzddlu8he3Bdd+e3kO/wyNy8h3gMDqrVagjDfIGhvnwIcPcc86zFYrEX4rHXb3LAWCg3wzXDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    &gt;&lt;/span&gt;
+    &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Page structure&quot;
         title=&quot;&quot;
-        src=&quot;/static/6fa2dc5ef7397105a9d7a44b2c4d6b99/5669b/page-structure.png&quot;
-        srcset=&quot;/static/6fa2dc5ef7397105a9d7a44b2c4d6b99/612f7/page-structure.png 148w,
-/static/6fa2dc5ef7397105a9d7a44b2c4d6b99/5669b/page-structure.png 261w&quot;
+        src=&quot;/static/6fa2dc5ef7397105a9d7a44b2c4d6b99/1e965/page-structure.png&quot;
+        srcset=&quot;/static/6fa2dc5ef7397105a9d7a44b2c4d6b99/5190f/page-structure.png 148w,
+/static/6fa2dc5ef7397105a9d7a44b2c4d6b99/1e965/page-structure.png 261w&quot;
         sizes=&quot;(max-width: 261px) 100vw, 261px&quot;
       /&gt;
-    &lt;/span&gt;
   &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
+  &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Passing breadcrumbs between views&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The next problem will be how to pass breadcrumbs between views. We need a unified strategy for that. There should be only one service that has this logic and it will only need to provide a clear API.&lt;/p&gt;
 &lt;p&gt;First, the whole logic will be based on the history object that can receive path and query params in order to create a URL for the next view. I will piggyback on this functionality, but I can’t use it as is, because before being able to use it, we need to wrap it in our service logic:&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/9de4373bfd095e5e9387a2ba73030be8/1c801/history-wrapper.png&quot;
+    href=&quot;/static/9de4373bfd095e5e9387a2ba73030be8/64525/history-wrapper.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
+    &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
       style=&quot;padding-bottom: 54.833836858006045%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAB9klEQVQoz42SvWsacRjHf3oeRbiqaZIjbVJKKU2mTiEhkMWhHTrEDv0DujlkyNS5+0En6dAuWRppsC4Sh7gIB4ogBRV8O/HtfFd8qaUdHNR8n8M7DDSSBx6eu+f33Of3fJ/nWCaTOVMUxVMsFqVCofC1XC4fMBiimWIqldKjM5lMKul0OlapVJKqqh5RvlqtaueG4bA4m83m4/F4TtZqtU4p32w2HzQaDXOv1+PpPZfLfaDzyWSi1QF4QvlQKMTdArbb7e/D4VAZDAa/+v0+6tS37D+GjvdHo9E5Lvag9ht8j60yl8tlpQjpO+jsDTp1osvXkHQoSRKd2ZdcgG/yPP8YcQtO8Ql8zQDG43F+0ckXkoSu59PplKT9i0QiG4IgPBVF8ZXNZtt1OBwvLRbLC5STP184dSwyzIhFo1EGhomAWNKzWq3mymaz77Cs9+jyeEnII8CsgJk4jqNl0Df6UuiZY263myAE1LKQ+6lUKvmx8Yt8Pn8J6A+8XwP8E/Nepxq99k7DL2EU4cMgZM8B/A3/i+1S/IO8ij9im2pisZhpJdDv9xvAcDhs7Xa7D3GJLRAIiOhSxKIcXq/X7vP5NBAiu5cRVAdD3udOpzPGLKvY+ACzvlrMSVO00mRZNkBYCLeQ/hEewXyD9XpdxgUeHZhIJO5k3QCcw0xQfpB9ngAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    &gt;&lt;/span&gt;
+    &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;History wrapper&quot;
         title=&quot;&quot;
-        src=&quot;/static/9de4373bfd095e5e9387a2ba73030be8/623ee/history-wrapper.png&quot;
-        srcset=&quot;/static/9de4373bfd095e5e9387a2ba73030be8/816c5/history-wrapper.png 148w,
-/static/9de4373bfd095e5e9387a2ba73030be8/c766b/history-wrapper.png 295w,
-/static/9de4373bfd095e5e9387a2ba73030be8/623ee/history-wrapper.png 590w,
-/static/9de4373bfd095e5e9387a2ba73030be8/1c801/history-wrapper.png 662w&quot;
+        src=&quot;/static/9de4373bfd095e5e9387a2ba73030be8/6255c/history-wrapper.png&quot;
+        srcset=&quot;/static/9de4373bfd095e5e9387a2ba73030be8/375dc/history-wrapper.png 148w,
+/static/9de4373bfd095e5e9387a2ba73030be8/6b157/history-wrapper.png 295w,
+/static/9de4373bfd095e5e9387a2ba73030be8/6255c/history-wrapper.png 590w,
+/static/9de4373bfd095e5e9387a2ba73030be8/64525/history-wrapper.png 662w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
-    &lt;/span&gt;
   &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
+  &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The API of the history object is quite simple. In order to change the URL, we need to push its definition into history:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;history&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   pathname&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;/some-url&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
@@ -334,40 +353,35 @@ Errors will occur no matter what, but I hope that’s not stopping you from writ
 &lt;p&gt;The way to ensure that this is the only data, which the user will receive, is to handle it in the middleware. Create a new object, with filtered data that has no sensitive information, and only then send it to the user. In this way, you’ll ensure that you’ll have all the information about the incident.&lt;/p&gt;
 &lt;h4&gt;In case an error hasn’t been caught - then it should be handled in the middleware&lt;/h4&gt;
 &lt;p&gt;There will be unhandled errors. From time to time we’ll forget to put logs and &lt;code class=&quot;language-text&quot;&gt;catch()&lt;/code&gt; methods in the right places. In this case, we’ll log the error in the middleware right before informing the user. This is the least preferable scenario, but it’s still better than crushing the server.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d6f7374d9f89f0484ca9cc346ce71812/f6de0/catch-and-log-errors-in-NodeJS-app.png&quot;
+    href=&quot;/static/d6f7374d9f89f0484ca9cc346ce71812/ba017/catch-and-log-errors-in-NodeJS-app.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
+    &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
       style=&quot;padding-bottom: 50.75987841945289%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABwklEQVQoz62QTWsaURSG7x0TG0cwAW2cTqqTWNNFoXQjQjZZuvEvuFXorrv+BTEouArkP2TlMuDGRUHciKIijhO/xq+o1SaCgtj3DJNAu0kCOfBw77n3fL6MwWKxGKvVamw+n5PLms3md3CpadrFZDK5HAwG5/SOO2+1Wmw4HPLxeMxHo9ET5Ou6buSzaDTKkMyWyyUnHx+/NpvNdjqdbslw/qT3xWJhYS+1dDrNkGvce73eDabalsvlFabaosEPeu90OkK1WuXr9dqG2P8RS6WS9Z+i+XxeoLPf719j4hUK6iiyxkqxxxis+63dbqsofAs0SKNVKhW10WjcwVIUwwVBoFUswWCQOuygkwsrH3W7XU8mk/mSSqXc4XDY6I7ks9lsNkfR+2Kx+AexD9D/N8mDba4o5gD4wRHBOfeZb2TvwHvgkiTpIBQKidlsdhfTS5j8Q6FQ8ORyOa+qqhJkkuv1+j4lucBX4AUn4LPT6bSTnvF43JJMJncSiYQFGgvsje2QGkIeRRTFY4fDcagoyp7f77fJsmwPBALWZytEIhHmdruNO6Sw4SDnFPjMbRSTU3PDV5sdfDILyuAj8Jha7wHhL2nK+cAEQ20AAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    &gt;&lt;/span&gt;
+    &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Catch and log errors in NodeJS app&quot;
         title=&quot;&quot;
-        src=&quot;/static/d6f7374d9f89f0484ca9cc346ce71812/623ee/catch-and-log-errors-in-NodeJS-app.png&quot;
-        srcset=&quot;/static/d6f7374d9f89f0484ca9cc346ce71812/816c5/catch-and-log-errors-in-NodeJS-app.png 148w,
-/static/d6f7374d9f89f0484ca9cc346ce71812/c766b/catch-and-log-errors-in-NodeJS-app.png 295w,
-/static/d6f7374d9f89f0484ca9cc346ce71812/623ee/catch-and-log-errors-in-NodeJS-app.png 590w,
-/static/d6f7374d9f89f0484ca9cc346ce71812/f6de0/catch-and-log-errors-in-NodeJS-app.png 658w&quot;
+        src=&quot;/static/d6f7374d9f89f0484ca9cc346ce71812/6255c/catch-and-log-errors-in-NodeJS-app.png&quot;
+        srcset=&quot;/static/d6f7374d9f89f0484ca9cc346ce71812/375dc/catch-and-log-errors-in-NodeJS-app.png 148w,
+/static/d6f7374d9f89f0484ca9cc346ce71812/6b157/catch-and-log-errors-in-NodeJS-app.png 295w,
+/static/d6f7374d9f89f0484ca9cc346ce71812/6255c/catch-and-log-errors-in-NodeJS-app.png 590w,
+/static/d6f7374d9f89f0484ca9cc346ce71812/ba017/catch-and-log-errors-in-NodeJS-app.png 658w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
-    &lt;/span&gt;
   &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
+  &lt;/a&gt;&lt;/p&gt;
 &lt;h4&gt;Now let’s talk code - how we’ll implement it&lt;/h4&gt;
 &lt;p&gt;First, I’m going to assume that we’re working with the &lt;code class=&quot;language-text&quot;&gt;express&lt;/code&gt; framework, so all examples will be based on that. Second, the logging system. I’m not going to explain in this post about what package to use or how to implement it. The assumption is that there is some library that is handling it and writing logs into the file or providing them via stdout so that some tool could aggregate it.&lt;/p&gt;
 &lt;p&gt;We’ll start with controllers, that are requesting data from some service. In the example below, we have &lt;code class=&quot;language-text&quot;&gt;projects&lt;/code&gt; service, that’s fetching data from somewhere. In the case of an error, we’ll log it and then provide it to the next middleware to handle the response to the user. I also wrapped it in the Boom object, this will indicate that the error has been processed and will need only to be returned to the user.&lt;/p&gt;
@@ -479,43 +493,38 @@ getTime&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 
 &lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; warn &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;showLog&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;warn&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; getTime&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; error &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;showLog&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;error&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; getTime&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Digital Product Management - Modern Fundamentals [coursera]]]></title><description><![CDATA[Well, I decided to learn more about being a product manager. It’s always fun to complain where there is no PM in the workplace, but I wanted…]]></description><link>https://artemdemo.com/20190228-coursera-digital-product-management/</link><guid isPermaLink="false">https://artemdemo.com/20190228-coursera-digital-product-management/</guid><pubDate>Thu, 28 Feb 2019 21:29:00 GMT</pubDate><content:encoded>&lt;p&gt;
-  &lt;a
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; error &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;showLog&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;error&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; getTime&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Digital Product Management - Modern Fundamentals [coursera]]]></title><description><![CDATA[Well, I decided to learn more about being a product manager. It’s always fun to complain where there is no PM in the workplace, but I wanted…]]></description><link>https://artemdemo.com/20190228-coursera-digital-product-management/</link><guid isPermaLink="false">https://artemdemo.com/20190228-coursera-digital-product-management/</guid><pubDate>Thu, 28 Feb 2019 21:29:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a4e0932fb365a5d7c90004eefeef0ed1/8596f/pm-coursera-course.jpg&quot;
+    href=&quot;/static/a4e0932fb365a5d7c90004eefeef0ed1/810dc/pm-coursera-course.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
+    &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
       style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMCBP/EABcBAAMBAAAAAAAAAAAAAAAAAAECAwD/2gAMAwEAAhADEAAAAetLU22km8BiAP8A/8QAGxAAAgIDAQAAAAAAAAAAAAAAARIAEAIDERT/2gAIAQEAAQUCnDQ2ofViQxjRq//EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BZl//xAAXEQEAAwAAAAAAAAAAAAAAAAABABAR/9oACAECAQE/AQJt/wD/xAAbEAABBAMAAAAAAAAAAAAAAAABABESIRAgMv/aAAgBAQAGPwKg65OJEJom9f/EABoQAQEBAQADAAAAAAAAAAAAAAERACFBYXH/2gAIAQEAAT8hnYi9aZWR80MNwiTmsHxsESGo5hZW7//aAAwDAQACAAMAAAAQDzf9/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAEDAQE/EEjlqwi//8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAECAQE/EKJrDar/xAAbEAEBAAMBAQEAAAAAAAAAAAABEQAhMUFxkf/aAAgBAQABPxBTrDZHMXjQq+D9wYplW0E7vffmTrobZK63gjg09w1knzBvDFJGXbM//9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    &gt;&lt;/span&gt;
+    &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Digital Product Management&quot;
         title=&quot;&quot;
-        src=&quot;/static/a4e0932fb365a5d7c90004eefeef0ed1/44e84/pm-coursera-course.jpg&quot;
-        srcset=&quot;/static/a4e0932fb365a5d7c90004eefeef0ed1/68355/pm-coursera-course.jpg 148w,
-/static/a4e0932fb365a5d7c90004eefeef0ed1/ada22/pm-coursera-course.jpg 295w,
-/static/a4e0932fb365a5d7c90004eefeef0ed1/44e84/pm-coursera-course.jpg 590w,
-/static/a4e0932fb365a5d7c90004eefeef0ed1/274de/pm-coursera-course.jpg 885w,
-/static/a4e0932fb365a5d7c90004eefeef0ed1/060c5/pm-coursera-course.jpg 1180w,
-/static/a4e0932fb365a5d7c90004eefeef0ed1/9b205/pm-coursera-course.jpg 1770w,
-/static/a4e0932fb365a5d7c90004eefeef0ed1/8596f/pm-coursera-course.jpg 3024w&quot;
+        src=&quot;/static/a4e0932fb365a5d7c90004eefeef0ed1/4b3ab/pm-coursera-course.jpg&quot;
+        srcset=&quot;/static/a4e0932fb365a5d7c90004eefeef0ed1/f8bb1/pm-coursera-course.jpg 148w,
+/static/a4e0932fb365a5d7c90004eefeef0ed1/900ac/pm-coursera-course.jpg 295w,
+/static/a4e0932fb365a5d7c90004eefeef0ed1/4b3ab/pm-coursera-course.jpg 590w,
+/static/a4e0932fb365a5d7c90004eefeef0ed1/78641/pm-coursera-course.jpg 885w,
+/static/a4e0932fb365a5d7c90004eefeef0ed1/38a35/pm-coursera-course.jpg 1180w,
+/static/a4e0932fb365a5d7c90004eefeef0ed1/d4d4c/pm-coursera-course.jpg 1770w,
+/static/a4e0932fb365a5d7c90004eefeef0ed1/810dc/pm-coursera-course.jpg 3024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
-    &lt;/span&gt;
   &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
+  &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Well, I decided to learn more about being a product manager. It’s always fun to complain where there is no PM in the workplace, but I wanted to see what was really missing, and why a PM was needed. So I decided to learn this top`ic by myself, I had some free time to spare, so why not?&lt;/p&gt;
 &lt;p&gt;Let’s start with Coursera. It has university-based content. I honestly felt like I was going back in time and sitting in one of the lectures in my college, in the middle of the desert (yeah, a story for another time). I don’t mean that it was a bad thing, it was just how the material was presented.&lt;/p&gt;
 &lt;p&gt;The author was presenting models, conducting interviews with other product managers and showing slides. All of these are important, it just felt like you had no idea what you should do next. When the course was done, what should be the next step for me to become a product manager? What were the practical applications of all that I had learned?&lt;/p&gt;
@@ -892,39 +901,34 @@ it’s easier for a new developer to understand the logic behind it.&lt;/p&gt;
 &lt;li&gt;Headers&lt;/li&gt;
 &lt;li&gt;Data (may or may not be provided)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4e81edfcabfd901d51913659ab52b5e2/e3a7f/rest-schema.png&quot;
+    href=&quot;/static/4e81edfcabfd901d51913659ab52b5e2/69707/rest-schema.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
+    &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 583px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 583px;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
       style=&quot;padding-bottom: 20.06861063464837%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAABIklEQVQY02NgQAJrGRh4GdDAIQYGbnQxFgYGxv0MDJwM2MDOUzcd952/v2XnmdvrDx65vGxyZ5fM7rN3WvddeLB5/5k7O3duOZi+6eAp9f0XHqwBql0HVLdi78kbB3ZtPhx84MIOh7N3j289cnnfqnP3Tmzbf36XK8PBy48zrr368//ItWf/D19/8XXx0mUee87cvnnu4af/l1/8+r/z1LWFOw8cDwfxgWr/7z137//Nd///7zlzt+XwmR0Nr/89/X/82sH/H/+/+n/8+qF8hpU7j0sDXeh19MYLz12nbjqAXL3rzG3TA5ceee87f89n06GLCvldC1l3n7ntefT6cw+gxW57z931X7nzgtj6A/MED1/e73v69jE3oCu9Nx1YKwsANPys4HJ8AXgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    &gt;&lt;/span&gt;
+    &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;REST schema&quot;
         title=&quot;&quot;
-        src=&quot;/static/4e81edfcabfd901d51913659ab52b5e2/e3a7f/rest-schema.png&quot;
-        srcset=&quot;/static/4e81edfcabfd901d51913659ab52b5e2/4db76/rest-schema.png 148w,
-/static/4e81edfcabfd901d51913659ab52b5e2/35fb5/rest-schema.png 295w,
-/static/4e81edfcabfd901d51913659ab52b5e2/e3a7f/rest-schema.png 583w&quot;
+        src=&quot;/static/4e81edfcabfd901d51913659ab52b5e2/69707/rest-schema.png&quot;
+        srcset=&quot;/static/4e81edfcabfd901d51913659ab52b5e2/309ac/rest-schema.png 148w,
+/static/4e81edfcabfd901d51913659ab52b5e2/7b6a0/rest-schema.png 295w,
+/static/4e81edfcabfd901d51913659ab52b5e2/69707/rest-schema.png 583w&quot;
         sizes=&quot;(max-width: 583px) 100vw, 583px&quot;
       /&gt;
-    &lt;/span&gt;
   &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
+  &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Blocks with an asterisk are required.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;REST verbs&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1154,39 +1158,34 @@ when the server just sends all of it to the browser - first of all let’s see w
 &lt;p&gt;Let’s say we have a huge database - millions of data entries.
 There is no way we can send it all to the client in one piece.
 We will require the client to define some criteria and then we’ll return the collection that represents these criteria.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1a31c405a3f3ec3a326ecc6c814350f1/91f75/collection-excerpt.png&quot;
+    href=&quot;/static/1a31c405a3f3ec3a326ecc6c814350f1/8f68d/collection-excerpt.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
+    &lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 484px; margin-left: auto; margin-right: auto;&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 484px;&quot;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
       style=&quot;padding-bottom: 25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsSAAALEgHS3X78AAABSElEQVQY02OQVVBmAIH///8zcHHziLCxs0twcnGLcXByCnNwckmwsXOI8/DyCQKViDEwMgoC1Yiys3OIAWlhkFp+QSE+BijILW+AMDwDwmBiIkAsD8QSQCwKxNJQDDJQDiouBsRSQCwOpUFyDP5hsQwowN0vRCq9oFI6MatINKOoSio6OVs8q7hGKjGzUDQ+o0COmZmZXUlVgw2oRgbIF00rqJAG0ck5JbKe/qHicIPquqawguhDlx+vOHbj5d+dp24ePX7z5dedp26dOHbz5Wcg/+Spu29/yyko801euFbi5O03//ecvXvoyLVnP4H0QaCa//svPpwPMqOxdwYLg6qGDhuQzbb5yGVnoOaUNXtO+e06fStx7d7T/kBDE4H8gH3n7ydzAwMS6C1BoFza+v3nfLefuJ68/gCYTlu376wj0Ax2LT0jFgBDVXjgRUkgsAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    &gt;&lt;/span&gt;
+    &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Collection excerpt&quot;
         title=&quot;&quot;
-        src=&quot;/static/1a31c405a3f3ec3a326ecc6c814350f1/91f75/collection-excerpt.png&quot;
-        srcset=&quot;/static/1a31c405a3f3ec3a326ecc6c814350f1/8202e/collection-excerpt.png 148w,
-/static/1a31c405a3f3ec3a326ecc6c814350f1/1b055/collection-excerpt.png 295w,
-/static/1a31c405a3f3ec3a326ecc6c814350f1/91f75/collection-excerpt.png 484w&quot;
+        src=&quot;/static/1a31c405a3f3ec3a326ecc6c814350f1/8f68d/collection-excerpt.png&quot;
+        srcset=&quot;/static/1a31c405a3f3ec3a326ecc6c814350f1/f31dc/collection-excerpt.png 148w,
+/static/1a31c405a3f3ec3a326ecc6c814350f1/b9894/collection-excerpt.png 295w,
+/static/1a31c405a3f3ec3a326ecc6c814350f1/8f68d/collection-excerpt.png 484w&quot;
         sizes=&quot;(max-width: 484px) 100vw, 484px&quot;
       /&gt;
-    &lt;/span&gt;
   &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
+  &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;So each time the client will get only partial data and sometimes, when a given query is too general,
 then the server will cut it even more. For example, it may return only the first 1000 entries.
 In this case we can’t sort data on the client,
