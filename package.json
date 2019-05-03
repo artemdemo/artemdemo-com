@@ -33,7 +33,7 @@
     "remark": "^10.0.1",
     "remark-html": "^9.0.0",
     "remark-preset-lint-markdown-style-guide": "^2.1.2",
-    "styled-components": "^3.4.10"
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
