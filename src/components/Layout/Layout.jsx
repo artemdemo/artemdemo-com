@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import Container from '../Container/Container';
 import Header from '../Header/Header';
 import { locationProp } from './layoutProps';
+import pkg from '../../../package.json';
 
 class Layout extends React.Component {
     render() {
@@ -12,7 +13,10 @@ class Layout extends React.Component {
             <React.Fragment>
                 <Helmet
                     htmlAttributes={{lang: 'en'}}
-                    meta={[{name: 'description', content: description}]}
+                    meta={[
+                        {name: 'description', content: description},
+                        {name: 'app-version', content: pkg.version},
+                    ]}
                     title={title}
                 />
                 <Header location={location} />

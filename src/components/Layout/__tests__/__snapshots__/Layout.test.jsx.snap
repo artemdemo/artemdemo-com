@@ -13,6 +13,10 @@ Array [
     {
       "name": "description",
       "content": "Site description"
+    },
+    {
+      "name": "app-version",
+      "content": "0.8.0"
     }
   ],
   "title": "Regular title"
@@ -40,6 +44,10 @@ Array [
     {
       "name": "description",
       "content": "Site description"
+    },
+    {
+      "name": "app-version",
+      "content": "0.8.0"
     }
   ],
   "title": "Regular title"
