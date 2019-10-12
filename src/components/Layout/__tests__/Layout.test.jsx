@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import Layout from '../Layout';
 
 jest.mock('react-helmet');
+jest.mock('../../../services/package');
 jest.mock('../../Icon/Icon');
 jest.mock('../../Header/Header');
 

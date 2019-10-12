@@ -1,7 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
-import toJSON from 'enzyme-to-json';
 import PostsItem from '../PostsItem';
 
 jest.mock('gatsby');
@@ -18,7 +16,7 @@ describe('PostsItem', () => {
     });
 
     it('should render with node', () => {
-        const wrapper = mount(
+        const tree = renderer.create(
             <PostsItem
                 node={{
                     frontmatter: {
@@ -31,13 +29,13 @@ describe('PostsItem', () => {
                     excerpt: 'Excerpt text',
                 }}
             />
-        );
+        ).toJSON();
 
-        expect(toJSON(wrapper)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     it('should render with slug when title not provided', () => {
-        const wrapper = mount(
+        const tree = renderer.create(
             <PostsItem
                 node={{
                     frontmatter: {
@@ -49,8 +47,8 @@ describe('PostsItem', () => {
                     excerpt: 'Excerpt text',
                 }}
             />
-        );
+        ).toJSON();
 
-        expect(toJSON(wrapper)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 });

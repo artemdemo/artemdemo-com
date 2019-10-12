@@ -16,7 +16,7 @@ Array [
     },
     {
       "name": "app-version",
-      "content": "0.8.0"
+      "content": "0.0.0-mock"
     }
   ],
   "title": "Regular title"
@@ -47,7 +47,7 @@ Array [
     },
     {
       "name": "app-version",
-      "content": "0.8.0"
+      "content": "0.0.0-mock"
     }
   ],
   "title": "Regular title"

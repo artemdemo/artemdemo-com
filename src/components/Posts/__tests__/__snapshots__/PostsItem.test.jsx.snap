@@ -3,150 +3,53 @@
 exports[`PostsItem should render empty 1`] = `null`;
 
 exports[`PostsItem should render with node 1`] = `
-<PostsItem
-  node={
-    Object {
-      "excerpt": "Excerpt text",
-      "fields": Object {
-        "slug": "/first",
-      },
-      "frontmatter": Object {
-        "date": "10 May, 2018",
-        "title": "Some title",
-      },
-    }
-  }
+<div
+  className="PostsItem__PostItemSty-sc-1fceitp-0 bGzTAb"
 >
-  <PostsItem__PostItemSty>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "PostsItem__PostItemSty-sc-1fceitp-0",
-            "isStatic": true,
-            "lastClassName": "bGzTAb",
-            "rules": Array [
-              "margin-bottom:30px;",
-            ],
-          },
-          "displayName": "PostsItem__PostItemSty",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "PostsItem__PostItemSty-sc-1fceitp-0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+  <h2>
+    <div
+      data-mock="Link"
     >
-      <div
-        className="PostsItem__PostItemSty-sc-1fceitp-0 bGzTAb"
-      >
-        <h2>
-          <Link
-            to="/blog/first"
-          >
-            <div
-              data-mock="Link"
-            >
-              Some title
-            </div>
-          </Link>
-        </h2>
-        <PostDate>
-          <div
-            data-mock="PostDate"
-          >
-            10 May, 2018
-          </div>
-        </PostDate>
-        <p
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Excerpt text",
-            }
-          }
-        />
-      </div>
-    </StyledComponent>
-  </PostsItem__PostItemSty>
-</PostsItem>
+      Some title
+    </div>
+  </h2>
+  <div
+    data-mock="PostDate"
+  >
+    10 May, 2018
+  </div>
+  <p
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "Excerpt text",
+      }
+    }
+  />
+</div>
 `;
 
 exports[`PostsItem should render with slug when title not provided 1`] = `
-<PostsItem
-  node={
-    Object {
-      "excerpt": "Excerpt text",
-      "fields": Object {
-        "slug": "/first",
-      },
-      "frontmatter": Object {
-        "date": "10 May, 2018",
-      },
-    }
-  }
+<div
+  className="PostsItem__PostItemSty-sc-1fceitp-0 bGzTAb"
 >
-  <PostsItem__PostItemSty>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "PostsItem__PostItemSty-sc-1fceitp-0",
-            "isStatic": true,
-            "lastClassName": "bGzTAb",
-            "rules": Array [
-              "margin-bottom:30px;",
-            ],
-          },
-          "displayName": "PostsItem__PostItemSty",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "PostsItem__PostItemSty-sc-1fceitp-0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+  <h2>
+    <div
+      data-mock="Link"
     >
-      <div
-        className="PostsItem__PostItemSty-sc-1fceitp-0 bGzTAb"
-      >
-        <h2>
-          <Link
-            to="/blog/first"
-          >
-            <div
-              data-mock="Link"
-            >
-              /first
-            </div>
-          </Link>
-        </h2>
-        <PostDate>
-          <div
-            data-mock="PostDate"
-          >
-            10 May, 2018
-          </div>
-        </PostDate>
-        <p
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "Excerpt text",
-            }
-          }
-        />
-      </div>
-    </StyledComponent>
-  </PostsItem__PostItemSty>
-</PostsItem>
+      /first
+    </div>
+  </h2>
+  <div
+    data-mock="PostDate"
+  >
+    10 May, 2018
+  </div>
+  <p
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "Excerpt text",
+      }
+    }
+  />
+</div>
 `;
