@@ -19,7 +19,7 @@ $ npm run build
 ```
 
 ```
-$ v
+$ git add --all && git commit -m 'Build blog' && git push
 ```
 
 ```
