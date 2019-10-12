@@ -4,19 +4,19 @@ import Icon from '../../components/Icon/Icon';
 
 const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true';
 
-const ContactFormLoadingSty = styled.div`
+const ContactFormLoading = styled.div`
     position: absolute;
     ${props => props.loaded ? 'display: none;' : ''}
 `;
 
-const ContactFormIframeSty = styled.iframe`
+const ContactFormIframe = styled.iframe`
     visibility: hidden;
     width: 640px;
     height: 822px;
     ${props => props.loaded ? 'visibility: visible;' : ''}
 `;
 
-const IconWrapSty = styled.span`
+const IconWrap = styled.span`
     font-size: 150%;
     opacity: 0.4;
 `;
@@ -39,15 +39,15 @@ class ContactForm extends React.PureComponent {
     render() {
         return (
             <React.Fragment>
-                <ContactFormLoadingSty
+                <ContactFormLoading
                     loaded={this.state.formLoaded}
                 >
                     Form is loading...
-                    <IconWrapSty>
+                    <IconWrap>
                         <Icon name='cog fa-spin fa-fw' />
-                    </IconWrapSty>
-                </ContactFormLoadingSty>
-                <ContactFormIframeSty
+                    </IconWrap>
+                </ContactFormLoading>
+                <ContactFormIframe
                     src={FORM_URL}
                     onLoad={this.iframeLoaded.bind(this)}
                     frameBorder='0'
@@ -55,7 +55,7 @@ class ContactForm extends React.PureComponent {
                     marginWidth='0'
                     loaded={this.state.formLoaded}
                 >
-                </ContactFormIframeSty>
+                </ContactFormIframe>
             </React.Fragment>
         );
     }

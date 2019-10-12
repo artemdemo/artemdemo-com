@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import './BinaryPagination.css';
 
-const PaginationContainerSty = styled.div`
+const PaginationContainer = styled.div`
     &::after {
         content: '';
         display: table;
@@ -17,13 +17,13 @@ const PaginationContainerSty = styled.div`
     }
 `;
 
-const PaginationItemSty = styled.div`
+const PaginationItem = styled.div`
     ${props => props.left && `
         float: left;    
-    `}
+    `};
     ${props => props.right && `
         float: right;
-    `}
+    `};
     @media (max-width: 768px) {
         float: initial;
         display: inline-block;
@@ -31,13 +31,13 @@ const PaginationItemSty = styled.div`
     }
 `;
 
-const LinkTextSty = styled.span`
+const LinkText = styled.span`
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 `;
 
-const LinkArrowSty = styled.span`
+const LinkArrow = styled.span`
     flex-grow: 1;
     :first-child {
         padding-right: 5px;
@@ -60,12 +60,12 @@ class BinaryPagination extends React.PureComponent {
                             to={previous.slug}
                             rel='prev'
                         >
-                            <LinkArrowSty>
+                            <LinkArrow>
                                 ←
-                            </LinkArrowSty>
-                            <LinkTextSty>
+                            </LinkArrow>
+                            <LinkText>
                                 {title}
-                            </LinkTextSty>
+                            </LinkText>
                         </Link>
                     </li>
                 </ul>
@@ -86,12 +86,12 @@ class BinaryPagination extends React.PureComponent {
                             to={next.slug}
                             rel='next'
                         >
-                            <LinkTextSty>
+                            <LinkText>
                                 {title}
-                            </LinkTextSty>
-                            <LinkArrowSty>
+                            </LinkText>
+                            <LinkArrow>
                                 →
-                            </LinkArrowSty>
+                            </LinkArrow>
                         </Link>
                     </li>
                 </ul>
@@ -102,14 +102,14 @@ class BinaryPagination extends React.PureComponent {
 
     render() {
         return (
-            <PaginationContainerSty>
-                <PaginationItemSty left>
+            <PaginationContainer>
+                <PaginationItem left>
                     {this.renderPrev()}
-                </PaginationItemSty>
-                <PaginationItemSty right>
+                </PaginationItem>
+                <PaginationItem right>
                     {this.renderNext()}
-                </PaginationItemSty>
-            </PaginationContainerSty>
+                </PaginationItem>
+            </PaginationContainer>
         );
     }
 }
