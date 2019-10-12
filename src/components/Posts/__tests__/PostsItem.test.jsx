@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';g
+import renderer from 'react-test-renderer';
 import PostsItem from '../PostsItem';
 
 jest.mock('gatsby');

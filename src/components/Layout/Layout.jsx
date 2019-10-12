@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import Container from '../Container/Container';
 import Header from '../Header/Header';
 import { locationProp } from './layoutProps';
-import pkg from '../../../package.json';
+import pkg from '../../services/package';
 
 class Layout extends React.Component {
     render() {
