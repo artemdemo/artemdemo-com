@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{60:function(n,e,t){"use strict";t.r(e),t.d(e,"pageQuery",function(){return u});var r=t(85),s=t.n(r),a=t(54),o=t(86);e.default=class extends a.default{constructor(n){super(n)}renderPagination(){const n=s()(this.props,"pageContext.tag","");return super.renderPagination(o.prefixTag.bind(null,n))}};const u="2016759457"}}]);
-//# sourceMappingURL=component---src-templates-posts-list-by-tag-jsx-b25baf3592b559b676d4.js.map

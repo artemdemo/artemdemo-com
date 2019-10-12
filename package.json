@@ -1,7 +1,7 @@
 {
   "name": "artemdemo-com",
   "description": "Blog artemdemo.com",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "author": "Artem Demo",
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -57,7 +57,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "gatsby develop",
+    "start": "npm run develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "NODE_ENV=test BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json",
     "test:coverage": "NODE_ENV=test BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json --coverage",
