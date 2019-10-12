@@ -54,7 +54,7 @@ class PostsItem extends React.PureComponent {
             </PostItemSty>
         );
     }
-};
+}
 
 PostsItem.propTypes = {
     node: PropTypes.shape({}),
