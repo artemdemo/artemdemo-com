@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{578:function(e,n,s){"use strict";s.r(n);var t=s(0),r=s.n(t);class a extends r.a.PureComponent{render(){return r.a.createElement("div",{"data-mock":"PostsList"},this.props.children)}}n.default=a}}]);
+//# sourceMappingURL=component---src-pages-posts-list-mocks-posts-list-jsx-236ccbf1771b8f696130.js.map
