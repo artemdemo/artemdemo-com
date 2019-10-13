@@ -59,7 +59,7 @@ module.exports = {
                 short_name: author,
                 start_url: `/`,
                 background_color: `#ffffff`,
-                theme_color: `#663399`,
+                theme_color: `#3d4799`,
                 display: `minimal-ui`,
                 // icon: `src/assets/gatsby-icon.png`,
             },
