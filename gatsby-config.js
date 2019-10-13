@@ -1,11 +1,11 @@
-const title = 'Artem Demo, frontend dev.';
+const title = 'Artem Demo, web dev.';
 const author = 'Artem Demo';
 
 module.exports = {
     siteMetadata: {
         title,
         author,
-        description: 'Blog about FrontEnd: JS, CSS, HTML',
+        description: 'Blog about web development',
         siteUrl: 'https://artemdemo.com',
     },
     pathPrefix: '/',
