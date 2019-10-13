@@ -19,7 +19,7 @@ class Layout extends React.Component {
                     ]}
                     title={title}
                 />
-                <Header location={location} />
+                <Header title={title} location={location} />
                 <Container>
                     {this.props.children}
                 </Container>

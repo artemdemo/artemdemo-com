@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import MainMenu from './MainMenu';
@@ -10,14 +11,14 @@ const HeaderSty = styled.div`
     margin-bottom: 20px;
 `;
 
-const HeaderContainerSty = styled.div`
+const HeaderContainer = styled.div`
     padding: 15px 0;
     @media (max-width: 575.98px) {
         text-align: center;
     }
 `;
 
-const HeaderItemSty = styled.div`
+const HeaderItem = styled.div`
     display: inline-block;
     vertical-align: middle;
     ${props => props.logo && `
@@ -39,17 +40,17 @@ const HeaderItemSty = styled.div`
     `}
 `;
 
-const HeaderItemMenuSty = styled.div`
+const HeaderItemMenu = styled.div`
     float: right;
 `;
 
-const HeaderSeparatorSty = styled.div`
+const HeaderSeparator = styled.div`
     border-bottom: 1px solid #dee2e6;
     max-width: 90%;
     margin: 0 auto;
 `;
 
-const HeaderLogoLinkSty = styled(Link)`
+const HeaderLogoLink = styled(Link)`
     color: initial;
     &:hover {
         text-decoration: none;
@@ -57,23 +58,23 @@ const HeaderLogoLinkSty = styled(Link)`
 `;
 
 const Header = (props) => {
-    const { location } = props;
+    const { location, title } = props;
     return (
         <HeaderSty>
             <Container>
-                <HeaderContainerSty>
-                    <HeaderItemSty logo>
-                        <HeaderLogoLinkSty to='/'>
-                            Artem Demo, frontend dev.
-                        </HeaderLogoLinkSty>
-                    </HeaderItemSty>
-                    <HeaderItemSty menu>
-                        <HeaderItemMenuSty>
+                <HeaderContainer>
+                    <HeaderItem logo>
+                        <HeaderLogoLink to='/'>
+                            {title}
+                        </HeaderLogoLink>
+                    </HeaderItem>
+                    <HeaderItem menu>
+                        <HeaderItemMenu>
                             <MainMenu location={location} />
-                        </HeaderItemMenuSty>
-                    </HeaderItemSty>
-                </HeaderContainerSty>
-                <HeaderSeparatorSty />
+                        </HeaderItemMenu>
+                    </HeaderItem>
+                </HeaderContainer>
+                <HeaderSeparator />
             </Container>
         </HeaderSty>
     );
@@ -81,10 +82,12 @@ const Header = (props) => {
 
 Header.propTypes = {
     location: locationProp,
+    title: PropTypes.string,
 };
 
 Header.defaultProps = {
     location: {},
+    title: '',
 };
 
 export default Header;
