@@ -1,4 +1,4 @@
-const title = 'Artem Demo, web dev.';
+const title = 'Artem Demo, web dev';
 const author = 'Artem Demo';
 
 module.exports = {

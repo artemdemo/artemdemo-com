@@ -9,6 +9,7 @@ import pkg from '../../services/package';
 class Layout extends React.Component {
     render() {
         const { title, description, location } = this.props;
+        const fullTitle = this.props.fullTitle !== '' ? this.props.fullTitle : title;
         return (
             <React.Fragment>
                 <Helmet
@@ -17,7 +18,7 @@ class Layout extends React.Component {
                         {name: 'description', content: description},
                         {name: 'app-version', content: pkg.version},
                     ]}
-                    title={title}
+                    title={fullTitle}
                 />
                 <Header title={title} location={location} />
                 <Container>
@@ -30,13 +31,18 @@ class Layout extends React.Component {
 
 Layout.propTypes = {
     location: locationProp,
+    // `title` will be used as site name on the left of the page (part of the page content)
     title: PropTypes.string.isRequired,
+    // `fullTitle` will be used in the title of the page (in browser tab)
+    // If fullTitle is not provided, then `title` will be used instead
+    fullTitle: PropTypes.string,
     description: PropTypes.string.isRequired,
     metaTitle: PropTypes.string.isRequired,
 };
 
 Layout.defaultProps = {
     location: {},
+    fullTitle: '',
 };
 
 export default Layout

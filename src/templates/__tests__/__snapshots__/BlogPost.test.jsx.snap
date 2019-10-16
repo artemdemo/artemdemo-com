@@ -5,7 +5,7 @@ exports[`BlogPost should render 1`] = `
   data-description="Post excerpt"
   data-metaTitle="Site title"
   data-mock="Layout"
-  data-title="FrontMatter title | Site title"
+  data-title="Site title"
 >
   <h1>
     FrontMatter title

@@ -38,7 +38,8 @@ class BlogPost extends React.Component {
 
         return (
             <Layout
-                title={`${post.frontmatter.title} | ${siteTitle}`}
+                title={siteTitle}
+                fullTitle={`${post.frontmatter.title} | ${siteTitle}`}
                 description={siteDescription}
                 metaTitle={siteTitle}
                 location={this.props.location}
