@@ -1,4 +1,129 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, web dev]]></title><description><![CDATA[Blog about web development]]></description><link>https://artemdemo.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 16 Oct 2019 14:49:20 GMT</lastBuildDate><item><title><![CDATA[Styled-components - the interesting parts]]></title><description><![CDATA[The whole logic of styled-components can be described in one “feature request”: “Let’s manage CSS in js alongside with component core code”. The logic behind it is sort of obvious - it will give us the dynamic of js inside of CSS and we’ll be able to treat styling as part of component code and not store it in a separate file. The idea is promising, now let’s see what are some of the edge cases. And why is that? Because nothing is ideal in the world.]]></description><link>https://artemdemo.com/20191014-styled-components-the-interesting-parts/</link><guid isPermaLink="false">https://artemdemo.com/20191014-styled-components-the-interesting-parts/</guid><pubDate>Mon, 14 Oct 2019 14:01:00 GMT</pubDate><content:encoded>&lt;p&gt;The whole logic of styled-components can be described in one “feature request”: “Let’s manage CSS in js alongside with component core code”. The logic behind it is sort of obvious - it will give us the dynamic of js inside of CSS and we’ll be able to treat styling as part of component code and not store it in a separate file.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Artem Demo, web dev]]></title><description><![CDATA[Blog about web development]]></description><link>https://artemdemo.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 21 Oct 2019 09:48:05 GMT</lastBuildDate><item><title><![CDATA[My CLI shortcuts for git]]></title><description><![CDATA[I’m using a lot of git features via CLI. Mainly it’s rebasing, committing and pushing new changes to the repository. I know that most editors have UI solutions for these commands, but I never liked it and honestly don’t see any reason to change my habits. Stubborn you say? Probably. Don’t know.]]></description><link>https://artemdemo.com/20191021-my-cli-shortcuts-for-git/</link><guid isPermaLink="false">https://artemdemo.com/20191021-my-cli-shortcuts-for-git/</guid><pubDate>Mon, 21 Oct 2019 12:40:00 GMT</pubDate><content:encoded>&lt;p&gt;I’m using a lot of git features via CLI. Mainly it’s rebasing, committing and pushing new changes to the repository. I know that most editors have UI solutions for these commands, but I never liked it and honestly don’t see any reason to change my habits. Stubborn you say? Probably. Don’t know.&lt;/p&gt;
+&lt;!-- end --&gt;
+&lt;p&gt;So if you, like me, and want to try to use CLI to manage git repo - I want to share with you the shortcuts that I regularly use at work. Because, some commands are just too long to remember, but still CLI is the best :)&lt;/p&gt;
+&lt;p&gt;We’ll add these commands to the global git config file. For Linux and mac global git configuration is here: ~/.gitconfig&lt;/p&gt;
+&lt;p&gt;I’m not going to explain everything you can configure in gitconfig. Frankly, I don’t know all the options. Only the minimum that needed. And the whole purpose of this post is to remind to future me, what are the commands that I usually use. So, you’re welcome, Artem.&lt;/p&gt;
+&lt;p&gt;Let’s start. There are three sections in gitconfig, that I use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;alias&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Here you’ll add CLI shortcuts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;user&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your main email and user name&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;core&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your default editor for commits and rebasing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;[alias]&lt;/h2&gt;
+&lt;p&gt;This is the most interesting section. Your git shortcuts. Your magic.&lt;/p&gt;
+&lt;p&gt;First, basic commands. The whole purpose of them is to save some typing. Very simple.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;c &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; checkout
+aa &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; --all
+s &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; status
+cm &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; commit -m
+ca &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; commit --amend&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Branches managing and rebasing. These commands I use most often.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# list of available branches&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# will be displayed name and when happened last change&lt;/span&gt;
+b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;!git for-each-ref --sort=&apos;-committerdate&apos; --format=&apos;%(color:green)%(committerdate:relative)%(color:reset)%09%(refname)&apos; refs/heads | sed -e &apos;s-refs/heads/--&apos;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# safely delete current branch&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# will change to &quot;master&quot;, fetch changes and attempt to safely delete last branch&lt;/span&gt;
+bd &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git c master &amp;amp;&amp;amp; git fetch &amp;amp;&amp;amp; git pull origin master &amp;amp;&amp;amp; git branch -d &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; rev-parse --abbrev-ref @&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;-1&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# same as previous command,&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# but will force delete last branch&lt;/span&gt;
+bDD &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git c master &amp;amp;&amp;amp; git fetch &amp;amp;&amp;amp; git pull origin master &amp;amp;&amp;amp; git branch -D &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; rev-parse --abbrev-ref @&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;-1&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# interactively rebase current branch on master&lt;/span&gt;
+rom &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git fetch &amp;amp;&amp;amp; git rebase -i origin/master&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Commits history. Your logs. There is an easy command git log, that will print list of commits, but it wouldn’t be so user-friendly. Therefore I created some commands that I use regularly:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# list of logs, in one line, with branch names and commit ids&lt;/span&gt;
+lg1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; log --oneline --decorate --graph --format&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;token string&quot;&gt;&apos;%C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(yellow)%d%C(reset)&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The result will look like this:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4c43c40758ca6fa3a1c4631c81df6fb2/e11df/git-cli-lg1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 35.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+ElEQVQoz42RS3OCMBSF+Tl9aUWLGAgBAglBHuKjo2O7aKes+v/3p5dMXbQLcXHmbnK/Od+Nk+oPRPKMVLdQ61dkZoc4b8FEiReWY+5LPLkcD88BHmfhaJzc9Iizd+hqj7I5oWxPBO/gBTkWKwl3mdiHF+Awr8GdzHxB6k8U9QFVd0aiOkwXwmZCGdpN5pHNLS0dn7cI4yN4WpHqhto24MJgyTIEUQE/1FZ9aHsTkIkOsugJWFvdTG3AuYLrhvA8akrzbspwT7ksXVXmyQF6/W1V6+0bwXdYRYZuqGjx7/LY/X4bbumGvf1Z0xwtcNAXpD7c8T9wTPkHk4fqOOnHU1MAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;git CLI lg1&quot;
+        title=&quot;git CLI lg1&quot;
+        src=&quot;/static/4c43c40758ca6fa3a1c4631c81df6fb2/b9e4f/git-cli-lg1.png&quot;
+        srcset=&quot;/static/4c43c40758ca6fa3a1c4631c81df6fb2/cf440/git-cli-lg1.png 148w,
+/static/4c43c40758ca6fa3a1c4631c81df6fb2/d2d38/git-cli-lg1.png 295w,
+/static/4c43c40758ca6fa3a1c4631c81df6fb2/b9e4f/git-cli-lg1.png 590w,
+/static/4c43c40758ca6fa3a1c4631c81df6fb2/f9b6a/git-cli-lg1.png 885w,
+/static/4c43c40758ca6fa3a1c4631c81df6fb2/e11df/git-cli-lg1.png 1000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# same as previous, but also includes commit author and when it was added&lt;/span&gt;
+lg2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; log --graph --abbrev-commit --decorate --date&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;relative --format&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;token string&quot;&gt;&apos;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset)  %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The result will be:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e8067ba0f598780224f65d5b91de5bb8/e11df/git-cli-lg2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABJElEQVQoz32Ry27CMBBF+Zu+eBMSbCe248R5uECatohSlQVVUaX+//52ZEGlAu3iajbjo3PHHVvvobItwleD+N3BtRvUizVcs/HRtoHMlhDaYRwZ9CcSvXGC2wHH3VD8zGM6v4C7I/AFWfUIJitMuaVHAlfdGa57jDLzkGNOoR0mW3C5wsSliJ4tVLWEKVokZk7AmlIiTiuaBe1ZhDz3hoNAXTZkCQHsB4Iqw+ytQOLmKOqVB3LlqKqFKQvEWlOTFAFT3rg7ii8Dk3RFgC+EjYXYV0ibByzaLfL66WDp6G6almOqzXDT5/9XFqpFXn5iusjBdqUHVvdrsmqh8sbfMhSWzHICJ2dGZ4aDwGAS1ehziZHVGAuDSJQHgMRwqn29v371NN/Lse46inflTQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;git CLI lg2&quot;
+        title=&quot;git CLI lg2&quot;
+        src=&quot;/static/e8067ba0f598780224f65d5b91de5bb8/b9e4f/git-cli-lg2.png&quot;
+        srcset=&quot;/static/e8067ba0f598780224f65d5b91de5bb8/cf440/git-cli-lg2.png 148w,
+/static/e8067ba0f598780224f65d5b91de5bb8/d2d38/git-cli-lg2.png 295w,
+/static/e8067ba0f598780224f65d5b91de5bb8/b9e4f/git-cli-lg2.png 590w,
+/static/e8067ba0f598780224f65d5b91de5bb8/f9b6a/git-cli-lg2.png 885w,
+/static/e8067ba0f598780224f65d5b91de5bb8/e11df/git-cli-lg2.png 1000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;And the default command for even shorter version of this shortcut:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# default command&lt;/span&gt;
+lg &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git lg1&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;[user]&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;email &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; you@mail.com
+name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Your Name&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Nothing to add here. You’re defining here default email and user name for your commits. Easy.&lt;/p&gt;
+&lt;h2&gt;[core]&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;editor &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Your editor of choice. Should I say that vim should be installed on your system? You know. If you expect me to be so explicit, then probably you’re in the wrong profession, buddy. Other than that, love you deeply :-*&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Styled-components - the interesting parts]]></title><description><![CDATA[The whole logic of styled-components can be described in one “feature request”: “Let’s manage CSS in js alongside with component core code”. The logic behind it is sort of obvious - it will give us the dynamic of js inside of CSS and we’ll be able to treat styling as part of component code and not store it in a separate file. The idea is promising, now let’s see what are some of the edge cases. And why is that? Because nothing is ideal in the world.]]></description><link>https://artemdemo.com/20191014-styled-components-the-interesting-parts/</link><guid isPermaLink="false">https://artemdemo.com/20191014-styled-components-the-interesting-parts/</guid><pubDate>Mon, 14 Oct 2019 14:01:00 GMT</pubDate><content:encoded>&lt;p&gt;The whole logic of styled-components can be described in one “feature request”: “Let’s manage CSS in js alongside with component core code”. The logic behind it is sort of obvious - it will give us the dynamic of js inside of CSS and we’ll be able to treat styling as part of component code and not store it in a separate file.&lt;/p&gt;
 &lt;p&gt;The idea is promising, now let’s see what are some of the edge cases. And why is that? Because nothing is ideal in the world.&lt;/p&gt;
 &lt;!-- end --&gt;
 &lt;p&gt;&lt;span
