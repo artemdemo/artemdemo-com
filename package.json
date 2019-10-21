@@ -1,7 +1,7 @@
 {
   "name": "artemdemo-com",
   "description": "Blog artemdemo.com",
-  "version": "0.12.1",
+  "version": "0.14.0",
   "author": "Artem Demo",
   "dependencies": {
     "bootstrap": "^4.3.1",
