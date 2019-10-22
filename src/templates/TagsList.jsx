@@ -28,7 +28,8 @@ class TagsList extends React.PureComponent {
                     to={`/tags/${tag.slug}`}
                     key={`tags-${tag.slug}`}
                 >
-                    {tag.name} ({tag.amount})
+                    {tag.name}
+                    <sup> {tag.amount}</sup>
                 </TagLinkSty>
             ));
     }
