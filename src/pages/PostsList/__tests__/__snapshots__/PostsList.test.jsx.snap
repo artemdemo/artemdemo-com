@@ -26,13 +26,6 @@ exports[`PostsList should render 1`] = `
 }
   </div>
   <div
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": null,
-      }
-    }
-  />
-  <div
     data-mock="Pagination"
   >
     {

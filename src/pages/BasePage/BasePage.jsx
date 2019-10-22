@@ -48,6 +48,14 @@ class BasePage extends React.PureComponent {
         return null;
     }
 
+    renderContent() {
+        return (
+            <div
+                dangerouslySetInnerHTML={{__html: this.state.content}}
+            />
+        );
+    }
+
     renderAfterContent() {
         return null;
     }
@@ -56,9 +64,7 @@ class BasePage extends React.PureComponent {
         return this.parentWrapper(
             <React.Fragment>
                 {this.renderBeforeContent()}
-                <div
-                    dangerouslySetInnerHTML={{__html: this.state.content}}
-                />
+                {this.renderContent()}
                 {this.renderAfterContent()}
             </React.Fragment>
         );
