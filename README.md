@@ -15,15 +15,11 @@ I'm using `gatsby@2.0.0`
 ## How to publish
 
 ```
-$ npm run build
+$ npm run build && git add --all && git commit -m 'Build blog' && git push
 ```
 
 ```
-$ git add --all && git commit -m 'Build blog' && git push
-```
-
-```
-$ git subtree push --prefix public origin gh-pages
+$ gatsby build --prefix-paths && gh-pages -d public
 ```
 
 ## Based on gatsby-starter-blog
