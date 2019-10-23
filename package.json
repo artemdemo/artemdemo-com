@@ -1,7 +1,7 @@
 {
   "name": "artemdemo-com",
   "description": "Blog artemdemo.com",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "author": "Artem Demo",
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -63,6 +63,7 @@
     "test:coverage": "NODE_ENV=test BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json --coverage",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "deploy": "npm run build && ./deploy.sh"
   }
 }
