@@ -20,54 +20,28 @@ exports[`BinaryPagination should render with data 1`] = `
   <div
     className="BinaryPagination__PaginationItem-sc-35l4ss-1 fjGTlq"
   >
-    <ul
-      className="pagination binary-pagination"
+    <div
+      data-mock="SideLinkItem"
     >
-      <li
-        className="page-item"
-      >
-        <div
-          data-mock="Link"
-        >
-          <span
-            className="BinaryPagination__LinkArrow-sc-35l4ss-3 iqANll"
-          >
-            ←
-          </span>
-          <span
-            className="BinaryPagination__LinkText-sc-35l4ss-2 gmmRgB"
-          >
-            Prev title
-          </span>
-        </div>
-      </li>
-    </ul>
+      {
+  "direction": "prev",
+  "to": "/prev",
+  "title": "Prev title"
+}
+    </div>
   </div>
   <div
     className="BinaryPagination__PaginationItem-sc-35l4ss-1 ibbqOI"
   >
-    <ul
-      className="pagination binary-pagination"
+    <div
+      data-mock="SideLinkItem"
     >
-      <li
-        className="page-item"
-      >
-        <div
-          data-mock="Link"
-        >
-          <span
-            className="BinaryPagination__LinkText-sc-35l4ss-2 gmmRgB"
-          >
-            Next title
-          </span>
-          <span
-            className="BinaryPagination__LinkArrow-sc-35l4ss-3 iqANll"
-          >
-            →
-          </span>
-        </div>
-      </li>
-    </ul>
+      {
+  "direction": "next",
+  "to": "/next",
+  "title": "Next title"
+}
+    </div>
   </div>
 </div>
 `;
@@ -79,54 +53,28 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
   <div
     className="BinaryPagination__PaginationItem-sc-35l4ss-1 fjGTlq"
   >
-    <ul
-      className="pagination binary-pagination"
+    <div
+      data-mock="SideLinkItem"
     >
-      <li
-        className="page-item"
-      >
-        <div
-          data-mock="Link"
-        >
-          <span
-            className="BinaryPagination__LinkArrow-sc-35l4ss-3 iqANll"
-          >
-            ←
-          </span>
-          <span
-            className="BinaryPagination__LinkText-sc-35l4ss-2 gmmRgB"
-          >
-            /prev
-          </span>
-        </div>
-      </li>
-    </ul>
+      {
+  "direction": "prev",
+  "to": "/prev",
+  "title": "/prev"
+}
+    </div>
   </div>
   <div
     className="BinaryPagination__PaginationItem-sc-35l4ss-1 ibbqOI"
   >
-    <ul
-      className="pagination binary-pagination"
+    <div
+      data-mock="SideLinkItem"
     >
-      <li
-        className="page-item"
-      >
-        <div
-          data-mock="Link"
-        >
-          <span
-            className="BinaryPagination__LinkText-sc-35l4ss-2 gmmRgB"
-          >
-            /next
-          </span>
-          <span
-            className="BinaryPagination__LinkArrow-sc-35l4ss-3 iqANll"
-          >
-            →
-          </span>
-        </div>
-      </li>
-    </ul>
+      {
+  "direction": "next",
+  "to": "/next",
+  "title": "/next"
+}
+    </div>
   </div>
 </div>
 `;

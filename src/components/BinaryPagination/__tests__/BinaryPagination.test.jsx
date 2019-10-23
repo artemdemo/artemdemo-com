@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import BinaryPagination from '../BinaryPagination';
 
 jest.mock('gatsby');
+jest.mock('../SideLinkItem');
 
 describe('BinaryPagination', () => {
     it('should render empty', () => {

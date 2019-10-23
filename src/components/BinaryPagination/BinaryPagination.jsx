@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
+import SideLinkItem, { SIDE_ITEM_DIRECTION } from './SideLinkItem';
 
 import './BinaryPagination.css';
 
@@ -31,44 +31,17 @@ const PaginationItem = styled.div`
     }
 `;
 
-const LinkText = styled.span`
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-`;
-
-const LinkArrow = styled.span`
-    flex-grow: 1;
-    :first-child {
-        padding-right: 5px;
-    }
-    :last-child {
-        padding-left: 5px;
-    }
-`;
-
 class BinaryPagination extends React.PureComponent {
     renderPrev() {
         const { previous } = this.props;
         if (previous && previous.slug != null) {
             const title = previous.title || previous.slug;
             return (
-                <ul className='pagination binary-pagination'>
-                    <li className='page-item'>
-                        <Link
-                            className='page-link binary-pagination-link'
-                            to={previous.slug}
-                            rel='prev'
-                        >
-                            <LinkArrow>
-                                ←
-                            </LinkArrow>
-                            <LinkText>
-                                {title}
-                            </LinkText>
-                        </Link>
-                    </li>
-                </ul>
+                <SideLinkItem
+                    direction={SIDE_ITEM_DIRECTION.PREV}
+                    to={previous.slug}
+                    title={title}
+                />
             );
         }
         return null;
@@ -79,22 +52,11 @@ class BinaryPagination extends React.PureComponent {
         if (next && next.slug != null) {
             const title = next.title || next.slug;
             return (
-                <ul className='pagination binary-pagination'>
-                    <li className='page-item'>
-                        <Link
-                            className='page-link binary-pagination-link'
-                            to={next.slug}
-                            rel='next'
-                        >
-                            <LinkText>
-                                {title}
-                            </LinkText>
-                            <LinkArrow>
-                                →
-                            </LinkArrow>
-                        </Link>
-                    </li>
-                </ul>
+                <SideLinkItem
+                    direction={SIDE_ITEM_DIRECTION.NEXT}
+                    to={next.slug}
+                    title={title}
+                />
             );
         }
         return null;
