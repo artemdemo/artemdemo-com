@@ -4,7 +4,7 @@ import BlogPost from '../BlogPost';
 
 jest.mock('gatsby');
 jest.mock('../../components/Layout/Layout');
-jest.mock('../../components/Pagination/BinaryPagination');
+jest.mock('../../components/BinaryPagination/BinaryPagination');
 jest.mock('../../components/PostDate/PostDate');
 jest.mock('../../components/PostTags/PostTags');
 

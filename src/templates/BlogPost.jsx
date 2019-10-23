@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import _get from 'lodash/get';
 import Layout from '../components/Layout/Layout';
-import BinaryPagination from '../components/Pagination/BinaryPagination';
+import BinaryPagination from '../components/BinaryPagination/BinaryPagination';
 import PostDate from '../components/PostDate/PostDate';
 import PostTags from '../components/PostTags/PostTags';
 import * as utils from '../services/utils';

@@ -2,23 +2,23 @@
 
 exports[`BinaryPagination should render empty 1`] = `
 <div
-  className="BinaryPagination__PaginationContainer-sc-1j8x01y-0 eqJxNl"
+  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 bnEHjt"
 >
   <div
-    className="BinaryPagination__PaginationItem-sc-1j8x01y-1 kPmDNE"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 fjGTlq"
   />
   <div
-    className="BinaryPagination__PaginationItem-sc-1j8x01y-1 kqcnMI"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 ibbqOI"
   />
 </div>
 `;
 
 exports[`BinaryPagination should render with data 1`] = `
 <div
-  className="BinaryPagination__PaginationContainer-sc-1j8x01y-0 eqJxNl"
+  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 bnEHjt"
 >
   <div
-    className="BinaryPagination__PaginationItem-sc-1j8x01y-1 kPmDNE"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 fjGTlq"
   >
     <ul
       className="pagination binary-pagination"
@@ -30,12 +30,12 @@ exports[`BinaryPagination should render with data 1`] = `
           data-mock="Link"
         >
           <span
-            className="BinaryPagination__LinkArrow-sc-1j8x01y-3 izPinq"
+            className="BinaryPagination__LinkArrow-sc-35l4ss-3 iqANll"
           >
             ←
           </span>
           <span
-            className="BinaryPagination__LinkText-sc-1j8x01y-2 iVphVd"
+            className="BinaryPagination__LinkText-sc-35l4ss-2 gmmRgB"
           >
             Prev title
           </span>
@@ -44,7 +44,7 @@ exports[`BinaryPagination should render with data 1`] = `
     </ul>
   </div>
   <div
-    className="BinaryPagination__PaginationItem-sc-1j8x01y-1 kqcnMI"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 ibbqOI"
   >
     <ul
       className="pagination binary-pagination"
@@ -56,12 +56,12 @@ exports[`BinaryPagination should render with data 1`] = `
           data-mock="Link"
         >
           <span
-            className="BinaryPagination__LinkText-sc-1j8x01y-2 iVphVd"
+            className="BinaryPagination__LinkText-sc-35l4ss-2 gmmRgB"
           >
             Next title
           </span>
           <span
-            className="BinaryPagination__LinkArrow-sc-1j8x01y-3 izPinq"
+            className="BinaryPagination__LinkArrow-sc-35l4ss-3 iqANll"
           >
             →
           </span>
@@ -74,10 +74,10 @@ exports[`BinaryPagination should render with data 1`] = `
 
 exports[`BinaryPagination should use slug if title not provided 1`] = `
 <div
-  className="BinaryPagination__PaginationContainer-sc-1j8x01y-0 eqJxNl"
+  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 bnEHjt"
 >
   <div
-    className="BinaryPagination__PaginationItem-sc-1j8x01y-1 kPmDNE"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 fjGTlq"
   >
     <ul
       className="pagination binary-pagination"
@@ -89,12 +89,12 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
           data-mock="Link"
         >
           <span
-            className="BinaryPagination__LinkArrow-sc-1j8x01y-3 izPinq"
+            className="BinaryPagination__LinkArrow-sc-35l4ss-3 iqANll"
           >
             ←
           </span>
           <span
-            className="BinaryPagination__LinkText-sc-1j8x01y-2 iVphVd"
+            className="BinaryPagination__LinkText-sc-35l4ss-2 gmmRgB"
           >
             /prev
           </span>
@@ -103,7 +103,7 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
     </ul>
   </div>
   <div
-    className="BinaryPagination__PaginationItem-sc-1j8x01y-1 kqcnMI"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 ibbqOI"
   >
     <ul
       className="pagination binary-pagination"
@@ -115,12 +115,12 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
           data-mock="Link"
         >
           <span
-            className="BinaryPagination__LinkText-sc-1j8x01y-2 iVphVd"
+            className="BinaryPagination__LinkText-sc-35l4ss-2 gmmRgB"
           >
             /next
           </span>
           <span
-            className="BinaryPagination__LinkArrow-sc-1j8x01y-3 izPinq"
+            className="BinaryPagination__LinkArrow-sc-35l4ss-3 iqANll"
           >
             →
           </span>
@@ -133,13 +133,13 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
 
 exports[`BinaryPagination shouldn't render without slug 1`] = `
 <div
-  className="BinaryPagination__PaginationContainer-sc-1j8x01y-0 eqJxNl"
+  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 bnEHjt"
 >
   <div
-    className="BinaryPagination__PaginationItem-sc-1j8x01y-1 kPmDNE"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 fjGTlq"
   />
   <div
-    className="BinaryPagination__PaginationItem-sc-1j8x01y-1 kqcnMI"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 ibbqOI"
   />
 </div>
 `;
