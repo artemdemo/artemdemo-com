@@ -64,6 +64,6 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "deploy": "npm run build && ./deploy.sh"
+    "deploy": "./deploy.sh"
   }
 }

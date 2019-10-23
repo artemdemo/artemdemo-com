@@ -1,5 +1,23 @@
 #!/bin/sh
 
+handleError () {
+    if [ $1 != 0 ]; then
+       echo "[deploy.sh] Error, occurred, exiting script"
+       exit 1
+    fi
+}
+
+echo "[deploy.sh] testing code"
+npm run test
+handleError $?
+
+echo ""
+echo "[deploy.sh] building code"
+npm run build
+handleError $?
+
+echo ""
+echo "[deploy.sh] starting deployment"
 git checkout master
 git checkout -b master_tmp
 rm .gitignore
