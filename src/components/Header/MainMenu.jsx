@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import _get from 'lodash/get';
 import { locationProp } from '../Layout/layoutProps';
 import * as styles from '../../services/styles';
 
@@ -24,20 +25,20 @@ const MainMenuLinkSty = styled(Link)`
 `;
 
 const MainMenu = (props) => {
-    const { location } = props;
+    const pathname = _get(props, 'location.pathname', '');
     return (
         <MainMenuSty>
-            <MainMenuItemSty active={location.pathname === '/' || location.pathname.startsWith('/blog')}>
+            <MainMenuItemSty active={pathname === '/' || pathname.startsWith('/blog')}>
                 <MainMenuLinkSty to='/'>
                     Blog
                 </MainMenuLinkSty>
             </MainMenuItemSty>
-            <MainMenuItemSty active={location.pathname.startsWith('/about')}>
+            <MainMenuItemSty active={pathname.startsWith('/about')}>
                 <MainMenuLinkSty to='/about'>
                     About
                 </MainMenuLinkSty>
             </MainMenuItemSty>
-            <MainMenuItemSty active={location.pathname.startsWith('/contact')}>
+            <MainMenuItemSty active={pathname.startsWith('/contact')}>
                 <MainMenuLinkSty to='/contact'>
                     Contact me
                 </MainMenuLinkSty>

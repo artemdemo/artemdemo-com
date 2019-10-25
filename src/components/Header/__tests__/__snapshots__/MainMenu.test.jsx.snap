@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainMenu should render with pathname = \`/\` 1`] = `
+<ul
+  className="MainMenu__MainMenuSty-sc-10g5x94-0 frjzoV"
+>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 hjxubK"
+  >
+    <div
+      data-mock="Link"
+    >
+      Blog
+    </div>
+  </li>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+  >
+    <div
+      data-mock="Link"
+    >
+      About
+    </div>
+  </li>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+  >
+    <div
+      data-mock="Link"
+    >
+      Contact me
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`MainMenu should render with pathname = \`/about\` 1`] = `
+<ul
+  className="MainMenu__MainMenuSty-sc-10g5x94-0 frjzoV"
+>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+  >
+    <div
+      data-mock="Link"
+    >
+      Blog
+    </div>
+  </li>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 hjxubK"
+  >
+    <div
+      data-mock="Link"
+    >
+      About
+    </div>
+  </li>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+  >
+    <div
+      data-mock="Link"
+    >
+      Contact me
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`MainMenu should render with pathname = \`/blog\` 1`] = `
+<ul
+  className="MainMenu__MainMenuSty-sc-10g5x94-0 frjzoV"
+>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 hjxubK"
+  >
+    <div
+      data-mock="Link"
+    >
+      Blog
+    </div>
+  </li>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+  >
+    <div
+      data-mock="Link"
+    >
+      About
+    </div>
+  </li>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+  >
+    <div
+      data-mock="Link"
+    >
+      Contact me
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`MainMenu should render with pathname = \`/contact\` 1`] = `
+<ul
+  className="MainMenu__MainMenuSty-sc-10g5x94-0 frjzoV"
+>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+  >
+    <div
+      data-mock="Link"
+    >
+      Blog
+    </div>
+  </li>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+  >
+    <div
+      data-mock="Link"
+    >
+      About
+    </div>
+  </li>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 hjxubK"
+  >
+    <div
+      data-mock="Link"
+    >
+      Contact me
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`MainMenu should render without location 1`] = `
+<ul
+  className="MainMenu__MainMenuSty-sc-10g5x94-0 frjzoV"
+>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+  >
+    <div
+      data-mock="Link"
+    >
+      Blog
+    </div>
+  </li>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+  >
+    <div
+      data-mock="Link"
+    >
+      About
+    </div>
+  </li>
+  <li
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+  >
+    <div
+      data-mock="Link"
+    >
+      Contact me
+    </div>
+  </li>
+</ul>
+`;
