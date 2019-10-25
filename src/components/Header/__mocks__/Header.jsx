@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = props => (
     <div data-mock='Header'>
-        {props.children}
+        {JSON.stringify(props, null, 2)}
     </div>
 );
 

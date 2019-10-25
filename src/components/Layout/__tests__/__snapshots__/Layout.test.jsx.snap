@@ -24,7 +24,12 @@ Array [
   </div>,
   <div
     data-mock="Header"
-  />,
+  >
+    {
+  "title": "Regular title",
+  "location": {}
+}
+  </div>,
   <div
     className="container"
   />,
@@ -55,7 +60,12 @@ Array [
   </div>,
   <div
     data-mock="Header"
-  />,
+  >
+    {
+  "title": "Regular title",
+  "location": {}
+}
+  </div>,
   <div
     className="container"
   >
