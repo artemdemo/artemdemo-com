@@ -31,3 +31,35 @@ Array [
   />,
 ]
 `;
+
+exports[`ContactForm should set formLoaded to "true" 1`] = `
+Array [
+  <div
+    className="ContactForm__ContactFormLoading-r3mpp6-0 fMJhXB"
+  >
+    Form is loading...
+    <span
+      className="ContactForm__IconWrap-r3mpp6-2 bTFytk"
+    >
+      <div
+        data-mock="Icon"
+      >
+        name: 
+        cog fa-spin fa-fw
+        title: 
+        className: 
+        inText: 
+        false
+      </div>
+    </span>
+  </div>,
+  <iframe
+    className="ContactForm__ContactFormIframe-r3mpp6-1 AtuZG"
+    frameBorder="0"
+    marginHeight="0"
+    marginWidth="0"
+    onLoad={[Function]}
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true"
+  />,
+]
+`;

@@ -12,4 +12,14 @@ describe('ContactForm', () => {
 
         expect(tree).toMatchSnapshot();
     });
+
+    it('should set formLoaded to "true"', () => {
+        const tree = renderer.create(
+            <ContactForm />
+        );
+
+        tree.root.instance.iframeLoaded();
+
+        expect(tree.toJSON()).toMatchSnapshot();
+    });
 });
