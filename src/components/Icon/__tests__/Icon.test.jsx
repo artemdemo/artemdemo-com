@@ -37,11 +37,13 @@ describe('Icon', () => {
 
     it('should throw an error if no name provided', () => {
         expect(() => {
-            Icon({ name: '' });
+            const icon = new Icon({ name: '' });
+            icon.render();
         }).toThrow();
 
         expect(() => {
-            Icon({});
+            const icon = new Icon({ name: null });
+            icon.render();
         }).toThrow();
     });
 });
