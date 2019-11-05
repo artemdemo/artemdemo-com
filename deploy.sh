@@ -12,9 +12,10 @@ npm run test
 handleError $?
 
 echo ""
-echo "[deploy.sh] building code"
-npm run build
-handleError $?
+echo "[deploy.sh] building code (SKIPPING)"
+echo "---^^^^^^ skipping ^^^^^^^^^^^^^^---"
+# npm run build
+# handleError $?
 
 echo ""
 echo "[deploy.sh] starting deployment"
