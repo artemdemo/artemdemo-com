@@ -4,7 +4,7 @@ date: "2019-11-05T21:56:00.000Z"
 tags: ["redux"]
 ---
 
-Ok, first of all I'm assuming you know what Redux is and already used it in one of your projects. Now, after we established it, let's move on. I always prefer to be clear in my assumptions and intentions. Makes life much easier :)
+Ok, first of all I'm assuming you know what Redux is and already used it in one of your projects. Now, after we established that, let's move on. I always prefer to be clear in my assumptions and intentions. It makes life much easier :)
 
 <!-- end -->
 
