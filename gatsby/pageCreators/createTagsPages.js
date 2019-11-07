@@ -39,7 +39,7 @@ const createTagsPages = (posts, createPage) => new Promise((resolve) => {
     // Make tag pages
     Object.keys(tagsMap).forEach(tagSlug => {
         const tag = tagsMap[tagSlug];
-        const paginatedPagesCount = Math.ceil(tag.amount / utils.POSTS_PER_PAGE);
+        const paginatedPagesCount = Math.ceil(tag.amount / utils.getPostsPerPageAmount());
 
         _.times(paginatedPagesCount, (index) => {
             createPage({
@@ -53,10 +53,10 @@ const createTagsPages = (posts, createPage) => new Promise((resolve) => {
                     tagName: tag.name,
                     // Skip this number of posts from the beginning
                     //
-                    skip: index * utils.POSTS_PER_PAGE,
+                    skip: index * utils.getPostsPerPageAmount(),
                     // How many posts to show on this paginated page
                     //
-                    limit: utils.POSTS_PER_PAGE,
+                    limit: utils.getPostsPerPageAmount(),
                 }
             });
         });

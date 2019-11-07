@@ -18,7 +18,7 @@ const onCreatePage = ({ page, actions }) => {
                 ...page,
                 context: {
                     skip: 0,
-                    limit: utils.POSTS_PER_PAGE,
+                    limit: utils.getPostsPerPageAmount(),
                 },
             });
             resolve();
