@@ -1,6 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlogPost should render 1`] = `
+exports[`BlogPost should render empty 1`] = `
+<div
+  data-description=""
+  data-mock="Layout"
+>
+  <h1>
+    
+  </h1>
+  <div
+    data-mock="PostDate"
+  >
+    
+  </div>
+  <div
+    data-mock="PostTags"
+  />
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+  <hr />
+  <div
+    data-mock="BinaryPagination"
+  >
+    {
+  "previous": {
+    "slug": null,
+    "title": null
+  },
+  "next": {
+    "slug": null,
+    "title": null
+  }
+}
+  </div>
+</div>
+`;
+
+exports[`BlogPost should render with data 1`] = `
 <div
   data-description="Post excerpt"
   data-metaTitle="Site title"
