@@ -15,7 +15,7 @@ class TagsList extends React.PureComponent {
     }
 
     renderTags() {
-        const tagsMap = _get(this.props, 'pageContext.tagsMap');
+        const tagsMap = _get(this.props, 'pageContext.tagsMap', {});
         return Object.keys(tagsMap)
             .map(slug => ({
                 slug,
