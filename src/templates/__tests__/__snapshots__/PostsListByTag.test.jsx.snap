@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsListByTag default render 1`] = `
+<div
+  data-mock="Container"
+>
+  {}
+  <p>
+    <strong>
+      Tag:
+    </strong>
+      
+    
+  </p>
+  <div
+    data-mock="Posts"
+  >
+    {}
+  </div>
+  <div
+    data-mock="Pagination"
+  >
+    {
+  "skip": 0,
+  "limit": 0,
+  "totalPosts": 0
+}
+  </div>
+</div>
+`;
+
+exports[`PostsListByTag should render with tagName 1`] = `
+<div
+  data-mock="Container"
+>
+  {}
+  <p>
+    <strong>
+      Tag:
+    </strong>
+      
+    Tag name
+  </p>
+  <div
+    data-mock="Posts"
+  >
+    {}
+  </div>
+  <div
+    data-mock="Pagination"
+  >
+    {
+  "skip": 0,
+  "limit": 0,
+  "totalPosts": 0
+}
+  </div>
+</div>
+`;

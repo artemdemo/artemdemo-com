@@ -10,11 +10,11 @@ class PostsListByTag extends PostsList {
     }
 
     renderBeforeContent () {
-        const { pageContext } = this.props;
+        const tagName = _get(this.props, 'pageContext.tagName', '')
         return (
             <p>
                 <strong>Tag:</strong>
-                &nbsp;&nbsp;{pageContext.tagName}
+                &nbsp;&nbsp;{tagName}
             </p>
         );
     }
