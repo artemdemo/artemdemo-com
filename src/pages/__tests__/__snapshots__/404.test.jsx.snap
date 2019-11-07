@@ -4,6 +4,7 @@ exports[`404 should render 1`] = `
 <div
   data-mock="Container"
 >
+  {}
   <div
     dangerouslySetInnerHTML={
       Object {

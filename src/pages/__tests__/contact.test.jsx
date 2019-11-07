@@ -4,6 +4,7 @@ import Contact from '../contact';
 
 jest.mock('../../components/Layout/Layout');
 jest.mock('../../components/ContactForm/ContactForm');
+jest.mock('../../components/Container/Container');
 
 describe('Contact', () => {
     it('should render', () => {

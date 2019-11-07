@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import Header from '../Header';
 
 jest.mock('../MainMenu');
+jest.mock('../../Container/Container');
 
 describe('Header', () => {
     it('should render empty', () => {

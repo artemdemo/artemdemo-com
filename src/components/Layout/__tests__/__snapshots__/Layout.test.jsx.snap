@@ -31,8 +31,10 @@ Array [
 }
   </div>,
   <div
-    className="container"
-  />,
+    data-mock="Container"
+  >
+    {}
+  </div>,
 ]
 `;
 
@@ -67,8 +69,9 @@ Array [
 }
   </div>,
   <div
-    className="container"
+    data-mock="Container"
   >
+    {}
     <div>
       Some child
     </div>

@@ -6,6 +6,7 @@ jest.mock('react-helmet');
 jest.mock('../../../services/package');
 jest.mock('../../Icon/Icon');
 jest.mock('../../Header/Header');
+jest.mock('../../Container/Container');
 
 describe('Layout', () => {
     it('should render empty', () => {
