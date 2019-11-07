@@ -8,11 +8,19 @@ exports[`PostTags should render with tags 1`] = `
   <div
     data-mock="Link"
   >
+    {
+  "to": "/tags/one",
+  "className": "PostTags__PostTagsItemSty-sc-8r4n58-0 czQWcx"
+}
     one
   </div>
   <div
     data-mock="Link"
   >
+    {
+  "to": "/tags/two",
+  "className": "PostTags__PostTagsItemSty-sc-8r4n58-0 czQWcx"
+}
     two
   </div>
 </div>

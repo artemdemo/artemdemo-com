@@ -7,6 +7,10 @@ exports[`PaginationNumItem should render with pageNum > 1 1`] = `
   <div
     data-mock="Link"
   >
+    {
+  "className": "page-link",
+  "to": "/2"
+}
     2
   </div>
 </li>
@@ -19,6 +23,10 @@ exports[`PaginationNumItem should render with pageNum > 1 and active 1`] = `
   <div
     data-mock="Link"
   >
+    {
+  "className": "page-link",
+  "to": "/2"
+}
     2
   </div>
 </li>
@@ -31,6 +39,9 @@ exports[`PaginationNumItem should render with pageNum 1`] = `
   <div
     data-mock="Link"
   >
+    {
+  "className": "page-link"
+}
     1
   </div>
 </li>

@@ -17,6 +17,10 @@ exports[`Header should render empty 1`] = `
         <div
           data-mock="Link"
         >
+          {
+  "to": "/",
+  "className": "Header__HeaderLogoLink-x4ek9t-5 ehZhfd"
+}
           
         </div>
       </div>
@@ -60,6 +64,10 @@ exports[`Header should render with title 1`] = `
         <div
           data-mock="Link"
         >
+          {
+  "to": "/",
+  "className": "Header__HeaderLogoLink-x4ek9t-5 ehZhfd"
+}
           Test title
         </div>
       </div>

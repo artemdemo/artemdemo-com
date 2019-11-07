@@ -10,6 +10,11 @@ exports[`SideLinkItem should render "next" 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "className": "page-link binary-pagination-link",
+  "to": "path/to/next",
+  "rel": "next"
+}
       <span
         className="SideLinkItem__LinkText-sc-1sb2mn5-0 itQixI"
       >
@@ -35,6 +40,11 @@ exports[`SideLinkItem should render "prev" 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "className": "page-link binary-pagination-link",
+  "to": "path/to/prev",
+  "rel": "prev"
+}
       <span
         className="SideLinkItem__LinkArrow-sc-1sb2mn5-1 bARCRt"
       >

@@ -10,6 +10,10 @@ exports[`MainMenu should render with pathname = \`/\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       Blog
     </div>
   </li>
@@ -19,6 +23,10 @@ exports[`MainMenu should render with pathname = \`/\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/about",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       About
     </div>
   </li>
@@ -28,6 +36,10 @@ exports[`MainMenu should render with pathname = \`/\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/contact",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       Contact me
     </div>
   </li>
@@ -44,6 +56,10 @@ exports[`MainMenu should render with pathname = \`/about\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       Blog
     </div>
   </li>
@@ -53,6 +69,10 @@ exports[`MainMenu should render with pathname = \`/about\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/about",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       About
     </div>
   </li>
@@ -62,6 +82,10 @@ exports[`MainMenu should render with pathname = \`/about\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/contact",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       Contact me
     </div>
   </li>
@@ -78,6 +102,10 @@ exports[`MainMenu should render with pathname = \`/blog\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       Blog
     </div>
   </li>
@@ -87,6 +115,10 @@ exports[`MainMenu should render with pathname = \`/blog\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/about",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       About
     </div>
   </li>
@@ -96,6 +128,10 @@ exports[`MainMenu should render with pathname = \`/blog\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/contact",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       Contact me
     </div>
   </li>
@@ -112,6 +148,10 @@ exports[`MainMenu should render with pathname = \`/contact\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       Blog
     </div>
   </li>
@@ -121,6 +161,10 @@ exports[`MainMenu should render with pathname = \`/contact\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/about",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       About
     </div>
   </li>
@@ -130,6 +174,10 @@ exports[`MainMenu should render with pathname = \`/contact\` 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/contact",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       Contact me
     </div>
   </li>
@@ -146,6 +194,10 @@ exports[`MainMenu should render without location 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       Blog
     </div>
   </li>
@@ -155,6 +207,10 @@ exports[`MainMenu should render without location 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/about",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       About
     </div>
   </li>
@@ -164,6 +220,10 @@ exports[`MainMenu should render without location 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/contact",
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+}
       Contact me
     </div>
   </li>

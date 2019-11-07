@@ -24,6 +24,10 @@ exports[`TagsList should render with data 1`] = `
   <div
     data-mock="Link"
   >
+    {
+  "to": "/tags/tag1",
+  "className": "TagsList__TagLink-sc-2p4wkd-0 jInolM"
+}
     tag1
     <sup>
        
@@ -33,6 +37,10 @@ exports[`TagsList should render with data 1`] = `
   <div
     data-mock="Link"
   >
+    {
+  "to": "/tags/tag2",
+  "className": "TagsList__TagLink-sc-2p4wkd-0 jInolM"
+}
     tag2
     <sup>
        
