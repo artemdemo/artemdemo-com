@@ -1,43 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Layout should render empty 1`] = `
-Array [
-  <div
-    data-mock="Helmet"
-  >
-    {
-  "htmlAttributes": {
-    "lang": "en"
-  },
-  "meta": [
-    {
-      "name": "description",
-      "content": "Site description"
-    },
-    {
-      "name": "app-version",
-      "content": "0.0.0-mock"
-    }
-  ],
-  "title": "Regular title"
-}
-  </div>,
-  <div
-    data-mock="Header"
-  >
-    {
-  "title": "Regular title",
-  "location": {}
-}
-  </div>,
-  <div
-    data-mock="Container"
-  >
-    {}
-  </div>,
-]
-`;
-
 exports[`Layout should render with children 1`] = `
 Array [
   <div
@@ -75,6 +37,82 @@ Array [
     <div>
       Some child
     </div>
+  </div>,
+]
+`;
+
+exports[`Layout should render with fullTitle 1`] = `
+Array [
+  <div
+    data-mock="Helmet"
+  >
+    {
+  "htmlAttributes": {
+    "lang": "en"
+  },
+  "meta": [
+    {
+      "name": "description",
+      "content": "Site description"
+    },
+    {
+      "name": "app-version",
+      "content": "0.0.0-mock"
+    }
+  ],
+  "title": "Full title"
+}
+  </div>,
+  <div
+    data-mock="Header"
+  >
+    {
+  "title": "Regular title",
+  "location": {}
+}
+  </div>,
+  <div
+    data-mock="Container"
+  >
+    {}
+  </div>,
+]
+`;
+
+exports[`Layout should render without children 1`] = `
+Array [
+  <div
+    data-mock="Helmet"
+  >
+    {
+  "htmlAttributes": {
+    "lang": "en"
+  },
+  "meta": [
+    {
+      "name": "description",
+      "content": "Site description"
+    },
+    {
+      "name": "app-version",
+      "content": "0.0.0-mock"
+    }
+  ],
+  "title": "Regular title"
+}
+  </div>,
+  <div
+    data-mock="Header"
+  >
+    {
+  "title": "Regular title",
+  "location": {}
+}
+  </div>,
+  <div
+    data-mock="Container"
+  >
+    {}
   </div>,
 ]
 `;
