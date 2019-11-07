@@ -8,7 +8,10 @@ import PaginationNumItem from './PaginationNumItem';
 class Pagination extends React.PureComponent {
     prefixPath(path) {
         const { prefixer } = this.props;
-        return prefixer ? prefixer(path) : path;
+        if (path) {
+            return prefixer ? prefixer(path) : path;
+        }
+        return '';
     }
 
     renderPrev() {

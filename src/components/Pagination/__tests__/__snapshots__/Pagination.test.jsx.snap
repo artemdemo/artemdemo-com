@@ -2,7 +2,7 @@
 
 exports[`Pagination default render (empty) 1`] = `null`;
 
-exports[`Pagination should render 1 page out of 2 1`] = `
+exports[`Pagination should render 1 page out of 3 1`] = `
 <ul
   className="pagination justify-content-center"
 >
@@ -13,7 +13,8 @@ exports[`Pagination should render 1 page out of 2 1`] = `
       data-mock="Link"
     >
       {
-  "className": "page-link"
+  "className": "page-link",
+  "to": ""
 }
       Previous
     </div>
@@ -32,6 +33,15 @@ exports[`Pagination should render 1 page out of 2 1`] = `
   >
     {
   "pageNum": 2,
+  "active": false,
+  "prefixer": null
+}
+  </div>
+  <div
+    data-mock="PaginationNumItem"
+  >
+    {
+  "pageNum": 3,
   "active": false,
   "prefixer": null
 }
@@ -52,7 +62,7 @@ exports[`Pagination should render 1 page out of 2 1`] = `
 </ul>
 `;
 
-exports[`Pagination should render 2 page out of 2 1`] = `
+exports[`Pagination should render 3 page out of 3 1`] = `
 <ul
   className="pagination justify-content-center"
 >
@@ -63,7 +73,8 @@ exports[`Pagination should render 2 page out of 2 1`] = `
       data-mock="Link"
     >
       {
-  "className": "page-link"
+  "className": "page-link",
+  "to": "/2"
 }
       Previous
     </div>
@@ -82,6 +93,15 @@ exports[`Pagination should render 2 page out of 2 1`] = `
   >
     {
   "pageNum": 2,
+  "active": false,
+  "prefixer": null
+}
+  </div>
+  <div
+    data-mock="PaginationNumItem"
+  >
+    {
+  "pageNum": 3,
   "active": true,
   "prefixer": null
 }
@@ -94,7 +114,56 @@ exports[`Pagination should render 2 page out of 2 1`] = `
     >
       {
   "className": "page-link",
-  "to": "/3"
+  "to": "/4"
+}
+      Next
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`Pagination should render with prefix 1`] = `
+<ul
+  className="pagination justify-content-center"
+>
+  <li
+    className="page-item disabled"
+  >
+    <div
+      data-mock="Link"
+    >
+      {
+  "className": "page-link",
+  "to": ""
+}
+      Previous
+    </div>
+  </li>
+  <div
+    data-mock="PaginationNumItem"
+  >
+    {
+  "pageNum": 1,
+  "active": true
+}
+  </div>
+  <div
+    data-mock="PaginationNumItem"
+  >
+    {
+  "pageNum": 2,
+  "active": false
+}
+  </div>
+  <li
+    className="page-item"
+  >
+    <div
+      data-mock="Link"
+    >
+      {
+  "className": "page-link",
+  "to": "test-path/2"
 }
       Next
     </div>

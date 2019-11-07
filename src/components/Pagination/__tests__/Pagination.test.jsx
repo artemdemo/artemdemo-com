@@ -20,24 +20,37 @@ describe('Pagination', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('should render 1 page out of 2', () => {
+    it('should render 1 page out of 3', () => {
         const tree = renderer.create(
             <Pagination
                 skip={0}
                 limit={5}
-                totalPosts={10}
+                totalPosts={15}
             />
         ).toJSON();
 
         expect(tree).toMatchSnapshot();
     });
 
-    it('should render 2 page out of 2', () => {
+    it('should render 3 page out of 3', () => {
         const tree = renderer.create(
             <Pagination
-                skip={5}
+                skip={10}
+                limit={5}
+                totalPosts={15}
+            />
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should render with prefix', () => {
+        const tree = renderer.create(
+            <Pagination
+                skip={0}
                 limit={5}
                 totalPosts={10}
+                prefixer={path => `test-path${path}`}
             />
         ).toJSON();
 
