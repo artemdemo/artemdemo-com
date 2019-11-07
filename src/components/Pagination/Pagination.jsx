@@ -12,10 +12,7 @@ class Pagination extends React.PureComponent {
     }
 
     renderPrev() {
-        const { skip, totalPosts, limit } = this.props;
-        if (totalPosts === 0) {
-            return null;
-        }
+        const { skip, limit } = this.props;
         const itemClass = classnames('page-item', {
             disabled: skip === 0
         });
@@ -35,9 +32,6 @@ class Pagination extends React.PureComponent {
 
     renderNext() {
         const { skip, totalPosts, limit} = this.props;
-        if (totalPosts === 0) {
-            return null;
-        }
         const pagesAmount = Math.ceil(totalPosts / limit);
         const nextPageNumber = Math.floor(skip / limit) + 2;
         const itemClass = classnames('page-item', {
@@ -57,9 +51,6 @@ class Pagination extends React.PureComponent {
 
     renderNumPages() {
         const { totalPosts, limit, skip, prefixer } = this.props;
-        if (totalPosts === 0) {
-            return null;
-        }
         const pagesAmount = Math.ceil(totalPosts / limit);
         const currentNumber = Math.floor(skip / limit) + 1;
         const iterArr = Array.from(Array(pagesAmount));
@@ -80,7 +71,7 @@ class Pagination extends React.PureComponent {
     render() {
         const { totalPosts } = this.props;
 
-        if (totalPosts <= utils.POSTS_PER_PAGE) {
+        if (totalPosts <= utils.getPostsPerPageAmount()) {
             return null;
         }
 
@@ -102,9 +93,9 @@ Pagination.propTypes = {
 };
 
 Pagination.defaultProps = {
-    skip: 0,
-    limit: 0,
-    totalPosts: 0,
+    skip: 0,        // how many posts to skip (will be converted to "current page")
+    limit: 0,       // how many posts per page to show
+    totalPosts: 0,  // total amount of posts
     prefixer: null,
 };
 

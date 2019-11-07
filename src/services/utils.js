@@ -1,7 +1,7 @@
 const _isString = require('lodash/isString');
 const _kebabCase = require('lodash/kebabCase');
 
-exports.POSTS_PER_PAGE = 10;
+exports.getPostsPerPageAmount = () => 10;
 
 const prefix = (prefix, slug) => {
     const suffix = _isString(slug) && slug.startsWith('/') ? slug.substr(1) : slug;

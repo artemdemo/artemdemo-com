@@ -1,3 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pagination default render (empty) 1`] = `null`;
+
+exports[`Pagination should render 1 page out of 2 1`] = `
+<ul
+  className="pagination justify-content-center"
+>
+  <li
+    className="page-item disabled"
+  >
+    <div
+      data-mock="Link"
+    >
+      Previous
+    </div>
+  </li>
+  <div
+    data-mock="PaginationNumItem"
+  >
+    {
+  "pageNum": 1,
+  "active": true,
+  "prefixer": null
+}
+  </div>
+  <div
+    data-mock="PaginationNumItem"
+  >
+    {
+  "pageNum": 2,
+  "active": false,
+  "prefixer": null
+}
+  </div>
+  <li
+    className="page-item"
+  >
+    <div
+      data-mock="Link"
+    >
+      Next
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`Pagination should render 2 page out of 2 1`] = `
+<ul
+  className="pagination justify-content-center"
+>
+  <li
+    className="page-item"
+  >
+    <div
+      data-mock="Link"
+    >
+      Previous
+    </div>
+  </li>
+  <div
+    data-mock="PaginationNumItem"
+  >
+    {
+  "pageNum": 1,
+  "active": false,
+  "prefixer": null
+}
+  </div>
+  <div
+    data-mock="PaginationNumItem"
+  >
+    {
+  "pageNum": 2,
+  "active": true,
+  "prefixer": null
+}
+  </div>
+  <li
+    className="page-item disabled"
+  >
+    <div
+      data-mock="Link"
+    >
+      Next
+    </div>
+  </li>
+</ul>
+`;
