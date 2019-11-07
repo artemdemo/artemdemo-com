@@ -46,3 +46,19 @@ exports[`PaginationNumItem should render with pageNum 1`] = `
   </div>
 </li>
 `;
+
+exports[`PaginationNumItem should render with prefix 1`] = `
+<li
+  className="page-item"
+>
+  <div
+    data-mock="Link"
+  >
+    {
+  "className": "page-link",
+  "to": "test-path/2"
+}
+    2
+  </div>
+</li>
+`;
