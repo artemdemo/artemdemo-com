@@ -22,7 +22,7 @@ const paginationPath = (tag, page, totalPages) => {
 const createTagsPages = (posts, createPage) => new Promise((resolve) => {
     const tagsMap = {};
 
-    // Iterate through each post, putting all found tags into `tags`
+    // Iterate through each post, putting all found tags into `tagsMap`
     _.each(posts, (edge) => {
         const edgeTags = _.get(edge, 'node.frontmatter.tags', []);
         edgeTags.forEach((tag) => {
