@@ -2,8 +2,9 @@
 
 exports[`About should render 1`] = `
 <div
-  className="container"
+  data-mock="Container"
 >
+  {}
   <div
     dangerouslySetInnerHTML={
       Object {

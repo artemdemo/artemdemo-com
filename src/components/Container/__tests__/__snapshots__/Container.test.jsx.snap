@@ -2,13 +2,23 @@
 
 exports[`Container should render empty 1`] = `
 <div
-  className="container"
+  className="Container-e93n52-0 grTusm container"
 />
 `;
 
 exports[`Container should render with child 1`] = `
 <div
-  className="container"
+  className="Container-e93n52-0 grTusm container"
+>
+  <div>
+    Some child
+  </div>
+</div>
+`;
+
+exports[`Container should render with className 1`] = `
+<div
+  className="Container-e93n52-0 grTusm test-class container"
 >
   <div>
     Some child

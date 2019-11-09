@@ -10,6 +10,9 @@ exports[`PostsItem should render with node 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/blog/first"
+}
       Some title
     </div>
   </h2>
@@ -36,6 +39,9 @@ exports[`PostsItem should render with slug when title not provided 1`] = `
     <div
       data-mock="Link"
     >
+      {
+  "to": "/blog/first"
+}
       /first
     </div>
   </h2>

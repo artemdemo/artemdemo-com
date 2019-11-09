@@ -9,7 +9,19 @@ jest.mock('../../components/PostDate/PostDate');
 jest.mock('../../components/PostTags/PostTags');
 
 describe('BlogPost', () => {
-    it('should render', () => {
+    it('should render empty', () => {
+        const tree = renderer.create(
+            <BlogPost
+                data={{}}
+                location={{}}
+                pageContext={{}}
+            />
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should render with data', () => {
         const tree = renderer.create(
             <BlogPost
                 data={{

@@ -31,27 +31,29 @@ class BlogPost extends React.Component {
     }
 
     render() {
-        const post = this.props.data.markdownRemark;
         const siteTitle = _get(this.props, 'data.site.siteMetadata.title');
+        const html = _get(this.props, 'data.markdownRemark.html', '');
+        const date = _get(this.props, 'data.markdownRemark.frontmatter.date', '');
         const tags = _get(this.props, 'data.markdownRemark.frontmatter.tags', []);
-        const siteDescription = post.excerpt;
+        const title = _get(this.props, 'data.markdownRemark.frontmatter.title', '');
+        const siteDescription = _get(this.props, 'data.markdownRemark.excerpt', '');
 
         return (
             <Layout
                 title={siteTitle}
-                fullTitle={`${post.frontmatter.title} | ${siteTitle}`}
+                fullTitle={`${title} | ${siteTitle}`}
                 description={siteDescription}
                 metaTitle={siteTitle}
                 location={this.props.location}
             >
-                <h1>{post.frontmatter.title}</h1>
+                <h1>{title}</h1>
                 <PostDate>
-                    {post.frontmatter.date}
+                    {date}
                 </PostDate>
                 <PostTags tags={tags} />
 
                 <div
-                    dangerouslySetInnerHTML={{__html: post.html}}
+                    dangerouslySetInnerHTML={{__html: html}}
                 />
 
                 <hr />

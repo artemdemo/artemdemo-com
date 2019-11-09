@@ -3,6 +3,7 @@ import renderer from 'react-test-renderer';
 import About from '../about';
 
 jest.mock('../../components/Layout/Layout');
+jest.mock('../../components/Container/Container');
 
 describe('About', () => {
     it('should render', () => {

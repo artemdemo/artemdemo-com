@@ -19,7 +19,7 @@ const createBlogPages = (posts, createPage) => new Promise((resolve) => {
     const postsAmount = posts.length;
     // How many paginated pages do we need?
     //
-    const paginatedPagesCount = Math.ceil(postsAmount / utils.POSTS_PER_PAGE);
+    const paginatedPagesCount = Math.ceil(postsAmount / utils.getPostsPerPageAmount());
 
     // Create each paginated page
     //
@@ -36,10 +36,10 @@ const createBlogPages = (posts, createPage) => new Promise((resolve) => {
             context: {
                 // Skip this number of posts from the beginning
                 //
-                skip: index * utils.POSTS_PER_PAGE,
+                skip: index * utils.getPostsPerPageAmount(),
                 // How many posts to show on this paginated page
                 //
-                limit: utils.POSTS_PER_PAGE,
+                limit: utils.getPostsPerPageAmount(),
             }
         });
     });

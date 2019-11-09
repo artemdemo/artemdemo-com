@@ -7,7 +7,9 @@ jest.mock('gatsby');
 describe('PaginationNumItem', () => {
     it('should render with pageNum', () => {
         const tree = renderer.create(
-            <PaginationNumItem pageNum={1} />
+            <PaginationNumItem
+                pageNum={1}
+            />
         ).toJSON();
 
         expect(tree).toMatchSnapshot();
@@ -15,7 +17,9 @@ describe('PaginationNumItem', () => {
 
     it('should render with pageNum > 1', () => {
         const tree = renderer.create(
-            <PaginationNumItem pageNum={2} />
+            <PaginationNumItem
+                pageNum={2}
+            />
         ).toJSON();
 
         expect(tree).toMatchSnapshot();
@@ -23,7 +27,21 @@ describe('PaginationNumItem', () => {
 
     it('should render with pageNum > 1 and active', () => {
         const tree = renderer.create(
-            <PaginationNumItem pageNum={2} active />
+            <PaginationNumItem
+                pageNum={2}
+                active
+            />
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should render with prefix', () => {
+        const tree = renderer.create(
+            <PaginationNumItem
+                pageNum={2}
+                prefixer={path => `test-path${path}`}
+            />
         ).toJSON();
 
         expect(tree).toMatchSnapshot();

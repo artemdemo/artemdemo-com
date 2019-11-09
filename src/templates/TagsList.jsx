@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/Layout/Layout';
 
-const TagLinkSty = styled(Link)`
+const TagLink = styled(Link)`
     display: inline-block;
     margin-right: 15px;
 `;
@@ -15,7 +15,7 @@ class TagsList extends React.PureComponent {
     }
 
     renderTags() {
-        const tagsMap = _get(this.props, 'pageContext.tagsMap');
+        const tagsMap = _get(this.props, 'pageContext.tagsMap', {});
         return Object.keys(tagsMap)
             .map(slug => ({
                 slug,
@@ -24,13 +24,13 @@ class TagsList extends React.PureComponent {
             }))
             .sort((tagA, tagB) => tagB.amount - tagA.amount)
             .map(tag => (
-                <TagLinkSty
+                <TagLink
                     to={`/tags/${tag.slug}`}
                     key={`tags-${tag.slug}`}
                 >
                     {tag.name}
                     <sup> {tag.amount}</sup>
-                </TagLinkSty>
+                </TagLink>
             ));
     }
 

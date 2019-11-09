@@ -20,4 +20,14 @@ describe('Container', () => {
 
         expect(tree).toMatchSnapshot();
     });
+
+    it('should render with className', () => {
+        const tree = renderer.create(
+            <Container className='test-class'>
+                <div>Some child</div>
+            </Container>
+        ).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
 });
