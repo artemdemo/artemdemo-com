@@ -14,3 +14,8 @@ li > p:first-child {
 .gatsby-highlight {
     font-size: 0.9rem;
 }
+
+blockquote {
+    padding: 0.2rem 0 0 1rem;
+    border-left: 4px solid #e8e8e8;
+}
