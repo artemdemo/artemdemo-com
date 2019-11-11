@@ -51,6 +51,26 @@ Starting token renew:
 
 ```js
 /**
+ * Token constructor class
+ */
+class AuthenticationToken {
+    constructor(id, access, expiresAt) {
+        this.id = id;
+        this.access = access;
+        this.expiresAt = expiresAt;
+    }
+}
+
+const getTokenFromResult = (result) => {
+    const expiresAt = (result.expiresIn * 1000) + Date.now();
+    return new AuthenticationToken(
+        result.idToken,
+        result.accessToken,
+        expiresAt,
+    );
+};
+
+/**
  * Renew authorization token
  * @param options {object}
  * @returns {Promise<any>}
@@ -76,6 +96,7 @@ export const renewAuth = (options = {}) => new Promise((resolve, reject) => {
         return reject(new Error(errorText));
     });
 });
+
 ```
 
 And here is `silent.html` file:
