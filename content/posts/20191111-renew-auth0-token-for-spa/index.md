@@ -10,12 +10,12 @@ Sorry, but documentation of auth0 is not the best source of knowledge on how to 
 
 First, let's understand why we need to renew. It's related to, whether you're using relatively short expiration time for your token. If you are, which, by the way, will make your app more secure, then you will want to renew token if your app is in active usage. This will make the user experience much more pleasant, so he wouldn't need to re-login each time. So the idea is legit, now the question is how to implement it.
 
-I will start with a description of the expected flow for silent token renewal. By the way, this flow is not obvious at all. And auth0 could've done a better job of explaining it. Now I found these steps only in one of their community forums. Here there are:
+I will start with a description of the expected flow for silent token renewal. By the way auth0 could've done a better job of explaining it. Now I found these steps only in one of their community forums. Here there are:
 
 1. User login to the application for the first time.
 1. When the initial tokens expire the client makes another request to auth0 in order to obtain a new token.
 
-Ok, that's great and the first step is even easy to implement. But what about the second one? How it should work and how to implement it? Let's talk about exactly that.
+Ok, that's great and the first step is even easy to implement, there is clear document for it. But what about the second one? How it should work and how to implement it? Let's talk about exactly that.
 
 ## Auth0 silent token renewal
 
