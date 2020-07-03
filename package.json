@@ -64,6 +64,7 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
+    "clean": "gatsby clean",
     "deploy": "./deploy.sh"
   }
 }
