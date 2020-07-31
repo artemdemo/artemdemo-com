@@ -19,7 +19,7 @@ const PostTagsItemSty = styled(Link)`
 
 const PostTags = (props) => {
     const { tags } = props;
-    if (tags.length === 0) {
+    if (!tags || tags.length === 0) {
         return null;
     }
     return (

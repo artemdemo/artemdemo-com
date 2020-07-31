@@ -24,7 +24,7 @@ const createTagsPages = (posts, createPage) => new Promise((resolve) => {
 
     // Iterate through each post, putting all found tags into `tagsMap`
     _.each(posts, (edge) => {
-        const edgeTags = _.get(edge, 'node.frontmatter.tags', []);
+        const edgeTags = _.get(edge, 'node.frontmatter.tags') || [];
         edgeTags.forEach((tag) => {
             const tagSlug = utils.normalizeTag(tag);
             tagsMap[tagSlug] ?
