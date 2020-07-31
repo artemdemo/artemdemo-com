@@ -4,6 +4,7 @@ import Header from '../Header';
 
 jest.mock('../MainMenu');
 jest.mock('../../Container/Container');
+jest.mock('../../UpdateReadyInfo/UpdateReadyInfo');
 
 describe('Header', () => {
     it('should render empty', () => {

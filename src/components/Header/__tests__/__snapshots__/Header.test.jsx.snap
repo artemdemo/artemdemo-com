@@ -43,6 +43,11 @@ exports[`Header should render empty 1`] = `
     <div
       className="Header__HeaderSeparator-x4ek9t-4 eeJXhx"
     />
+    <div
+      data-mock="UpdateReadyInfo"
+    >
+      {}
+    </div>
   </div>
 </div>
 `;
@@ -90,6 +95,11 @@ exports[`Header should render with title 1`] = `
     <div
       className="Header__HeaderSeparator-x4ek9t-4 eeJXhx"
     />
+    <div
+      data-mock="UpdateReadyInfo"
+    >
+      {}
+    </div>
   </div>
 </div>
 `;
