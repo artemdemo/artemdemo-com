@@ -13,7 +13,7 @@ class Contact extends BasePage {
         // it's the only way to use specific loader
         // @docs https://webpack.js.org/concepts/loaders/#inline
         //
-        this.contentMd = isTestEnv ? null : require('raw-loader!./md/contact.md');
+        this.contentMd = isTestEnv ? null : require('raw-loader!./md/contact.md').default;
     }
 
     renderAfterContent() {

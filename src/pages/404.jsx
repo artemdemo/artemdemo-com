@@ -12,7 +12,7 @@ class NotFoundPage extends BasePage {
         // it's the only way to use specific loader
         // @docs https://webpack.js.org/concepts/loaders/#inline
         //
-        this.contentMd = isTestEnv ? null : require('raw-loader!./md/404.md');
+        this.contentMd = isTestEnv ? null : require('raw-loader!./md/404.md').default;
     }
 }
 
