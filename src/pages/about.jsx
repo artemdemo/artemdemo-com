@@ -12,7 +12,7 @@ class About extends BasePage {
         // it's the only way to use specific loader
         // @docs https://webpack.js.org/concepts/loaders/#inline
         //
-        this.contentMd = isTestEnv ? null : require('raw-loader?modules!./md/about.md');
+        this.contentMd = isTestEnv ? null : require('raw-loader!./md/about.md');
     }
 }
 
