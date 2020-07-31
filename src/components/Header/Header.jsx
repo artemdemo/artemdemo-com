@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 import MainMenu from './MainMenu';
 import Container from '../Container/Container';
 import { locationProp } from '../Layout/layoutProps';
+import UpdateReadyInfo from '../UpdateReadyInfo/UpdateReadyInfo';
 import * as styles from '../../services/styles';
 
 const HeaderSty = styled.div`
@@ -75,6 +76,7 @@ const Header = (props) => {
                     </HeaderItem>
                 </HeaderContainer>
                 <HeaderSeparator />
+                <UpdateReadyInfo />
             </Container>
         </HeaderSty>
     );

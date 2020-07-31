@@ -24,6 +24,7 @@
     "gatsby-transformer-sharp": "^2.5.2",
     "jest-cli": "^26.0.1",
     "lodash": "^4.17.15",
+    "nanoevents": "^5.1.8",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
