@@ -16,7 +16,7 @@ exports[`Icon should render with name and className 1`] = `
 
 exports[`Icon should render with name and inText 1`] = `
 <span
-  className="Icon__SpanSty-dahynt-0 XPUIp"
+  className="Icon__SpanSty-dahynt-0 bfHdvE"
 >
   <span
     className="fa fa-fire"

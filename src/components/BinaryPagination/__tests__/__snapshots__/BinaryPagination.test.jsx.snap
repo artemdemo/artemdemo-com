@@ -2,23 +2,23 @@
 
 exports[`BinaryPagination should render empty 1`] = `
 <div
-  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 bnEHjt"
+  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 fXIlaE"
 >
   <div
-    className="BinaryPagination__PaginationItem-sc-35l4ss-1 fjGTlq"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 liryBZ"
   />
   <div
-    className="BinaryPagination__PaginationItem-sc-35l4ss-1 ibbqOI"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 gugICK"
   />
 </div>
 `;
 
 exports[`BinaryPagination should render with data 1`] = `
 <div
-  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 bnEHjt"
+  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 fXIlaE"
 >
   <div
-    className="BinaryPagination__PaginationItem-sc-35l4ss-1 fjGTlq"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 liryBZ"
   >
     <div
       data-mock="SideLinkItem"
@@ -31,7 +31,7 @@ exports[`BinaryPagination should render with data 1`] = `
     </div>
   </div>
   <div
-    className="BinaryPagination__PaginationItem-sc-35l4ss-1 ibbqOI"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 gugICK"
   >
     <div
       data-mock="SideLinkItem"
@@ -48,10 +48,10 @@ exports[`BinaryPagination should render with data 1`] = `
 
 exports[`BinaryPagination should use slug if title not provided 1`] = `
 <div
-  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 bnEHjt"
+  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 fXIlaE"
 >
   <div
-    className="BinaryPagination__PaginationItem-sc-35l4ss-1 fjGTlq"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 liryBZ"
   >
     <div
       data-mock="SideLinkItem"
@@ -64,7 +64,7 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
     </div>
   </div>
   <div
-    className="BinaryPagination__PaginationItem-sc-35l4ss-1 ibbqOI"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 gugICK"
   >
     <div
       data-mock="SideLinkItem"
@@ -81,13 +81,13 @@ exports[`BinaryPagination should use slug if title not provided 1`] = `
 
 exports[`BinaryPagination shouldn't render without slug 1`] = `
 <div
-  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 bnEHjt"
+  className="BinaryPagination__PaginationContainer-sc-35l4ss-0 fXIlaE"
 >
   <div
-    className="BinaryPagination__PaginationItem-sc-35l4ss-1 fjGTlq"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 liryBZ"
   />
   <div
-    className="BinaryPagination__PaginationItem-sc-35l4ss-1 ibbqOI"
+    className="BinaryPagination__PaginationItem-sc-35l4ss-1 gugICK"
   />
 </div>
 `;

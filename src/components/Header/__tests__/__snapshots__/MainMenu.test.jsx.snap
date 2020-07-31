@@ -2,43 +2,43 @@
 
 exports[`MainMenu should render with pathname = \`/\` 1`] = `
 <ul
-  className="MainMenu__MainMenuSty-sc-10g5x94-0 frjzoV"
+  className="MainMenu__MainMenuSty-sc-10g5x94-0 gJbRLb"
 >
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 hjxubK"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 mCxBS"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       Blog
     </div>
   </li>
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 ekhyEU"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/about",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       About
     </div>
   </li>
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 ekhyEU"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/contact",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       Contact me
     </div>
@@ -48,43 +48,43 @@ exports[`MainMenu should render with pathname = \`/\` 1`] = `
 
 exports[`MainMenu should render with pathname = \`/about\` 1`] = `
 <ul
-  className="MainMenu__MainMenuSty-sc-10g5x94-0 frjzoV"
+  className="MainMenu__MainMenuSty-sc-10g5x94-0 gJbRLb"
 >
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 ekhyEU"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       Blog
     </div>
   </li>
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 hjxubK"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 mCxBS"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/about",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       About
     </div>
   </li>
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 ekhyEU"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/contact",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       Contact me
     </div>
@@ -94,43 +94,43 @@ exports[`MainMenu should render with pathname = \`/about\` 1`] = `
 
 exports[`MainMenu should render with pathname = \`/blog\` 1`] = `
 <ul
-  className="MainMenu__MainMenuSty-sc-10g5x94-0 frjzoV"
+  className="MainMenu__MainMenuSty-sc-10g5x94-0 gJbRLb"
 >
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 hjxubK"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 mCxBS"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       Blog
     </div>
   </li>
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 ekhyEU"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/about",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       About
     </div>
   </li>
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 ekhyEU"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/contact",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       Contact me
     </div>
@@ -140,43 +140,43 @@ exports[`MainMenu should render with pathname = \`/blog\` 1`] = `
 
 exports[`MainMenu should render with pathname = \`/contact\` 1`] = `
 <ul
-  className="MainMenu__MainMenuSty-sc-10g5x94-0 frjzoV"
+  className="MainMenu__MainMenuSty-sc-10g5x94-0 gJbRLb"
 >
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 ekhyEU"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       Blog
     </div>
   </li>
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 ekhyEU"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/about",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       About
     </div>
   </li>
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 hjxubK"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 mCxBS"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/contact",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       Contact me
     </div>
@@ -186,43 +186,43 @@ exports[`MainMenu should render with pathname = \`/contact\` 1`] = `
 
 exports[`MainMenu should render without location 1`] = `
 <ul
-  className="MainMenu__MainMenuSty-sc-10g5x94-0 frjzoV"
+  className="MainMenu__MainMenuSty-sc-10g5x94-0 gJbRLb"
 >
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 ekhyEU"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       Blog
     </div>
   </li>
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 ekhyEU"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/about",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       About
     </div>
   </li>
   <li
-    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 iErzFj"
+    className="MainMenu__MainMenuItemSty-sc-10g5x94-1 ekhyEU"
   >
     <div
       data-mock="Link"
     >
       {
   "to": "/contact",
-  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 edNkKg"
+  "className": "MainMenu__MainMenuLinkSty-sc-10g5x94-2 exmIPZ"
 }
       Contact me
     </div>

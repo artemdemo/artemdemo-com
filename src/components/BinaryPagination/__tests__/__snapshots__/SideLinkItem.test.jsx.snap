@@ -16,12 +16,12 @@ exports[`SideLinkItem should render "next" 1`] = `
   "rel": "next"
 }
       <span
-        className="SideLinkItem__LinkText-sc-1sb2mn5-0 itQixI"
+        className="SideLinkItem__LinkText-sc-1sb2mn5-0 dwIQaA"
       >
         Next title
       </span>
       <span
-        className="SideLinkItem__LinkArrow-sc-1sb2mn5-1 bARCRt"
+        className="SideLinkItem__LinkArrow-sc-1sb2mn5-1 dYCJk"
       >
         →
       </span>
@@ -46,12 +46,12 @@ exports[`SideLinkItem should render "prev" 1`] = `
   "rel": "prev"
 }
       <span
-        className="SideLinkItem__LinkArrow-sc-1sb2mn5-1 bARCRt"
+        className="SideLinkItem__LinkArrow-sc-1sb2mn5-1 dYCJk"
       >
         ←
       </span>
       <span
-        className="SideLinkItem__LinkText-sc-1sb2mn5-0 itQixI"
+        className="SideLinkItem__LinkText-sc-1sb2mn5-0 dwIQaA"
       >
         Prev title
       </span>

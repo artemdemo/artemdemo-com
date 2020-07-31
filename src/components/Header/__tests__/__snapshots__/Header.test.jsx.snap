@@ -2,33 +2,33 @@
 
 exports[`Header should render empty 1`] = `
 <div
-  className="Header__HeaderWrapper-x4ek9t-0 bBieLL"
+  className="Header__HeaderWrapper-x4ek9t-0 kndkLQ"
 >
   <div
     data-mock="Container"
   >
     {}
     <div
-      className="Header__HeaderContainer-x4ek9t-1 fzAqQm"
+      className="Header__HeaderContainer-x4ek9t-1 dcVYvD"
     >
       <div
-        className="Header__HeaderItem-x4ek9t-2 jLKXMa"
+        className="Header__HeaderItem-x4ek9t-2 uMxjY"
       >
         <div
           data-mock="Link"
         >
           {
   "to": "/",
-  "className": "Header__HeaderLogoLink-x4ek9t-5 ehZhfd"
+  "className": "Header__HeaderLogoLink-x4ek9t-5 gpqiWd"
 }
           
         </div>
       </div>
       <div
-        className="Header__HeaderItem-x4ek9t-2 hoLYPK"
+        className="Header__HeaderItem-x4ek9t-2 lancbj"
       >
         <div
-          className="Header__HeaderItemMenu-x4ek9t-3 imOZsT"
+          className="Header__HeaderItemMenu-x4ek9t-3 jmGRuE"
         >
           <div
             data-mock="MainMenu"
@@ -41,7 +41,7 @@ exports[`Header should render empty 1`] = `
       </div>
     </div>
     <div
-      className="Header__HeaderSeparator-x4ek9t-4 eeJXhx"
+      className="Header__HeaderSeparator-x4ek9t-4 eXGQby"
     />
     <div
       data-mock="UpdateReadyInfo"
@@ -54,33 +54,33 @@ exports[`Header should render empty 1`] = `
 
 exports[`Header should render with title 1`] = `
 <div
-  className="Header__HeaderWrapper-x4ek9t-0 bBieLL"
+  className="Header__HeaderWrapper-x4ek9t-0 kndkLQ"
 >
   <div
     data-mock="Container"
   >
     {}
     <div
-      className="Header__HeaderContainer-x4ek9t-1 fzAqQm"
+      className="Header__HeaderContainer-x4ek9t-1 dcVYvD"
     >
       <div
-        className="Header__HeaderItem-x4ek9t-2 jLKXMa"
+        className="Header__HeaderItem-x4ek9t-2 uMxjY"
       >
         <div
           data-mock="Link"
         >
           {
   "to": "/",
-  "className": "Header__HeaderLogoLink-x4ek9t-5 ehZhfd"
+  "className": "Header__HeaderLogoLink-x4ek9t-5 gpqiWd"
 }
           Test title
         </div>
       </div>
       <div
-        className="Header__HeaderItem-x4ek9t-2 hoLYPK"
+        className="Header__HeaderItem-x4ek9t-2 lancbj"
       >
         <div
-          className="Header__HeaderItemMenu-x4ek9t-3 imOZsT"
+          className="Header__HeaderItemMenu-x4ek9t-3 jmGRuE"
         >
           <div
             data-mock="MainMenu"
@@ -93,7 +93,7 @@ exports[`Header should render with title 1`] = `
       </div>
     </div>
     <div
-      className="Header__HeaderSeparator-x4ek9t-4 eeJXhx"
+      className="Header__HeaderSeparator-x4ek9t-4 eXGQby"
     />
     <div
       data-mock="UpdateReadyInfo"
