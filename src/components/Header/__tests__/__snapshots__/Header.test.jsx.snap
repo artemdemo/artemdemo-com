@@ -2,7 +2,7 @@
 
 exports[`Header should render empty 1`] = `
 <div
-  className="Header__HeaderSty-x4ek9t-0 ctjVwy"
+  className="Header__HeaderWrapper-x4ek9t-0 bBieLL"
 >
   <div
     data-mock="Container"
@@ -54,7 +54,7 @@ exports[`Header should render empty 1`] = `
 
 exports[`Header should render with title 1`] = `
 <div
-  className="Header__HeaderSty-x4ek9t-0 ctjVwy"
+  className="Header__HeaderWrapper-x4ek9t-0 bBieLL"
 >
   <div
     data-mock="Container"

@@ -8,7 +8,7 @@ import { locationProp } from '../Layout/layoutProps';
 import UpdateReadyInfo from '../UpdateReadyInfo/UpdateReadyInfo';
 import * as styles from '../../services/styles';
 
-const HeaderSty = styled.div`
+const HeaderWrapper = styled.div`
     margin-bottom: 20px;
 `;
 
@@ -61,7 +61,7 @@ const HeaderLogoLink = styled(Link)`
 const Header = (props) => {
     const { location, title } = props;
     return (
-        <HeaderSty>
+        <HeaderWrapper>
             <Container>
                 <HeaderContainer>
                     <HeaderItem logo>
@@ -78,7 +78,7 @@ const Header = (props) => {
                 <HeaderSeparator />
                 <UpdateReadyInfo />
             </Container>
-        </HeaderSty>
+        </HeaderWrapper>
     );
 };
 
