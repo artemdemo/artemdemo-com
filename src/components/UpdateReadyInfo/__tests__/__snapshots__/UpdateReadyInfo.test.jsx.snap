@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UpdateReadyInfo should render default 1`] = `
+<div
+  className="UpdateReadyInfo__Info-sc-1b2xarw-0 boLWiV"
+  onClick={[Function]}
+  style={
+    Object {
+      "right": "-100%",
+    }
+  }
+>
+  <div>
+    This site has been updated.
+  </div>
+  <div>
+    Reload to display the latest version?
+  </div>
+  <div>
+    (click here)
+  </div>
+</div>
+`;
+
+exports[`UpdateReadyInfo should render update is ready 1`] = `
+<div
+  className="UpdateReadyInfo__Info-sc-1b2xarw-0 boLWiV"
+  onClick={[Function]}
+  style={
+    Object {
+      "right": "10%",
+    }
+  }
+>
+  <div>
+    This site has been updated.
+  </div>
+  <div>
+    Reload to display the latest version?
+  </div>
+  <div>
+    (click here)
+  </div>
+</div>
+`;
