@@ -14,7 +14,7 @@ exports[`Pagination should render 1 page out of 3 1`] = `
     >
       {
   "className": "page-link",
-  "to": ""
+  "to": "/"
 }
       Previous
     </div>
@@ -134,7 +134,7 @@ exports[`Pagination should render with prefix 1`] = `
     >
       {
   "className": "page-link",
-  "to": ""
+  "to": "test-path/"
 }
       Previous
     </div>
