@@ -2,6 +2,7 @@
 title: Simple template engine in JavaScript
 date: "2020-10-24T10:27:00.000Z"
 tags: ["regex","template"]
+no_excerpt: true
 ---
 
 Recently I had a task, that included creating simple templates.

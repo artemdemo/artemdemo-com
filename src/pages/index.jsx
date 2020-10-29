@@ -22,11 +22,13 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 500)
+          html
           fields {
             slug
           }
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
+            no_excerpt
             title
           }
         }

@@ -27,8 +27,12 @@ class PostsItem extends React.PureComponent {
 
     componentDidMount() {
         const excerpt = _get(this.props, 'node.excerpt');
+        const noExcerpt = _get(this.props, 'node.frontmatter.no_excerpt')
 
-        if (excerpt) {
+        if (noExcerpt) {
+            const content = _get(this.props, 'node.html', '');
+            this.setState({ content })
+        } else if (excerpt) {
             renderMd(excerpt)
                 .then(content => this.setState({ content }));
         }
