@@ -1,6 +1,6 @@
 ---
 title: I started to learn pixel art
-date: "2020-01-01T12:07:00.000Z"
+date: "2021-01-01T12:07:00.000Z"
 tags: ["studying","pixel art"]
 ---
 
