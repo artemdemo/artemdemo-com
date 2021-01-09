@@ -1,6 +1,6 @@
 ---
 title: I started new game experiment
-date: "2021-01-03T12:07:00.000Z"
+date: "2021-01-09T15:01:00.000Z"
 tags: ["game","pixel art","unity"]
 ---
 
