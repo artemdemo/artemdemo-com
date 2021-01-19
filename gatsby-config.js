@@ -53,18 +53,6 @@ module.exports = {
             },
         },
         `gatsby-plugin-feed`,
-        {
-            resolve: `gatsby-plugin-manifest`,
-            options: {
-                name: title,
-                short_name: author,
-                start_url: `/`,
-                background_color: `#ffffff`,
-                theme_color: `#3d4799`,
-                display: `minimal-ui`,
-                // icon: `src/assets/gatsby-icon.png`,
-            },
-        },
         `gatsby-plugin-offline`,
         `gatsby-plugin-react-helmet`,
     ],
