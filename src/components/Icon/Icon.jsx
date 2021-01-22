@@ -10,55 +10,55 @@ import './Icon.css';
  * @link https://fontawesome.com/get-started
  */
 class Icon extends React.PureComponent {
-    renderIcon() {
-        const { name, title, className } = this.props;
+  renderIcon() {
+    const {name, title, className} = this.props;
 
-        const iconClass = classnames('fa', {
-            [`fa-${name}`]: true,
-        }, className);
+    const iconClass = classnames('fa', {
+      [`fa-${name}`]: true,
+    }, className);
 
-        return (
-            <span
-                className={iconClass}
-                title={title}
-            />
-        );
+    return (
+      <span
+        className={iconClass}
+        title={title}
+      />
+    );
+  }
+
+  render() {
+    const {name, inText} = this.props;
+
+    if (name === '' || name == null) {
+      throw new Error('Icon prop `name` couldn\'t be empty');
     }
 
-    render() {
-        const { name, inText } = this.props;
+    if (!inText) {
+      return this.renderIcon();
+    }
 
-        if (name === '' || name == null) {
-            throw new Error('Icon prop `name` couldn\'t be empty');
-        }
-
-        if(!inText) {
-            return this.renderIcon();
-        }
-
-        return (
-            <span
-              className={classnames({
-                  'icon_in-text': inText
-              })}
-            >
+    return (
+      <span
+        className={classnames({
+          'icon_in-text': inText
+        })}
+      >
                 {this.renderIcon()}
             </span>
-        );
-    }
+    );
+  }
 }
 
 Icon.propTypes = {
-    name: PropTypes.string.isRequired,
-    title: PropTypes.string,
-    className: PropTypes.string,
-    inText: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  className: PropTypes.string,
+  inText: PropTypes.bool,
 };
 
 Icon.defaultProps = {
-    title: null,
-    className: null,
-    inText: false,
+  title: null,
+  className: null,
+  inText: false,
 };
 
 export default Icon;
