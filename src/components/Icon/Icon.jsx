@@ -1,13 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import styled from 'styled-components';
-
 import 'font-awesome/css/font-awesome.min.css';
-
-const SpanSty = styled.span`
-    ${props => props.inText ? 'padding-right: 5px;' : ''}
-`;
+import './Icon.css';
 
 /**
  * Icon component
@@ -42,9 +37,13 @@ class Icon extends React.PureComponent {
         }
 
         return (
-            <SpanSty inText={inText}>
+            <span
+              className={classnames({
+                  'icon_in-text': inText
+              })}
+            >
                 {this.renderIcon()}
-            </SpanSty>
+            </span>
         );
     }
 }
