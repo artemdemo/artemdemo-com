@@ -4,7 +4,6 @@ import {Link} from 'gatsby';
 import _get from 'lodash/get';
 import PostDate from '../PostDate/PostDate';
 import * as utils from '../../services/utils';
-import {renderMd} from '../../services/md';
 
 // Yes, I know, not the best solution.
 // The problem is that I need to use here custom service for markdown,
@@ -12,23 +11,6 @@ import {renderMd} from '../../services/md';
 import './PostsItem.css';
 
 class PostsItem extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      content: null,
-    };
-  }
-
-  componentDidMount() {
-    const excerpt = _get(this.props, 'node.excerpt');
-
-    if (excerpt) {
-      renderMd(excerpt)
-        .then(content => this.setState({content}));
-    }
-  }
-
   render() {
     const {node} = this.props;
     if (!node) {
@@ -45,7 +27,9 @@ class PostsItem extends React.PureComponent {
         <PostDate>
           {node.frontmatter.date}
         </PostDate>
-        <p dangerouslySetInnerHTML={{__html: this.state.content}}/>
+        <p>
+          {_get(this.props, 'node.excerpt')}
+        </p>
       </div>
     );
   }
