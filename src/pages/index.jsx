@@ -1,7 +1,8 @@
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import PostsList from './PostsList/PostsList';
 
-class BlogIndex extends PostsList {}
+class BlogIndex extends PostsList {
+}
 
 export default BlogIndex;
 
