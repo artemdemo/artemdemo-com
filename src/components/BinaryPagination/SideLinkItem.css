@@ -1,0 +1,15 @@
+.side-link-arrow {
+  flex-grow: 1;
+}
+  .side-link-arrow:first-child {
+    padding-right: 5px;
+  }
+  .side-link-arrow:last-child {
+    padding-left: 5px;
+  }
+
+.side-link-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

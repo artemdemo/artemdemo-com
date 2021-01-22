@@ -1,16 +1,47 @@
+.pagination-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 @media (max-width: 768px) {
-    .binary-pagination {
-        display: block;
-    }
+  .pagination-container {
+    text-align: center;
+  }
+}
+
+.pagination-item {
+}
+
+.pagination-item_left {
+  float: left;
+}
+
+.pagination-item_left {
+  float: right;
+}
+
+@media (max-width: 768px) {
+  .pagination-item {
+    float: initial;
+    display: inline-block;
+    width: 51%;
+  }
+}
+
+@media (max-width: 768px) {
+  .binary-pagination {
+    display: block;
+  }
 }
 
 .binary-pagination-link {
-    max-width: 200px;
-    display: flex;
+  max-width: 200px;
+  display: flex;
 }
 
 @media (min-width: 992px) {
-    .binary-pagination-link {
-        max-width: 300px;
-    }
+  .binary-pagination-link {
+    max-width: 300px;
+  }
 }
