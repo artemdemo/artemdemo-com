@@ -1,58 +1,54 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
+import {Link} from 'gatsby';
 import _get from 'lodash/get';
-import { locationProp } from '../Layout/layoutProps';
-import * as styles from '../../services/styles';
-
-const MainMenuSty = styled.ul`
-    ${styles.clearFix}
-    ${styles.resetUl}
-`;
-
-const MainMenuItemSty = styled.li`
-    float: left;
-    padding: 0 10px;
-    ${props => props.active && `
-        border-bottom: 2px solid #96c9ff;
-    `}
-`;
-
-const MainMenuLinkSty = styled(Link)`
-    &:hover {
-        text-decoration: none;
-    }
-`;
+import classnames from 'classnames';
+import {locationProp} from '../Layout/layoutProps';
+import './MainMenu.css';
 
 const MainMenu = (props) => {
-    const pathname = _get(props, 'location.pathname', '');
-    return (
-        <MainMenuSty>
-            <MainMenuItemSty active={pathname === '/' || pathname.startsWith('/blog')}>
-                <MainMenuLinkSty to='/'>
-                    Blog
-                </MainMenuLinkSty>
-            </MainMenuItemSty>
-            <MainMenuItemSty active={pathname.startsWith('/about')}>
-                <MainMenuLinkSty to='/about'>
-                    About
-                </MainMenuLinkSty>
-            </MainMenuItemSty>
-            <MainMenuItemSty active={pathname.startsWith('/contact')}>
-                <MainMenuLinkSty to='/contact'>
-                    Contact me
-                </MainMenuLinkSty>
-            </MainMenuItemSty>
-        </MainMenuSty>
-    );
+  const pathname = _get(props, 'location.pathname', '');
+  return (
+    <div className='main-menu'>
+      <div
+        className={classnames({
+          'main-menu_item': true,
+          'main-menu_item__active': pathname === '/' || pathname.startsWith('/blog'),
+        })}
+      >
+        <Link className='main-menu_link' to='/'>
+          Blog
+        </Link>
+      </div>
+      <div
+        className={classnames({
+          'main-menu_item': true,
+          'main-menu_item__active': pathname.startsWith('/about'),
+        })}
+      >
+        <Link className='main-menu_link' to='/about'>
+          About
+        </Link>
+      </div>
+      <div
+        className={classnames({
+          'main-menu_item': true,
+          'main-menu_item__active': pathname.startsWith('/contact'),
+        })}
+      >
+        <Link className='main-menu_link' to='/contact'>
+          Contact me
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 MainMenu.propTypes = {
-    location: locationProp,
+  location: locationProp,
 };
 
 MainMenu.defaultProps = {
-    location: {},
+  location: {},
 };
 
 export default MainMenu;
