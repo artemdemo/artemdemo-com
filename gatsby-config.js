@@ -11,14 +11,14 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/posts`,
         name: 'posts',
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         // You can also manually mark in your markdown where to stop excerpting.
         // Any file that does not have the given `excerpt_separator` will fall back to the default pruning method.
@@ -26,16 +26,16 @@ module.exports = {
         excerpt_separator: '<!-- end -->',
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 590,
               quality: 90,
             },
           },
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: 'margin-bottom: 1.0725rem',
             },
           },
           'gatsby-remark-prismjs',
@@ -44,16 +44,16 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-38910005-10',
       },
     },
-    `gatsby-plugin-feed`,
-    `gatsby-plugin-remove-serviceworker`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-feed',
+    'gatsby-plugin-remove-serviceworker',
+    'gatsby-plugin-react-helmet',
   ],
 };
