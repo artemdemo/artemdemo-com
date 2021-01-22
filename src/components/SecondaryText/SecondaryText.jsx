@@ -1,14 +1,10 @@
-import styled from 'styled-components';
+import React from 'react';
+import './SecondaryText.css';
 
-const SecondaryText = styled.div`
-    font-size: 85%;
-    margin-bottom: 10px;
-    opacity: 0.5;
-    transition: 300ms;
-    
-    &:hover {
-        opacity: 1;
-    }
-`;
+const SecondaryText = (props) => (
+  <div className='secondary-text'>
+    {props.children}
+  </div>
+);
 
 export default SecondaryText;
