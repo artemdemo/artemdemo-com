@@ -3,29 +3,29 @@ import PropTypes from 'prop-types';
 import PostsItem from './PostsItem';
 
 const Posts = (props) => {
-    const { list } = props;
+  const {list} = props;
 
-    return (
-        <React.Fragment>
-            {list.map((post) => {
-                const { node } = post;
-                return (
-                    <PostsItem
-                        node={node}
-                        key={node.fields.slug}
-                    />
-                )
-            })}
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      {list.map((post) => {
+        const {node} = post;
+        return (
+          <PostsItem
+            node={node}
+            key={node.fields.slug}
+          />
+        )
+      })}
+    </React.Fragment>
+  );
 };
 
 Posts.propTypes = {
-    list: PropTypes.arrayOf(PropTypes.shape({})),
+  list: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 Posts.defaultProps = {
-    list: [],
+  list: [],
 };
 
 export default Posts;

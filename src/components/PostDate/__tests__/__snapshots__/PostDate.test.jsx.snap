@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`PostDate should render 1`] = `
-<div
-  data-mock="SecondaryText"
->
-  29 September, 2018
-</div>
-`;
