@@ -1,28 +1,28 @@
 import React from 'react';
 import _get from 'lodash/get';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import PostsList from '../pages/PostsList/PostsList';
 import * as utils from '../services/utils';
 
 class PostsListByTag extends PostsList {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    renderBeforeContent () {
-        const tagName = _get(this.props, 'pageContext.tagName', '')
-        return (
-            <p>
-                <strong>Tag:</strong>
-                &nbsp;&nbsp;{tagName}
-            </p>
-        );
-    }
+  renderBeforeContent() {
+    const tagName = _get(this.props, 'pageContext.tagName', '')
+    return (
+      <p>
+        <strong>Tag:</strong>
+        &nbsp;&nbsp;{tagName}
+      </p>
+    );
+  }
 
-    renderPagination() {
-        const tagName = _get(this.props, 'pageContext.tagName', '');
-        return super.renderPagination(utils.prefixTag.bind(null, tagName))
-    }
+  renderPagination() {
+    const tagName = _get(this.props, 'pageContext.tagName', '');
+    return super.renderPagination(utils.prefixTag.bind(null, tagName))
+  }
 }
 
 export default PostsListByTag;

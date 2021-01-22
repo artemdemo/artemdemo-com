@@ -3,9 +3,9 @@
 // and make some adjustments.
 //
 export const isTestEnv = (() => {
-    try {
-        return process.env.NODE_ENV === 'test';
-    } catch(e) {
-        return false;
-    }
+  try {
+    return process.env.NODE_ENV === 'test';
+  } catch (e) {
+    return false;
+  }
 })();
