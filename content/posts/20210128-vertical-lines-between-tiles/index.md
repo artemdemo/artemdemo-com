@@ -1,6 +1,6 @@
 ---
 title: Vertical lines between tiles in tile map in unity
-date: "2021-01-30T20:05:00.000Z"
+date: "2021-01-28T20:05:00.000Z"
 featuredImage: vertical-line-between-tiles-thumbnail.png
 tags: ["unity","tiles"]
 ---
