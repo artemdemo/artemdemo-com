@@ -13,3 +13,15 @@ code {
 .post-item {
   margin-bottom: 30px;
 }
+
+.post-item-content {
+  display: flex;
+}
+  .post-item-content__thumbnail {
+    flex-basis: 120px;
+    flex-shrink: 0;
+  }
+  .post-item-content__excerpt {
+    flex-grow: 1;
+    padding-left: 10px;
+  }

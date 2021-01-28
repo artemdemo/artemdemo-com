@@ -6,7 +6,7 @@ const Posts = (props) => {
   const {list} = props;
 
   return (
-    <React.Fragment>
+    <>
       {list.map((post) => {
         const {node} = post;
         return (
@@ -16,7 +16,7 @@ const Posts = (props) => {
           />
         )
       })}
-    </React.Fragment>
+    </>
   );
 };
 

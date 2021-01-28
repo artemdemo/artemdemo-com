@@ -1,6 +1,7 @@
 ---
 title: Adding favicon to gatsby website
 date: "2020-10-29T20:27:00.000Z"
+featuredImage: favicon-thumbnail.png
 tags: ["favicon","gatsby"]
 no_excerpt: true
 ---
