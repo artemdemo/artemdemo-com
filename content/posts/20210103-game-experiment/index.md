@@ -1,6 +1,7 @@
 ---
 title: I started new game experiment
 date: "2021-01-09T15:01:00.000Z"
+featuredImage: first-screenshot-thumbnail.png
 tags: ["game","pixel art","unity"]
 ---
 

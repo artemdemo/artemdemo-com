@@ -1,6 +1,7 @@
 ---
 title: I started to learn pixel art
 date: "2021-01-01T12:07:00.000Z"
+featuredImage: pixel-art-thumbnail.png
 tags: ["studying","pixel art"]
 ---
 
