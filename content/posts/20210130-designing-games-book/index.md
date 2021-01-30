@@ -1,14 +1,15 @@
 ---
 title: Designing Games, book by Tynan Sylvester
-date: "2021-01-31T20:05:00.000Z"
+date: "2021-01-30T15:05:00.000Z"
 featuredImage: designing-games-thumbnail.jpeg
-tags: ["book", "studying"]
+tags: ["book", "studying", "game"]
 ---
 
 ![Designing Games, by Tynan Sylvester](designing-games.jpg)
 
 Lately I finished the "Designing Games", by Tynan Sylvester, lead developer of Rimworld.
 Highly recommend to everyone who is interested in game design.
+This book is not about the code, but about experience that your game will create. 
 
 <!-- end -->
 
