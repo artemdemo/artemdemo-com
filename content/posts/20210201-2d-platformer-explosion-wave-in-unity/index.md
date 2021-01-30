@@ -10,11 +10,9 @@ First it should be an area damage and regardless of players position, he should 
 
 Without the damage - explosion is only cool graphical effect, but there aren't many emotions attached to it.
 
-<div style="margin: 0 auto">
 <video autoplay loop>
   <source src="explosion-without-damage.mp4" type="video/mp4" />
 </video>
-</div>
 
 All Line Render configurations I'm doing in code, the only thing I changed in UI was Material.
 I changed it to "Default-Line".
