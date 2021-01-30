@@ -10,7 +10,7 @@ First it should be an area damage and regardless of players position, he should 
 
 Without the damage - explosion is only cool graphical effect, but there aren't many emotions attached to it.
 
-<video autoplay loop>
+<video autoplay loop data-test="foo">
   <source src="explosion-without-damage.mp4" type="video/mp4" />
 </video>
 
