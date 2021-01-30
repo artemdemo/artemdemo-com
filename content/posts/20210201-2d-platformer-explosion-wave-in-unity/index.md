@@ -5,14 +5,26 @@ featuredImage: explosion-wave-thumbnail.png
 tags: ["unity", "game"]
 ---
 
-One of cool parts about in-game explosions - is how you deal damage to the player.
-First it should be an area damage and regardless of players position, he should receive damage if he stays close enough.
+One of the challenging issues with in-game explosions - is to decide how you'll deal damage to the player.
+First, it should be an area damage and regardless of players position he should receive damage (if he stays close enough).
 
-Without the damage - explosion is only cool graphical effect, but there aren't many emotions attached to it.
+<!-- end -->
+
+Without the damage - explosion is only cool visual effect, but there aren't many emotions attached to it.
+It looks interesting, but it's not frightening:
 
 <video autoplay loop data-test="foo">
   <source src="explosion-without-damage.mp4" type="video/mp4" />
 </video>
+
+There are four aspects in a successful explosion:
+
+1. It should go "BOOM" visually.
+1. It should damage a careless player that stays too close to the epicenter.
+1. Optionally it can show explosion wave, so player will learn what is the safe distance.
+1. It should sound like explosion.
+
+In this post I will deal with first 3.
 
 All Line Render configurations I'm doing in code, the only thing I changed in UI was Material.
 I changed it to "Default-Line".
