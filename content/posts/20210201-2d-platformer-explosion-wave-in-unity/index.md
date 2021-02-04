@@ -1,16 +1,16 @@
 ---
 title: 2D explosion wave in unity
-date: "2021-02-01T15:05:00.000Z"
+date: "2021-02-04T19:03:00.000Z"
 featuredImage: explosion-wave-thumbnail.png
 tags: ["unity", "game"]
 ---
 
 One of the challenging issues with in-game explosions - is to decide how you'll deal damage to the player.
-First, it should be an area damage and regardless of players position he should receive damage (if he stays close enough).
+First, it should be an area damage and regardless of the player's position he should receive damage (if he stays close enough).
 
 <!-- end -->
 
-Without the damage - explosion is only cool visual effect, but there aren't many emotions attached to it.
+Without the damage - explosion is only a cool visual effect, but there aren't many emotions attached to it.
 It looks interesting, but it's not frightening:
 
 <video autoplay loop data-test="foo">
@@ -21,17 +21,21 @@ There are four aspects in a successful explosion:
 
 1. It should go "BOOM" visually.
 1. It should damage a careless player that stays too close to the epicenter.
-1. Optionally it can show explosion wave, so player will learn what is the safe distance.
-1. It should sound like explosion.
+1. Optionally it can show an explosion wave, so the player will learn what is the safe distance.
+1. It should sound like an explosion.
 
-In this post I will deal with first 3.
 
-All Line Render configurations I'm doing in code, the only thing I changed in UI was Material.
+In this post I will deal with the first 3.
+
+First of all I need somehow to render a circle around the exploded object.
+For that can be used the "Line Render" component.
+All "Line Render" configurations I'm doing in code, the only thing I defined in the UI was Material.
 I changed it to "Default-Line".
 
 ![Explosion Render Line](explosion-render-line.png)
 
-This is how I draw the circle itself:
+Next is to draw a growing circle around the game object. This is how I did it:
+
 ```typescript
 private float _currentRadius;
 private const int Segments = 36;
