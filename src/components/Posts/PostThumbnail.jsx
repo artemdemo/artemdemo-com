@@ -1,23 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _get from 'lodash/get';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import './PostThumbnail.css';
 
 export const PostThumbnail = ({ featuredImage }) => {
-  const featuredImgFluid = _get(featuredImage, 'childImageSharp.fluid');
-  if (featuredImgFluid) {
+  if (featuredImage) {
     return (
-      <Img className='post-thumbnail' fluid={featuredImgFluid} />
+      <GatsbyImage
+        className='post-thumbnail'
+        image={getImage(featuredImage)}
+        alt=""
+      />
     );
   }
   return null;
 };
 
 PostThumbnail.propTypes = {
-  featuredImage: PropTypes.shape({
-    childImageSharp: PropTypes.shape({
-      fluid: PropTypes.shape({}),
-    }),
-  }),
+  featuredImage: PropTypes.shape({}),
 };
