@@ -1,6 +1,6 @@
 import React from 'react';
 import _get from 'lodash/get';
-import {graphql, Link} from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout/Layout';
 
 class TagsList extends React.PureComponent {
@@ -11,15 +11,15 @@ class TagsList extends React.PureComponent {
   renderTags() {
     const tagsMap = _get(this.props, 'pageContext.tagsMap', {});
     return Object.keys(tagsMap)
-      .map(slug => ({
+      .map((slug) => ({
         slug,
         name: tagsMap[slug].name,
         amount: tagsMap[slug].amount,
       }))
       .sort((tagA, tagB) => tagB.amount - tagA.amount)
-      .map(tag => (
+      .map((tag) => (
         <Link
-          className='tag-link'
+          className="tag-link"
           to={`/tags/${tag.slug}`}
           key={`tags-${tag.slug}`}
         >
@@ -31,7 +31,10 @@ class TagsList extends React.PureComponent {
 
   render() {
     const siteTitle = _get(this.props, 'data.site.siteMetadata.title');
-    const siteDescription = _get(this.props, 'data.site.siteMetadata.description');
+    const siteDescription = _get(
+      this.props,
+      'data.site.siteMetadata.description',
+    );
     const title = 'Tags List';
 
     return (

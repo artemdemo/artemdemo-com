@@ -1,7 +1,7 @@
 ---
 title: UUID generator app
-date: "2020-07-03T14:30:00.000Z"
-tags: ["uuid", "svelte", "tailwind css"]
+date: '2020-07-03T14:30:00.000Z'
+tags: ['uuid', 'svelte', 'tailwind css']
 ---
 
 Once upon a time I needed to create UUIDs, and I needed to do it manually.
@@ -23,5 +23,5 @@ As a result js code is only 4.8 kb and css is 780 bytes, and it tools only 225 m
 
 ![UUID generator app](uuid-generator-app.png)
 
-* Github: https://github.com/artemdemo/uuid-generator
-* The deployed app: https://artemdemo.github.io/uuid-generator/public/
+- Github: https://github.com/artemdemo/uuid-generator
+- The deployed app: https://artemdemo.github.io/uuid-generator/public/

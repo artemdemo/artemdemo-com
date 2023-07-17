@@ -1,33 +1,35 @@
 ---
 title: Theming with styled-components
-date: "2020-07-31T15:27:00.000Z"
-tags: ["styled-components"]
+date: '2020-07-31T15:27:00.000Z'
+tags: ['styled-components']
 ---
 
 Theme can be stored (or generated) in a js file.
 For instance, we can keep all of them, in `./themes` folder and load, while bootstrapping the application.
 
 ```js
-const loadTheme = themeName => new Promise((resolve, reject) => {
-  const resolveResponse = response => resolve(response.default);
-  import(`./themes/${themeName}Theme`)
-    .then(resolveResponse)
-    .catch((err) => {
-      const defaultThemeName = 'default';
-      if (themeName !== defaultThemeName) {
-        console.warn(`Can't load "${themeName}" theme`);
-        console.warn(err);
-        console.warn(`Trying to load the default theme`);
-        return import(`./themes/${defaultThemeName}Theme`)
-          .then(resolveResponse);
-      }
-      throw new Error(err);
-    })
-    .catch((err) => {
-      console.error(err);
-      reject(new Error('Theme can\'t be loaded'));
-    });
-});
+const loadTheme = (themeName) =>
+  new Promise((resolve, reject) => {
+    const resolveResponse = (response) => resolve(response.default);
+    import(`./themes/${themeName}Theme`)
+      .then(resolveResponse)
+      .catch((err) => {
+        const defaultThemeName = 'default';
+        if (themeName !== defaultThemeName) {
+          console.warn(`Can't load "${themeName}" theme`);
+          console.warn(err);
+          console.warn(`Trying to load the default theme`);
+          return import(`./themes/${defaultThemeName}Theme`).then(
+            resolveResponse,
+          );
+        }
+        throw new Error(err);
+      })
+      .catch((err) => {
+        console.error(err);
+        reject(new Error("Theme can't be loaded"));
+      });
+  });
 ```
 
 Provide theme to the app.
@@ -39,15 +41,14 @@ import { ThemeProvider } from 'styled-components';
 // ...
 
 const bootstrapApp = () => {
-  loadTheme(configs.theme)
-    .then((theme) => {
-      render(
-        <ThemeProvider theme={theme}>
-          <App />
-        </ThemeProvider>,
-        document.getElementById('app'),
-      );
-    });
+  loadTheme(configs.theme).then((theme) => {
+    render(
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>,
+      document.getElementById('app'),
+    );
+  });
 };
 ```
 
@@ -59,7 +60,7 @@ In the example below, it's an object with two properties: `infoButtonBgColor` an
 import styled, { withTheme } from 'styled-components';
 
 const InfoButton = styled.button`
-  background-color: ${props => props.theme.infoButtonBgColor};
+  background-color: ${(props) => props.theme.infoButtonBgColor};
 `;
 
 const InfoArea = (props) => {

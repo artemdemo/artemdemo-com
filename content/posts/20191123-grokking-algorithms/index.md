@@ -1,11 +1,11 @@
 ---
 title: Grokking algorithms
-date: "2019-11-23T17:15:00.000Z"
-tags: ["book", "studying", "algorithms"]
+date: '2019-11-23T17:15:00.000Z'
+tags: ['book', 'studying', 'algorithms']
 ---
 
-*An illustrated guide for<br />
-programmers and other curious people.*
+_An illustrated guide for<br />
+programmers and other curious people._
 
 The book about algorithms. Not an easy topic, and not very useful in most workplaces. Ok, depends on what you're required to do. There are definitely job descriptions that require work with algorithms. But is it always the case? Certainly not.
 

@@ -1,7 +1,7 @@
 ---
 title: How to use Konva with Rough.js
-date: "2020-10-12T19:27:00.000Z"
-tags: ["konva","rough.js","imgreview"]
+date: '2020-10-12T19:27:00.000Z'
+tags: ['konva', 'rough.js', 'imgreview']
 ---
 
 For my [ImgReview](https://imgreview.app/) app I wanted to use custom shapes with a hand-drawn, sketchy, appearance.
@@ -20,8 +20,8 @@ but their approaches are different and may contradict (sort of).
 
 Let's see what we get from each one of them:
 
-* [Konva](https://github.com/konvajs/konva) provides a framework and hides a boilerplate of canvas API. I obviously want that.
-* [Rough.js](https://github.com/rough-stuff/rough) helps me to create artistic patterns for my shapes, which is cool, and I want it as well.
+- [Konva](https://github.com/konvajs/konva) provides a framework and hides a boilerplate of canvas API. I obviously want that.
+- [Rough.js](https://github.com/rough-stuff/rough) helps me to create artistic patterns for my shapes, which is cool, and I want it as well.
 
 With a straight-forward approach I can't pass a link to the canvas to rough.js and just draw whatever I want:
 
@@ -45,7 +45,7 @@ const customShape = new Konva.Shape({
   y: 10,
   fill: 'red',
   // a Konva.Canvas renderer is passed into the sceneFunc function
-  sceneFunc (context, shape) {
+  sceneFunc(context, shape) {
     context.beginPath();
     context.moveTo(200, 50);
     context.lineTo(420, 80);
@@ -53,7 +53,7 @@ const customShape = new Konva.Shape({
     context.closePath();
     // Konva specific method
     context.fillStrokeShape(shape);
-  }
+  },
 });
 ```
 

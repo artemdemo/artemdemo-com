@@ -1,18 +1,18 @@
 .contact-form-loading {
   position: absolute;
 }
-  .contact-form-loading__loaded {
-    display: none;
-  }
+.contact-form-loading__loaded {
+  display: none;
+}
 
 .contact-form-iframe {
   visibility: hidden;
   width: 640px;
   height: 822px;
 }
-  .contact-form-iframe__loaded {
-    visibility: visible
-  }
+.contact-form-iframe__loaded {
+  visibility: visible;
+}
 
 .contact-form-icon {
   font-size: 150%;

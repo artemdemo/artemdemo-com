@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'gatsby';
+import { Link } from 'gatsby';
 import _get from 'lodash/get';
 import classnames from 'classnames';
 import PostDate from '../PostDate/PostDate';
@@ -19,24 +19,18 @@ const PostsItem = ({ node }) => {
   const title = _get(node, 'frontmatter.title') || node.fields.slug;
   const featuredImage = _get(node, 'frontmatter.featuredImage');
   return (
-    <div className='post-item'>
+    <div className="post-item">
       <h2>
-        <Link to={utils.prefixBlog(node.fields.slug)}>
-          {title}
-        </Link>
+        <Link to={utils.prefixBlog(node.fields.slug)}>{title}</Link>
       </h2>
-      <PostDate>
-        {_get(node, 'frontmatter.date')}
-      </PostDate>
-      <div className='post-item-content'>
+      <PostDate>{_get(node, 'frontmatter.date')}</PostDate>
+      <div className="post-item-content">
         <div
           className={classnames({
             'post-item-content__thumbnail': featuredImage,
           })}
         >
-          <PostThumbnail
-            featuredImage={featuredImage}
-          />
+          <PostThumbnail featuredImage={featuredImage} />
         </div>
         <div
           className={classnames({
@@ -48,7 +42,7 @@ const PostsItem = ({ node }) => {
       </div>
     </div>
   );
-}
+};
 
 PostsItem.propTypes = {
   node: PropTypes.shape({}),

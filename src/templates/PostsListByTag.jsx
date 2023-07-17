@@ -1,6 +1,6 @@
 import React from 'react';
 import _get from 'lodash/get';
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 import PostsList from '../pages/PostsList/PostsList';
 import * as utils from '../services/utils';
 
@@ -10,7 +10,7 @@ class PostsListByTag extends PostsList {
   }
 
   renderBeforeContent() {
-    const tagName = _get(this.props, 'pageContext.tagName', '')
+    const tagName = _get(this.props, 'pageContext.tagName', '');
     return (
       <p>
         <strong>Tag:</strong>
@@ -21,7 +21,7 @@ class PostsListByTag extends PostsList {
 
   renderPagination() {
     const tagName = _get(this.props, 'pageContext.tagName', '');
-    return super.renderPagination(utils.prefixTag.bind(null, tagName))
+    return super.renderPagination(utils.prefixTag.bind(null, tagName));
   }
 }
 
@@ -30,7 +30,7 @@ export default PostsListByTag;
 // Notice, that this query should be the same as in `/templates/PostsList.jsx`
 // ToDo: Find the way to keep both queries in one place
 export const pageQuery = graphql`
-  query($tagName: String, $skip: Int!, $limit: Int!) {
+  query ($tagName: String, $skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title

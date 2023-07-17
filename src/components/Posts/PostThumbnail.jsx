@@ -8,7 +8,7 @@ export const PostThumbnail = ({ featuredImage }) => {
   if (featuredImage) {
     return (
       <GatsbyImage
-        className='post-thumbnail'
+        className="post-thumbnail"
         image={getImage(featuredImage)}
         alt=""
       />

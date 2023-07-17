@@ -23,9 +23,7 @@ class PostsList extends BasePage {
 
   renderContent() {
     const posts = _get(this.props, 'data.allMarkdownRemark.edges');
-    return (
-      <Posts list={posts}/>
-    );
+    return <Posts list={posts} />;
   }
 
   renderAfterContent() {

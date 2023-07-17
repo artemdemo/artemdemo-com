@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import {Link} from 'gatsby';
+import { Link } from 'gatsby';
 import * as utils from '../../services/utils';
 import PaginationNumItem from './PaginationNumItem';
 
 class Pagination extends React.PureComponent {
   prefixPath(path) {
-    const {prefixer} = this.props;
+    const { prefixer } = this.props;
     if (path) {
       return prefixer ? prefixer(path) : path;
     }
@@ -15,18 +15,18 @@ class Pagination extends React.PureComponent {
   }
 
   renderPrev() {
-    const {skip, limit} = this.props;
+    const { skip, limit } = this.props;
     const itemClass = classnames('page-item', {
-      disabled: skip === 0
+      disabled: skip === 0,
     });
     const prevPageNumber = Math.floor(skip / limit);
-    const prevPath = prevPageNumber > 1 ? this.prefixPath(`/${prevPageNumber}`) : this.prefixPath('/');
+    const prevPath =
+      prevPageNumber > 1
+        ? this.prefixPath(`/${prevPageNumber}`)
+        : this.prefixPath('/');
     return (
       <li className={itemClass}>
-        <Link
-          className='page-link'
-          to={prevPath}
-        >
+        <Link className="page-link" to={prevPath}>
           Previous
         </Link>
       </li>
@@ -34,7 +34,7 @@ class Pagination extends React.PureComponent {
   }
 
   renderNext() {
-    const {skip, totalPosts, limit} = this.props;
+    const { skip, totalPosts, limit } = this.props;
     const pagesAmount = Math.ceil(totalPosts / limit);
     const nextPageNumber = Math.floor(skip / limit) + 2;
     const itemClass = classnames('page-item', {
@@ -42,10 +42,7 @@ class Pagination extends React.PureComponent {
     });
     return (
       <li className={itemClass}>
-        <Link
-          className='page-link'
-          to={this.prefixPath(`/${nextPageNumber}`)}
-        >
+        <Link className="page-link" to={this.prefixPath(`/${nextPageNumber}`)}>
           Next
         </Link>
       </li>
@@ -53,7 +50,7 @@ class Pagination extends React.PureComponent {
   }
 
   renderNumPages() {
-    const {totalPosts, limit, skip, prefixer} = this.props;
+    const { totalPosts, limit, skip, prefixer } = this.props;
     const pagesAmount = Math.ceil(totalPosts / limit);
     const currentNumber = Math.floor(skip / limit) + 1;
     const iterArr = Array.from(Array(pagesAmount));
@@ -72,14 +69,14 @@ class Pagination extends React.PureComponent {
   }
 
   render() {
-    const {totalPosts} = this.props;
+    const { totalPosts } = this.props;
 
     if (totalPosts <= utils.getPostsPerPageAmount()) {
       return null;
     }
 
     return (
-      <ul className='pagination justify-content-center'>
+      <ul className="pagination justify-content-center">
         {this.renderPrev()}
         {this.renderNumPages()}
         {this.renderNext()}
@@ -96,9 +93,9 @@ Pagination.propTypes = {
 };
 
 Pagination.defaultProps = {
-  skip: 0,        // how many posts to skip (will be converted to "current page")
-  limit: 0,       // how many posts per page to show
-  totalPosts: 0,  // total amount of posts
+  skip: 0, // how many posts to skip (will be converted to "current page")
+  limit: 0, // how many posts per page to show
+  totalPosts: 0, // total amount of posts
   prefixer: null,
 };
 

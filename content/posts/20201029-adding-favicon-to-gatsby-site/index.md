@@ -1,12 +1,12 @@
 ---
 title: Adding favicon to gatsby website
-date: "2020-10-29T20:27:00.000Z"
+date: '2020-10-29T20:27:00.000Z'
 featuredImage: favicon-thumbnail.png
-tags: ["favicon","gatsby"]
+tags: ['favicon', 'gatsby']
 no_excerpt: true
 ---
 
-Today is an important milestone - I create favicon for my website (the one you're viewing right now) 🎉 
+Today is an important milestone - I create favicon for my website (the one you're viewing right now) 🎉
 
 <!-- end -->
 

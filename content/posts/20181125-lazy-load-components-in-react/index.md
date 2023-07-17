@@ -1,7 +1,7 @@
 ---
 title: Lazy load components in React
-date: "2018-11-25T21:29:00.000Z"
-tags: ["react", "lazy load", "React.lazy", "React.Suspense"]
+date: '2018-11-25T21:29:00.000Z'
+tags: ['react', 'lazy load', 'React.lazy', 'React.Suspense']
 ---
 
 Lazy loading in React was always possible.
@@ -59,23 +59,21 @@ Therefore the solution could be something like this:
 ```javascript
 import React from 'react';
 
-const lazify = loader => (props) => {
-    const Component = React.lazy(loader);
+const lazify = (loader) => (props) => {
+  const Component = React.lazy(loader);
 
-    const loadingFallback = (() => {
-        if (React.Children.count(props.children) > 0) {
-            return props.children;
-        }
-        return (
-            <span>Loading...</span>
-        );
-    })();
+  const loadingFallback = (() => {
+    if (React.Children.count(props.children) > 0) {
+      return props.children;
+    }
+    return <span>Loading...</span>;
+  })();
 
-    return (
-        <React.Suspense fallback={loadingFallback}>
-            <Component {...props} />
-        </React.Suspense>
-    );
+  return (
+    <React.Suspense fallback={loadingFallback}>
+      <Component {...props} />
+    </React.Suspense>
+  );
 };
 
 export default lazify;
@@ -102,8 +100,8 @@ If you want to render something else, you should provide children to the compone
 until the component is ready:
 
 ```javascript
-import React from "react";
-import SomeComponent from "./SomeComponent.async";
+import React from 'react';
+import SomeComponent from './SomeComponent.async';
 
 class RootComponent extends React.Component {
   render() {

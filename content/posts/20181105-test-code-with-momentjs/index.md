@@ -1,17 +1,17 @@
 ---
 title: How to test code that uses moment.js
-date: "2018-11-05T08:00:20.100Z"
-tags: ["moment.js", "test", "mocks"]
+date: '2018-11-05T08:00:20.100Z'
+tags: ['moment.js', 'test', 'mocks']
 ---
 
 I'm going to talk about unit tests here, not any other kind of tests.
 And unit tests have, in my opinion, the following list of criteria that they have to meet.
 This list makes it hard to write tests for code that use external libraries, especially ones that manipulate time:
 
-* Unit tests should be able to run on the developer’s machine as well as on the remote server
-* Unit tests shouldn't relate to timezone
-* Each tested class (or component) should be tested independently from external libraries
-* Clarification: All external dependencies should be mocked-up
+- Unit tests should be able to run on the developer’s machine as well as on the remote server
+- Unit tests shouldn't relate to timezone
+- Each tested class (or component) should be tested independently from external libraries
+- Clarification: All external dependencies should be mocked-up
 
 With this in mind, let's see what we can do.
 
@@ -48,20 +48,20 @@ The solution could be the following code:
 
 ```javascript
 function MomentMock(time) {
-    if (this instanceof MomentMock) {
-        this._time = time;
-    } else {
-        return new MomentMock(time);
-    }
+  if (this instanceof MomentMock) {
     this._time = time;
+  } else {
+    return new MomentMock(time);
+  }
+  this._time = time;
 
-    this.format = format => `${this._time} [${format}]`;
+  this.format = (format) => `${this._time} [${format}]`;
 
-    this.utc = MomentMock;
+  this.utc = MomentMock;
 }
 
-MomentMock.duration = time => ({
-    asDays: () => `${time} asDays`,
+MomentMock.duration = (time) => ({
+  asDays: () => `${time} asDays`,
 });
 
 export default MomentMock;
@@ -71,4 +71,3 @@ It's especially helpful if the time parameter is primitive that represents time,
 This way we're testing only that we used the right timestamp and format string.
 Also, we don't need to care about the timezone of the machine where we run tests,
 since we're not dealing with `Date()` objects.
-

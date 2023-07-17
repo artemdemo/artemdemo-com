@@ -3,18 +3,13 @@ import PropTypes from 'prop-types';
 import PostsItem from './PostsItem';
 
 const Posts = (props) => {
-  const {list} = props;
+  const { list } = props;
 
   return (
     <>
       {list.map((post) => {
-        const {node} = post;
-        return (
-          <PostsItem
-            node={node}
-            key={node.fields.slug}
-          />
-        )
+        const { node } = post;
+        return <PostsItem node={node} key={node.fields.slug} />;
       })}
     </>
   );

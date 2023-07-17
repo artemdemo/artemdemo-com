@@ -1,7 +1,7 @@
 ---
 title: Digital Product Management - Modern Fundamentals [coursera]
-date: "2019-02-28T21:29:00.000Z"
-tags: ["coursera", "product management", "studying"]
+date: '2019-02-28T21:29:00.000Z'
+tags: ['coursera', 'product management', 'studying']
 ---
 
 ![Digital Product Management](./pm-coursera-course.jpg)

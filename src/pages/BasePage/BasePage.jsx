@@ -2,7 +2,7 @@ import React from 'react';
 import _get from 'lodash/get';
 import Layout from '../../components/Layout/Layout';
 import Container from '../../components/Container/Container';
-import {renderMd} from '../../services/md';
+import { renderMd } from '../../services/md';
 
 class BasePage extends React.PureComponent {
   constructor(props) {
@@ -17,14 +17,17 @@ class BasePage extends React.PureComponent {
 
   componentDidMount() {
     if (this.contentMd) {
-      renderMd(this.contentMd)
-        .then(content => this.setState({content}));
+      renderMd(this.contentMd).then((content) => this.setState({ content }));
     }
   }
 
   parentWrapper(children) {
     const siteTitle = _get(this.props, 'data.site.siteMetadata.title', null);
-    const siteDescription = _get(this.props, 'data.site.siteMetadata.description', null);
+    const siteDescription = _get(
+      this.props,
+      'data.site.siteMetadata.description',
+      null,
+    );
     if (this.props.location && siteTitle && siteDescription) {
       return (
         <Layout
@@ -37,11 +40,7 @@ class BasePage extends React.PureComponent {
         </Layout>
       );
     }
-    return (
-      <Container>
-        {children}
-      </Container>
-    );
+    return <Container>{children}</Container>;
   }
 
   renderBeforeContent() {
@@ -49,11 +48,7 @@ class BasePage extends React.PureComponent {
   }
 
   renderContent() {
-    return (
-      <div
-        dangerouslySetInnerHTML={{__html: this.state.content}}
-      />
-    );
+    return <div dangerouslySetInnerHTML={{ __html: this.state.content }} />;
   }
 
   renderAfterContent() {
@@ -66,7 +61,7 @@ class BasePage extends React.PureComponent {
         {this.renderBeforeContent()}
         {this.renderContent()}
         {this.renderAfterContent()}
-      </React.Fragment>
+      </React.Fragment>,
     );
   }
 }

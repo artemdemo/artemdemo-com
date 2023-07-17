@@ -3,17 +3,22 @@ import remark from 'remark';
 import guide from 'remark-preset-lint-markdown-style-guide';
 import html from 'remark-html';
 
-export const renderMd = mdString => new Promise((resolve, reject) => {
-  remark()
-    .use(guide)
-    .use(html)
-    .process(mdString, (err, file) => {
-      if (err) {
-        return reject(new Error(err));
-      }
-      if (_isString(file.contents)) {
-        resolve(file.contents);
-      }
-      reject(new Error('Returned "file" does not have `contents` property in it, or it\'s not string'));
-    });
-});
+export const renderMd = (mdString) =>
+  new Promise((resolve, reject) => {
+    remark()
+      .use(guide)
+      .use(html)
+      .process(mdString, (err, file) => {
+        if (err) {
+          return reject(new Error(err));
+        }
+        if (_isString(file.contents)) {
+          resolve(file.contents);
+        }
+        reject(
+          new Error(
+            'Returned "file" does not have `contents` property in it, or it\'s not string',
+          ),
+        );
+      });
+  });

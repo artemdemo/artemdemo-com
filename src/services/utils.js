@@ -4,9 +4,10 @@ const _kebabCase = require('lodash/kebabCase');
 exports.getPostsPerPageAmount = () => 10;
 
 const prefix = (prefix, slug) => {
-  const suffix = _isString(slug) && slug.startsWith('/') ? slug.substr(1) : slug;
+  const suffix =
+    _isString(slug) && slug.startsWith('/') ? slug.substr(1) : slug;
   if (suffix === '' || suffix == null) {
-    return prefix
+    return prefix;
   }
   return `${prefix}/${suffix}`;
 };
@@ -21,4 +22,4 @@ exports.prefixTag = (tag, slug) => {
 
 // Normalize tag for use in url.
 //
-exports.normalizeTag = tag => _kebabCase(tag);
+exports.normalizeTag = (tag) => _kebabCase(tag);

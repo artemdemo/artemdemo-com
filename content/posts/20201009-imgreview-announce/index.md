@@ -1,7 +1,7 @@
 ---
 title: ImgReview announce
-date: "2020-10-09T11:27:00.000Z"
-tags: ["imgreview"]
+date: '2020-10-09T11:27:00.000Z'
+tags: ['imgreview']
 ---
 
 I started this project some time ago, just to test an idea and now I want to share it with everyone :)

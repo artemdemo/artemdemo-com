@@ -3,7 +3,8 @@ import classnames from 'classnames';
 import Icon from '../../components/Icon/Icon';
 import './ContactForm.css';
 
-const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true';
+const FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfbcq5MKljpEZg27bOOj5OqdBP4ARBdikUs4G2zuqIgBYE4KA/viewform?embedded=true';
 
 class ContactForm extends React.PureComponent {
   constructor(props) {
@@ -30,8 +31,8 @@ class ContactForm extends React.PureComponent {
           })}
         >
           Form is loading...
-          <span className='contact-form-icon'>
-            <Icon name='cog fa-spin fa-fw'/>
+          <span className="contact-form-icon">
+            <Icon name="cog fa-spin fa-fw" />
           </span>
         </div>
         <iframe
@@ -41,11 +42,10 @@ class ContactForm extends React.PureComponent {
           })}
           src={FORM_URL}
           onLoad={this.iframeLoaded.bind(this)}
-          frameBorder='0'
-          marginHeight='0'
-          marginWidth='0'
-        >
-        </iframe>
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+        ></iframe>
       </>
     );
   }

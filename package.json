@@ -47,19 +47,20 @@
     "babel-plugin-macros": "^3.0.1",
     "enzyme": "^3.11.0",
     "gh-pages": "^2.1.1",
+    "prettier": "2.8.8",
     "raw-loader": "^4.0.2"
   },
-  "license": "MIT",
   "main": "n/a",
   "scripts": {
     "start": "npm run develop",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "NODE_ENV=test BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json",
     "test:coverage": "NODE_ENV=test BABEL_DISABLE_CACHE=1 jest --config ./jest/jest-config.json --coverage",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "lint": "prettier --write .",
     "deploy": "./deploy.sh"
-  }
+  },
+  "packageManager": "yarn@3.6.0"
 }

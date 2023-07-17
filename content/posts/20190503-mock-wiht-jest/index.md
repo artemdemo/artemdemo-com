@@ -1,7 +1,7 @@
 ---
 title: How to mock components with jest
-date: "2019-05-03T18:43:00.000Z"
-tags: ["jest", "test", "mocks"]
+date: '2019-05-03T18:43:00.000Z'
+tags: ['jest', 'test', 'mocks']
 ---
 
 I have already written a post about [mocking moment.js for tests](https://artemdemo.com/blog/20181105-test-code-with-momentjs/). Today let's talk about how to use mocks in a specific tests framework - [Jest](https://jestjs.io/). Jest was developed by Facebook and was based on another tests library called Jasmine. It meant that Jest used widely popular test syntax and could be adapted very easily.
@@ -20,22 +20,18 @@ import PropTypes from 'prop-types';
 class DateComponent extends React.PureComponent {
   render() {
     const { timeStamp, formatStr } = this.props;
-    return (
-      <div>
-        {format(timeStamp, formatStr)}
-      </div>
-    )
+    return <div>{format(timeStamp, formatStr)}</div>;
   }
 }
 
 SomeClass.propTypes = {
   timeStamp: PropTypes.number.isRequired,
   formatStr: PropTypes.string,
-}
+};
 
 SomeClass.defaultProps = {
   formatStr: 'HH:mm:ss, YYYY-MM-DD',
-}
+};
 ```
 
 First of all, if you say, that this call can be a function, you'll be right. I just want to define it as a class for now. But good catch, I already like you!
@@ -58,17 +54,17 @@ const timeStamp = 1540035262000;
 
 describe('DateComponent', () => {
   it('should render with default format', () => {
-    const tree = renderer.create(
-      <DateComponent timeStamp={timeStamp} />
-    ).toJSON();
+    const tree = renderer
+      .create(<DateComponent timeStamp={timeStamp} />)
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it('should render with custom format', () => {
-    const tree = renderer.create(
-      <DateComponent timeStamp={timeStamp} formatStr='YYYY/MM/DD' />
-    ).toJSON();
+    const tree = renderer
+      .create(<DateComponent timeStamp={timeStamp} formatStr="YYYY/MM/DD" />)
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -97,7 +93,7 @@ const ViewComponent = () => {
       </p>
     </React.Fragment>
   );
-}
+};
 ```
 
 Therefore we'll need to add mocks for `DateComponent`, so we can test `ViewComponent` disconnected from its child components. This mock file will need to be added in the same directory where `DateComponent` is stored and should be placed in `__mocks__` directory:
@@ -107,10 +103,8 @@ Therefore we'll need to add mocks for `DateComponent`, so we can test `ViewCompo
 
 import React from 'react';
 
-const DateComponent = props => (
-    <div data-mock='DateComponent'>
-        timeStamp: {props.timeStamp}
-    </div>
+const DateComponent = (props) => (
+  <div data-mock="DateComponent">timeStamp: {props.timeStamp}</div>
 );
 
 export default DateComponent;

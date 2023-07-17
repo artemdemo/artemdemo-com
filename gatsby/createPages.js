@@ -12,7 +12,10 @@ const createPages = ({ graphql, actions }) => {
     graphql(
       `
         {
-          allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 2000) {
+          allMarkdownRemark(
+            sort: { fields: [frontmatter___date], order: DESC }
+            limit: 2000
+          ) {
             edges {
               node {
                 fields {
@@ -26,29 +29,29 @@ const createPages = ({ graphql, actions }) => {
             }
           }
         }
-      `
+      `,
     )
-    .then((result) => {
-      if (result.errors) {
-        console.log(result.errors);
-        reject(result.errors);
-      }
+      .then((result) => {
+        if (result.errors) {
+          console.log(result.errors);
+          reject(result.errors);
+        }
 
-      posts = result.data.allMarkdownRemark.edges;
-    })
-    .then(() => {
-      return createBlogPages(posts, createPage);
-    })
-    .then(() => {
-      return createBlogPosts(posts, createPage);
-    })
-    .then(() => {
-      return createTagsPages(posts, createPage, graphql);
-    })
-    .then(() => {
-      resolve();
-    });
-  })
+        posts = result.data.allMarkdownRemark.edges;
+      })
+      .then(() => {
+        return createBlogPages(posts, createPage);
+      })
+      .then(() => {
+        return createBlogPosts(posts, createPage);
+      })
+      .then(() => {
+        return createTagsPages(posts, createPage, graphql);
+      })
+      .then(() => {
+        resolve();
+      });
+  });
 };
 
 exports.default = createPages;

@@ -1,0 +1,10 @@
+build
+out
+node_modules
+.next
+.vscode
+.idea
+.cache
+documentation
+coverage
+styles

@@ -1,7 +1,7 @@
 ---
 title: What is REST?
-date: "2018-11-21T19:33:20.100Z"
-tags: ["rest"]
+date: '2018-11-21T19:33:20.100Z'
+tags: ['rest']
 ---
 
 This is one of those rare occasions when disambiguation will not lead to a better understanding.
@@ -31,10 +31,10 @@ it’s easier for a new developer to understand the logic behind it.
 
 Each RESTful endpoint is built from basic building blocks:
 
-* REST verb
-* URL
-* Headers
-* Data (may or may not be provided)
+- REST verb
+- URL
+- Headers
+- Data (may or may not be provided)
 
 ![REST schema](./rest-schema.png)
 
@@ -42,13 +42,13 @@ Blocks with an asterisk are required.
 
 **REST verbs**
 
-* GET - retrieve data from a specific resource
-* POST - submit data to be processed to a specific resource
-* PUT - update a specific resource
-* DELETE - delete a specific resource
-* PATCH - update a partial resource
-* HEAD - request only for headers, does not return a body
-* OPTIONS - return the supported HTTP methods
+- GET - retrieve data from a specific resource
+- POST - submit data to be processed to a specific resource
+- PUT - update a specific resource
+- DELETE - delete a specific resource
+- PATCH - update a partial resource
+- HEAD - request only for headers, does not return a body
+- OPTIONS - return the supported HTTP methods
 
 **Headers**
 
@@ -56,15 +56,15 @@ Headers are metadata about the request or response.
 They provide information about the status of the requests, content of it, authorizations and more.
 Let's describe some of them:
 
-* Status - describes the status of the request. It's an integer number, that defines what happened in the request:
-  * 200 - Ok
-  * 201 - Created
-  * 400 - Bad request
-  * 401 - Unauthorized
-  * 500 - Internal Server Error
-  * [more examples of statuses](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)  
-* Authorization - carries credentials containing the authentication information of the client.
-* Content-Type - defines the media type of the response sent to the client by the server.
+- Status - describes the status of the request. It's an integer number, that defines what happened in the request:
+  - 200 - Ok
+  - 201 - Created
+  - 400 - Bad request
+  - 401 - Unauthorized
+  - 500 - Internal Server Error
+  - [more examples of statuses](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+- Authorization - carries credentials containing the authentication information of the client.
+- Content-Type - defines the media type of the response sent to the client by the server.
 
 **Data**
 
@@ -79,10 +79,10 @@ IANA holds a list of registered media types:
 The most used media-type is obviously application/json,
 because it's general for all JSON data structures you will send or receive in communication with the server.
 
-Those are the main parts of RESTful API. There are additional things to research and study, such as: 
+Those are the main parts of RESTful API. There are additional things to research and study, such as:
 
-* What are the best data structures for certain use cases? For example, what if you need to introduce filtering, sorting and pagination? - What data will the endpoint accept? What will the response look like?
-* How to define the endpoint for combined data from different services.
-* etc.
+- What are the best data structures for certain use cases? For example, what if you need to introduce filtering, sorting and pagination? - What data will the endpoint accept? What will the response look like?
+- How to define the endpoint for combined data from different services.
+- etc.
 
 As always there is no silver bullet solution, we just need to find the right way for our set of requirements.

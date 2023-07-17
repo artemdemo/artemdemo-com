@@ -1,7 +1,7 @@
 ---
 title: My CLI shortcuts for git
-date: "2019-10-21T12:40:00.000Z"
-tags: ["cli", "git"]
+date: '2019-10-21T12:40:00.000Z'
+tags: ['cli', 'git']
 ---
 
 I'm using a lot of git features via CLI. Mainly it's rebasing, committing and pushing new changes to the repository. I know that most editors have UI solutions for these commands, but I never liked it and honestly don't see any reason to change my habits. Stubborn you say? Probably. Don't know.
@@ -16,12 +16,12 @@ I'm not going to explain everything you can configure in gitconfig. Frankly, I d
 
 Let's start. There are three sections in gitconfig, that I use:
 
-* alias
-  * Here you'll add CLI shortcuts
-* user
-  * Your main email and user name
-* core
-  * Your default editor for commits and rebasing
+- alias
+  - Here you'll add CLI shortcuts
+- user
+  - Your main email and user name
+- core
+  - Your default editor for commits and rebasing
 
 ##[alias]
 
@@ -98,4 +98,4 @@ Nothing to add here. You're defining here default email and user name for your c
 editor = vim
 ```
 
-Your editor of choice. Should I say that vim should be installed on your system? You know. If you expect me to be so explicit, then probably you're in the wrong profession, buddy. Other than that, love you deeply :-*
+Your editor of choice. Should I say that vim should be installed on your system? You know. If you expect me to be so explicit, then probably you're in the wrong profession, buddy. Other than that, love you deeply :-\*

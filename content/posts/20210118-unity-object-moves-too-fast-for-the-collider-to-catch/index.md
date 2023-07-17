@@ -1,8 +1,8 @@
 ---
 title: Object moves too fast for the collider to catch (solution for unity)
-date: "2021-01-18T20:05:00.000Z"
+date: '2021-01-18T20:05:00.000Z'
 featuredImage: oldman-attack-illustration-thumbnail.png
-tags: ["game","unity"]
+tags: ['game']
 ---
 
 **TL;DR**

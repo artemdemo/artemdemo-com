@@ -1,7 +1,7 @@
 ---
 title: Reducing boilerplate in React + Redux app
-date: "2018-11-22T07:41:20.100Z"
-tags: ["react", "redux", "boilerplate", "constants"]
+date: '2018-11-22T07:41:20.100Z'
+tags: ['react', 'redux', 'boilerplate', 'constants']
 ---
 
 First, let’s see what is the problem, then we'll discuss possible solutions and, in the end,
@@ -14,10 +14,10 @@ Anyway, as I said, let's see how we build a React-Redux application. Usually,
 for each ajax call, we need 3-4 different files.
 Those files that hold different types of data pieces that allow us to manage the application state:
 
-* constants - unique data identifiers.
-* actions - data transfer functions (in some cases they also make logic for async requests to the server).
-* reducers - functions that define how stat should be changed.
-* sagas - async calls (you use them if you want to keep async operations away from actions)
+- constants - unique data identifiers.
+- actions - data transfer functions (in some cases they also make logic for async requests to the server).
+- reducers - functions that define how stat should be changed.
+- sagas - async calls (you use them if you want to keep async operations away from actions)
 
 Let's see a simple example:
 
@@ -27,19 +27,19 @@ const ADD_TODO = 'ADD_TODO';
 const TODO_ADDED = 'TODO_ADDED';
 
 // actions.js
-const addTodo = function(data) {
+const addTodo = function (data) {
   return {
     type: ADD_TODO,
     data,
   };
-}
+};
 
-const todoAdded = function(data) {
+const todoAdded = function (data) {
   return {
     type: TODO_ADDED,
     data,
   };
-}
+};
 
 // reducer.js
 const initState = {
@@ -47,7 +47,7 @@ const initState = {
   adding: false,
 };
 
-const todoReducer = function(state = initState, action) {
+const todoReducer = function (state = initState, action) {
   switch (action.type) {
     case ADD_TODO:
       return {
@@ -64,20 +64,17 @@ const todoReducer = function(state = initState, action) {
     default:
       return state;
   }
-}
+};
 
 // saga.js
 function* addTodoSaga() {
-    while (true) {
-        try {
-            const { data } = yield take(ADD_TODO);
-            const result = yield request
-                .post('/api/todo')
-                .send(data)
-                .promise();
-            yield put(todoAdded(result.body));
-        } catch (err) {}
-    }
+  while (true) {
+    try {
+      const { data } = yield take(ADD_TODO);
+      const result = yield request.post('/api/todo').send(data).promise();
+      yield put(todoAdded(result.body));
+    } catch (err) {}
+  }
 }
 ```
 
@@ -105,22 +102,22 @@ It can be done by overriding toString method. The full implementation of `create
 ```javascript
 // actionCreator.js
 export const createAction = (constant, actionFunc) => {
-    const resultFunc = (...args) => {
-        if (!actionFunc) {
-            return {
-                type: constant,
-            };
-        }
-        const action = actionFunc(...args);
-        return {
-            type: constant,
-            ...action,
-        };
+  const resultFunc = (...args) => {
+    if (!actionFunc) {
+      return {
+        type: constant,
+      };
+    }
+    const action = actionFunc(...args);
+    return {
+      type: constant,
+      ...action,
     };
+  };
 
-    resultFunc.toString = () => constant;
+  resultFunc.toString = () => constant;
 
-    return resultFunc;
+  return resultFunc;
 };
 ```
 
@@ -130,9 +127,8 @@ It's very repetitive and it looks like we can just define the reducer with some 
 also automatically add the default state. So it will look like this:
 
 ```javascript
-
 const todoReducer = createReducer(initState, {
-  [addTodo]: state => ({
+  [addTodo]: (state) => ({
     ...state,
     adding: true,
   }),
@@ -154,17 +150,17 @@ import _isArray from 'lodash/isArray';
 import _isFunction from 'lodash/isFunction';
 
 export const createReducer = (initState, actionsHandler) => {
-    return function(state = initState, action) {
-        const type = _get(action, 'type');
-        if (type && actionsHandler.hasOwnProperty(type)) {
-            const handler = actionsHandler[action.type];
-            if (_isFunction(handler)) {
-                return handler(state, action);
-            }
-            throw new Error('action handler should be a function');
-        }
-        return state;
+  return function (state = initState, action) {
+    const type = _get(action, 'type');
+    if (type && actionsHandler.hasOwnProperty(type)) {
+      const handler = actionsHandler[action.type];
+      if (_isFunction(handler)) {
+        return handler(state, action);
+      }
+      throw new Error('action handler should be a function');
     }
+    return state;
+  };
 };
 ```
 
@@ -213,12 +209,12 @@ const reducer = handleActions(
   //
   {
     INCREMENT: (state, action) => ({
-      counter: state.counter + action.payload
+      counter: state.counter + action.payload,
     }),
   },
   // Default state:
   //
-  { counter: 0 }
+  { counter: 0 },
 );
 ```
 
@@ -242,10 +238,13 @@ import { createAction, createReducer } from 'redux-act';
 const increment = createAction('increment the state');
 const decrement = createAction('decrement the state');
 
-const counterReducer = createReducer({
-  [increment]: (state) => state + 1,
-  [decrement]: (state) => state - 1,
-}, 0); // <-- This is the default state
+const counterReducer = createReducer(
+  {
+    [increment]: (state) => state + 1,
+    [decrement]: (state) => state - 1,
+  },
+  0,
+); // <-- This is the default state
 ```
 
 Similar to the previous library this one uses payload property to store data.
@@ -263,12 +262,3 @@ an `action` is the whole action object.
 In the case of `redux-act` reducer will receive the only `payload` and not the whole object.
 The only `payload` is not enough and I can think about use-cases when it could problematic -
 I prefer to have easy access to the whole data.
-
-
-
-
-
-
-
-
-

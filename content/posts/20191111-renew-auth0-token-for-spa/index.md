@@ -1,7 +1,7 @@
 ---
 title: Renew auth0 token for SPA using js SDK
-date: "2019-11-11T11:56:00.000Z"
-tags: ["auth0", "token", "spa"]
+date: '2019-11-11T11:56:00.000Z'
+tags: ['auth0', 'token', 'spa']
 ---
 
 Sorry, but documentation of auth0 is not the best source of knowledge on how to use auth0. Not something that you expect to happen, right? Official documentation is okay if you need to understand only a basic usage, but if you need more than that, you pretty much on your own. At least it's my experience with this service. Especially for not so popular topic of "renewing auth0 token for SPA (Single Page Application)". So let's talk about exactly that.
@@ -21,8 +21,8 @@ Ok, that's great and the first step is even easy to implement, there is clear do
 
 Before we'll dive into code example, I want to establish some vocabulary. Auth0 uses different tokens in its lifecycle: access token, refresh token, ID token and some others. It looks like the most relevant are access token and refresh token - the first one we use in order to get access to the API and the second just has the right name. Let's look at the definition, provided by auth0 itself:
 
-* access token - a credential that can be used by an application to access an API.
-* refresh token - contains the information required to obtain a new Access Token or ID Token.
+- access token - a credential that can be used by an application to access an API.
+- refresh token - contains the information required to obtain a new Access Token or ID Token.
 
 So which one we need in the renew flow? Looks like the second one is the obvious choice. But it's wrong. The funny thing is that we need neither of them in order to renew existing token for our SPA %) Crazy world.
 
@@ -34,12 +34,12 @@ The first step will be to login. We need to start from this basic step in order 
 // Initialize auth0 instance.
 // http://auth0.github.io/auth0.js/WebAuth.html
 webAuth = new auth0js.WebAuth({
-        domain,
-        clientID,
-        redirectUri,
-        audience,
-        responseType,
-        scope,
+  domain,
+  clientID,
+  redirectUri,
+  audience,
+  responseType,
+  scope,
 });
 
 // Kick in authorization with auth0.
@@ -54,20 +54,16 @@ Starting token renew:
  * Token constructor class
  */
 class AuthenticationToken {
-    constructor(id, access, expiresAt) {
-        this.id = id;
-        this.access = access;
-        this.expiresAt = expiresAt;
-    }
+  constructor(id, access, expiresAt) {
+    this.id = id;
+    this.access = access;
+    this.expiresAt = expiresAt;
+  }
 }
 
 const getTokenFromResult = (result) => {
-    const expiresAt = (result.expiresIn * 1000) + Date.now();
-    return new AuthenticationToken(
-        result.idToken,
-        result.accessToken,
-        expiresAt,
-    );
+  const expiresAt = result.expiresIn * 1000 + Date.now();
+  return new AuthenticationToken(result.idToken, result.accessToken, expiresAt);
 };
 
 /**
@@ -75,59 +71,62 @@ const getTokenFromResult = (result) => {
  * @param options {object}
  * @returns {Promise<any>}
  */
-export const renewAuth = (options = {}) => new Promise((resolve, reject) => {
-    const _options = Object.assign({
+export const renewAuth = (options = {}) =>
+  new Promise((resolve, reject) => {
+    const _options = Object.assign(
+      {
         audience: authProps.audience,
         redirectUri: `${appUrl}/silent.html`,
         usePostMessage: true,
-    }, options);
+      },
+      options,
+    );
     // Executes a silent authentication transaction under the hood
     // in order to fetch a new tokens for the current session.
     // @link http://auth0.github.io/auth0.js/global.html#renewAuth
     webAuth.renewAuth(_options, (err, result) => {
-        if (err || _get(result, 'error')) {
-            return reject(err || result);
-        }
-        if (result && result.accessToken && result.idToken) {
-            const token = getTokenFromResult(result);
-            return resolve(token);
-        }
-        const errorText = 'Ambiguous response from auth0';
-        return reject(new Error(errorText));
+      if (err || _get(result, 'error')) {
+        return reject(err || result);
+      }
+      if (result && result.accessToken && result.idToken) {
+        const token = getTokenFromResult(result);
+        return resolve(token);
+      }
+      const errorText = 'Ambiguous response from auth0';
+      return reject(new Error(errorText));
     });
-});
-
+  });
 ```
 
 And here is `silent.html` file:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script src="https://cdn.auth0.com/js/auth0/9.11/auth0.min.js"></script>
-        <script>
-            var appUrlFromConfig = '<%= htmlWebpackPlugin.options.appUrl %>';
-            var appUrl = appUrlFromConfig ? appUrlFromConfig : window.location.origin;
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.auth0.com/js/auth0/9.11/auth0.min.js"></script>
+    <script>
+      var appUrlFromConfig = '<%= htmlWebpackPlugin.options.appUrl %>';
+      var appUrl = appUrlFromConfig ? appUrlFromConfig : window.location.origin;
 
-            var webAuth = new auth0.WebAuth({
-                domain: '<%= htmlWebpackPlugin.options.auth0Domain %>',
-                clientID: '<%= htmlWebpackPlugin.options.auth0ClientID %>',
-                redirectUri: appUrl,
-                audience: '<%= htmlWebpackPlugin.options.auth0Audience %>',
-                responseType: '<%= htmlWebpackPlugin.options.auth0ResponseType %>',
-                scope: '<%= htmlWebpackPlugin.options.auth0PartitionScope %>',
-            });
+      var webAuth = new auth0.WebAuth({
+        domain: '<%= htmlWebpackPlugin.options.auth0Domain %>',
+        clientID: '<%= htmlWebpackPlugin.options.auth0ClientID %>',
+        redirectUri: appUrl,
+        audience: '<%= htmlWebpackPlugin.options.auth0Audience %>',
+        responseType: '<%= htmlWebpackPlugin.options.auth0ResponseType %>',
+        scope: '<%= htmlWebpackPlugin.options.auth0PartitionScope %>',
+      });
 
-            webAuth.parseHash(function(err, response) {
-                // This message will be handled by auth0 in the main app
-                // You can find related callback in `webAuth.renewAuth`
-                parent.postMessage(err || response, appUrl);
-            });
-        </script>
-    </head>
-    <body></body>
+      webAuth.parseHash(function (err, response) {
+        // This message will be handled by auth0 in the main app
+        // You can find related callback in `webAuth.renewAuth`
+        parent.postMessage(err || response, appUrl);
+      });
+    </script>
+  </head>
+  <body></body>
 </html>
 ```
 
@@ -147,14 +146,13 @@ Property "Block third-party cookies" (third from the top in my case) should be d
 
 Ok, but our problems are not ending there. In the next year, Chrome will introduce a new policy for the cookies and will require to use property SameSite. In case this property is not set, again cookies will not work. Already today you can see the following warning in the browser console:
 
-> *A cookie associated with a cross-site resource at <URL> was set without the `SameSite` attribute. A future release of Chrome will only deliver cookies with cross-site requests if they are set with `SameSite=None` and `Secure`. You can review cookies in developer tools under Application>Storage>Cookies and see more details at <URL> and <URL>.*
-
+> _A cookie associated with a cross-site resource at <URL> was set without the `SameSite` attribute. A future release of Chrome will only deliver cookies with cross-site requests if they are set with `SameSite=None` and `Secure`. You can review cookies in developer tools under Application>Storage>Cookies and see more details at <URL> and <URL>._
 
 In Chrome console it will look like this:
 
 ![Chrome console warning](chrome-console-warning.png)
 
-Auth0 support guys are saying that they are aware of the problem and will change their code accordingly. They will need to be ready before Chrome 80, which will be rolled out in Feb 2020. In Chrome 80 all cookies, that don't have SameSite, will be ignored by the browser. 
+Auth0 support guys are saying that they are aware of the problem and will change their code accordingly. They will need to be ready before Chrome 80, which will be rolled out in Feb 2020. In Chrome 80 all cookies, that don't have SameSite, will be ignored by the browser.
 
 ## Conclusion
 

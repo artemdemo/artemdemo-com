@@ -1,7 +1,7 @@
 ---
 title: Why use Svelte
-date: "2019-11-01T15:47:00.000Z"
-tags: ["svelte"]
+date: '2019-11-01T15:47:00.000Z'
+tags: ['svelte']
 ---
 
 Yeah, I know, another library. But that's okay, we'll go through all of them and we'll find the best one for each project. Or at least this is something that we should do as responsible developers.

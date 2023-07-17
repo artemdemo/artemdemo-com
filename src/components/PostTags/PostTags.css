@@ -2,9 +2,9 @@
   display: inline-block;
   margin-right: 5px;
 }
-  .post-tags-item::after {
-    content: ',';
-  }
-  .post-tags-item:last-of-type::after {
-    content: '';
-  }
+.post-tags-item::after {
+  content: ',';
+}
+.post-tags-item:last-of-type::after {
+  content: '';
+}

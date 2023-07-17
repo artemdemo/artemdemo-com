@@ -10,7 +10,7 @@ const onCreatePage = ({ page, actions }) => {
   // Provide context to the index page
   //
   if (page.path === '/') {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       deletePage({
         ...page,
       });

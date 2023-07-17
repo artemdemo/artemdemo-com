@@ -1,7 +1,7 @@
 ---
 title: Simple template engine in JavaScript
-date: "2020-10-24T10:27:00.000Z"
-tags: ["regex","template"]
+date: '2020-10-24T10:27:00.000Z'
+tags: ['regex', 'template']
 ---
 
 Recently I had a task, that included creating simple templates.
@@ -11,9 +11,10 @@ Obviously it's better to have some general solution in place, so next time any c
 <!-- end -->
 
 Examples of some strings with placeholders:
-* "Hello, {name}!"
-* "The answer is {value}"
-* etc
+
+- "Hello, {name}!"
+- "The answer is {value}"
+- etc
 
 There is no complicated logic inside of the template.
 Therefore, I need just an object with values to replace,
@@ -23,16 +24,12 @@ So I came up with following solution:
 
 ```typescript
 export type TTemplateData = {
-    [key: string]: string,
+  [key: string]: string;
 };
 
 export const templateEngine = (inputString: string, data: TTemplateData) => {
-    return inputString
-        .replace(
-            /{\s*(\w*)\s*}/g,
-            (match, key) => {
-                return data.hasOwnProperty(key) ? data[key] : '';
-            }
-        );
+  return inputString.replace(/{\s*(\w*)\s*}/g, (match, key) => {
+    return data.hasOwnProperty(key) ? data[key] : '';
+  });
 };
 ```

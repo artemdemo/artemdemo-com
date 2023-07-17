@@ -1,7 +1,7 @@
 ---
 title: Catch and log errors in NodeJS app
-date: "2019-03-08T15:04:00.000Z"
-tags: ["node.js", "error handling"]
+date: '2019-03-08T15:04:00.000Z'
+tags: ['node.js', 'error handling']
 ---
 
 Errors will occur no matter what, but I hope that’s not stopping you from writing code because it doesn't matter if you stop - someone else will continue the tradition instead :) So the only proper solution is to be prepared and to handle errors in the right way.
@@ -11,8 +11,8 @@ Errors will occur no matter what, but I hope that’s not stopping you from writ
 What is the right way, you may ask? It's great that you asked. The right way of handling any error is to make sure it is logged and can be found in the postmortem analysis. So how do we do this? The general approach will include the following rules:
 
 1. Each error should be logged as close to the source as possible.
-    * If an error occurred in an ajax request to the server, it should be logged in the catch() method of the controller - in most cases, this will be the most relevant scenario.
-    * If it occurred in some general method, then it depends on what part of the code was wrapped in the try catch.
+   - If an error occurred in an ajax request to the server, it should be logged in the catch() method of the controller - in most cases, this will be the most relevant scenario.
+   - If it occurred in some general method, then it depends on what part of the code was wrapped in the try catch.
 1. In most cases, the user shouldn't be allowed to see the full technical information about the error, the code line, exact error description from the database, etc. This information should be logged and obfuscated before sending to the user.
 1. In a case where an error hasn't been caught - then it should be handled in the middleware. This is needed to ensure that the application will stay alive.
 
@@ -46,18 +46,18 @@ We'll start with controllers, that are requesting data from some service. In the
 
 ```javascript
 const getAllProjects = (req, res, next) => {
-    debug(`Get all projects (user id ${req.authSession.userId})`);
-    projects
-        .getAll({
-            userId: req.authSession.userId,
-        })
-        .then((projects) => {
-            res.json(projects);
-        })
-        .catch((err) => {
-            logger(err);
-            next(Boom.badRequest(err));
-        });
+  debug(`Get all projects (user id ${req.authSession.userId})`);
+  projects
+    .getAll({
+      userId: req.authSession.userId,
+    })
+    .then((projects) => {
+      res.json(projects);
+    })
+    .catch((err) => {
+      logger(err);
+      next(Boom.badRequest(err));
+    });
 };
 ```
 
@@ -68,19 +68,19 @@ Next, we need to write the middleware, that will handle the response to the user
 
 ```javascript
 app.use((err, req, res, next) => {
-    const boomErr = (() => {
-        if (!err.isBoom) {
-            logger(err);
-            return Boom.boomify(err, { statusCode: 500 });
-        }
-        return err;
-    })();
-    // Hide message of server errors
-    if (boomErr.output.payload.statusCode >= 500) {
-      boomErr.output.payload.message = boomErr.output.payload.error;
+  const boomErr = (() => {
+    if (!err.isBoom) {
+      logger(err);
+      return Boom.boomify(err, { statusCode: 500 });
     }
+    return err;
+  })();
+  // Hide message of server errors
+  if (boomErr.output.payload.statusCode >= 500) {
+    boomErr.output.payload.message = boomErr.output.payload.error;
+  }
 
-    res.status(boomErr.output.statusCode).send(boomErr.output.payload);
+  res.status(boomErr.output.statusCode).send(boomErr.output.payload);
 });
 ```
 

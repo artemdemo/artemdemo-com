@@ -3,29 +3,28 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Container from '../Container/Container';
 import Header from '../Header/Header';
-import {locationProp} from './layoutProps';
+import { locationProp } from './layoutProps';
 import pkg from '../../services/package';
 
 class Layout extends React.Component {
   render() {
-    const {title, description, location} = this.props;
-    const fullTitle = this.props.fullTitle !== '' ? this.props.fullTitle : title;
+    const { title, description, location } = this.props;
+    const fullTitle =
+      this.props.fullTitle !== '' ? this.props.fullTitle : title;
     return (
       <React.Fragment>
         <Helmet
-          htmlAttributes={{lang: 'en'}}
+          htmlAttributes={{ lang: 'en' }}
           meta={[
-            {name: 'description', content: description},
-            {name: 'app-version', content: pkg.version},
+            { name: 'description', content: description },
+            { name: 'app-version', content: pkg.version },
           ]}
           title={fullTitle}
         />
-        <Header title={title} location={location}/>
-        <Container>
-          {this.props.children}
-        </Container>
+        <Header title={title} location={location} />
+        <Container>{this.props.children}</Container>
       </React.Fragment>
-    )
+    );
   }
 }
 
@@ -45,4 +44,4 @@ Layout.defaultProps = {
   fullTitle: '',
 };
 
-export default Layout
+export default Layout;

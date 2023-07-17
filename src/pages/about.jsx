@@ -1,7 +1,7 @@
-import React from 'react'
-import {graphql} from 'gatsby';
+import React from 'react';
+import { graphql } from 'gatsby';
 import BasePage from './BasePage/BasePage';
-import {isTestEnv} from '../services/testEnv';
+import { isTestEnv } from '../services/testEnv';
 
 class About extends BasePage {
   constructor(props) {
@@ -12,7 +12,9 @@ class About extends BasePage {
     // it's the only way to use specific loader
     // @docs https://webpack.js.org/concepts/loaders/#inline
     //
-    this.contentMd = isTestEnv ? null : require('raw-loader!./md/about.md').default;
+    this.contentMd = isTestEnv
+      ? null
+      : require('raw-loader!./md/about.md').default;
   }
 }
 

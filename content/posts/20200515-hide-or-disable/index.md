@@ -1,7 +1,7 @@
 ---
 title: Hide or disable a feature?
-date: "2020-05-15T12:34:00.000Z"
-tags: ["ui", "ux", "hide", "disable"]
+date: '2020-05-15T12:34:00.000Z'
+tags: ['ui', 'ux', 'hide', 'disable']
 ---
 
 More than once I argued with my fellow developers on whether we should hide or disable some feature or functionality. I decided to write down my opinion to be sure the internet knows.

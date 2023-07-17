@@ -1,7 +1,7 @@
 ---
 title: Why we need to stop validating emails at the frontend
-date: "2018-11-23T20:27:20.100Z"
-tags: ["email", "validation", "regex"]
+date: '2018-11-23T20:27:20.100Z'
+tags: ['email', 'validation', 'regex']
 ---
 
 Let's talk about one of the most well-known features of the web - registration.
@@ -20,12 +20,12 @@ Have you actually tried to read a complete definition of what an email can be?
 Trust me, there are some surprises :) Let's see some examples.
 Here is a list of different email addresses, which one is valid?
 
-* mail"hello@there"@mail.com
-* user+mailbox/department=shipping@example.com
-* mail"(hi)"@mail.com
-* 用户@例子.广告
-* mail@dimainname
-* mail@somedomain.com
+- mail"hello@there"@mail.com
+- user+mailbox/department=shipping@example.com
+- mail"(hi)"@mail.com
+- 用户@例子.广告
+- mail@dimainname
+- mail@somedomain.com
 
 Well, most people will say that only the last one is valid.
 But in fact, that’s not true. Every email in the list is valid according to the definition.
@@ -53,10 +53,10 @@ we'll try to help him to write his email.
 Usually, users just misspell their own email and we can just test for common mistakes and that's it.
 So what are the mistakes:
 
-* Adding a character after a dot, by typing on one of the buttons nearby.
-* Check that the user used @ in the email
-* No white spaces
-* Take into account the option that the email could have Unicode symbols
+- Adding a character after a dot, by typing on one of the buttons nearby.
+- Check that the user used @ in the email
+- No white spaces
+- Take into account the option that the email could have Unicode symbols
 
 This is it, the rest is the server’s problem and even the server will only need to send an email to the given address
 and then check whether it returns an error. This is the only validation.

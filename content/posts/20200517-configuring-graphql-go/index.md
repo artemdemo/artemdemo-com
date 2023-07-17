@@ -1,7 +1,7 @@
 ---
 title: Configuring graphql-go/graphql
-date: "2020-05-17T19:30:00.000Z"
-tags: ["golang", "graphql", "graphql-go"]
+date: '2020-05-17T19:30:00.000Z'
+tags: ['golang', 'graphql', 'graphql-go']
 ---
 
 It's not that hard to use graphql with go, but it could take some effort to find all the gotchas. Therefore let's save some time and talk about some configuration of graphql in Golang.
@@ -21,6 +21,7 @@ http.Handle("/graphql", services.CorsMiddleware(controllers.GraphqlHandler()))
 ```
 
 `CorsMiddleware` will do 2 things
+
 1. Allow CORS (or not, you can change it in your implementation)
 1. Handle OPTIONS request of the browser
 

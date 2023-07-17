@@ -11,25 +11,24 @@ import './Icon.css';
  */
 class Icon extends React.PureComponent {
   renderIcon() {
-    const {name, title, className} = this.props;
+    const { name, title, className } = this.props;
 
-    const iconClass = classnames('fa', {
-      [`fa-${name}`]: true,
-    }, className);
-
-    return (
-      <span
-        className={iconClass}
-        title={title}
-      />
+    const iconClass = classnames(
+      'fa',
+      {
+        [`fa-${name}`]: true,
+      },
+      className,
     );
+
+    return <span className={iconClass} title={title} />;
   }
 
   render() {
-    const {name, inText} = this.props;
+    const { name, inText } = this.props;
 
     if (name === '' || name == null) {
-      throw new Error('Icon prop `name` couldn\'t be empty');
+      throw new Error("Icon prop `name` couldn't be empty");
     }
 
     if (!inText) {
@@ -39,11 +38,11 @@ class Icon extends React.PureComponent {
     return (
       <span
         className={classnames({
-          'icon_in-text': inText
+          'icon_in-text': inText,
         })}
       >
-                {this.renderIcon()}
-            </span>
+        {this.renderIcon()}
+      </span>
     );
   }
 }

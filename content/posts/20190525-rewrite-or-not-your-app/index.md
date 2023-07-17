@@ -1,10 +1,10 @@
 ---
 title: Rewrite or not your app
-date: "2019-05-25T14:36:00.000Z"
-tags: ["refactoring", "rewrite", "product management"]
+date: '2019-05-25T14:36:00.000Z'
+tags: ['refactoring', 'rewrite', 'product management']
 ---
 
-*"Rewriting almost always feels a lot more appealing then gradual refactoring, but remember, that you're comparing reality to a fictitious concept."* [Always rewrite EVERYTHING!](https://www.youtube.com/watch?v=XcUUY8ziTuk)
+_"Rewriting almost always feels a lot more appealing then gradual refactoring, but remember, that you're comparing reality to a fictitious concept."_ [Always rewrite EVERYTHING!](https://www.youtube.com/watch?v=XcUUY8ziTuk)
 
 Sometimes I have a feeling that there is a tradition, in the developers' community, that whenever you arrive at a new workplace, one of the first things you'll do is to say that all this old code should be rewritten. This is rarely the case, but traditional ways are hard to stop or be replaced by something else, right?
 

@@ -1,7 +1,7 @@
 ---
 title: Google Drive API - Script initialization
-date: "2020-07-06T19:30:00.000Z"
-tags: ["gapi"]
+date: '2020-07-06T19:30:00.000Z'
+tags: ['gapi']
 ---
 
 The [basic example](https://developers.google.com/drive/api/v3/quickstart/js) from the official documentation is very informative (this is not a sarcasm). I just want to add my 2 cents in order to make it more es6 like, then it is now. Plus I want one function of initialization that will take care of everything. I want to be able to run it from anywhere in the code and be sure that app will be authorized.
@@ -52,30 +52,27 @@ export const _load = () => new Promise((resolve) => {
 Next step will be gapi client initialization. The same criteria here as well - this method could be called more than once, but initialised only once:
 
 ```js
-export const _init = () => new Promise((resolve, reject) => {
+export const _init = () =>
+  new Promise((resolve, reject) => {
     if (!gapi.client.getToken()) {
-        gapi.client
-            .init({
-                apiKey: getApiKey(),
-                clientId: getClientId(),
-                discoveryDocs: DISCOVERY_DOCS,
-                scope: SCOPES
-            })
-            .then(
-                resolve,
-                reject,
-            );
+      gapi.client
+        .init({
+          apiKey: getApiKey(),
+          clientId: getClientId(),
+          discoveryDocs: DISCOVERY_DOCS,
+          scope: SCOPES,
+        })
+        .then(resolve, reject);
     } else {
-        resolve();
+      resolve();
     }
-});
+  });
 ```
 
 And in the end I can combine everything in one function and use it everywhere:
 
 ```js
 export const loadAndInit = () => {
-    return _load()
-        .then(_init)
+  return _load().then(_init);
 };
 ```

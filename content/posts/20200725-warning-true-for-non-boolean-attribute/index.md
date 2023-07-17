@@ -1,7 +1,7 @@
 ---
 title: Styled-components "Warning Received `true` for non-boolean attribute"
-date: "2020-07-25T09:05:00.000Z"
-tags: ["styled-components"]
+date: '2020-07-25T09:05:00.000Z'
+tags: ['styled-components']
 ---
 
 IMO styled-components library has only one problematic warning.
@@ -22,14 +22,10 @@ It usually happens, when you creating styled component like this:
 
 ```js
 const Text = styled.p`
-  color: ${props => props.alt ? "orange" : "black"};
+  color: ${(props) => (props.alt ? 'orange' : 'black')};
 `;
 
-const Foo = (props) => (
-  <Text alt={props.warning}>
-    {props.children}
-  </Text>
-);
+const Foo = (props) => <Text alt={props.warning}>{props.children}</Text>;
 ```
 
 In order to get rid of the error, you need to rename the `alt` attribute to something else. Name should be different from standard attributes of the `<p>` tag.

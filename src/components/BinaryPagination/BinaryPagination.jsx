@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SideLinkItem, {SIDE_ITEM_DIRECTION} from './SideLinkItem';
+import SideLinkItem, { SIDE_ITEM_DIRECTION } from './SideLinkItem';
 import './BinaryPagination.css';
 
 class BinaryPagination extends React.PureComponent {
   renderPrev() {
-    const {previous} = this.props;
+    const { previous } = this.props;
     if (previous && previous.slug != null) {
       const title = previous.title || previous.slug;
       return (
@@ -21,7 +21,7 @@ class BinaryPagination extends React.PureComponent {
   }
 
   renderNext() {
-    const {next} = this.props;
+    const { next } = this.props;
     if (next && next.slug != null) {
       const title = next.title || next.slug;
       return (
@@ -37,7 +37,7 @@ class BinaryPagination extends React.PureComponent {
 
   render() {
     return (
-      <div className='pagination-container'>
+      <div className="pagination-container">
         <div
           className={classnames({
             'pagination-item': true,

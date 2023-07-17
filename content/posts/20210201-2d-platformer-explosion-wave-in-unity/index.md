@@ -1,8 +1,8 @@
 ---
 title: 2D explosion wave in unity
-date: "2021-02-04T19:03:00.000Z"
+date: '2021-02-04T19:03:00.000Z'
 featuredImage: explosion-wave-thumbnail.png
-tags: ["unity", "game"]
+tags: ['unity']
 ---
 
 One of the challenging issues with in-game explosions - is to decide how you'll deal damage to the player.
@@ -24,7 +24,6 @@ There are four aspects in a successful explosion:
 1. Optionally it can show an explosion wave, so the player will learn what is the safe distance.
 1. It should sound like an explosion.
 
-
 In this post I will deal with the first 3.
 
 First of all I need somehow to render a circle around the exploded object.
@@ -41,9 +40,9 @@ private float _currentRadius;
 private const int Segments = 36;
 private const float LineWidth = 0.015f;
 
-private void Start() {  
+private void Start() {
   _lr = GetComponent<LineRenderer>();
-  
+
   SetupExplosionWave();
 }
 
@@ -62,7 +61,7 @@ private void FixedUpdate() {
 private bool IsPlayerInTheRadius() {
   var results = new Collider2D[1];
   var size = Physics2D.OverlapCircleNonAlloc(
-    transform.position, 
+    transform.position,
     _currentRadius,
     results,
     LayerMask.GetMask(ELayers.Player.ToString("g"))
@@ -76,7 +75,7 @@ private void SetupExplosionWave() {
   _lr.widthCurve = curve;
 
   var waveColor = new Color(1f, 1f, 1f, 0.35f);
-  
+
   _lr.startColor = waveColor;
   _lr.endColor = waveColor;
 }
@@ -90,7 +89,7 @@ private void DrawExplosionWave() {
     var y = Mathf.Cos(angle) * _currentRadius + position.y;
     points[i] = new Vector3(x, y, 0);
   }
-  
+
   points[Segments] = points[0];
   _lr.positionCount = points.Length;
   _lr.SetPositions(points);

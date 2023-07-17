@@ -1,5 +1,5 @@
 import React from 'react';
-import {createNanoEvents} from 'nanoevents';
+import { createNanoEvents } from 'nanoevents';
 import './UpdateReadyInfo.css';
 
 const updateReadyEmitter = createNanoEvents();
@@ -25,7 +25,7 @@ class UpdateReadyInfo extends React.PureComponent {
       this.setState({
         updateIsReady: true,
       });
-    })
+    });
   }
 
   componentWillUnmount() {
@@ -39,7 +39,7 @@ class UpdateReadyInfo extends React.PureComponent {
   render() {
     return (
       <div
-        className='update-ready-info'
+        className="update-ready-info"
         style={{
           right: this.state.updateIsReady ? '10%' : '-100%',
         }}

@@ -10,7 +10,7 @@ This is what continues to improve the web industry and each developer can only b
 Second, writing helps me better understand the concepts.
 You truly start to understand something, only when you start to explain it to someone.
 I know that for some it could seem unintuitive, but it's true.
-By explaining complicated concepts we start to understand them better  ourselves.
+By explaining complicated concepts we start to understand them better ourselves.
 
 If you're interested in my open source projects, or code examples, you can checkout
 [my github account](https://github.com/artemdemo)

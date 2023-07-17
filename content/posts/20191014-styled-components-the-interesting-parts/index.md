@@ -1,7 +1,7 @@
 ---
 title: Styled-components - the interesting parts
-date: "2019-10-14T14:01:00.000Z"
-tags: ["styled-components"]
+date: '2019-10-14T14:01:00.000Z'
+tags: ['styled-components']
 ---
 
 The whole logic of styled-components can be described in one "feature request": "Let's manage CSS in js alongside with component core code". The logic behind it is sort of obvious - it will give us the dynamic of js inside of CSS and we'll be able to treat styling as part of component code and not store it in a separate file.
@@ -20,34 +20,34 @@ I can solve it by reference to the component itself. The library will later repl
 
 ```js
 const RadioMark = styled.span`
-    display: inline-block;
-    position: relative;
-    border: 1px solid #777777;
-    width: 14px;
-    height: 14px;
-    left: 0;
-    border-radius: 50%;
-    margin-right: 10px;
-    vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  border: 1px solid #777777;
+  width: 14px;
+  height: 14px;
+  left: 0;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
 `;
 
 const RadioInput = styled.input`
-    position: absolute;
-    visibility: hidden;
-    display: none;
-    &:checked + ${RadioMark} {
-        &::after {
-            content: '';
-            display: block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: blue;
-            left: 2px;
-            top: 15%;
-            position: absolute;
-        }
+  position: absolute;
+  visibility: hidden;
+  display: none;
+  &:checked + ${RadioMark} {
+    &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: blue;
+      left: 2px;
+      top: 15%;
+      position: absolute;
     }
+  }
 `;
 ```
 
@@ -65,16 +65,16 @@ Another interesting example is - how to change the attribute of the component. W
 Another reason for this approach is often style changes. You see, styled-components will create a separate class for each change and will dynamically shuffle them when needed. It's not always desired behavior and could affect performance. A much better solution will be to update an attribute directly.
 
 ```js
-const Logo = styled.div.attrs(props => ({
-    style: {
-        backgroundImage: `url(${selectLogo(props)})`,
-    },
+const Logo = styled.div.attrs((props) => ({
+  style: {
+    backgroundImage: `url(${selectLogo(props)})`,
+  },
 }))`
-    width: 30px;
-    height: 30px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
 `;
 ```
 
@@ -88,7 +88,9 @@ The easy solution will be to filter out such properties. We can do it simply wit
 // <Link /> is expecting certain list of props.
 // It will print a warning for unknown props, therefore I'm filtering it out.
 
-const StyledLink = styled(({ warning, danger, general, theme, ...rest }) => <Link {...rest} />)`
-    ${props => styleGen(props)}
+const StyledLink = styled(({ warning, danger, general, theme, ...rest }) => (
+  <Link {...rest} />
+))`
+  ${(props) => styleGen(props)}
 `;
 ```

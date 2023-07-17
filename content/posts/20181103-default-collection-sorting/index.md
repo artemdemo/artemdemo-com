@@ -1,7 +1,7 @@
 ---
 title: Where the default sorting of a collection should be done
-date: "2018-11-03T09:46:37.121Z"
-tags: ["sorting", "collections", "order"]
+date: '2018-11-03T09:46:37.121Z'
+tags: ['sorting', 'collections', 'order']
 ---
 
 Let's say you need to display a collection that you received from the server.

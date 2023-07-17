@@ -1,5 +1,5 @@
 import React from 'react';
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 import _get from 'lodash/get';
 import Layout from '../components/Layout/Layout';
 import BinaryPagination from '../components/BinaryPagination/BinaryPagination';
@@ -11,7 +11,7 @@ import 'prismjs/themes/prism.css';
 
 class BlogPost extends React.Component {
   renderPagination() {
-    const {previous, next} = this.props.pageContext;
+    const { previous, next } = this.props.pageContext;
 
     const prevSlug = _get(previous, 'fields.slug', null);
     const nextSlug = _get(next, 'fields.slug', null);
@@ -47,16 +47,12 @@ class BlogPost extends React.Component {
         location={this.props.location}
       >
         <h1>{title}</h1>
-        <PostDate>
-          {date}
-        </PostDate>
-        <PostTags tags={tags}/>
+        <PostDate>{date}</PostDate>
+        <PostTags tags={tags} />
 
-        <div
-          dangerouslySetInnerHTML={{__html: html}}
-        />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
 
-        <hr/>
+        <hr />
 
         {this.renderPagination()}
       </Layout>

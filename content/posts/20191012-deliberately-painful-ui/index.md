@@ -1,7 +1,7 @@
 ---
 title: Deliberately painful UI
-date: "2019-10-12T13:52:00.000Z"
-tags: ["ui"]
+date: '2019-10-12T13:52:00.000Z'
+tags: ['ui']
 ---
 
 "Let's play a game" I will give you a link to a form that is designed against all UI and UX norms and you'll need to fill it as fast as possible. You can't imagine how hard it could be when the designer deliberately is going against all codes that the industry agrees upon.

@@ -1,7 +1,7 @@
 ---
 title: Adding react-snap to my app
-date: "2020-10-17T15:27:00.000Z"
-tags: ["react-snap","prerender","imgreview"]
+date: '2020-10-17T15:27:00.000Z'
+tags: ['react-snap', 'prerender', 'imgreview']
 ---
 
 I started to experiment with [react-snap](https://github.com/stereobooster/react-snap) - a nice tool for creating pre rendered html of your SPA.
@@ -14,13 +14,13 @@ Basically you need to install the package npm install react-snap, and then just 
 const rootElement = doc.getElementById('app');
 
 if (rootElement.hasChildNodes()) {
-    ReactDOM.hydrate(<App />, rootElement);
+  ReactDOM.hydrate(<App />, rootElement);
 } else {
-    ReactDOM.render(<App />, rootElement);
+  ReactDOM.render(<App />, rootElement);
 }
 ```
 
-In my case though there was a problem. Pre render failed with this weird error message: 
+In my case though there was a problem. Pre render failed with this weird error message:
 
 ```
 pageerror at /: SyntaxError: Unexpected token '<'
