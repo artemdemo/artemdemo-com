@@ -30,7 +30,7 @@ export default PostsListByTag;
 // Notice, that this query should be the same as in `/templates/PostsList.jsx`
 // ToDo: Find the way to keep both queries in one place
 export const pageQuery = graphql`
-  query ($tagName: String, $skip: Int!, $limit: Int!) {
+  query PostsListByTag($tagName: String, $skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
@@ -38,7 +38,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       skip: $skip
       limit: $limit
       filter: { frontmatter: { tags: { in: [$tagName] } } }

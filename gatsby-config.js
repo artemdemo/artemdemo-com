@@ -56,7 +56,7 @@ module.exports = {
     // {
     //   resolve: 'gatsby-plugin-feed',
     //   options: {
-   
+
     //   },
     // },
     'gatsby-plugin-remove-serviceworker',
