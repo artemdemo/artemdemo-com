@@ -53,7 +53,12 @@ module.exports = {
         trackingId: 'UA-38910005-10',
       },
     },
-    'gatsby-plugin-feed',
+    // {
+    //   resolve: 'gatsby-plugin-feed',
+    //   options: {
+   
+    //   },
+    // },
     'gatsby-plugin-remove-serviceworker',
     'gatsby-plugin-react-helmet',
   ],
