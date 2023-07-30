@@ -4,10 +4,6 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout/Layout';
 
 class TagsList extends React.PureComponent {
-  constructor(props) {
-    super(props);
-  }
-
   renderTags() {
     const tagsMap = _get(this.props, 'pageContext.tagsMap', {});
     return Object.keys(tagsMap)
