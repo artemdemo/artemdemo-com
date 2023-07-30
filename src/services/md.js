@@ -1,5 +1,5 @@
 import _isString from 'lodash/isString';
-import remark from 'remark';
+import { remark } from 'remark';
 import guide from 'remark-preset-lint-markdown-style-guide';
 import html from 'remark-html';
 
@@ -12,12 +12,12 @@ export const renderMd = (mdString) =>
         if (err) {
           return reject(new Error(err));
         }
-        if (_isString(file.contents)) {
-          resolve(file.contents);
+        if (_isString(file.value)) {
+          resolve(file.value);
         }
         reject(
           new Error(
-            'Returned "file" does not have `contents` property in it, or it\'s not string',
+            'Returned "file" does not have `value` property in it, or it\'s not string',
           ),
         );
       });
