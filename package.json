@@ -46,7 +46,6 @@
     "@types/jest": "^26.0.20",
     "babel-plugin-macros": "^3.0.1",
     "enzyme": "^3.11.0",
-    "gh-pages": "^2.1.1",
     "prettier": "2.8.8",
     "raw-loader": "^4.0.2"
   },
