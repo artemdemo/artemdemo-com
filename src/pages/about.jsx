@@ -1,4 +1,3 @@
-import React from 'react';
 import { graphql } from 'gatsby';
 import BasePage from './BasePage/BasePage';
 import { isTestEnv } from '../services/testEnv';

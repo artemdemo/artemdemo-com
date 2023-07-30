@@ -101,7 +101,7 @@ export const renewAuth = (options = {}) =>
 And here is `silent.html` file:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />

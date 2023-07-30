@@ -9,28 +9,23 @@ const createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     // Now we're seeding GraphQL “database” that we can then query against via page-level GraphQL queries.
     //
-    graphql(
-      `
-        {
-          allMarkdownRemark(
-            sort: { fields: [frontmatter___date], order: DESC }
-            limit: 2000
-          ) {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                  tags
-                }
+    graphql(`
+      {
+        allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 2000) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                tags
               }
             }
           }
         }
-      `,
-    )
+      }
+    `)
       .then((result) => {
         if (result.errors) {
           console.log(result.errors);
