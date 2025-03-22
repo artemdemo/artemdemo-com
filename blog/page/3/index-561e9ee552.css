@@ -60,13 +60,13 @@
 .post-item-content__thumbnail {
   flex-basis: 120px;
   flex-shrink: 0;
+  padding-right: 10px;
   img {
     border-radius: 5px;
   }
 }
 .post-item-content__excerpt {
   flex-grow: 1;
-  padding-left: 10px;
   p {
     margin: 0;
   }
