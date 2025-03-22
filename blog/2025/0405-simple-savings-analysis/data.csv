@@ -1,0 +1,49 @@
+Date,Account Name,Account Type,Amount,Memo
+2024-01-31,Alpha,Savings,"$1,000",Investment income
+2024-01-31,Ironclad,Bank,"$1,400",Salary
+2024-01-31,Beta,Savings,$400,Investment income
+2024-01-31,Gamma,Savings,"$10,000",Investment income
+2024-02-29,Alpha,Savings,"$1,100",Investment income
+2024-02-29,Ironclad,Bank,"$1,400",Salary
+2024-02-29,Beta,Savings,-$300,Investment losses
+2024-02-29,Gamma,Savings,"$10,000",Investment income
+2024-03-31,Alpha,Savings,-$500,Investment losses
+2024-03-31,Ironclad,Bank,"$1,400",Salary
+2024-03-31,Beta,Savings,$400,Investment income
+2024-03-31,Gamma,Savings,"$10,000",Investment income
+2024-04-30,Alpha,Savings,-$200,Investment losses
+2024-04-30,Ironclad,Bank,"$1,400",Salary
+2024-04-30,Beta,Savings,-$300,Investment losses
+2024-04-30,Gamma,Savings,"$10,000",Investment income
+2024-05-31,Alpha,Savings,"$1,100",Investment income
+2024-05-31,Ironclad,Bank,"$1,400",Salary
+2024-05-31,Beta,Savings,-$100,Investment losses
+2024-05-31,Gamma,Savings,"-$90,000",Investment losses
+2024-06-30,Alpha,Savings,$400,Investment income
+2024-06-30,Ironclad,Bank,"$1,400",Salary
+2024-06-30,Beta,Savings,$50,Investment losses
+2024-06-30,Gamma,Savings,"$90,000",Investment losses
+2024-07-31,Alpha,Savings,$0,Investment income
+2024-07-31,Ironclad,Bank,"$1,400",Salary
+2024-07-31,Beta,Savings,$50,Investment losses
+2024-07-31,Gamma,Savings,"$10,000",Investment income
+2024-08-31,Alpha,Savings,-$100,Investment income
+2024-08-31,Ironclad,Bank,"$1,400",Salary
+2024-08-31,Beta,Savings,$0,Investment losses
+2024-08-31,Gamma,Savings,"-$20,000",Investment losses
+2024-09-30,Alpha,Savings,-$400,Investment income
+2024-09-30,Ironclad,Bank,"$1,400",Salary
+2024-09-30,Beta,Savings,$0,Investment losses
+2024-09-30,Gamma,Savings,"$10,000",Investment income
+2024-10-31,Alpha,Savings,$100,Investment income
+2024-10-31,Ironclad,Bank,"$1,400",Salary
+2024-10-31,Beta,Savings,$50,Investment losses
+2024-10-31,Gamma,Savings,"-$50,000",Investment losses
+2024-11-30,Alpha,Savings,$150,Investment income
+2024-11-30,Ironclad,Bank,"$1,400",Salary
+2024-11-30,Beta,Savings,$150,Investment losses
+2024-11-30,Gamma,Savings,"$10,000",Investment income
+2024-12-31,Alpha,Savings,$50,Investment income
+2024-12-31,Ironclad,Bank,"$1,400",Salary
+2024-12-31,Beta,Savings,-$50,Investment losses
+2024-12-31,Gamma,Savings,"$10,000",Investment income
