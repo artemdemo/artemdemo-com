@@ -1,9 +1,0 @@
-.secondary-text {
-  font-size: 85%;
-  margin-bottom: 10px;
-  opacity: 0.5;
-  transition: 300ms;
-}
-.secondary-text:hover {
-  opacity: 1;
-}
