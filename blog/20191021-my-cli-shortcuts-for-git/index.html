@@ -1,51 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Artem Demo, indie developer | My CLI shortcuts for git</title>
-  <link rel="icon" type="image/x-icon" href="/./assets/favicon-dec32dcbac.ico">
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Blog about web development, indie GameDev">
-  <link rel="stylesheet" href="/./assets/code-theme-36bdf5f7fe.css">
-<link rel="stylesheet" href="/./assets/site.render-bd2e04c548.css">
-  
-</head>
-<body>
-  
-  <link rel="preload" as="image" href="git-cli-lg1.png"/><link rel="preload" as="image" href="git-cli-lg2.png"/><div><div class="header-wrapper"><div class="container"><div class="header-container"><div class="header-item header-item__logo"><a class="header-logo-link" href="/">Artem Demo</a></div><div class="header-item header-item__menu"><div class="header-item-menu"><div class="top-menu"><div class="top-menu_item top-menu_item__active"><a class="top-menu_link" href="/">Blog</a></div><div class="top-menu_item"><a class="top-menu_link" href="/about/">About</a></div><div class="top-menu_item"><a class="top-menu_link" href="/contact/">Contact me</a></div></div></div></div></div><div class="header-separator"></div></div></div><div class="container"><div class="ContentWrapper"><h1>My CLI shortcuts for git</h1><div class="secondary-text">21 October, 2019</div><div class="secondary-text">Tags: <a class="post-tags-item" href="/blog/tag/cli/">cli</a><a class="post-tags-item" href="/blog/tag/git/">git</a></div><p>I&#x27;m using a lot of git features via CLI. Mainly it&#x27;s rebasing, committing and pushing new changes to the repository. I know that most editors have UI solutions for these commands, but I never liked it and honestly don&#x27;t see any reason to change my habits. Stubborn you say? Probably. Don&#x27;t know.</p>
-<p>So if you, like me, and want to try to use CLI to manage git repo - I want to share with you the shortcuts that I regularly use at work. Because, some commands are just too long to remember, but still CLI is the best :)</p>
-<p>We&#x27;ll add these commands to the global git config file. For Linux and mac global git configuration is here: ~/.gitconfig</p>
-<p>I&#x27;m not going to explain everything you can configure in gitconfig. Frankly, I don&#x27;t know all the options. Only the minimum that needed. And the whole purpose of this post is to remind to future me, what are the commands that I usually use. So, you&#x27;re welcome, Artem.</p>
-<p>Let&#x27;s start. There are three sections in gitconfig, that I use:</p>
-<ul>
-<li>alias
-<ul>
-<li>Here you&#x27;ll add CLI shortcuts</li>
-</ul>
-</li>
-<li>user
-<ul>
-<li>Your main email and user name</li>
-</ul>
-</li>
-<li>core
-<ul>
-<li>Your default editor for commits and rebasing</li>
-</ul>
-</li>
-</ul>
-<p>##[alias]</p>
-<p>This is the most interesting section. Your git shortcuts. Your magic.</p>
-<p>First, basic commands. The whole purpose of them is to save some typing. Very simple.</p>
-<pre><code class="language-bash hljs"><span class="hljs">c = checkout
+<!DOCTYPE html><html lang="en"><head><title>Artem Demo, indie developer | My CLI shortcuts for git</title><link rel="icon" type="image/x-icon" href="/./assets/favicon-dec32dcbac.ico"><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="description" content="Blog about web development, indie GameDev"><link rel="stylesheet" href="/./assets/code-theme-36bdf5f7fe.css"><link rel="stylesheet" href="/./assets/site.render-b8f7a46a2c.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-3BCNZ31TWL"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3BCNZ31TWL');</script></head><body><link rel="preload" as="image" href="git-cli-lg1.png"><link rel="preload" as="image" href="git-cli-lg2.png"><div><div class="header-wrapper"><div class="container"><div class="header-container"><div class="header-item header-item__logo"><a class="header-logo-link" href="/">Artem Demo</a></div><div class="header-item header-item__menu"><div class="header-item-menu"><div class="top-menu"><div class="top-menu_item top-menu_item__active"><a class="top-menu_link" href="/">Blog</a></div><div class="top-menu_item"><a class="top-menu_link" href="/about/">About</a></div><div class="top-menu_item"><a class="top-menu_link" href="/contact/">Contact me</a></div></div></div></div></div><div class="header-separator"></div></div></div><div class="container"><div class="ContentWrapper"><h1>My CLI shortcuts for git</h1><div class="secondary-text">21 October, 2019</div><div class="secondary-text">Tags: <a class="post-tags-item" href="/blog/tag/cli/">cli</a><a class="post-tags-item" href="/blog/tag/git/">git</a></div><p>I&#x27;m using a lot of git features via CLI. Mainly it&#x27;s rebasing, committing and pushing new changes to the repository. I know that most editors have UI solutions for these commands, but I never liked it and honestly don&#x27;t see any reason to change my habits. Stubborn you say? Probably. Don&#x27;t know.</p><p>So if you, like me, and want to try to use CLI to manage git repo - I want to share with you the shortcuts that I regularly use at work. Because, some commands are just too long to remember, but still CLI is the best :)</p><p>We&#x27;ll add these commands to the global git config file. For Linux and mac global git configuration is here: ~/.gitconfig</p><p>I&#x27;m not going to explain everything you can configure in gitconfig. Frankly, I don&#x27;t know all the options. Only the minimum that needed. And the whole purpose of this post is to remind to future me, what are the commands that I usually use. So, you&#x27;re welcome, Artem.</p><p>Let&#x27;s start. There are three sections in gitconfig, that I use:</p><ul><li>alias<ul><li>Here you&#x27;ll add CLI shortcuts</li></ul></li><li>user<ul><li>Your main email and user name</li></ul></li><li>core<ul><li>Your default editor for commits and rebasing</li></ul></li></ul><p>##[alias]</p><p>This is the most interesting section. Your git shortcuts. Your magic.</p><p>First, basic commands. The whole purpose of them is to save some typing. Very simple.</p><pre><code class="language-bash hljs"><span class="hljs">c = checkout
 aa = add --all
 s = status
 cm = commit -m
 ca = commit --amend
-</span></code></pre>
-<p>Branches managing and rebasing. These commands I use most often.</p>
-<pre><code class="language-bash hljs"><span class="hljs"><span class="hljs-comment"># list of available branches</span>
+</span></code></pre><p>Branches managing and rebasing. These commands I use most often.</p><pre><code class="language-bash hljs"><span class="hljs"><span class="hljs-comment"># list of available branches</span>
 <span class="hljs-comment"># will be displayed name and when happened last change</span>
 b = &quot;!git for-each-ref --<span class="hljs-built_in">sort</span>=&#x27;-committerdate&#x27; --format=&#x27;%(color:green)%(committerdate:relative)%(color:reset)%09%(refname)&#x27; refs/heads | sed -e &#x27;s-refs/heads/--&#x27;&quot;
 
@@ -59,31 +21,13 @@ bDD = !&quot;git c master &amp;&amp; git fetch &amp;&amp; git pull origin master
 
 <span class="hljs-comment"># interactively rebase current branch on master</span>
 rom = !&quot;git fetch &amp;&amp; git rebase -i origin/master&quot;
-</span></code></pre>
-<p>Commits history. Your logs. There is an easy command git log, that will print list of commits, but it wouldn&#x27;t be so user-friendly. Therefore I created some commands that I use regularly:</p>
-<pre><code class="language-bash hljs"><span class="hljs"><span class="hljs-comment"># list of logs, in one line, with branch names and commit ids</span>
+</span></code></pre><p>Commits history. Your logs. There is an easy command git log, that will print list of commits, but it wouldn&#x27;t be so user-friendly. Therefore I created some commands that I use regularly:</p><pre><code class="language-bash hljs"><span class="hljs"><span class="hljs-comment"># list of logs, in one line, with branch names and commit ids</span>
 lg1 = <span class="hljs-built_in">log</span> --oneline --decorate --graph --format=format:&#x27;%C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(yellow)%d%C(reset)&#x27;
-</span></code></pre>
-<p>The result will look like this:</p>
-<p><img src="git-cli-lg1.png" alt="git CLI lg1"/></p>
-<pre><code class="language-bash hljs"><span class="hljs"><span class="hljs-comment"># same as previous, but also includes commit author and when it was added</span>
+</span></code></pre><p>The result will look like this:</p><p><img src="git-cli-lg1.png" alt="git CLI lg1"></p><pre><code class="language-bash hljs"><span class="hljs"><span class="hljs-comment"># same as previous, but also includes commit author and when it was added</span>
 lg2 = <span class="hljs-built_in">log</span> --graph --abbrev-commit --decorate --<span class="hljs-built_in">date</span>=relative --format=format:&#x27;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset)  %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#x27;
-</span></code></pre>
-<p>The result will be:</p>
-<p><img src="git-cli-lg2.png" alt="git CLI lg2"/></p>
-<p>And the default command for even shorter version of this shortcut:</p>
-<pre><code class="language-bash hljs"><span class="hljs"><span class="hljs-comment"># default command</span>
+</span></code></pre><p>The result will be:</p><p><img src="git-cli-lg2.png" alt="git CLI lg2"></p><p>And the default command for even shorter version of this shortcut:</p><pre><code class="language-bash hljs"><span class="hljs"><span class="hljs-comment"># default command</span>
 lg = !&quot;git lg1&quot;
-</span></code></pre>
-<h2>[user]</h2>
-<pre><code class="language-bash hljs"><span class="hljs">email = you@mail.com
+</span></code></pre><h2>[user]</h2><pre><code class="language-bash hljs"><span class="hljs">email = you@mail.com
 name = Your Name
-</span></code></pre>
-<p>Nothing to add here. You&#x27;re defining here default email and user name for your commits. Easy.</p>
-<h2>[core]</h2>
-<pre><code class="language-bash hljs"><span class="hljs">editor = vim
-</span></code></pre>
-<p>Your editor of choice. Should I say that vim should be installed on your system? You know. If you expect me to be so explicit, then probably you&#x27;re in the wrong profession, buddy. Other than that, love you deeply :-*</p></div></div></div>
-  
-</body>
-</html>
+</span></code></pre><p>Nothing to add here. You&#x27;re defining here default email and user name for your commits. Easy.</p><h2>[core]</h2><pre><code class="language-bash hljs"><span class="hljs">editor = vim
+</span></code></pre><p>Your editor of choice. Should I say that vim should be installed on your system? You know. If you expect me to be so explicit, then probably you&#x27;re in the wrong profession, buddy. Other than that, love you deeply :-*</p></div></div></div></body></html>

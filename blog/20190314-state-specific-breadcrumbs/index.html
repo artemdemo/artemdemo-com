@@ -1,51 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Artem Demo, indie developer | State-specific breadcrumbs</title>
-  <link rel="icon" type="image/x-icon" href="/./assets/favicon-dec32dcbac.ico">
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Blog about web development, indie GameDev">
-  <link rel="stylesheet" href="/./assets/code-theme-36bdf5f7fe.css">
-<link rel="stylesheet" href="/./assets/site.render-bd2e04c548.css">
-  
-</head>
-<body>
-  
-  <link rel="preload" as="image" href="./breadcrumbs-sequence.png"/><link rel="preload" as="image" href="./page-structure.png"/><link rel="preload" as="image" href="./history-wrapper.png"/><div><div class="header-wrapper"><div class="container"><div class="header-container"><div class="header-item header-item__logo"><a class="header-logo-link" href="/">Artem Demo</a></div><div class="header-item header-item__menu"><div class="header-item-menu"><div class="top-menu"><div class="top-menu_item top-menu_item__active"><a class="top-menu_link" href="/">Blog</a></div><div class="top-menu_item"><a class="top-menu_link" href="/about/">About</a></div><div class="top-menu_item"><a class="top-menu_link" href="/contact/">Contact me</a></div></div></div></div></div><div class="header-separator"></div></div></div><div class="container"><div class="ContentWrapper"><h1>State-specific breadcrumbs</h1><div class="secondary-text">14 March, 2019</div><div class="secondary-text">Tags: <a class="post-tags-item" href="/blog/tag/breadcrumbs/">breadcrumbs</a><a class="post-tags-item" href="/blog/tag/browser history/">browser history</a><a class="post-tags-item" href="/blog/tag/routing/">routing</a></div><p>Breadcrumbs can be displayed in different ways. Usually, this is solved in a naive way - if a user enters the page where a certain product is displayed, then he will see breadcrumbs from categories that are hierarchically dependent on each other. This is reasonably easy to implement because it is static information. The more complex requirement is to display a history of the changes, where we&#x27;ll see not only the previous pages but also the filters that have been applied to them.</p>
-<p>Let&#x27;s start by defining a use-case. It will be a simple one, as we don&#x27;t need to make it complicated. I&#x27;m building an application that is dealing with some kinds of deliveries. There are &quot;parcels&quot;, that have packages and items. They are dependent on each other and they can be presented in the following way:</p>
-<ol>
-<li>Parcels
-<ul>
-<li>Parcels: delivered</li>
-</ul>
-</li>
-<li>Single parcel</li>
-<li>Package</li>
-<li>List of items
-<ul>
-<li>List of items: red</li>
-</ul>
-</li>
-<li>Single item</li>
-</ol>
-<p><img src="./breadcrumbs-sequence.png" alt="Breadcrumbs sequence"/></p>
-<p>As you can see from the list, the parcels and items can be sorted. Packages are presented in a simple list and you just need to find the right one.</p>
-<p>Now, we need to define functionality for our breadcrumbs that will define whether we implement them or not. So the requirements are:</p>
-<ol>
-<li>Breadcrumbs list should be activated when the user enters a page that allows breadcrumbs.</li>
-<li>If the user enters a page with no breadcrumbs, then the breadcrumbs data should be lost.</li>
-<li>Each crumb should also display filters that have been applied on the list that the user saw on the previous page.
-<ul>
-<li>The user should be able to click on the breadcrumb and go back to the page with the same filtered (or sorted) list.</li>
-</ul>
-</li>
-<li>The user should be able to send a link to the current page, with breadcrumbs, to a coworker and he will see exactly the same breadcrumbs history.</li>
-</ol>
-<p><strong>Routing structure</strong></p>
-<p>Ok, let&#x27;s start by defining the routings that will be used for displaying our pages. Each one of the entities has its own page and can be accessed independently, so routing needs to reflect this. This is a fairly easy part since it&#x27;s relying on the basic functionality of any routing:</p>
-<pre><code class="language-javascript hljs"><span class="hljs">&lt;<span class="hljs-title class_">Router</span> history={history}&gt;
+<!DOCTYPE html><html lang="en"><head><title>Artem Demo, indie developer | State-specific breadcrumbs</title><link rel="icon" type="image/x-icon" href="/./assets/favicon-dec32dcbac.ico"><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="description" content="Blog about web development, indie GameDev"><link rel="stylesheet" href="/./assets/code-theme-36bdf5f7fe.css"><link rel="stylesheet" href="/./assets/site.render-b8f7a46a2c.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-3BCNZ31TWL"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3BCNZ31TWL');</script></head><body><link rel="preload" as="image" href="./breadcrumbs-sequence.png"><link rel="preload" as="image" href="./page-structure.png"><link rel="preload" as="image" href="./history-wrapper.png"><div><div class="header-wrapper"><div class="container"><div class="header-container"><div class="header-item header-item__logo"><a class="header-logo-link" href="/">Artem Demo</a></div><div class="header-item header-item__menu"><div class="header-item-menu"><div class="top-menu"><div class="top-menu_item top-menu_item__active"><a class="top-menu_link" href="/">Blog</a></div><div class="top-menu_item"><a class="top-menu_link" href="/about/">About</a></div><div class="top-menu_item"><a class="top-menu_link" href="/contact/">Contact me</a></div></div></div></div></div><div class="header-separator"></div></div></div><div class="container"><div class="ContentWrapper"><h1>State-specific breadcrumbs</h1><div class="secondary-text">14 March, 2019</div><div class="secondary-text">Tags: <a class="post-tags-item" href="/blog/tag/breadcrumbs/">breadcrumbs</a><a class="post-tags-item" href="/blog/tag/browser history/">browser history</a><a class="post-tags-item" href="/blog/tag/routing/">routing</a></div><p>Breadcrumbs can be displayed in different ways. Usually, this is solved in a naive way - if a user enters the page where a certain product is displayed, then he will see breadcrumbs from categories that are hierarchically dependent on each other. This is reasonably easy to implement because it is static information. The more complex requirement is to display a history of the changes, where we&#x27;ll see not only the previous pages but also the filters that have been applied to them.</p><p>Let&#x27;s start by defining a use-case. It will be a simple one, as we don&#x27;t need to make it complicated. I&#x27;m building an application that is dealing with some kinds of deliveries. There are &quot;parcels&quot;, that have packages and items. They are dependent on each other and they can be presented in the following way:</p><ol><li>Parcels<ul><li>Parcels: delivered</li></ul></li><li>Single parcel</li><li>Package</li><li>List of items<ul><li>List of items: red</li></ul></li><li>Single item</li></ol><p><img src="./breadcrumbs-sequence.png" alt="Breadcrumbs sequence"></p><p>As you can see from the list, the parcels and items can be sorted. Packages are presented in a simple list and you just need to find the right one.</p><p>Now, we need to define functionality for our breadcrumbs that will define whether we implement them or not. So the requirements are:</p><ol><li>Breadcrumbs list should be activated when the user enters a page that allows breadcrumbs.</li><li>If the user enters a page with no breadcrumbs, then the breadcrumbs data should be lost.</li><li>Each crumb should also display filters that have been applied on the list that the user saw on the previous page.<ul><li>The user should be able to click on the breadcrumb and go back to the page with the same filtered (or sorted) list.</li></ul></li><li>The user should be able to send a link to the current page, with breadcrumbs, to a coworker and he will see exactly the same breadcrumbs history.</li></ol><p><strong>Routing structure</strong></p><p>Ok, let&#x27;s start by defining the routings that will be used for displaying our pages. Each one of the entities has its own page and can be accessed independently, so routing needs to reflect this. This is a fairly easy part since it&#x27;s relying on the basic functionality of any routing:</p><pre><code class="language-javascript hljs"><span class="hljs">&lt;<span class="hljs-title class_">Router</span> history={history}&gt;
   &lt;<span class="hljs-title class_">Route</span> path=&quot;/&quot; component={<span class="hljs-title class_">AppView</span>}&gt;
     &lt;<span class="hljs-title class_">IndexRoute</span> component={<span class="hljs-title class_">MainView</span>} /&gt;
     &lt;<span class="hljs-title class_">Route</span> path=&quot;parcels&quot; component={<span class="hljs-title class_">ParcelsView</span>} /&gt;
@@ -56,21 +13,11 @@
     &lt;<span class="hljs-title class_">Route</span> path=&quot;items/:itemId&quot; component={<span class="hljs-title class_">SingleItemView</span>} /&gt;
   &lt;/<span class="hljs-title class_">Route</span>&gt;
 &lt;/<span class="hljs-title class_">Router</span>&gt;
-</span></code></pre>
-<p>As you can see above I&#x27;m assuming there are already defined views and that I can incorporate them into my router. I will define each one of them later. First, let&#x27;s see what will be the template for each view. It will be something simple, but nevertheless, let&#x27;s first define it. At the top, we&#x27;ll have a menu that is permanently placed there. Under the menu is a placeholder for breadcrumbs - they could be shown or not, it depends on the page. After that, we have page content.</p>
-<p><img src="./page-structure.png" alt="Page structure"/></p>
-<p><strong>Passing breadcrumbs between views</strong></p>
-<p>The next problem will be how to pass breadcrumbs between views. We need a unified strategy for that. There should be only one service that has this logic and it will only need to provide a clear API.</p>
-<p>First, the whole logic will be based on the history object that can receive path and query params in order to create a URL for the next view. I will piggyback on this functionality, but I can&#x27;t use it as is, because before being able to use it, we need to wrap it in our service logic:</p>
-<p><img src="./history-wrapper.png" alt="History wrapper"/></p>
-<p>The API of the history object is quite simple. In order to change the URL, we need to push its definition into history:</p>
-<pre><code class="language-javascript hljs"><span class="hljs">history.<span class="hljs-title function_">push</span>({
+</span></code></pre><p>As you can see above I&#x27;m assuming there are already defined views and that I can incorporate them into my router. I will define each one of them later. First, let&#x27;s see what will be the template for each view. It will be something simple, but nevertheless, let&#x27;s first define it. At the top, we&#x27;ll have a menu that is permanently placed there. Under the menu is a placeholder for breadcrumbs - they could be shown or not, it depends on the page. After that, we have page content.</p><p><img src="./page-structure.png" alt="Page structure"></p><p><strong>Passing breadcrumbs between views</strong></p><p>The next problem will be how to pass breadcrumbs between views. We need a unified strategy for that. There should be only one service that has this logic and it will only need to provide a clear API.</p><p>First, the whole logic will be based on the history object that can receive path and query params in order to create a URL for the next view. I will piggyback on this functionality, but I can&#x27;t use it as is, because before being able to use it, we need to wrap it in our service logic:</p><p><img src="./history-wrapper.png" alt="History wrapper"></p><p>The API of the history object is quite simple. In order to change the URL, we need to push its definition into history:</p><pre><code class="language-javascript hljs"><span class="hljs">history.<span class="hljs-title function_">push</span>({
   <span class="hljs-attr">pathname</span>: &#x27;/some-url&#x27;,
   <span class="hljs-attr">search</span>: &#x27;?query=list-<span class="hljs-keyword">of</span>-breadcrumbs&#x27;,
 });
-</span></code></pre>
-<p>Now we need to define how these breadcrumbs need to be stored in the URL. Since it will be a list of objects, the obvious choice will be JSON, but we need to encode it, in order to store it in the URL, and it could be a quite long string, which could create a problem in the future. Honestly, there is no easy workaround for this problem. What we can do for now is to convert the JSON string into the base64 format and gain some space; not much, but it&#x27;s better than nothing.</p>
-<pre><code class="language-javascript hljs"><span class="hljs"><span class="hljs-keyword">import</span> _get <span class="hljs-keyword">from</span> &#x27;lodash/get&#x27;;
+</span></code></pre><p>Now we need to define how these breadcrumbs need to be stored in the URL. Since it will be a list of objects, the obvious choice will be JSON, but we need to encode it, in order to store it in the URL, and it could be a quite long string, which could create a problem in the future. Honestly, there is no easy workaround for this problem. What we can do for now is to convert the JSON string into the base64 format and gain some space; not much, but it&#x27;s better than nothing.</p><pre><code class="language-javascript hljs"><span class="hljs"><span class="hljs-keyword">import</span> _get <span class="hljs-keyword">from</span> &#x27;lodash/get&#x27;;
 <span class="hljs-keyword">import</span> _isString <span class="hljs-keyword">from</span> &#x27;lodash/isString&#x27;;
 <span class="hljs-keyword">import</span> history <span class="hljs-keyword">from</span> &#x27;../history&#x27;;
 
@@ -151,10 +98,7 @@
     <span class="hljs-attr">search</span>: <span class="hljs-string">`?<span class="hljs-subst">${QUERY_CRUMB_PROP}</span>=<span class="hljs-subst">${encodeCrumbs(str)}</span>`</span>,
   });
 };
-</span></code></pre>
-<p>Good, now we can store breadcrumbs in the URL and have access to them. The next step will be to define the way of displaying them. Since I have been using bootstrap CSS in almost every project, I will use design and CSS classes from there.</p>
-<p>This time the only thing we need to do is to fetch breadcrumbs from the URL, if there is something to display, then render it, and if an array is empty, then render nothing.</p>
-<pre><code class="language-javascript hljs"><span class="hljs"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span> <span class="hljs-keyword">from</span> &#x27;react&#x27;;
+</span></code></pre><p>Good, now we can store breadcrumbs in the URL and have access to them. The next step will be to define the way of displaying them. Since I have been using bootstrap CSS in almost every project, I will use design and CSS classes from there.</p><p>This time the only thing we need to do is to fetch breadcrumbs from the URL, if there is something to display, then render it, and if an array is empty, then render nothing.</p><pre><code class="language-javascript hljs"><span class="hljs"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span> <span class="hljs-keyword">from</span> &#x27;react&#x27;;
 <span class="hljs-keyword">import</span> _get <span class="hljs-keyword">from</span> &#x27;lodash/get&#x27;;
 <span class="hljs-keyword">import</span> { <span class="hljs-title class_">Link</span> } <span class="hljs-keyword">from</span> &#x27;react-router&#x27;;
 <span class="hljs-keyword">import</span> <span class="hljs-title class_">PropTypes</span> <span class="hljs-keyword">from</span> &#x27;prop-types&#x27;;
@@ -215,8 +159,4 @@
 };
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Breadcrumbs</span>;
-</span></code></pre>
-<p>This is it, all the major parts are here. The full example is stored in my GitHub and you can check it out https://github.com/artemdemo/breadcrumbs</p></div></div></div>
-  
-</body>
-</html>
+</span></code></pre><p>This is it, all the major parts are here. The full example is stored in my GitHub and you can check it out https://github.com/artemdemo/breadcrumbs</p></div></div></div></body></html>

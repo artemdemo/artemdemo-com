@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Artem Demo, indie developer | Styled-components - the interesting parts</title>
-  <link rel="icon" type="image/x-icon" href="/./assets/favicon-dec32dcbac.ico">
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Blog about web development, indie GameDev">
-  <link rel="stylesheet" href="/./assets/code-theme-36bdf5f7fe.css">
-<link rel="stylesheet" href="/./assets/site.render-bd2e04c548.css">
-  
-</head>
-<body>
-  
-  <link rel="preload" as="image" href="styled-components.png"/><div><div class="header-wrapper"><div class="container"><div class="header-container"><div class="header-item header-item__logo"><a class="header-logo-link" href="/">Artem Demo</a></div><div class="header-item header-item__menu"><div class="header-item-menu"><div class="top-menu"><div class="top-menu_item top-menu_item__active"><a class="top-menu_link" href="/">Blog</a></div><div class="top-menu_item"><a class="top-menu_link" href="/about/">About</a></div><div class="top-menu_item"><a class="top-menu_link" href="/contact/">Contact me</a></div></div></div></div></div><div class="header-separator"></div></div></div><div class="container"><div class="ContentWrapper"><h1>Styled-components - the interesting parts</h1><div class="secondary-text">14 October, 2019</div><div class="secondary-text">Tags: <a class="post-tags-item" href="/blog/tag/styled-components/">styled-components</a></div><p>The whole logic of styled-components can be described in one &quot;feature request&quot;: &quot;Let&#x27;s manage CSS in js alongside with component core code&quot;. The logic behind it is sort of obvious - it will give us the dynamic of js inside of CSS and we&#x27;ll be able to treat styling as part of component code and not store it in a separate file.</p>
-<p>The idea is promising, now let&#x27;s see what are some of the edge cases. And why is that? Because nothing is ideal in the world.</p>
-<p><img src="styled-components.png" alt="Styled-components"/></p>
-<h2>Referencing existing component</h2>
-<p>Let&#x27;s say we need to reference the style of sibling component status. The simple example will be - custom radio button. I want to change the CSS of a sibling component based on whether Input is checked or not. In this case, I definitely need the class name. But I don&#x27;t have it, because styled-components will generate class later.</p>
-<p>I can solve it by reference to the component itself. The library will later replace it with the generated class name.</p>
-<pre><code class="language-js hljs"><span class="hljs"><span class="hljs-keyword">const</span> <span class="hljs-title class_">RadioMark</span> = styled.<span class="hljs-property">span</span><span class="hljs-string">`
+<!DOCTYPE html><html lang="en"><head><title>Artem Demo, indie developer | Styled-components - the interesting parts</title><link rel="icon" type="image/x-icon" href="/./assets/favicon-dec32dcbac.ico"><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="description" content="Blog about web development, indie GameDev"><link rel="stylesheet" href="/./assets/code-theme-36bdf5f7fe.css"><link rel="stylesheet" href="/./assets/site.render-b8f7a46a2c.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-3BCNZ31TWL"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3BCNZ31TWL');</script></head><body><link rel="preload" as="image" href="styled-components.png"><div><div class="header-wrapper"><div class="container"><div class="header-container"><div class="header-item header-item__logo"><a class="header-logo-link" href="/">Artem Demo</a></div><div class="header-item header-item__menu"><div class="header-item-menu"><div class="top-menu"><div class="top-menu_item top-menu_item__active"><a class="top-menu_link" href="/">Blog</a></div><div class="top-menu_item"><a class="top-menu_link" href="/about/">About</a></div><div class="top-menu_item"><a class="top-menu_link" href="/contact/">Contact me</a></div></div></div></div></div><div class="header-separator"></div></div></div><div class="container"><div class="ContentWrapper"><h1>Styled-components - the interesting parts</h1><div class="secondary-text">14 October, 2019</div><div class="secondary-text">Tags: <a class="post-tags-item" href="/blog/tag/styled-components/">styled-components</a></div><p>The whole logic of styled-components can be described in one &quot;feature request&quot;: &quot;Let&#x27;s manage CSS in js alongside with component core code&quot;. The logic behind it is sort of obvious - it will give us the dynamic of js inside of CSS and we&#x27;ll be able to treat styling as part of component code and not store it in a separate file.</p><p>The idea is promising, now let&#x27;s see what are some of the edge cases. And why is that? Because nothing is ideal in the world.</p><p><img src="styled-components.png" alt="Styled-components"></p><h2>Referencing existing component</h2><p>Let&#x27;s say we need to reference the style of sibling component status. The simple example will be - custom radio button. I want to change the CSS of a sibling component based on whether Input is checked or not. In this case, I definitely need the class name. But I don&#x27;t have it, because styled-components will generate class later.</p><p>I can solve it by reference to the component itself. The library will later replace it with the generated class name.</p><pre><code class="language-js hljs"><span class="hljs"><span class="hljs-keyword">const</span> <span class="hljs-title class_">RadioMark</span> = styled.<span class="hljs-property">span</span><span class="hljs-string">`
   display: inline-block;
   position: relative;
   border: 1px solid #777777;
@@ -49,15 +32,7 @@
     }
   }
 `</span>;
-</span></code></pre>
-<p>Live example:</p>
-<iframe src="https://codesandbox.io/embed/radio-button-getgl?fontsize=14" title="Radio Button" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" style="width:100%;height:500px;border:0;border-radius:4px;overflow:hidden" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-<br/>
-<br/>
-<h2>Update attributes via styled-components API</h2>
-<p>Another interesting example is - how to change the attribute of the component. We certainly can do it directly via component props. But what about changing styling directly? I would like to define every style change in one place.</p>
-<p>Another reason for this approach is often style changes. You see, styled-components will create a separate class for each change and will dynamically shuffle them when needed. It&#x27;s not always desired behavior and could affect performance. A much better solution will be to update an attribute directly.</p>
-<pre><code class="language-js hljs"><span class="hljs"><span class="hljs-keyword">const</span> <span class="hljs-title class_">Logo</span> = styled.<span class="hljs-property">div</span>.<span class="hljs-title function_">attrs</span>((props) =&gt; ({
+</span></code></pre><p>Live example:</p><iframe src="https://codesandbox.io/embed/radio-button-getgl?fontsize=14" title="Radio Button" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" style="width:100%;height:500px;border:0;border-radius:4px;overflow:hidden" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe><br><br><h2>Update attributes via styled-components API</h2><p>Another interesting example is - how to change the attribute of the component. We certainly can do it directly via component props. But what about changing styling directly? I would like to define every style change in one place.</p><p>Another reason for this approach is often style changes. You see, styled-components will create a separate class for each change and will dynamically shuffle them when needed. It&#x27;s not always desired behavior and could affect performance. A much better solution will be to update an attribute directly.</p><pre><code class="language-js hljs"><span class="hljs"><span class="hljs-keyword">const</span> <span class="hljs-title class_">Logo</span> = styled.<span class="hljs-property">div</span>.<span class="hljs-title function_">attrs</span>((props) =&gt; ({
   <span class="hljs-attr">style</span>: {
     <span class="hljs-attr">backgroundImage</span>: <span class="hljs-string">`url(<span class="hljs-subst">${selectLogo(props)}</span>)`</span>,
   },
@@ -68,11 +43,7 @@
   background-repeat: no-repeat;
   display: inline-block;
 `</span>;
-</span></code></pre>
-<h2>Wrap existing component in styled, but do not pass all props</h2>
-<p>Some components don&#x27;t like to receive props that are not defined. If you have access to the source code of such components, then you can decide whether you want to change this behavior or not. But often it&#x27;s not the case especially if this component came from a 3rd party library.</p>
-<p>The easy solution will be to filter out such properties. We can do it simply with the destructuring method of ES6. You just need to explicitly define which values are not desired and use the rest.</p>
-<pre><code class="language-js hljs"><span class="hljs"><span class="hljs-comment">// &lt;Link /&gt; is expecting certain list of props.</span>
+</span></code></pre><h2>Wrap existing component in styled, but do not pass all props</h2><p>Some components don&#x27;t like to receive props that are not defined. If you have access to the source code of such components, then you can decide whether you want to change this behavior or not. But often it&#x27;s not the case especially if this component came from a 3rd party library.</p><p>The easy solution will be to filter out such properties. We can do it simply with the destructuring method of ES6. You just need to explicitly define which values are not desired and use the rest.</p><pre><code class="language-js hljs"><span class="hljs"><span class="hljs-comment">// &lt;Link /&gt; is expecting certain list of props.</span>
 <span class="hljs-comment">// It will print a warning for unknown props, therefore I&#x27;m filtering it out.</span>
 
 <span class="hljs-keyword">const</span> <span class="hljs-title class_">StyledLink</span> = <span class="hljs-title function_">styled</span>(({ warning, danger, general, theme, ...rest }) =&gt; (
@@ -80,7 +51,4 @@
 ))<span class="hljs-string">`
   <span class="hljs-subst">${(props) =&gt; styleGen(props)}</span>
 `</span>;
-</span></code></pre></div></div></div>
-  
-</body>
-</html>
+</span></code></pre></div></div></div></body></html>
